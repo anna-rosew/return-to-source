@@ -77,11 +77,11 @@ const SnowdoniaRetreat = () => {
           priority
         />
         <div className="absolute inset-0 bg-black/30 rounded-xl" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
-          <p className="text-xs uppercase tracking-widest mb-3 opacity-80">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-2">
+          <p className="text-xs uppercase tracking-widest mb-3 text-white/80">
             April 2026 · Snowdonia
           </p>
-          <h1 className="font-jomolhari text-4xl md:text-5xl mb-4">
+          <h1 className="font-jomolhari text-4xl md:text-5xl mb-4 text-white">
             Spring Yoga Retreat
           </h1>
           <span className="bg-customSienna text-white text-xs font-semibold px-4 py-1.5 rounded-full">
@@ -91,7 +91,7 @@ const SnowdoniaRetreat = () => {
       </div>
 
       {/* Intro prose */}
-      <div className="max-w-2xl mx-auto text-center mb-12 space-y-4">
+      <div className="w-full text-center mb-12 space-y-4">
         <p className="italic text-customSienna font-semibold">
           As the snow melts from the mountain tops and the streams come alive
           with rushing water, the sleeping land awakens.
@@ -116,7 +116,7 @@ const SnowdoniaRetreat = () => {
       </div>
 
       {/* Dates & venue */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 max-w-2xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 w-full">
         <div className="flex items-start gap-4 border border-customBeige/70 rounded-xl p-5 bg-white">
           <CalendarDays className="w-5 h-5 mt-0.5 shrink-0 text-customTeal" strokeWidth={1.5} />
           <div>
@@ -150,7 +150,7 @@ const SnowdoniaRetreat = () => {
       </div>
 
       {/* Rose's personal note */}
-      <div className="max-w-2xl mx-auto mb-12 text-center space-y-4">
+      <div className="w-full mb-12 text-center space-y-4">
         <p>
           Come and spend deep, reconnecting time on the mat, and deep,
           reconnecting time in nature. There&apos;ll be moments for reflection,
@@ -170,7 +170,7 @@ const SnowdoniaRetreat = () => {
       {/* What's included */}
       <div className="mb-12">
         <h2 className="text-center mb-8">What&apos;s Included</h2>
-        <p className="text-center text-black/60 text-sm max-w-xl mx-auto mb-8">
+        <p className="text-center text-black/60 text-sm w-full mb-8">
           Everything is taken care of, so you can simply arrive, breathe in the
           beauty of the valley, and allow yourself to be restored and
           revitalised.
