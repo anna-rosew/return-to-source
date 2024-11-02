@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Jomolhari&family=Jost:wght@400&display=swap");
+
 :root {
-  --background: #ffffff;
+  --background: #f6ece1;
   --foreground: #171717;
 }
 
@@ -17,5 +19,32 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-sans;
+}
+
+h1 {
+  @apply font-jomolhari font-normal text-[40px] text-[black];
+}
+
+h2 {
+  @apply font-jomolhari font-normal text-[25px] text-[black];
+}
+
+h3 {
+  @apply font-jost font-normal uppercase text-[15px] text-black;
+}
+
+/* Subtitle styles */
+.subtitle {
+  @apply font-jost font-normal uppercase opacity-70 text-[15px] m-[10px] text-[black];
+}
+
+/* Paragraph styles */
+p {
+  @apply font-jost font-normal leading-[25px] tracking-[0.3px] text-[black];
+}
+
+/* Link styles */
+a {
+  @apply no-underline;
 }
