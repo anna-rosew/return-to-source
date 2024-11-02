@@ -34,17 +34,18 @@ h3 {
   @apply font-jost font-normal uppercase text-[15px] text-black;
 }
 
-/* Subtitle styles */
 .subtitle {
   @apply font-jost font-normal uppercase opacity-70 text-[15px] m-[10px] text-[black];
 }
 
-/* Paragraph styles */
 p {
   @apply font-jost font-normal leading-[25px] tracking-[0.3px] text-[black];
 }
 
-/* Link styles */
 a {
-  @apply no-underline;
+  @apply cursor-pointer;
+}
+
+Link {
+  @apply cursor-pointer;
 }

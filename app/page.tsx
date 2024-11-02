@@ -1,9 +1,9 @@
-import { Navbar } from "../app/Components/Navbar";
-
 export default function Home() {
   return (
     <div>
-      <Navbar />
+      <h1 className="uppercase text-12 leading-[3] text-center">
+        Breath - Mind - Body
+      </h1>
     </div>
   );
 }
