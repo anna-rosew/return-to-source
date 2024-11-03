@@ -1,4 +1,5 @@
 import HeroImage from "@/app/Components/HeroImage";
+import DefaultButton from "@/app/Components/DefaultButton";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
         Breath - Mind - Body
       </h1>
       <HeroImage />
+      <DefaultButton text="Start your journey" />
     </div>
   );
 }
