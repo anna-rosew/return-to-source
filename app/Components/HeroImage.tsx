@@ -20,6 +20,7 @@ export default function HeroImage() {
           alt="Person walking through a round pebble maze on a sandy beach on a clear day."
           fill
           className="rounded-lg object-cover"
+          placeholder="blur"
         />
       </div>
     </div>
