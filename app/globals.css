@@ -23,23 +23,19 @@ body {
 }
 
 h1 {
-  @apply font-jomolhari font-normal text-[40px] text-[black];
+  @apply font-jomolhari text-[2.2rem] font-normal text-black md:text-[2rem] lg:text-[2.5rem];
 }
 
 h2 {
-  @apply font-jomolhari font-normal text-[25px] text-[black];
+  @apply font-jost text-[1.8rem] font-normal text-black md:text-[1.6rem] lg:text-[2rem];
 }
 
 h3 {
-  @apply font-jost font-normal uppercase text-[15px] text-black;
-}
-
-.subtitle {
-  @apply font-jost font-normal uppercase opacity-70 text-[15px] m-[10px] text-[black];
+  @apply font-jost uppercase text-[1.5rem] font-normal text-black md:text-[1.3rem] lg:text-[1.8rem];
 }
 
 p {
-  @apply font-jost font-normal leading-[25px] tracking-[0.3px] text-[black];
+  @apply font-jost leading-[1.5em] text-[1rem] text-black tracking-[0.02em] md:text-[1.1rem] lg:text-[1.2rem];
 }
 
 a {
