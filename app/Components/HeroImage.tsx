@@ -7,8 +7,8 @@ export default function HeroImage() {
       <div
         className="
           relative
-          w-[360px] h-[380px]
-          md:w-[883px] md:h-[462px]  
+          w-[360px] h-[300px]
+          md:w-[883px] md:h-[400px]  
           p-3                          
           md:px-[280px] md:py-[29px]  
           flex-shrink-0               

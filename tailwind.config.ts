@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customTeal: "#356D65",
+        customBeige: "#CABB9D",
+        customGreen: "#BACA9E",
+        customSienna: "#A75844",
       },
       fontFamily: {
         jomolhari: ["Jomolhari", "serif"],
