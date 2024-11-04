@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <div className="relative flex flex-col justify-left items-left lg:justify-center lg:items-center overflow-hidden">
       {/* Content */}
-      <h1 className="uppercase text-[28px] lg:text-[48px] leading-2 text-left lg:text-center pt-20 pl-4">
+      <h4 className="uppercase text-[28px] lg:text-[48px] leading-2 text-left lg:text-center pt-20 pl-4 font-neato">
         Breath - Mind - Body
-      </h1>
+      </h4>
       <p className="p-4 lg:mx-[290px] lg:text-center text-customTeal">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.

@@ -17,6 +17,7 @@ const config: Config = {
         customSienna: "#A75844",
       },
       fontFamily: {
+        neato: ["neato-serif", "serif"],
         jomolhari: ["Jomolhari", "serif"],
         jost: ["Jost", "sans-serif"],
       },

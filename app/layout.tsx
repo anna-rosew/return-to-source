@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Head from "next/head";
+
 import "./globals.css";
 import { Navbar } from "../app/Components/Navbar";
 
@@ -15,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="stylesheet" href="https://use.typekit.net/kli2wwi.css" />
+      </Head>
       <body>
         <Navbar />
         {children}
