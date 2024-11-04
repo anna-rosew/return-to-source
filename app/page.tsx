@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import HeroImage from "@/app/Components/HeroImage";
 import DefaultButton from "@/app/Components/DefaultButton";
-
-
+import BlackButton from "@/app/Components/BlackButton";
+import PlainButton from "@/app/Components/PlainButton";
 
 export default function Home() {
   return (

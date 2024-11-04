@@ -20,7 +20,7 @@ const BlackButton: React.FC<ButtonProps> = ({
 }) => {
   const colorClasses = {
     primary:
-      "bg-black text-customBeige border-black hover:bg-customBeige hover:text-black",
+      "bg-black text-white border-black hover:bg-customBeige hover:text-black",
     secondary: "bg-gray-600 text-white border-gray-600 hover:bg-gray-700",
     danger: "bg-red-600 text-white border-red-600 hover:bg-red-700",
     success: "bg-green-600 text-white border-green-600 hover:bg-green-700",

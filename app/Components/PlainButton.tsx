@@ -19,7 +19,8 @@ const PlainButton: React.FC<ButtonProps> = ({
   type = "button",
 }) => {
   const colorClasses = {
-    primary: "text-black border-black hover:bg-black hover:text-customBeige",
+    primary:
+      "text-black border-black border-[1px] hover:bg-black hover:text-white",
     secondary:
       "text-gray-600 border-gray-600 hover:bg-gray-600 hover:text-white",
     danger: "text-red-600 border-red-600 hover:bg-red-600 hover:text-white",
