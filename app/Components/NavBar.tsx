@@ -15,7 +15,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="flex w-full items-center justify-between px-5 py-4 border-b-2 border-black lg:container lg:mx-auto lg:px-5">
+    <nav className="flex w-full items-center justify-between px-5 py-4 border-b-[1px] border-black lg:container lg:mx-auto lg:px-5">
       <div className="flex items-center">
         <Link href="/">
           <Image
@@ -25,12 +25,12 @@ export function Navbar() {
             className="cursor-pointer"
           />
         </Link>
-        <div className="hidden lg:flex p-5 gap-x-[40px]">
+        <div className="hidden lg:flex px-10 gap-x-[48px]">
           {navLinks.map((item, index) => (
             <Link
               href={item.link}
               key={index}
-              className="font-jost text-[18px] text-black text-lg uppercase relative hover:text-black cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-black after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
+              className="font-jost text-[18px] text-black text-lg uppercase relative hover:text-black cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-black after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
             >
               {item.name}
             </Link>
