@@ -1,7 +1,13 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+
+import DefaultButton from "@/app/Components/DefaultButton";
+import BlackButton from "../Components/BlackButton";
+
+import Login from "@/public/Assets/register.webp";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -45,45 +51,81 @@ export default function Register() {
   };
 
   return (
-    <main className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-xl font-semibold mb-6">Register</h2>
+    <main className="flex items-center justify-center min-h-screen bg-none">
+      <div className="flex flex-col md:flex-row items-stretch container p-4 border-[1px] border-black  rounded-lg w-4/5 h-2/5">
+        {/* Image Section */}
+        <div className="md:w-1/2 flex items-center p-1">
+          <Image
+            src={Login}
+            alt="Artwork by Lynn Hanford-Day - https://www.sacredintuitiveart.com/gallery?itemId=7o2d2o8ss49rq1dd1lr0gsbwbfhabb"
+            className="object-cover w-full h-full rounded-lg"
+          />
+        </div>
+        {/* Text Section */}
+        <div className="md:w-1/2 flex items-center mx-20">
+          <div>
+            <h1 className="mb-6 text-center">Create an account</h1>
+            <p className="font-medium opacity-75 text-center">
+              Create an account to start booking classes, accessing exclusive
+              playbacks and more.
+            </p>
 
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="border border-gray-300 rounded-md p-2 mb-4 w-full"
-            placeholder="Your name"
-            required
-          />
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="border border-gray-300 rounded-md p-2 mb-4 w-full"
-            placeholder="Your email"
-            required
-          />
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="border border-gray-300 rounded-md p-2 mb-4 w-full"
-            placeholder="Your password"
-            required
-          />
-          <button
-            type="submit"
-            className={`w-full py-2 rounded-md text-white ${
-              loading ? "bg-gray-400" : "bg-blue-600 hover:bg-blue-700"
-            } transition`}
-            disabled={loading || !name || !email || !password}
-          >
-            {loading ? "Please wait..." : "Submit"}
-          </button>
-        </form>
+            <form onSubmit={handleSubmit}>
+              <label
+                htmlFor="name"
+                className="block text-gray-700 font-medium mb-1"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="border bg-[#D9D9D9] border-black rounded-lg p-2 mb-4 w-full"
+                placeholder="Enter your name"
+                required
+              />
+              <label
+                htmlFor="email"
+                className="block text-gray-700 font-medium mb-1"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="border bg-[#D9D9D9] border-black rounded-lg p-2 mb-4 w-full"
+                placeholder="Enter your email"
+                required
+              />
+              <label
+                htmlFor="password"
+                className="block text-gray-700 font-medium mb-1"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="border bg-[#D9D9D9] border-black rounded-lg p-2 mb-4 w-full"
+                placeholder="Enter your password"
+                required
+              />
+              <DefaultButton
+                text={loading ? "Please wait..." : "Submit"}
+                color="primary"
+                size="medium"
+                className="w-full"
+                type="submit"
+                loading={loading}
+                disabled={loading || !name || !email || !password}
+              />
+              <BlackButton text="Login" className="w-full mt-2" />
+            </form>
+          </div>
+        </div>
       </div>
     </main>
   );
