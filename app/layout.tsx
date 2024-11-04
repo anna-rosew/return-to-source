@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import "./globals.css";
 import { Navbar } from "../app/Components/Navbar";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Return to Source",
@@ -22,6 +23,7 @@ export default function RootLayout({
       </Head>
       <body>
         <Navbar />
+        <Toaster />
         {children}
       </body>
     </html>
