@@ -6,7 +6,7 @@ type ButtonProps = {
   size?: "small" | "medium" | "large";
   disabled?: boolean;
   loading?: boolean;
-  type?: "button" | "submit" | "reset"; // Add type to ButtonProps
+  type?: "button" | "submit" | "reset";
 };
 
 const DefaultButton: React.FC<ButtonProps> = ({
