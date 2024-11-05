@@ -48,7 +48,7 @@ export default function Home() {
 /*   <div className="absolute w-[300px] h-[300px] bg-[rgba(67,108,101,0.60)] rounded-full blur-[50px] top-[100px] left-[68px] animate-move-left" />
       <div className="absolute w-[400px] h-[400px] bg-[rgba(202,187,157,1)] rounded-full blur-[50px] top-[209px] right-[40px] animate-move-right"
       import BlackButton from "@/app/Components/BlackButton";
-import PlainButton from "@/app/Components/PlainButton";
+      import PlainButton from "@/app/Components/PlainButton";
       <BlackButton text="Start your journey" />
       <PlainButton text="Start your journey" />
       /> */

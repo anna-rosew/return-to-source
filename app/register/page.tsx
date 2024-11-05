@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -122,7 +123,10 @@ export default function Register() {
                 loading={loading}
                 disabled={loading || !name || !email || !password}
               />
-              <BlackButton text="Login" className="w-full mt-2" />
+
+              <Link href="/login">
+                <BlackButton text="Login" className="w-full mt-2" />
+              </Link>
             </form>
           </div>
         </div>

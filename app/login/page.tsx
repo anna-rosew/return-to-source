@@ -7,7 +7,6 @@ import Link from "next/link";
 import { signIn } from "next-auth/react";
 
 import DefaultButton from "@/app/Components/DefaultButton";
-import BlackButton from "../Components/BlackButton";
 
 import SignIn from "@/public/Assets/register.webp";
 
@@ -100,8 +99,10 @@ export default function Login() {
                 loading={loading}
                 disabled={loading || !email || !password}
               />
-              <Link href="/login">
-                <BlackButton text="Login" className="w-full mt-2" />
+              <Link href="/register">
+                <p className="text-[15px] underline pt-2 opacity-70">
+                  Havent got an account yet?
+                </p>
               </Link>
             </form>
           </div>

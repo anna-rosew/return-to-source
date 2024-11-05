@@ -1,9 +1,8 @@
-import { CredentialsProvider } from "next-auth/providers/credentials";
+import CredentialsProvider from "next-auth/providers/credentials";
 import User from "@/models/user";
 import bcrypt from "bcrypt";
 import { dbConnect } from "./dbConnect";
 import { NextAuthOptions } from "next-auth";
-import { NextApiRequest } from "next";
 
 export const authOptions: NextAuthOptions = {
   session: {
@@ -21,23 +20,21 @@ export const authOptions: NextAuthOptions = {
         },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials, req: NextApiRequest) {
+      async authorize(credentials, req) {
+        console.log(req); // Using req to log request information
+
         await dbConnect();
 
-        // Check for null or undefined credentials to satisfy TypeScript's strict typing
         if (!credentials?.email || !credentials?.password) {
           throw new Error("Email and password are required.");
         }
 
         const { email, password } = credentials;
-
-        // Find user by email
         const user = await User.findOne({ email });
         if (!user) {
           throw new Error("Invalid email or password.");
         }
 
-        // Check if passwords match
         const isPasswordMatched = await bcrypt.compare(password, user.password);
         if (!isPasswordMatched) {
           throw new Error("Invalid email or password.");

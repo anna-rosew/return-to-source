@@ -8,8 +8,8 @@ import User from "../../public/assets/User.svg";
 import Menu from "../../public/assets/Menu.svg";
 
 export function Navbar() {
-  const { data, status, loading } = useSession();
-  console.table({ data, status, loading });
+  const { data, status } = useSession();
+  console.table({ data, status });
   const navLinks = [
     { name: "Home", link: "/" },
     { name: "Work with Me", link: "/work-with-me" },
