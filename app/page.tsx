@@ -8,8 +8,8 @@ export const metadata: Metadata = {
     "Discover how your body, mind, and breath work together for transformation with Rose Long, a dual-qualified Yoga Teacher and Life Coach. Begin your journey of self-awareness and growth through personalized sessions...",
   openGraph: {
     type: "website",
-    url: "https://www.rose-long.com/",
-    images: "https://yourwebsite.com/path-to-image.jpg",
+    url: "https://www.rose-long.com",
+    images: "http://localhost:3000/public/Assets/logo2",
   },
   keywords: [
     "yoga",
