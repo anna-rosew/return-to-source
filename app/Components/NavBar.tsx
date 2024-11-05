@@ -48,10 +48,24 @@ export function Navbar() {
         >
           Open an Account
         </Link>
-        <Link href="/login" className="hidden items-center gap-x-2 lg:flex">
-          <Image src={User} alt="User Profile" width={38} />
-          <span className=" text-[16px]">Sign in</span>
-        </Link>
+        {status === "authenticated" ? (
+          <>
+            <Link
+              href="/dashboard/user"
+              className="hidden items-center gap-x-2 lg:flex"
+            >
+              <Image src={User} alt="User Profile" width={38} />
+              <span className=" text-[16px]">{data?.user?.name}</span>
+            </Link>
+            <a className=" text-[16px]">Logout</a>
+          </>
+        ) : (
+          <Link href="/login" className="hidden items-center gap-x-2 lg:flex">
+            <Image src={User} alt="User Profile" width={38} />
+            <span className=" text-[16px]">Sign in</span>
+          </Link>
+        )}
+
         <Image src={Menu} alt="Menu Button" className="lg:hidden" />
       </div>
     </nav>
