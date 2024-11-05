@@ -1,9 +1,32 @@
-import Image from "next/image";
-
 import HeroImage from "@/app/Components/HeroImage";
 import DefaultButton from "@/app/Components/DefaultButton";
-import BlackButton from "@/app/Components/BlackButton";
-import PlainButton from "@/app/Components/PlainButton";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Rose Long | Return to Source",
+  description:
+    "Discover how your body, mind, and breath work together for transformation with Rose Long, a dual-qualified Yoga Teacher and Life Coach. Begin your journey of self-awareness and growth through personalized sessions...",
+  openGraph: {
+    type: "website",
+    url: "https://www.rose-long.com/",
+    images: "https://yourwebsite.com/path-to-image.jpg",
+  },
+  keywords: [
+    "yoga",
+    "life coaching and yoga",
+    "holistic life coaching",
+    "wellness coaching by Rose",
+    "personal growth coaching",
+    "mindful yoga sessions",
+    "life coach Rose",
+    "stress relief yoga",
+    "yoga for personal growth",
+    "life coach",
+    "Rose yoga and wellness",
+    "yoga and mindfulness coaching",
+    "wellbeing and health",
+  ],
+};
 
 export default function Home() {
   return (

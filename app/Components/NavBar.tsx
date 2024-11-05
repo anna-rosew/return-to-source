@@ -1,11 +1,15 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useSession, signOut } from "next-auth/react";
 
 import Logo from "../../public/assets/Logo.svg";
 import User from "../../public/assets/User.svg";
 import Menu from "../../public/assets/Menu.svg";
 
 export function Navbar() {
+  const { data, status, loading } = useSession();
+  console.table({ data, status, loading });
   const navLinks = [
     { name: "Home", link: "/" },
     { name: "Work with Me", link: "/work-with-me" },
