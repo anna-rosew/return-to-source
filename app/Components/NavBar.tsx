@@ -57,7 +57,12 @@ export function Navbar() {
               <Image src={User} alt="User Profile" width={38} />
               <span className=" text-[16px]">{data?.user?.name}</span>
             </Link>
-            <a className=" text-[16px]">Logout</a>
+            <a
+              className=" text-[16px]"
+              onClick={() => signOut({ callbackUrl: "/login" })}
+            >
+              Logout
+            </a>
           </>
         ) : (
           <Link href="/login" className="hidden items-center gap-x-2 lg:flex">

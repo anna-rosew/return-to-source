@@ -21,7 +21,7 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
-        console.log(req); // Using req to log request information
+        console.log(req);
 
         await dbConnect();
 

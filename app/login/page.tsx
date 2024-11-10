@@ -18,37 +18,35 @@ export default function Login() {
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevent the default form submission behavior
-    setLoading(true); // Set loading state
+    e.preventDefault();
+    setLoading(true);
 
     try {
       const result = await signIn("credentials", {
-        redirect: false, // Prevent automatic redirection
+        redirect: false,
         email,
         password,
       });
 
-      console.log("SignIn Result:", result); // Log the result for debugging
+      console.log("SignIn Result:", result);
 
       if (result?.error) {
-        // Check if there's an error in the result
-        toast.error(result.error); // Display error message
+        toast.error(result.error);
       } else {
-        toast.success("Logged in successfully."); // Display success message
-        router.push("/"); // Redirect to the home page
+        toast.success("Logged in successfully.");
+        router.push("/");
       }
     } catch (err) {
-      console.error("SignIn Error:", err); // Log any unexpected errors
-      toast.error("An error occurred. Please try again."); // Display a generic error message
+      console.error("SignIn Error:", err);
+      toast.error("An error occurred. Please try again.");
     } finally {
-      setLoading(false); // Reset loading state
+      setLoading(false);
     }
   };
 
   return (
     <main className="flex items-center justify-center min-h-screen bg-none">
       <div className="flex flex-col md:flex-row items-stretch container p-4 border-[1px] border-black  rounded-lg w-4/5 h-2/5">
-        {/* Image Section */}
         <div className="md:w-1/2 flex items-center p-1">
           <Image
             src={SignIn}
@@ -56,7 +54,7 @@ export default function Login() {
             className="object-cover w-full h-full rounded-lg"
           />
         </div>
-        {/* Text Section */}
+
         <div className="md:w-1/2 flex items-center mx-20">
           <div>
             <h1 className="mb-6 text-center">Login</h1>

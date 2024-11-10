@@ -13,18 +13,18 @@ const userSchema = new mongoose.Schema(
 
     email: {
       type: String,
-      required: [true, "Email is required."], // Fix: Corrected the error message
+      required: [true, "Email is required."],
       index: true,
       lowercase: true,
       unique: true,
       trim: true,
       minLength: 5,
-      maxLength: 50, // Adjusted max length for typical emails
+      maxLength: 50,
     },
 
     password: {
       type: String,
-      required: [true, "Password is required."], // Added required validation
+      required: [true, "Password is required."],
     },
 
     role: {
@@ -42,14 +42,13 @@ const userSchema = new mongoose.Schema(
       },
       expiresAt: {
         type: Date,
-        default: () => new Date(Date.now() + 10 * 60 * 1000), // 10 mins
+        default: () => new Date(Date.now() + 10 * 60 * 1000),
       },
     },
   },
   { timestamps: true }
 );
 
-// Apply the uniqueValidator plugin to the schema
 userSchema.plugin(uniqueValidator);
 
 export default mongoose.models.User || mongoose.model("User", userSchema);
