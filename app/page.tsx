@@ -1,5 +1,5 @@
 import HeroImage from "@/app/Components/HeroImage";
-import DefaultButton from "@/app/Components/DefaultButton";
+import DefaultButton from "@/app/Components/ui/DefaultButton";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

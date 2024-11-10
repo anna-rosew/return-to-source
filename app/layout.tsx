@@ -2,9 +2,7 @@
 import Head from "next/head";
 
 import "./globals.css";
-import { Navbar } from "../app/Components/Navbar";
-import { Toaster } from "react-hot-toast";
-import { SessionProvider } from "next-auth/react";
+import { Navbar } from "./Components/NavBar";
 
 export default function RootLayout({
   children,
@@ -33,13 +31,13 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
       </Head>
-      <SessionProvider>
-        <body>
+
+      <body>
+        <nav>
           <Navbar />
-          <Toaster />
-          {children}
-        </body>
-      </SessionProvider>
+        </nav>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

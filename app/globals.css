@@ -1,47 +1,59 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Jomolhari&family=Jost:wght@400&display=swap");
-
-:root {
-  --background: #f6ece1;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f6ece1;
+    --foreground: #171717;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    @apply font-sans;
+  }
+
+  h1 {
+    @apply font-jomolhari text-[2.2rem] font-normal text-black md:text-[2rem] lg:text-[2.5rem];
+  }
+
+  h2 {
+    @apply font-jost text-[1.8rem] font-normal text-black md:text-[1.6rem] lg:text-[2rem];
+  }
+
+  h3 {
+    @apply font-jost uppercase text-[1.5rem] font-normal text-black md:text-[1.3rem] lg:text-[1.8rem];
+  }
+
+  p {
+    @apply font-jost leading-[1.5em] text-[1rem] text-black tracking-[0.02em] md:text-[1.1rem] lg:text-[1.2rem];
+  }
+
+  a {
+    @apply cursor-pointer;
+  }
+
+  Link {
+    @apply cursor-pointer;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  @apply font-sans;
+@tailwind components;
+@layer components {
+  .nav-links {
+    @apply font-jost text-[16px] text-black text-lg uppercase relative hover:text-black cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-black after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%];
+  }
+
+  .button {
+    @apply rounded-lg uppercase border-1 tracking-wide border transition-colors duration-700 ease-in-out;
+  }
 }
 
-h1 {
-  @apply font-jomolhari text-[2.2rem] font-normal text-black md:text-[2rem] lg:text-[2.5rem];
-}
+@tailwind utilities;
 
-h2 {
-  @apply font-jost text-[1.8rem] font-normal text-black md:text-[1.6rem] lg:text-[2rem];
-}
-
-h3 {
-  @apply font-jost uppercase text-[1.5rem] font-normal text-black md:text-[1.3rem] lg:text-[1.8rem];
-}
-
-p {
-  @apply font-jost leading-[1.5em] text-[1rem] text-black tracking-[0.02em] md:text-[1.1rem] lg:text-[1.2rem];
-}
-
-a {
-  @apply cursor-pointer;
-}
-
-Link {
-  @apply cursor-pointer;
-}
+@import url("https://fonts.googleapis.com/css2?family=Jomolhari&family=Jost:wght@400&display=swap");
