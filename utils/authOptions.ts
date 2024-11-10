@@ -20,9 +20,7 @@ export const authOptions: NextAuthOptions = {
         },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials, req) {
-        console.log(req);
-
+      async authorize(credentials) {
         await dbConnect();
 
         if (!credentials?.email || !credentials?.password) {
