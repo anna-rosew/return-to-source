@@ -1,6 +1,7 @@
 import HeroImage from "@/app/Components/HeroImage";
-import DefaultButton from "@/app/Components/ui/DefaultButton";
+import DefaultButton from "@/app/Components/DefaultButton";
 import { Metadata } from "next";
+import HomeScroll from "./Components/HomeScroll";
 
 export const metadata: Metadata = {
   title: "Rose Long | Return to Source",
@@ -41,6 +42,9 @@ export default function Home() {
       </p>
       <HeroImage />
       <DefaultButton text="Start your journey" className="my-5 mx-2" />
+      <div className="h-full w-full bg-black">
+        <HomeScroll />
+      </div>
     </div>
   );
 }

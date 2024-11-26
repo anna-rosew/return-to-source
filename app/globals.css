@@ -1,59 +1,112 @@
 @tailwind base;
+
+/* Body Font Style */
+body {
+  @apply font-sans;
+}
+
+/* Base Layer Styles */
 @layer base {
-  :root {
-    --background: #f6ece1;
-    --foreground: #171717;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #0a0a0a;
-      --foreground: #ededed;
-    }
-  }
-
-  body {
-    color: var(--foreground);
-    background: var(--background);
-    @apply font-sans;
-  }
-
+  /* Headings */
   h1 {
     @apply font-jomolhari text-[2.2rem] font-normal text-black md:text-[2rem] lg:text-[2.5rem];
   }
-
   h2 {
     @apply font-jost text-[1.8rem] font-normal text-black md:text-[1.6rem] lg:text-[2rem];
   }
-
   h3 {
     @apply font-jost uppercase text-[1.5rem] font-normal text-black md:text-[1.3rem] lg:text-[1.8rem];
   }
-
+  /* Paragraphs */
   p {
     @apply font-jost leading-[1.5em] text-[1rem] text-black tracking-[0.02em] md:text-[1.1rem] lg:text-[1.2rem];
   }
-
-  a {
+  /* Links */
+  a,
+  Link {
     @apply cursor-pointer;
   }
 
-  Link {
-    @apply cursor-pointer;
+  /* CSS Variables for Light Mode */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.3rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  /* CSS Variables for Dark Mode */
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  /* Border and Background Styles */
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
 @tailwind components;
+
+/* Components Layer */
 @layer components {
   .nav-links {
-    @apply font-jost text-[16px] text-black text-lg uppercase relative hover:text-black cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-black after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%];
-  }
-
-  .button {
-    @apply rounded-lg uppercase border-1 tracking-wide border transition-colors duration-700 ease-in-out;
+    @apply font-jost text-[16px] text-black text-lg uppercase relative hover:text-black cursor-pointer transition-all ease-in-out;
+    @apply before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-black;
+    @apply before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%];
+    @apply after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-black;
+    @apply after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%];
   }
 }
 
 @tailwind utilities;
 
+/* Google Fonts Import */
 @import url("https://fonts.googleapis.com/css2?family=Jomolhari&family=Jost:wght@400&display=swap");
