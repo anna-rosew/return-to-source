@@ -1,5 +1,11 @@
 import Link from "next/link";
+
+//images
 import Image from "next/image";
+import AnahataChakra from "@/public/Assets/courage-white.svg";
+import AjnaChakra from "@/public/Assets/clarity-white.svg";
+import MuladharaChakra from "@/public/Assets/presence-white.svg";
+import NextArrow from "@/public/Assets/arrow_forward.svg";
 
 export default function HomeScroll() {
   {
@@ -37,65 +43,42 @@ export default function HomeScroll() {
           className="hidden w-1/2 sm:block"
         />
         <div className="sm:w-1/2 lg:py-[56px] lg:pr-56px">
-          <h3 className="font-medium text-[#0085FF] lg:text-[18px]">
-            Sales Monitoring
-          </h3>
           <h1 className="pt-[12px] text-2xl font-medium text-[#172026] lg:text-[42px] lg:leading-[58px]">
-            Simplify your sales monitoring
+            Build Courage
           </h1>
           <Image
-            src={Feature1}
+            src={AnahataChakra}
             alt="Sales Monitoring"
             className="pt-[24px] sm:hidden"
           />
           <p className="py-[24px] text-[#36485C] lg:text-[18px]">
-            Stay on top of things and revamp your work process with our
-            game-changing feature. Get a birds eye view with our customizable
-            dashboard.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. 
           </p>
-          <ul className="flex flex-col gap-y-3 lg:text-[18px]">
-            <li className="flex items-center gap-x-2 text-[#36485C]">
+          <Link href="/work">
+            <p className="flex items-center gap-x-2 pt-6 font-medium text-[#0085FF] lg:text-[18px]">
+              Learn More{" "}
               <span>
-                <Image src={Check} alt="check-mark" />
+                <Image src={NextArrow} alt="Learn More" />
               </span>
-              Lorem ipsum dolor sit amet
-            </li>
-            <li className="flex items-center gap-x-2 text-[#36485C]">
-              <span>
-                <Image src={Check} alt="check-mark" />
-              </span>
-              Lorem ipsum dolor sit amet
-            </li>
-            <li className="flex items-center gap-x-2 text-[#36485C]">
-              <span>
-                <Image src={Check} alt="check-mark" />
-              </span>
-              Lorem ipsum dolor sit amet
-            </li>
-          </ul>
-          <p className="flex items-center gap-x-2 pt-6 font-medium text-[#0085FF] lg:text-[18px]">
-            Learn More{" "}
-            <span>
-              <Image src={BlueButton} alt="Learn More" />
-            </span>
-          </p>
+            </p>
+          </Link>
         </div>
       </div>
       <div className="flex flex-col gap-x-6 sm:flex-row">
         <Image
-          src={Feature2}
+          src={AjnaChakra}
           alt="Growth Monitoring"
           className="hidden w-1/2 sm:block"
         />
         <div className="sm:w-1/2 lg:py-[56px] lg:pl-56px">
-          <h3 className="font-medium text-[#00A424] lg:text-[18px]">
-            Growth Monitoring
-          </h3>
           <h1 className="pt-[12px] text-2xl font-medium text-[#172026] lg:text-[42px] lg:leading-[58px]">
             Monitor your site’s new subscribers
           </h1>
           <Image
-            src={Feature2}
+            src={AjnaChakra}
             alt="Growth Monitoring"
             className="pt-[24px] sm:hidden"
           />
@@ -104,37 +87,19 @@ export default function HomeScroll() {
             game-changing feature. Get a birds eye view with our customizable
             dashboard.
           </p>
-          <ul className="flex flex-col gap-y-3 lg:text-[18px]">
-            <li className="flex items-center gap-x-2 text-[#36485C]">
+          <Link href="/work">
+            <p className="flex items-center gap-x-2 pt-6 font-medium text-[#0085FF] lg:text-[18px]">
+              Learn More{" "}
               <span>
-                <Image src={Check} alt="check-mark" />
+                <Image src={NextArrow} alt="Learn More" />
               </span>
-              Lorem ipsum dolor sit amet
-            </li>
-            <li className="flex items-center gap-x-2 text-[#36485C]">
-              <span>
-                <Image src={Check} alt="check-mark" />
-              </span>
-              Lorem ipsum dolor sit amet
-            </li>
-            <li className="flex items-center gap-x-2 text-[#36485C]">
-              <span>
-                <Image src={Check} alt="check-mark" />
-              </span>
-              Lorem ipsum dolor sit amet
-            </li>
-          </ul>
-          <p className="flex items-center gap-x-2 pt-6 font-medium text-[#00A424] lg:text-[18px]">
-            Learn More{" "}
-            <span>
-              <Image src={GreenButton} alt="Learn More" />
-            </span>
-          </p>
+            </p>
+          </Link>
         </div>
       </div>
       <div className="flex flex-col gap-x-6 sm:flex-row-reverse">
         <Image
-          src={Feature3}
+          src={MuladharaChakra}
           alt="Sales Monitoring"
           className="hidden w-1/2 sm:block"
         />
@@ -146,7 +111,7 @@ export default function HomeScroll() {
             Monitor your sites new subscribers
           </h1>
           <Image
-            src={CourageChakra}
+            src={MuladharaChakra}
             alt="Growth Monitoring"
             className="pt-[24px] sm:hidden"
           />
@@ -165,13 +130,14 @@ export default function HomeScroll() {
               <p className="text-[#36485C]">Lorem ipsum dolor si</p>
             </div>
           </div>
-
-          <p className="flex items-center gap-x-2 pt-6 font-medium text-[#EB2891] lg:text-[18px]">
-            Learn More{" "}
-            <span>
-              <Image src={ArrowButton} alt="Learn More" />
-            </span>
-          </p>
+          <Link href="/work">
+            <p className="flex items-center gap-x-2 pt-6 font-medium text-[#0085FF] lg:text-[18px]">
+              Learn More{" "}
+              <span>
+                <Image src={NextArrow} alt="Learn More" />
+              </span>
+            </p>
+          </Link>
         </div>
       </div>
     </div>
