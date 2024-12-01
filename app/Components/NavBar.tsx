@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-
 import Logo from "../../public/assets/Logo.svg";
 import User from "../../public/assets/User.svg";
 import Menu from "../../public/assets/Menu.svg";
+import { Button } from "./ui/button";
 
 export function Navbar() {
   const navLinks = [
@@ -28,9 +28,14 @@ export function Navbar() {
         </Link>
         <div className="hidden lg:flex px-10 gap-x-[48px]">
           {navLinks.map((item, index) => (
-            <Link href={item.link} key={index} className="nav-links">
+            <Button
+              variant="link"
+              href={item.link}
+              key={index}
+              className="pb-0"
+            >
               {item.name}
-            </Link>
+            </Button>
           ))}
         </div>
       </div>

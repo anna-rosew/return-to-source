@@ -2,7 +2,7 @@
 import Head from "next/head";
 
 import "./globals.css";
-import { Navbar } from "./Components/NavBar";
+import { Navbar } from "./components/NavBar";
 
 export default function RootLayout({
   children,

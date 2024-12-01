@@ -1,7 +1,7 @@
-import HeroImage from "@/app/Components/HeroImage";
-import DefaultButton from "@/app/Components/DefaultButton";
+import HeroImage from "@/app/components/HeroImage";
 import { Metadata } from "next";
-import HomeScroll from "./Components/HomeScroll";
+import HomeScroll from "./components/HomeScroll";
+import { Button } from "./components/ui/button";
 
 export const metadata: Metadata = {
   title: "Rose Long | Return to Source",
@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className="relative flex flex-col justify-left items-left lg:justify-center lg:items-center overflow-hidden">
       {/* Content */}
-      <h4 className="uppercase text-[28px] lg:text-[48px] leading-2 text-left lg:text-center pt-20 pl-4 font-neato">
+      <h4 className="uppercase text-[28px] lg:text-[48px] leading-2 text-left lg:text-center pt-10 pl-4 font-neato">
         Breath - Mind - Body
       </h4>
       <p className="p-4 lg:mx-[290px] lg:text-center text-customTeal">
@@ -41,7 +41,9 @@ export default function Home() {
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
       <HeroImage />
-      <DefaultButton text="Start your journey" className="my-5 mx-2" />
+      <Button variant="primary" size="lg" className="my-5 mx-2 " href="/work">
+        Start my journey
+      </Button>
       <div className="h-full w-full bg-black">
         <HomeScroll />
       </div>
