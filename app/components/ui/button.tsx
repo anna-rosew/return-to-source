@@ -1,12 +1,12 @@
 import React from "react";
-import { cn } from "@/lib/utils"; // Assuming this utility function is available
+import { cn } from "@/lib/utils";
 
 interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   variant?: "primary" | "secondary" | "outline" | "white-outline" | "link";
   size?: "sm" | "md" | "lg";
-  as?: "button" | "a"; // Allow switching between button and anchor elements
-  href?: string; // Only for links
+  as?: "button" | "a";
+  href?: string;
 }
 
 const Button = React.forwardRef<
