@@ -1,7 +1,7 @@
 import React from "react";
-import Logo from "../styles/imgs/icons/logo_white.svg";
-import InstaIcon from "../styles/imgs/icons/insta-footer.svg";
-import VimeoIcon from "../styles/imgs/icons/footer-vimeo.svg";
+import LogoWhite from "../../public/assets/logo_white.svg";
+import InstaIcon from "../../public/assets/insta-footer.svg";
+import VimeoIcon from "../../public/assets/footer-vimeo.svg";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -18,116 +18,88 @@ const Footer = () => {
 
   const aboutLinks = [
     { name: "Approach", link: "/approach" },
-    { name: "About", link: "/" },
-    { name: "Qualifications", link: "/groups" },
+    { name: "About", link: "/about" },
+    { name: "Qualifications", link: "/about" },
   ];
 
   const resourceLinks = [
-    { name: "Blog", link: "/group" },
-    { name: "Contact", link: "/onetoone" },
-    { name: "Members Portal", link: "/groups" },
-    { name: "Newsletter", link: "/groups" },
+    { name: "Blog", link: "/blog" },
+    { name: "Contact", link: "/contact" },
+    { name: "Members Portal", link: "/dashboard" },
+    { name: "Newsletter", link: "/" },
   ];
   return (
-    <div>
-      <div className="w-100 mt-6 bg-customSienna text-white">
-        <div className="grid-cols-2 gap-12 p-6">
-          <div className="flex flex-col items-center gap-2">
-            <div className="items-center">
-              <Link href="/">
-                <Image src={Logo} alt="Rose Long Logo" className="h-16" />
-              </Link>
-              <div>
-                <Link
-                  href="https://www.instagram.com/lifechangesrose/?hl=en"
-                  className="h-12 inline-block m-2.5"
-                >
-                  <Image src={InstaIcon} alt="Instagram" />
-                </Link>
-                <Link
-                  href="https://vimeo.com/roselong"
-                  className="h-12 inline-block m-2.5"
-                >
-                  <Image src={VimeoIcon} alt="Vimeo" />
-                </Link>
-              </div>
-              <Link href="/contact">
-                <Button variant="secondary">Get in Touch</Button>
-              </Link>
-              <div className="mb-2">
-                <p>
-                  Website built by{" "}
-                  <Link href="https://annarosewain.com/"> Anna-Rose Wain </Link>{" "}
-                  | Artwork by{" "}
-                  <Link href="https://www.sacredintuitiveart.com/about">
-                    Lynn Hanford Day - Sacred Intuitive Art
-                  </Link>
-                </p>
-              </div>{" "}
-            </div>
-          </div>
-
-          <div className="flex flex-wrap justify-between">
+    <div className="w-full m-0 bg-customSienna text-white">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
+        <div className="order-last md:order-first grid grid-rows-3 gap-2 items-center">
+          <div className="items-center">
+            <Link href="/">
+              <Image src={LogoWhite} alt="Rose Long Logo" height={64} />
+            </Link>
             <div>
-              <h3>services</h3>
-              <ul>
+              <Link
+                href="https://www.instagram.com/lifechangesrose/?hl=en"
+                className=" inline-block m-2.5"
+              >
+                <Image src={InstaIcon} alt="Instagram" height={48} width={48} />
+              </Link>
+              <Link
+                href="https://vimeo.com/roselong"
+                className="inline-block m-2.5"
+              >
+                <Image src={VimeoIcon} alt="Vimeo" height={48} width={48} />
+              </Link>
+            </div>
+            <Link href="/contact">
+              <Button variant="secondary">Get in Touch</Button>
+            </Link>
+            <div className="mb-2">
+              <p>
+                Website built by{" "}
+                <Link href="https://annarosewain.com/"> Anna-Rose Wain </Link> |
+                Artwork by{" "}
+                <Link href="https://www.sacredintuitiveart.com/about">
+                  Lynn Hanford Day - Sacred Intuitive Art
+                </Link>
+              </p>
+            </div>{" "}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-3 items-center justify-between">
+          <div>
+            <h3>services</h3>
+            <ul>
+              <li className="white-links">
                 {serviceLinks.map((item, index) => (
-                  <Link
-                    href={item.link}
-                    key={index}
-                    className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0"
-                  >
-                    <li>{item.name}</li>
+                  <Link href={item.link} key={index} className="footer-links">
+                    {item.name}
                   </Link>
                 ))}
-                <li>
-                  <Link href="/groups">Groups Overview</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="list">
+            <h3>about</h3>
+            <ul>
+              <li>
+                {aboutLinks.map((item, index) => (
+                  <Link href={item.link} key={index} className="footer-links">
+                    <li className="white-links">{item.name}</li>
+                  </Link>
+                ))}
+              </li>
+            </ul>
+          </div>
+          <div className="list">
+            <h3>resources</h3>
+            <ul className="list-none p-0">
+              {resourceLinks.map((item, index) => (
+                <li key={index} className="white-links mb-2">
+                  <Link href={item.link}>{item.name}</Link>
                 </li>
-                <li>
-                  <Link to="/onetoone">One-To-Ones</Link>
-                </li>
-                <li>
-                  <Link to="/groups">Online Groups</Link>
-                </li>
-                <li>
-                  <Link to="/inperson">In-Person Sessions</Link>
-                </li>
-                <li>
-                  <Link to="/retreats">Retreats</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="list">
-              <h3>about</h3>
-              <ul>
-                <li>
-                  <Link to="/approach">Approach</Link>
-                </li>
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>
-                  <Link to="/qualifications">Qualifications</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="list">
-              <h3>resources</h3>
-              <ul>
-                <li>
-                  <Link to="/blog">Blog</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Newsletter</Link>
-                </li>
-                <li>
-                  <Link to="/membership">Membership</Link>
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

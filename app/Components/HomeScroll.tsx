@@ -35,7 +35,7 @@ export default function HomeScroll() {
   }
 
   return (
-    <div className="flex flex-col gap-y-[56px] lg:gap-y-[80px] lg:gap-y-[80px]lg:py-[120px] py-[56px] px-4">
+    <div className="flex flex-col gap-y-[56px] lg:gap-y-[80px] lg:py-[120px] py-[56px] px-4">
       <div className="flex flex-col gap-x-12 items-center sm:flex-row-reverse w-full max-w-screen-lg mx-auto justify-center">
         <Image
           src={AnahataChakra}
