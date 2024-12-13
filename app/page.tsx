@@ -2,6 +2,7 @@ import HeroImage from "@/app/components/HeroImage";
 import { Metadata } from "next";
 import HomeScroll from "./components/HomeScroll";
 import { Button } from "./components/ui/button";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Rose Long | Return to Source",
@@ -47,6 +48,7 @@ export default function Home() {
       <div className="h-full w-full bg-black">
         <HomeScroll />
       </div>
+      <Footer />
     </div>
   );
 }
