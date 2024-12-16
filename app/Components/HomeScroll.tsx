@@ -43,8 +43,10 @@ export default function HomeScroll() {
           className="hidden w-2/5 sm:block"
         />
         <div className="sm:w-1/2 lg:py-[56px] sm:px-10">
-          <h3 className="text-[1rem] text-customBeige">Anahata</h3>
-          <h1 className="pt-[12px] text-2xl font-medium text-white lg:text-[42px] lg:leading-[58px]">
+          <h3 className="text-[1rem] text-customBeige text-center md:text-left">
+            Anahata
+          </h3>
+          <h1 className="pt-[12px] text-2xl font-medium text-white lg:text-[42px] lg:leading-[58px] text-center md:text-left">
             Build Courage
           </h1>
           <div className="block sm:hidden lg:w-[600px] lg:h-[600px] mx-auto">
@@ -54,22 +56,25 @@ export default function HomeScroll() {
               className="pt-7"
             />
           </div>
-          <p className="py-[24px] text-white lg:text-[18px]">
+          <p className="py-[24px] text-white lg:text-[18px] text-center md:text-left">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. 
+            aliquip ex ea commodo consequat.
           </p>
           <Link href="/work">
-            <p className="flex items-center gap-x-2 pt-1 sm:pt-6 font-medium text-customGreen lg:text-[18px] ">
-              Learn More{" "}
-              <span>
-                <ChevronRight />
-              </span>
-            </p>
+            <div className="flex items-center justify-center md:justify-start">
+              <p className="flex items-center gap-x-2 pt-1 sm:pt-6 font-medium text-customGreen lg:text-[18px] text-center md:text-left">
+                Learn More{" "}
+                <span>
+                  <ChevronRight />
+                </span>
+              </p>
+            </div>
           </Link>
         </div>
       </div>
+
       <div className="flex flex-col gap-x-12 sm:flex-row items-center w-full max-w-screen-lg mx-auto justify-center">
         <Image
           src={AjnaChakra}
@@ -77,8 +82,10 @@ export default function HomeScroll() {
           className="hidden w-2/5 sm:block"
         />
         <div className="sm:w-1/2 lg:py-[56px] sm:px-10">
-          <h3 className="text-[1rem] text-customBeige">Ajna</h3>
-          <h1 className="pt-[12px] text-2xl font-medium text-white lg:text-[42px] lg:leading-[58px]">
+          <h3 className="text-[1rem] text-customBeige text-center md:text-left">
+            Ajna
+          </h3>
+          <h1 className="pt-[12px] text-2xl font-medium text-white lg:text-[42px] lg:leading-[58px] text-center md:text-left">
             Find Clarity
           </h1>
           <div className="block sm:hidden lg:w-[600px] lg:h-[600px] mx-auto">
@@ -88,19 +95,21 @@ export default function HomeScroll() {
               className="pt-7"
             />
           </div>
-          <p className="py-[24px] text-white lg:text-[18px]">
+          <p className="py-[24px] text-white lg:text-[18px] text-center md:text-left">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. 
+            aliquip ex ea commodo consequat.
           </p>
           <Link href="/work">
-            <p className="flex items-center gap-x-2 pt-1 sm:pt-6 font-medium text-customGreen lg:text-[18px] ">
-              Learn More{" "}
-              <span>
-                <ChevronRight />
-              </span>
-            </p>
+            <div className="flex items-center justify-center md:justify-start">
+              <p className="flex items-center gap-x-2 pt-1 sm:pt-6 font-medium text-customGreen lg:text-[18px] text-center md:text-left">
+                Learn More{" "}
+                <span>
+                  <ChevronRight />
+                </span>
+              </p>
+            </div>
           </Link>
         </div>
       </div>
@@ -112,8 +121,10 @@ export default function HomeScroll() {
           className="hidden w-2/5 sm:block"
         />
         <div className="sm:w-1/2 lg:py-[56px] sm:px-10">
-          <h3 className="text-[1rem] text-customBeige">Muladhara</h3>
-          <h1 className="pt-[12px] text-2xl font-medium text-white lg:text-[42px] lg:leading-[58px]">
+          <h3 className="text-[1rem] text-customBeige text-center md:text-left">
+            Muladhara
+          </h3>
+          <h1 className="pt-[12px] text-2xl font-medium text-white lg:text-[42px] lg:leading-[58px] text-center md:text-left">
             Be Present
           </h1>
           <div className="block sm:hidden lg:w-[600px] lg:h-[600px] mx-auto">
@@ -123,19 +134,21 @@ export default function HomeScroll() {
               className="pt-7"
             />
           </div>
-          <p className="py-[24px] text-white lg:text-[18px]">
+          <p className="py-[24px] text-white lg:text-[18px] text-center md:text-left">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. 
+            aliquip ex ea commodo consequat.
           </p>
           <Link href="/work">
-            <p className="flex items-center gap-x-2 pt-1 sm:pt-6 font-medium text-customGreen lg:text-[18px] ">
-              Learn More{" "}
-              <span>
-                <ChevronRight />
-              </span>
-            </p>
+            <div className="flex items-center justify-center md:justify-start">
+              <p className="flex items-center gap-x-2 pt-1 sm:pt-6 font-medium text-customGreen lg:text-[18px] text-center md:text-left">
+                Learn More{" "}
+                <span>
+                  <ChevronRight />
+                </span>
+              </p>
+            </div>
           </Link>
         </div>
       </div>
