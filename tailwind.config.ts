@@ -62,6 +62,14 @@ const config: Config = {
         jost: ["Jost", "sans-serif"],
       },
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        fadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
         "scale-and-move-left": {
           "0%": {
             transform: "translate3d(0%, 0%, 0) scale3d(1, 1, 1)",
@@ -88,6 +96,8 @@ const config: Config = {
       animation: {
         "move-left": "scale-and-move-left 10s ease-in-out infinite",
         "move-right": "scale-and-move-right 10s ease-in-out infinite",
+        fadeIn: "fadeIn 0.5s ease-in-out",
+        fadeOut: "fadeOut 0.5s ease-in-out",
       },
       borderRadius: {
         lg: "var(--radius)",
