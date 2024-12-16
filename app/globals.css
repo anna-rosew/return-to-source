@@ -15,7 +15,7 @@ body {
     @apply font-jost text-[1.8rem] font-normal text-black md:text-[1.6rem] lg:text-[2rem];
   }
   h3 {
-    @apply font-jost uppercase text-[1.5rem] font-normal text-black md:text-[1.3rem] lg:text-[1.8rem];
+    @apply font-jost uppercase text-[1.1rem] font-normal text-black md:text-[1.3rem] lg:text-[1.8rem];
   }
   /* Paragraphs */
   p {
@@ -102,7 +102,7 @@ body {
   }
 
   .white-links {
-    @apply font-jost text-[16px] text-white uppercase relative hover:text-white cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0;
+    @apply font-jost text-[16px] text-white relative hover:text-white cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0;
   }
 }
 

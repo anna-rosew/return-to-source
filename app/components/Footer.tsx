@@ -28,18 +28,24 @@ const Footer = () => {
     { name: "Members Portal", link: "/dashboard" },
     { name: "Newsletter", link: "/" },
   ];
+
   return (
     <div className="w-full m-0 bg-customSienna text-white">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
-        <div className="order-last md:order-first grid grid-rows-3 gap-2 items-center">
-          <div className="items-center">
+        <div className="order-last md:order-first items-center">
+          <div className="items-center text-center md:text-left">
             <Link href="/">
-              <Image src={LogoWhite} alt="Rose Long Logo" height={64} />
+              <Image
+                src={LogoWhite}
+                alt="Rose Long Logo"
+                height={64}
+                className="mx-auto md:mx-1"
+              />
             </Link>
             <div>
               <Link
                 href="https://www.instagram.com/lifechangesrose/?hl=en"
-                className=" inline-block m-2.5"
+                className=" inline-block m-3"
               >
                 <Image src={InstaIcon} alt="Instagram" height={48} width={48} />
               </Link>
@@ -51,52 +57,71 @@ const Footer = () => {
               </Link>
             </div>
             <Link href="/contact">
-              <Button variant="secondary">Get in Touch</Button>
+              <Button variant="secondary" className="my-2">
+                Get in Touch
+              </Button>
             </Link>
-            <div className="mb-2">
-              <p>
+            <div className="my-6">
+              <p className="text-xs text-white leading-6">
                 Website built by{" "}
-                <Link href="https://annarosewain.com/"> Anna-Rose Wain </Link> |
-                Artwork by{" "}
-                <Link href="https://www.sacredintuitiveart.com/about">
+                <Link href="https://annarosewain.com/" className="font-bold">
+                  {" "}
+                  Anna-Rose Wain{" "}
+                </Link>{" "}
+                | Artwork by{" "}
+                <Link
+                  href="https://www.sacredintuitiveart.com/about"
+                  className="font-bold"
+                >
                   Lynn Hanford Day - Sacred Intuitive Art
                 </Link>
               </p>
-            </div>{" "}
+            </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-3 items-center justify-between">
-          <div>
-            <h3>services</h3>
-            <ul>
-              <li className="white-links">
-                {serviceLinks.map((item, index) => (
-                  <Link href={item.link} key={index} className="footer-links">
+        <div className="grid grid-cols-3 items-start justify-between text-center">
+          <div className="flex flex-col items-center">
+            <h3 className="text-white text-base my-4">services</h3>
+            <ul className="list-none p-0">
+              {serviceLinks.map((item, index) => (
+                <li key={index} className="block mb-3">
+                  <Link
+                    className="white-links text-xs leading-6 md:text-base"
+                    href={item.link}
+                  >
                     {item.name}
                   </Link>
-                ))}
-              </li>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className="list">
-            <h3>about</h3>
-            <ul>
-              <li>
-                {aboutLinks.map((item, index) => (
-                  <Link href={item.link} key={index} className="footer-links">
-                    <li className="white-links">{item.name}</li>
+          <div className="flex flex-col items-center">
+            <h3 className="text-white text-base my-4">about</h3>
+            <ul className="list-none p-0">
+              {aboutLinks.map((item, index) => (
+                <li key={index} className="block mb-3">
+                  <Link
+                    className="white-links text-xs leading-6 md:text-base"
+                    href={item.link}
+                  >
+                    {item.name}
                   </Link>
-                ))}
-              </li>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className="list">
-            <h3>resources</h3>
+          <div className="flex flex-col items-center">
+            <h3 className="text-white text-base my-4">resources</h3>
             <ul className="list-none p-0">
               {resourceLinks.map((item, index) => (
-                <li key={index} className="white-links mb-2">
-                  <Link href={item.link}>{item.name}</Link>
+                <li key={index} className="block mb-3">
+                  <Link
+                    className="white-links text-xs leading-6 md:text-base"
+                    href={item.link}
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
