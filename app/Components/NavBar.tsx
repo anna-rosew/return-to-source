@@ -1,4 +1,6 @@
 "use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/assets/Logo.svg";
@@ -7,6 +9,7 @@ import Menu from "../../public/assets/Menu.svg";
 import { Button } from "./ui/button";
 
 export function Navbar() {
+  const [navbar, setNavBar] = useState(false);
   const navLinks = [
     { name: "Home", link: "/" },
     { name: "Work with Me", link: "/work-with-me" },
@@ -15,7 +18,7 @@ export function Navbar() {
     { name: "Blog", link: "/blog" },
   ];
   return (
-    <div className="flex w-full items-center justify-between px-5 py-2 border-b-[1px] border-black lg:container lg:mx-auto lg:px-5">
+    <nav className="flex w-full items-center justify-between px-5 py-2 border-b-[1px] border-black lg:container lg:mx-auto lg:px-5 fixed top-0 left-0 right-0 z-10">
       <div className="flex items-center justify-between">
         <Link href="/">
           <Image
@@ -46,6 +49,6 @@ export function Navbar() {
 
         <Image src={Menu} alt="Menu Button" className="lg:hidden" />
       </div>
-    </div>
+    </nav>
   );
 }

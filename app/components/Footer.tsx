@@ -30,8 +30,8 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full m-0 bg-customSienna text-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
+    <div className="w-full m-0 bg-customSienna text-white ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6 lg:container lg:mx-auto lg:px-5">
         <div className="order-last md:order-first items-center">
           <div className="items-center text-center md:text-left">
             <Link href="/">
@@ -80,9 +80,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 items-start justify-between text-center">
-          <div className="flex flex-col items-center">
-            <h3 className="text-white text-base my-4">services</h3>
+        <div className="grid grid-cols-3 items-start justify-between text-center md:text-left">
+          {/* Services Section */}
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="text-white text-base my-4 text-center md:text-left">
+              services
+            </h3>
             <ul className="list-none p-0">
               {serviceLinks.map((item, index) => (
                 <li key={index} className="block mb-3">
@@ -96,8 +99,12 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col items-center">
-            <h3 className="text-white text-base my-4">about</h3>
+
+          {/* About Section */}
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="text-white text-base my-4 text-center md:text-left">
+              about
+            </h3>
             <ul className="list-none p-0">
               {aboutLinks.map((item, index) => (
                 <li key={index} className="block mb-3">
@@ -111,8 +118,12 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col items-center">
-            <h3 className="text-white text-base my-4">resources</h3>
+
+          {/* Resources Section */}
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="text-white text-base my-4 text-center md:text-left">
+              resources
+            </h3>
             <ul className="list-none p-0">
               {resourceLinks.map((item, index) => (
                 <li key={index} className="block mb-3">

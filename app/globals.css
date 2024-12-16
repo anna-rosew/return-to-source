@@ -7,6 +7,9 @@ body {
 
 /* Base Layer Styles */
 @layer base {
+  body {
+    background-color: var(--background);
+  }
   /* Headings */
   h1 {
     @apply font-jomolhari text-[2.2rem] font-normal text-black md:text-[2rem] lg:text-[2.5rem];
@@ -29,7 +32,7 @@ body {
 
   /* CSS Variables for Light Mode */
   :root {
-    --background: 0 0% 100%;
+    --background: #f6ece1;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
