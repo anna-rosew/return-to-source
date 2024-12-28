@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import LogoImg from "../../../../public/Assets/Logo.svg";
-import { Button } from "../../ui/button";
+import LogoImg from "../../../public/Assets/Logo.svg";
+import { Button } from "../ui/Button";
 
 const Logo = () => {
   //update the size of the logo when the size of the screen changes

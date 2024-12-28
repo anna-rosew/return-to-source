@@ -2,7 +2,7 @@
 import Head from "next/head";
 
 import "./globals.css";
-import Navigation from "./components/navigation/index";
+import Navigation from "./components/navigation/Navigation";
 
 export default function RootLayout({
   children,

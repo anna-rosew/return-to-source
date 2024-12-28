@@ -1,7 +1,7 @@
 import HeroImage from "@/app/components/HeroImage";
 import { Metadata } from "next";
 import HomeScroll from "./components/HomeScroll";
-import { Button } from "./components/ui/button";
+import { Button } from "./components/ui/Button";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
