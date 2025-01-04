@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import "./globals.css";
 import NavBar from "./components/navigation/NavBar";
+import Footer from "./components/Footer";
 
 export default function RootLayout({
   children,
@@ -40,6 +41,7 @@ export default function RootLayout({
             {children}
           </div>
         </main>
+        <Footer />
       </body>
     </html>
   );
