@@ -3,6 +3,9 @@ import Link from "next/link";
 import Approach from "@/public/Assets/Images/my-approach.webp";
 import SunIcon from "@/public/Assets/Icons/SunIcon";
 
+//Correct spacing on mobile view
+//Add images
+
 const Work = () => {
   return (
     <div className="text-center">
