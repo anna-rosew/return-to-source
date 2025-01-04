@@ -1,53 +1,215 @@
-import React from "react";
+"use client";
+
+import { useState } from "react";
 import Logo from "./Logo";
-import { NavLinks } from "./NavLinks";
+import Burger from "./Burger";
 import Link from "next/link";
 import { Button } from "../ui/Button";
-import Image from "next/image";
-import User from "../../../public/Assets/user.svg";
-import Hamburger from "../ui/Hamburger"; // Import the Hamburger component
 
-const NavBar = ({
-  toggle,
-  isOpen,
-}: {
-  toggle: () => void;
-  isOpen: boolean;
-}) => {
+import UserIcon from "@/public/Assets/Icons/UserIcon";
+
+//add links
+
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdowns, setDropdowns] = useState({
+    workWithRose: false,
+    about: false,
+    resources: false,
+  });
+
+  const toggleDropdown = (key: keyof typeof dropdowns) => {
+    setDropdowns((prevState) => ({
+      ...prevState,
+      [key]: !prevState[key],
+    }));
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <nav
-      className={`flex w-full items-center justify-between px-6 py-1 border-b-[1px] border-black lg:container lg:mx-auto lg:px-5 sticky top-0 z-20 ${
-        isOpen ? "hidden" : "" // Hide nav when sidebar is open
-      }`}
-    >
-      <div className="flex items-center justify-between">
-        <Logo />
-        <ul className="hidden md:flex md:items-center px-10 gap-x-[48px]">
-          {NavLinks.map((route) => {
-            const { name, link } = route;
-            return (
-              <li key={name}>
-                <Link
-                  href={link}
-                  className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0"
+    <nav className="relative">
+      <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+        {/* Logo */}
+        <div className="flex items-center justify-between w-full md:w-auto">
+          <Logo />
+        </div>
+        <div className="lg:flex hidden items-center justify-center space-x-2 md:order-2">
+          <Button
+            variant="outline"
+            size="md"
+            href="/login"
+            className="flex items-center space-x-2 group"
+          >
+            <UserIcon className=" hover:fill-white hover:text-white" />
+            <span>Login</span>
+          </Button>
+          <Button variant="secondary" size="md" href="/login">
+            Join Community
+          </Button>
+        </div>
+        <div className="hidden lg:block">
+          <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+            {/* Home Link */}
+            <li className="py-2 px-3">
+              <Link href="#" aria-current="page">
+                <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
+                  Home
+                </p>
+              </Link>
+            </li>
+
+            {/* Work with Rose Dropdown */}
+            <li>
+              <button
+                onClick={() => toggleDropdown("workWithRose")}
+                className="flex items-center justify-between w-full py-2 px-3 cursor-pointer"
+              >
+                <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
+                  Work with Rose
+                </p>
+                <svg
+                  className="w-2.5 h-2.5 ms-3 cursor-pointer"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
                 >
-                  {name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <div className="flex gap-x-5 items-center">
-        <Button href="/login" variant="secondary">
-          <Image src={User} alt="User Profile" width={38} />
-          Sign in
-        </Button>
-        {/* Use the Hamburger component here */}
-        <Hamburger toggle={toggle} isOpen={isOpen} />
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <div
+                className={`${
+                  dropdowns.workWithRose ? "block" : "hidden"
+                } absolute z-10 w-auto text-sm bg-black border rounded-lg shadow-md  dark:bg-gray-700`}
+              >
+                <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
+                  <li>
+                    <Link href="/work" className="hover:text-customGreen">
+                      Online Groups
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/work" className="hover:text-customGreen">
+                      In-Person Groups
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/work" className="hover:text-customGreen">
+                      Retreats
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            {/* About Dropdown */}
+            <li>
+              <button
+                onClick={() => toggleDropdown("about")}
+                className="flex items-center justify-between w-full py-2 px-3"
+              >
+                <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
+                  About
+                </p>
+                <svg
+                  className="w-2.5 h-2.5 ms-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <div
+                className={`${
+                  dropdowns.about ? "block" : "hidden"
+                } absolute z-10 w-auto text-sm bg-black border rounded-lg shadow-md  dark:bg-gray-700`}
+              >
+                <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
+                  <li>
+                    <Link href="/about" className="hover:text-customGreen">
+                      Meet Rose
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/approach" className="hover:text-customGreen">
+                      Approach
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            {/* Resources Dropdown */}
+            <li>
+              <button
+                onClick={() => toggleDropdown("resources")}
+                className="flex items-center justify-between w-full py-2 px-3"
+              >
+                <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
+                  Resources
+                </p>
+                <svg
+                  className="w-2.5 h-2.5 ms-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <div
+                className={`${
+                  dropdowns.resources ? "block" : "hidden"
+                } absolute z-10 w-auto text-sm bg-black border rounded-lg shadow-md dark:bg-gray-700`}
+              >
+                <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
+                  <li>
+                    <Link href="/dashboard" className="hover:text-customGreen">
+                      My Account
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog" className="hover:text-customGreen">
+                      Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog" className="hover:text-customGreen">
+                      Class
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        {/* Hamburger Menu */}
+        <Burger menuOpen={menuOpen} toggleMenu={toggleMenu} />
       </div>
     </nav>
   );
 };
 
-export default NavBar;
+export default Navbar;

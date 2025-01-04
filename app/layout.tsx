@@ -2,7 +2,7 @@
 import Head from "next/head";
 
 import "./globals.css";
-import Navigation from "./components/navigation/Navigation";
+import NavBar from "./components/navigation/NavBar";
 
 export default function RootLayout({
   children,
@@ -33,7 +33,7 @@ export default function RootLayout({
       </Head>
 
       <body>
-        <Navigation />
+        <NavBar />
         <main>{children}</main>
       </body>
     </html>

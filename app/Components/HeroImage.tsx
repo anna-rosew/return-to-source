@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MazeHero from "@/public/Assets/maze-hero.webp";
+import MazeHero from "@/public/Assets/Images/maze-hero.webp";
 
 export default function HeroImage() {
   return (

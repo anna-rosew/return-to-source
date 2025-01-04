@@ -1,7 +1,7 @@
 import React from "react";
-import LogoWhite from "../../public/assets/logo_white.svg";
-import InstaIcon from "../../public/assets/insta-footer.svg";
-import VimeoIcon from "../../public/assets/footer-vimeo.svg";
+import LogoWhite from "../../public/assets/Icons/logo_white.svg";
+import InstaIcon from "../../public/assets/Icons/insta-footer.svg";
+import VimeoIcon from "../../public/assets/Icons/footer-vimeo.svg";
 
 import Link from "next/link";
 import Image from "next/image";
