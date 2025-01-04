@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative">
+    <nav className="relative lg:mt-3 lg:mx-[76px] border-b-2 border-black">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
         {/* Logo */}
         <div className="flex items-center justify-between w-full md:w-auto">
@@ -54,7 +54,7 @@ const Navbar = () => {
           <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
             {/* Home Link */}
             <li className="py-2 px-3">
-              <Link href="#" aria-current="page">
+              <Link href="/" aria-current="page">
                 <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
                   Home
                 </p>

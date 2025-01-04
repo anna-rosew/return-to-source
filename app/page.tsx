@@ -32,17 +32,16 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col justify-left items-left lg:justify-center lg:items-center overflow-hidden">
-      {/* Content */}
-      <h4 className="uppercase text-[28px] lg:text-[48px] leading-2 text-center pt-10 pl-4 font-neato">
+    <div className="flex flex-col items-center">
+      <h4 className="uppercase text-[28px] lg:text-[48px] leading-2 text-center font-neato">
         Breath - Mind - Body
       </h4>
-      <p className="p-4 lg:mx-[290px]  text-center text-customTeal">
+      <p className="p-4 text-center text-customTeal">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
       <HeroImage />
-      <Button variant="primary" size="lg" className="my-5 mx-2 " href="/work">
+      <Button variant="primary" size="lg" className="my-3 mx-auto" href="/work">
         Start my journey
       </Button>
       <div className="h-full w-full bg-black">

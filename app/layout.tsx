@@ -34,7 +34,12 @@ export default function RootLayout({
 
       <body>
         <NavBar />
-        <main>{children}</main>
+        <main className="flex flex-col items-center">
+          {" "}
+          <div className="relative flex flex-col justify-left items-left lg:justify-center lg:items-center lg:mx-64 overflow-hidden pt-7">
+            {children}
+          </div>
+        </main>
       </body>
     </html>
   );
