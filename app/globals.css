@@ -66,4 +66,31 @@
   body {
     background: hsl(var(--background));
   }
+
+  /* Headings */
+  h1 {
+    @apply font-jomolhari text-[2.2rem] font-normal text-black md:text-[2rem] lg:text-[2.5rem];
+  }
+  h2 {
+    @apply font-jost text-[1.8rem] font-normal text-black md:text-[1.6rem] lg:text-[2rem];
+  }
+  h3 {
+    @apply font-jost uppercase text-[1.5rem] font-normal text-black md:text-[1.3rem] lg:text-[1.8rem];
+    @apply font-jost uppercase text-[1.1rem] font-normal text-black md:text-[1.3rem] lg:text-[1.8rem];
+  }
+  /* Paragraphs */
+  p {
+    @apply font-jost leading-[1.5em] text-[1rem] text-black tracking-[0.02em] md:text-[1.1rem] lg:text-[1.2rem];
+  }
+
+  /* Links */
+
+  a,
+  Link {
+    @apply cursor-pointer;
+  }
+
+  .white-links {
+    @apply font-jost text-[16px] text-white relative hover:text-white cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0;
+  }
 }
