@@ -1,7 +1,7 @@
 deployment:
   tasks:
     - export DEPLOY_PATH=/home/roselong/public_html
-    - /bin/cp -R * $DEPLOY_PATH/
-    - cd $DEPLOY_PATH
+    - cd /home/roselong/repositories/return-to-source
     - /usr/local/bin/yarn install
     - /usr/local/bin/yarn build
+    - cp -R .next/* $DEPLOY_PATH/
