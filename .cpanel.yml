@@ -4,4 +4,5 @@ deployment:
     - cd /home/roselong/repositories/return-to-source
     - /usr/local/bin/yarn install
     - /usr/local/bin/yarn build
-    - cp -R .next/* $DEPLOY_PATH/
+    - rsync -av --delete public/ $DEPLOY_PATH/
+    - rsync -av --delete .next/ $DEPLOY_PATH/
