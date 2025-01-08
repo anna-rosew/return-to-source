@@ -1,0 +1,7 @@
+deployment:
+  tasks:
+    - export DEPLOY_PATH=/home/roselong/public_html
+    - /bin/cp -R * $DEPLOY_PATH/
+    - cd $DEPLOY_PATH
+    - /usr/local/bin/yarn install
+    - /usr/local/bin/yarn build
