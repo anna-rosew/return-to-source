@@ -5,4 +5,4 @@ deployment:
     - /usr/local/bin/yarn install
     - /usr/local/bin/yarn build
     - rsync -av --delete public/ $DEPLOY_PATH/
-    - rsync -av --delete .next/ $DEPLOY_PATH/
+    - rsync -av --delete .next/ $DEPLOY_PATH/.next
