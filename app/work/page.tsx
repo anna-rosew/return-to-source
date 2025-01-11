@@ -1,21 +1,21 @@
 import Link from "next/link";
 import SunIcon from "@/public/Assets/Icons/SunIcon";
 
-//Correct spacing on mobile view
 //Add images
+//array + card component
 
 const Work = () => {
   return (
-    <div className="text-center">
+    <div className="container text-center">
       <h1>Work with Rose</h1>
       <p className="font-medium">
         Come and explore how your body, mind and breath work together. Open
         yourself to new dimensions of experience and personal growth.
       </p>
-      <div className="lg:my-20 my-7 mx-3">
+      <div className="lg:my-20 my-7">
         <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
           <div
-            className="card rounded-lg group relative bg-cover bg-center transition-all duration-700 ease-in-out aspect-[1/1]"
+            className="card rounded-lg group relative bg-cover bg-center transition-all duration-700 ease-in-out aspect-[1/1] min-h-[300px]"
             style={{
               backgroundImage: "url(/Assets/Images/my-approach.webp)",
             }}
@@ -42,7 +42,7 @@ const Work = () => {
             </Link>
           </div>
           <div
-            className=" card rounded-lg group relative bg-cover bg-center transition-all duration-300 ease-in-out min-h-[375px]"
+            className=" card rounded-lg group relative bg-cover bg-center transition-all duration-300 ease-in-out min-h-[343px] md:min-h-[300px]"
             style={{
               backgroundImage: "url(/Assets/Images/my-approach.webp)",
             }}
@@ -70,7 +70,7 @@ const Work = () => {
           </div>
 
           <div
-            className="card rounded-lg group relative bg-cover bg-center transition-all duration-700 ease-in-out aspect-[1/1]"
+            className="card rounded-lg group relative bg-cover bg-center transition-all duration-700 ease-in-out aspect-[1/1] min-h-[300px]"
             style={{
               backgroundImage: "url(/Assets/Images/my-approach.webp)",
             }}

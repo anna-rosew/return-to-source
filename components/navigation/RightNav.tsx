@@ -22,17 +22,17 @@ const RightNav = ({ open, closeMenu }: RightNavProps) => {
             Home
           </p>
         </Link>
-        <Link href="#work-with-rose" onClick={closeMenu}>
+        <Link href="/work" onClick={closeMenu}>
           <p className="font-jost text-[16px] text-white uppercase relative hover:text-white cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
             Work with Rose
           </p>
         </Link>
-        <Link href="#about" onClick={closeMenu}>
+        <Link href="/about" onClick={closeMenu}>
           <p className="font-jost text-[16px] text-white uppercase relative hover:text-white cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
             About
           </p>
         </Link>
-        <Link href="#resources" onClick={closeMenu}>
+        <Link href="/dashboard" onClick={closeMenu}>
           <p className="font-jost text-[16px] text-white uppercase relative hover:text-white cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
             Resources
           </p>
