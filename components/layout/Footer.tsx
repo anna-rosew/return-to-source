@@ -5,7 +5,7 @@ import VimeoIcon from "@/public/Assets/Icons/footer-vimeo.svg";
 
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "./ui/Button";
+import { Button } from "../ui/button";
 
 const Footer = () => {
   const serviceLinks = [

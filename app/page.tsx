@@ -1,7 +1,8 @@
-import HeroImage from "@/app/components/HeroImage";
+import HeroImage from "../components/layout/HeroImage";
 import { Metadata } from "next";
-import HomeScroll from "./components/HomeScroll";
-import { Button } from "./components/ui/Button";
+import HomeScroll from "../components/layout/HomeScroll";
+import { Button } from "../components/ui/button";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Rose Long | Return to Source",
@@ -31,18 +32,20 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center">
-      <h4 className="uppercase text-[28px] lg:text-[48px] leading-2 text-center font-neato">
+    <div className="flex flex-col items-center w-full">
+      <h4 className="uppercase text-[28px] lg:text-[48px] leading-2 text-center font-neato ">
         Breath - Mind - Body
       </h4>
-      <p className="p-4 text-center text-customTeal">
+      <p className="p-4 text-center text-customTeal lg:mx-64">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
       <HeroImage />
-      <Button variant="primary" size="lg" className="my-3 mx-auto" href="/work">
-        Start my journey
-      </Button>
+      <Link href="/work">
+        <Button variant="primary" size="lg" className="my-3 mx-auto">
+          Start my journey
+        </Button>
+      </Link>
       <div className="h-full w-full bg-black">
         <HomeScroll />
       </div>

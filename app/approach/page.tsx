@@ -1,7 +1,7 @@
 import React from "react";
 
 const approach = () => {
-  return <div></div>;
+  return <div>Approach</div>;
 };
 
 export default approach;

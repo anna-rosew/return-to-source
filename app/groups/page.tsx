@@ -1,7 +1,7 @@
 import React from "react";
 
 const groups = () => {
-  return <div></div>;
+  return <div>Groups</div>;
 };
 
 export default groups;

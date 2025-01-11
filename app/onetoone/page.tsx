@@ -1,7 +1,7 @@
 import React from "react";
 
 const onetoone = () => {
-  return <div></div>;
+  return <div>One-to-One</div>;
 };
 
 export default onetoone;

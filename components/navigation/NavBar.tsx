@@ -4,7 +4,7 @@ import { useState } from "react";
 import Logo from "./Logo";
 import Burger from "./Burger";
 import Link from "next/link";
-import { Button } from "../ui/Button";
+import { Button } from "../ui/button";
 
 import UserIcon from "@/public/Assets/Icons/UserIcon";
 
@@ -37,18 +37,21 @@ const Navbar = () => {
           <Logo />
         </div>
         <div className="lg:flex hidden items-center justify-center space-x-2 md:order-2">
-          <Button
-            variant="outline"
-            size="md"
-            href="/login"
-            className="flex items-center space-x-2 group"
-          >
-            <UserIcon className=" hover:fill-white hover:text-white" />
-            <span>Login</span>
-          </Button>
-          <Button variant="secondary" size="md" href="/login">
-            Join Community
-          </Button>
+          <Link href="/login">
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex items-center space-x-2 group"
+            >
+              <UserIcon className=" hover:fill-white hover:text-white" />
+              <span>Login</span>
+            </Button>
+          </Link>
+          <Link href="/login">
+            <Button variant="secondary" size="sm">
+              Join Community
+            </Button>
+          </Link>
         </div>
         <div className="hidden lg:block">
           <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">

@@ -2,7 +2,7 @@
 
 import UserIcon from "@/public/Assets/Icons/UserIcon";
 import Link from "next/link";
-import { Button } from "../ui/Button";
+import { Button } from "../ui/button";
 
 interface RightNavProps {
   open: boolean;
@@ -40,23 +40,25 @@ const RightNav = ({ open, closeMenu }: RightNavProps) => {
 
         {/* Buttons Wrapper */}
         <div className="absolute bottom-6 w-full px-4 space-y-4">
-          <Button
-            variant="outline"
-            size="md"
-            href="/login"
-            className="w-full justify-center flex items-center space-x-2 group"
-          >
-            <UserIcon className="hover:fill-white" />
-            <span>Login</span>
-          </Button>
-          <Button
-            variant="secondary"
-            size="md"
-            href="/login"
-            className="w-full justify-center"
-          >
-            Join Community
-          </Button>
+          <Link href="/login">
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full justify-center flex items-center space-x-2 group"
+            >
+              <UserIcon className="hover:fill-white" />
+              <span>Login</span>
+            </Button>
+          </Link>
+          <Link href="/login">
+            <Button
+              variant="secondary"
+              size="lg"
+              className="w-full justify-center"
+            >
+              Join Community
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
