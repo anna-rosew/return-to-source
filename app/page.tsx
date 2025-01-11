@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import HomeScroll from "./components/HomeScroll";
 import { Button } from "./components/ui/Button";
 
-
 export const metadata: Metadata = {
   title: "Rose Long | Return to Source",
   description:
