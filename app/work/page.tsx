@@ -21,7 +21,7 @@ const cards = [
     alt: "Group - 'Chinese Year of the Water Rabbit': painting by Lynn Hanford-Day",
   },
   {
-    imageUrl: "/Assets/Images/one-to-ones.webp",
+    imageUrl: "/Assets/Images/one-to-one.webp",
     title: "One-to-Ones",
     subtitle: "Coaching & Yoga",
     description: "Transform from the inside out!",
