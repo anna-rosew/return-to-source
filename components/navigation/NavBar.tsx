@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Logo from "./Logo";
 import Burger from "./Burger";
 import Link from "next/link";
@@ -8,7 +8,8 @@ import { Button } from "../ui/button";
 
 import UserIcon from "@/public/Assets/Icons/UserIcon";
 
-//add links
+//Create onClick handler to close the dropdowns when a link is clicked
+//Use useEffect to handle clicks outside
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,6 +18,8 @@ const Navbar = () => {
     about: false,
     resources: false,
   });
+
+  const navbarRef = useRef<HTMLElement | null>(null);
 
   const toggleDropdown = (key: keyof typeof dropdowns) => {
     setDropdowns((prevState) => ({
@@ -29,8 +32,35 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const closeDropdowns = () => {
+    setDropdowns({
+      workWithRose: false,
+      about: false,
+      resources: false,
+    });
+  };
+
+  // Detect clicks outside the navbar or dropdowns
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target as Node)
+      ) {
+        closeDropdowns();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
-    <nav className="relative lg:mt-3 lg:mx-[76px] border-b-2 border-black">
+    <nav
+      ref={navbarRef}
+      className="relative lg:mt-3 lg:mx-[76px] border-b-2 border-black"
+    >
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
         {/* Logo */}
         <div className="flex items-center justify-between w-full md:w-auto">
@@ -40,7 +70,7 @@ const Navbar = () => {
           <Link href="/login">
             <Button
               variant="outline"
-              size="sm"
+              size="lg"
               className="flex items-center space-x-2 group"
             >
               <UserIcon className=" hover:fill-white hover:text-white" />
@@ -48,7 +78,7 @@ const Navbar = () => {
             </Button>
           </Link>
           <Link href="/login">
-            <Button variant="secondary" size="sm">
+            <Button variant="secondary" size="lg">
               Join Community
             </Button>
           </Link>
@@ -95,17 +125,29 @@ const Navbar = () => {
               >
                 <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
                   <li>
-                    <Link href="/work" className="hover:text-customGreen">
+                    <Link
+                      href="/work"
+                      className="hover:text-customGreen"
+                      onClick={closeDropdowns}
+                    >
                       Online Groups
                     </Link>
                   </li>
                   <li>
-                    <Link href="/work" className="hover:text-customGreen">
+                    <Link
+                      href="/work"
+                      className="hover:text-customGreen"
+                      onClick={closeDropdowns}
+                    >
                       In-Person Groups
                     </Link>
                   </li>
                   <li>
-                    <Link href="/work" className="hover:text-customGreen">
+                    <Link
+                      href="/work"
+                      className="hover:text-customGreen"
+                      onClick={closeDropdowns}
+                    >
                       Retreats
                     </Link>
                   </li>
@@ -144,12 +186,20 @@ const Navbar = () => {
               >
                 <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
                   <li>
-                    <Link href="/about" className="hover:text-customGreen">
+                    <Link
+                      href="/about"
+                      className="hover:text-customGreen"
+                      onClick={closeDropdowns}
+                    >
                       Meet Rose
                     </Link>
                   </li>
                   <li>
-                    <Link href="/approach" className="hover:text-customGreen">
+                    <Link
+                      href="/approach"
+                      className="hover:text-customGreen"
+                      onClick={closeDropdowns}
+                    >
                       Approach
                     </Link>
                   </li>
@@ -188,17 +238,29 @@ const Navbar = () => {
               >
                 <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
                   <li>
-                    <Link href="/dashboard" className="hover:text-customGreen">
+                    <Link
+                      href="/dashboard"
+                      className="hover:text-customGreen"
+                      onClick={closeDropdowns}
+                    >
                       My Account
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blog" className="hover:text-customGreen">
+                    <Link
+                      href="/blog"
+                      className="hover:text-customGreen"
+                      onClick={closeDropdowns}
+                    >
                       Blog
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blog" className="hover:text-customGreen">
+                    <Link
+                      href="/blog"
+                      className="hover:text-customGreen"
+                      onClick={closeDropdowns}
+                    >
                       Class
                     </Link>
                   </li>
