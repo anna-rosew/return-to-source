@@ -8,6 +8,7 @@ interface CardInfo {
   subtitle: string;
   description: string;
   link: string;
+  alt: string;
 }
 
 const card = ({ cardInfo }: { cardInfo: CardInfo }) => {
@@ -17,6 +18,7 @@ const card = ({ cardInfo }: { cardInfo: CardInfo }) => {
       style={{
         backgroundImage: `url(${cardInfo.imageUrl})`,
       }}
+      aria-label={cardInfo.alt}
     >
       <Link href={cardInfo.link} className="card-link">
         {/* Initial content */}
