@@ -8,9 +8,6 @@ import { Button } from "../ui/button";
 
 import UserIcon from "@/public/Assets/Icons/UserIcon";
 
-//Create onClick handler to close the dropdowns when a link is clicked
-//Use useEffect to handle clicks outside
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdowns, setDropdowns] = useState({
