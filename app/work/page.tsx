@@ -1,7 +1,6 @@
 import Card from "@/components/common/card";
 
-//Add images
-//array + card component
+//Add testimonial component to bottom
 
 const cards = [
   {
@@ -17,7 +16,7 @@ const cards = [
     title: "Groups",
     subtitle: "Classes - Workshops - Retreats",
     description: "Transform from the inside out!",
-    link: "/approach",
+    link: "/groups",
     alt: "Group - 'Chinese Year of the Water Rabbit': painting by Lynn Hanford-Day",
   },
   {

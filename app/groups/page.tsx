@@ -1,30 +1,33 @@
 import Card from "@/components/common/card";
 import React from "react";
 
+//make images darker
+//Add other components to scroll
+
 const cards = [
   {
-    imageUrl: "/Assets/Images/my-approach.webp",
-    title: "Approach",
-    subtitle: "Learn from Experience",
+    imageUrl: "/Assets/Images/online-groups.webp",
+    title: "Online Groups",
+    subtitle: "yoga | community",
     description: "Transform from the inside out!",
     link: "/approach",
-    alt: "One-To-Ones - 'The Lotfollah Dome': painting by Lynn Hanford-Day",
+    alt: "Online Groups - Photo of a laptop on the beach with a live Zoom class led by Rose Long.",
   },
   {
-    imageUrl: "/Assets/Images/my-approach.webp",
-    title: "Groups",
-    subtitle: "Classes - Workshops - Retreats",
+    imageUrl: "/Assets/Images/in-person-groups.webp",
+    title: "In-Person Sessions",
+    subtitle: "Classes | workshops",
     description: "Transform from the inside out!",
     link: "/approach",
-    alt: "One-To-Ones - 'The Lotfollah Dome': painting by Lynn Hanford-Day",
+    alt: "In-Person Groups - Photo of a relaxing yoga class being led by Rose Long. All participants lying on matts and Rose sat at the front of the class next to a large gong.",
   },
   {
-    imageUrl: "/Assets/Images/my-approach.webp",
-    title: "One-to-Ones",
-    subtitle: "Coaching & Yoga",
+    imageUrl: "/Assets/Images/retreats.webp",
+    title: "Retreats",
+    subtitle: "Journeys | Growth | Exploration",
     description: "Transform from the inside out!",
     link: "/approach",
-    alt: "One-To-Ones - 'The Lotfollah Dome': painting by Lynn Hanford-Day",
+    alt: "In-Person Groups - Photo of a group on retreat doing a yoga session led by Rose Long on a beach on a sunny day, facing the sea.",
   },
 ];
 
