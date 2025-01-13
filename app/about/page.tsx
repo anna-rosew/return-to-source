@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="container text-center w-full">
       <h1>Meet Rose</h1>
       <p>
         This page is currently under construction. Please visit,{" "}

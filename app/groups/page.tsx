@@ -10,7 +10,7 @@ const cards = [
     title: "Online Groups",
     subtitle: "yoga | community",
     description: "Transform from the inside out!",
-    link: "/approach",
+    link: "/groups",
     alt: "Online Groups - Photo of a laptop on the beach with a live Zoom class led by Rose Long.",
   },
   {
@@ -18,7 +18,7 @@ const cards = [
     title: "In-Person Sessions",
     subtitle: "Classes | workshops",
     description: "Transform from the inside out!",
-    link: "/approach",
+    link: "/groups",
     alt: "In-Person Groups - Photo of a relaxing yoga class being led by Rose Long. All participants lying on matts and Rose sat at the front of the class next to a large gong.",
   },
   {
@@ -26,7 +26,7 @@ const cards = [
     title: "Retreats",
     subtitle: "Journeys | Growth | Exploration",
     description: "Transform from the inside out!",
-    link: "/approach",
+    link: "/group",
     alt: "In-Person Groups - Photo of a group on retreat doing a yoga session led by Rose Long on a beach on a sunny day, facing the sea.",
   },
 ];
