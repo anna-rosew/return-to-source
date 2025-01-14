@@ -94,6 +94,10 @@
 @layer components {
   .button-container {
     @apply flex flex-col md:flex-row gap-4 w-full;
+
+    Button {
+      @apply w-full;
+    }
   }
 }
 

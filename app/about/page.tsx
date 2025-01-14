@@ -42,12 +42,12 @@ const About = () => {
             </p>
             <div className="button-container">
               <Link href="/blog" className="flex-1">
-                <Button variant="outline" size="lg" className="w-full">
+                <Button variant="outline" size="lg">
                   Blog
                 </Button>
               </Link>
               <Link href="/" className="flex-1">
-                <Button variant="outline" size="lg" className="w-full">
+                <Button variant="outline" size="lg">
                   Qualifications
                 </Button>
               </Link>
