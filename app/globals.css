@@ -104,6 +104,11 @@
 }
 
 @layer components {
+  img,
+  .next-image {
+    @apply rounded-lg;
+  }
+
   .button-container {
     @apply flex flex-col md:flex-row gap-4 w-full mt-10;
 

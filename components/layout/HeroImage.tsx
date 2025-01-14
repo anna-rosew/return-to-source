@@ -19,7 +19,7 @@ export default function HeroImage() {
           src={MazeHero}
           alt="Person walking through a round pebble maze on a sandy beach on a clear day."
           fill
-          className="rounded-lg object-cover"
+          className="object-cover"
           placeholder="blur"
         />
       </div>
