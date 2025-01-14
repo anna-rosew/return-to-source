@@ -89,11 +89,23 @@
   Link {
     @apply cursor-pointer;
   }
+
+  .small-screen-component {
+    @apply block lg:hidden;
+  }
+
+  .medium-screen-component {
+    @apply hidden md:block;
+  }
+
+  .large-screen-component {
+    @apply hidden lg:block;
+  }
 }
 
 @layer components {
   .button-container {
-    @apply flex flex-col md:flex-row gap-4 w-full;
+    @apply flex flex-col md:flex-row gap-4 w-full mt-10;
 
     Button {
       @apply w-full;

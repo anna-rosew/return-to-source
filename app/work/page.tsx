@@ -1,6 +1,7 @@
 import Card from "@/components/common/card";
 
 //Add testimonial component to bottom
+//add margin to cards
 
 const cards = [
   {
@@ -31,19 +32,18 @@ const cards = [
 
 const Work = () => {
   return (
-    <div className="container text-center w-full">
+    <div>
       <h1>Work with Rose</h1>
       <p className="font-bold">
         Come and explore how your body, mind and breath work together. Open
         yourself to new dimensions of experience and personal growth.
       </p>
+
       <div className="lg:my-20 my-7">
-        <div className="lg:my-20 my-7">
-          <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
-            {cards.map((card, index) => (
-              <Card key={index} cardInfo={card} />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+          {cards.map((card, index) => (
+            <Card key={index} cardInfo={card} />
+          ))}
         </div>
       </div>
     </div>

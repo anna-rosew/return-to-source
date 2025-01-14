@@ -57,7 +57,7 @@ const Footer = () => {
               </Link>
             </div>
             <Link href="/contact">
-              <Button variant="secondary" className="my-2">
+              <Button variant="secondary" className="my-2 mx-auto lg:mx-3">
                 Get in Touch
               </Button>
             </Link>

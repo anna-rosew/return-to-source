@@ -106,7 +106,7 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       container: {
-        center: true, // Centers the container
+        center: true,
         padding: {
           DEFAULT: "1rem",
           sm: "2rem",

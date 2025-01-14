@@ -2,13 +2,29 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import AboutImage from "@/public/Assets/Images/about.webp";
+import AboutSmall from "@/public/Assets/Images/about-small.webp";
 import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
-    <div className="container text-center w-full">
+    <div>
       <h1 className="pb-5">Meet Rose</h1>
       <div className="grid md:grid-cols-2 gap-8">
+        <div className="relative order-first md:order-last">
+          <Image
+            className="rounded-lg medium-screen-component w-full max-w-md h-auto object-contain"
+            alt="Rose Long sat leading a retreat class in cross-legged position on the floor, smiling with her eyes closed. She is sat in-front of a large bay window which looks out onto a large sun-filled garden. There is a large, golden gong to her left and a plant with a himilayan salt lamp on her right."
+            src={AboutImage}
+            layout="responsive"
+          />
+          {/* Small screen image */}
+          <Image
+            className="rounded-lg small-screen-component"
+            alt="Rose Long sat leading a retreat class in cross-legged position on the floor, smiling with her eyes closed. She is sat in-front of a large bay window which looks out onto a large sun-filled garden. There is a large, golden gong to her left and a plant with a himilayan salt lamp on her right."
+            src={AboutSmall}
+            layout="responsive"
+          />
+        </div>
         <div className="text">
           <p className="para">
             I used to regularly ask myself, ‘What’s the point?’ Life was a
@@ -53,17 +69,6 @@ const About = () => {
               </Link>
             </div>
           </div>
-        </div>
-
-        <div className="relative">
-          <Image
-            className="about-image rounded-lg"
-            alt="Rose Long"
-            src={AboutImage}
-            layout="responsive w-full h-full"
-            width={400}
-            height={300}
-          />
         </div>
       </div>
     </div>
