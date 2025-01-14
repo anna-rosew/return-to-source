@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import AboutImage from "@/public/Assets/Images/register.webp";
+import AboutImage from "@/public/Assets/Images/about.webp";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
@@ -40,17 +41,15 @@ const About = () => {
               and growing myself.
             </p>
             <div className="flex space-x-4">
-              <Link
-                href="/blog"
-                className="general-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-              >
-                Blog
+              <Link href="/blog">
+                <Button variant="outline" size="lg">
+                  Blog
+                </Button>
               </Link>
-              <Link
-                href="/qualifications"
-                className="general-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-              >
-                Qualifications
+              <Link href="/">
+                <Button variant="outline" size="lg">
+                  Qualifications
+                </Button>
               </Link>
             </div>
           </div>
@@ -60,9 +59,9 @@ const About = () => {
             className="about-image rounded-lg"
             alt="Rose Long"
             src={AboutImage}
-            layout="responsive"
-            width={300}
-            height={200}
+            layout="responsive w-full h-full"
+            width={400}
+            height={300}
           />
         </div>
       </div>
