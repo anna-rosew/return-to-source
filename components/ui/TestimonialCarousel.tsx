@@ -9,12 +9,12 @@ import {
 
 const TestimonialCarousel = () => {
   return (
-    <div>
+    <div className="text-white">
       <Carousel>
         <CarouselContent>
-          <CarouselItem>...</CarouselItem>
-          <CarouselItem>...</CarouselItem>
-          <CarouselItem>...</CarouselItem>
+          <CarouselItem>Hell</CarouselItem>
+          <CarouselItem>This</CarouselItem>
+          <CarouselItem>Is.</CarouselItem>
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />

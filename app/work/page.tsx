@@ -1,4 +1,5 @@
 import Card from "@/components/common/card";
+import TestimonialCarousel from "@/components/ui/TestimonialCarousel";
 
 //Add testimonial component to bottom
 //add margin to cards
@@ -45,6 +46,9 @@ const Work = () => {
             <Card key={index} cardInfo={card} />
           ))}
         </div>
+      </div>
+      <div className="h-full w-full bg-black">
+        <TestimonialCarousel />
       </div>
     </div>
   );
