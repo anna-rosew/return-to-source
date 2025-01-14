@@ -32,21 +32,23 @@ const About = () => {
               Life brought teachers, mentors and transformative practices.
               Challenges became opportunities for growth. I learned to cultivate
               inner coherence instead of chaos. The mystery of life opened from
-              within. I continue to be amazed by what's possible when we make a
-              conscious choice to change. Working with people who are up for the
-              challenge keeps me inspired and motivated to keep learning and
-              growing myself.
+              within. I continue to be amazed by what&apos;s possible when we
+              make a conscious choice to change. Working with people who are up
+              for the challenge keeps me inspired and motivated to keep learning
+              and growing myself.
             </p>
             <div className="grid-button-container flex space-x-4">
-              <Link href="/blog">
-                <a className="general-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                  Blog
-                </a>
+              <Link
+                href="/blog"
+                className="general-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              >
+                Blog
               </Link>
-              <Link href="/qualifications">
-                <a className="general-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                  Qualifications
-                </a>
+              <Link
+                href="/qualifications"
+                className="general-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              >
+                Qualifications
               </Link>
             </div>
           </div>
@@ -60,29 +62,6 @@ const About = () => {
             width={400}
             height={300}
           />
-        </div>
-      </div>
-      <div className="medium-element mt-8">
-        <p className="mb-4">
-          Life brought teachers, mentors and transformative practices.
-          Challenges became opportunities for growth. I learned to cultivate
-          inner coherence instead of chaos. The mystery of life opened from
-          within. I continue to be amazed by what's possible when we make a
-          conscious choice to change. Working with people who are up for the
-          challenge keeps me inspired and motivated to keep learning and growing
-          myself.
-        </p>
-        <div className="grid-button-container flex space-x-4">
-          <Link href="/blog">
-            <a className="general-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-              Blog
-            </a>
-          </Link>
-          <Link href="/qualifications">
-            <a className="general-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-              Qualifications
-            </a>
-          </Link>
         </div>
       </div>
     </div>
