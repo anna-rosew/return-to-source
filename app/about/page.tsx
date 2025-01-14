@@ -40,20 +40,21 @@ const About = () => {
               for the challenge keeps me inspired and motivated to keep learning
               and growing myself.
             </p>
-            <div className="flex space-x-4">
-              <Link href="/blog">
-                <Button variant="outline" size="lg">
+            <div className="button-container">
+              <Link href="/blog" className="flex-1">
+                <Button variant="outline" size="lg" className="w-full">
                   Blog
                 </Button>
               </Link>
-              <Link href="/">
-                <Button variant="outline" size="lg">
+              <Link href="/" className="flex-1">
+                <Button variant="outline" size="lg" className="w-full">
                   Qualifications
                 </Button>
               </Link>
             </div>
           </div>
         </div>
+
         <div className="relative">
           <Image
             className="about-image rounded-lg"
