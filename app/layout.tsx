@@ -19,7 +19,7 @@ export default function RootLayout({
       <body>
         <NavBar />
         <main className="flex flex-col">
-          <div className="container relative flex flex-col lg:justify-center lg:items-center overflow-hidden  py-5 md:py-8 w-full text-center">
+          <div className="relative flex flex-col lg:justify-center lg:items-center overflow-hidden  py-5 md:py-8 w-full text-center">
             {children}
           </div>
         </main>

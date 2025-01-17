@@ -5,11 +5,13 @@ import React, { useEffect } from "react";
 // Define the type of the props, including backgroundColor and children
 interface SectionObserverProps {
   backgroundColor: string;
+  height?: string | number;
   children: React.ReactNode;
 }
 
 export default function SectionObserver({
   backgroundColor,
+  height = "500px",
   children,
 }: SectionObserverProps) {
   useEffect(() => {
@@ -39,7 +41,7 @@ export default function SectionObserver({
     <div
       className="flex flex-col items-center w-full"
       data-backgroundcolor={backgroundColor}
-      style={{ backgroundColor }}
+      style={{ backgroundColor, height }}
     >
       <div className="text-center">{children}</div>
     </div>
