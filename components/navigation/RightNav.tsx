@@ -40,7 +40,7 @@ const RightNav = ({ open, closeMenu }: RightNavProps) => {
 
         {/* Buttons Wrapper */}
         <div className="absolute bottom-6 w-full px-4 space-y-4">
-          <Link href="/login">
+          <Link href="/login" className="my-2">
             <Button
               variant="outline"
               size="lg"
@@ -50,7 +50,7 @@ const RightNav = ({ open, closeMenu }: RightNavProps) => {
               <span>Login</span>
             </Button>
           </Link>
-          <Link href="/login">
+          <Link href="/login" className="my-2">
             <Button
               variant="secondary"
               size="lg"

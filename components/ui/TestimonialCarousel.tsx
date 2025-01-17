@@ -39,11 +39,11 @@ const TestimonialCarousel = () => {
   return (
     <div className="text-black">
       <Carousel>
-        <CarouselContent className="w-full flex items-center justify-center">
+        <CarouselContent className="w-full h-full flex items-center justify-center">
           {testimonialDetails.map((testimonial, index) => (
             <CarouselItem
               key={index}
-              className="flex items-center justify-center"
+              className="flex items-center justify-center w-full h-full"
             >
               <TestimonialCard
                 pic={testimonial.pic}

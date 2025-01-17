@@ -52,7 +52,6 @@ const Work = () => {
         </div>
       </div>
       <div className="h-full w-full bg-black flex flex-col md:flex-row items-center justify-center px-4 py-12 md:px-36 md:py-12">
-        {/* Left Section */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left mb-6 md:mb-0">
           <h2 className="text-white font-semibold">
             Other Peoples&apos; Stories...
@@ -74,7 +73,6 @@ const Work = () => {
           </Link>
         </div>
 
-        {/* Right Section */}
         <div className="flex justify-center items-center w-full md:w-1/2">
           <div className="overflow-hidden w-full">
             <TestimonialCarousel />
