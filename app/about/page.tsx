@@ -37,8 +37,8 @@ const About = () => {
             hard, and paid the price. Stress and anxiety led me to reach for
             quick fixes that only increased my inner turmoil. Life brought me to
             my knees, everything falling apart for real change to take place. In
-            chaos and despair, I admitted I didn’t know how to live but longed
-            to learn. Admitting this sparked change.
+            chaos and despair, I admitted I didn&apos;t know how to live but
+            longed to learn. Admitting this sparked change.
           </p>
           <div className="quote">
             <p>
