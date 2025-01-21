@@ -4,6 +4,7 @@ import Image from "next/image";
 import ContactImage from "@/public/Assets/Images/contact.webp";
 import ContactSmall from "@/public/Assets/Images/contact-mobile.webp";
 import { Button } from "@/components/ui/button";
+import ContactForm from "@/components/ui/ContactForm";
 
 const Contact = () => {
   return (
@@ -26,13 +27,8 @@ const Contact = () => {
           />
         </div>
         <div className="text">
-          <h2>Get in Touch</h2>
-          <p className="para">
-            I used to regularly ask myself, ‘What’s the point?’ Life was a
-            struggle; I didn’t like what was going on in the world, or inside
-            me. I was deeply uncomfortable, wanting to make the world better
-            while unconsciously driven to fix myself and those around me.
-          </p>
+          
+          <ContactForm />
 
           <div>
             <p className="para">
