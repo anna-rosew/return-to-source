@@ -101,6 +101,10 @@
   .large-screen-component {
     @apply hidden lg:block;
   }
+
+  .container {
+    @apply mb-10;
+  }
 }
 
 @layer components {

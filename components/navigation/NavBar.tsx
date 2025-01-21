@@ -6,8 +6,6 @@ import Burger from "./Burger";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
-import UserIcon from "@/public/Assets/Icons/UserIcon";
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdowns, setDropdowns] = useState({
@@ -37,7 +35,19 @@ const Navbar = () => {
     });
   };
 
-  // Detect clicks outside the navbar or dropdowns
+  /**Login Button: 
+   * import UserIcon from "@/public/Assets/Icons/UserIcon";
+   * <Link href="/login">
+            <Button
+              variant="outline"
+              size="lg"
+              className="flex items-center space-x-2 group"
+            >
+              <UserIcon className=" hover:fill-white hover:text-white" />
+              <span>Login</span>
+            </Button>
+          </Link> */
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -59,30 +69,18 @@ const Navbar = () => {
       className="relative lg:mt-3 lg:mx-[76px] border-b-2 border-black"
     >
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
-        {/* Logo */}
         <div className="flex items-center justify-between w-full md:w-auto">
           <Logo />
         </div>
         <div className="lg:flex hidden items-center justify-center space-x-2 md:order-2">
-          <Link href="/login">
-            <Button
-              variant="outline"
-              size="lg"
-              className="flex items-center space-x-2 group"
-            >
-              <UserIcon className=" hover:fill-white hover:text-white" />
-              <span>Login</span>
-            </Button>
-          </Link>
-          <Link href="/login">
+          <Link href="/contact">
             <Button variant="secondary" size="lg">
-              Join Community
+              Contact Rose
             </Button>
           </Link>
         </div>
         <div className="hidden lg:block">
-          <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
-            {/* Home Link */}
+          <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-4 rtl:space-x-reverse">
             <li className="py-2 px-3">
               <Link href="/" aria-current="page">
                 <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
@@ -91,7 +89,6 @@ const Navbar = () => {
               </Link>
             </li>
 
-            {/* Work with Rose Dropdown */}
             <li>
               <button
                 onClick={() => toggleDropdown("workWithRose")}
@@ -152,7 +149,6 @@ const Navbar = () => {
               </div>
             </li>
 
-            {/* About Dropdown */}
             <li>
               <button
                 onClick={() => toggleDropdown("about")}
@@ -204,7 +200,6 @@ const Navbar = () => {
               </div>
             </li>
 
-            {/* Resources Dropdown */}
             <li>
               <button
                 onClick={() => toggleDropdown("resources")}
@@ -267,7 +262,6 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Hamburger Menu */}
         <Burger menuOpen={menuOpen} toggleMenu={toggleMenu} />
       </div>
     </nav>
