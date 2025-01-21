@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <div className=" text-center w-full">
+    <div className="container text-center w-full">
       <h1>Contact</h1>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="relative order-first md:order-last">
@@ -26,26 +26,14 @@ const Contact = () => {
           />
         </div>
         <div className="text">
+          <h2>Get in Touch</h2>
           <p className="para">
             I used to regularly ask myself, ‘What’s the point?’ Life was a
             struggle; I didn’t like what was going on in the world, or inside
             me. I was deeply uncomfortable, wanting to make the world better
             while unconsciously driven to fix myself and those around me.
           </p>
-          <p className="para">
-            In my thirties, running a Social Enterprise, I worked hard, played
-            hard, and paid the price. Stress and anxiety led me to reach for
-            quick fixes that only increased my inner turmoil. Life brought me to
-            my knees, everything falling apart for real change to take place. In
-            chaos and despair, I admitted I didn&apos;t know how to live but
-            longed to learn. Admitting this sparked change.
-          </p>
-          <div className="quote">
-            <p>
-              The despair I felt began to transform into quiet gratitude and
-              wonder.
-            </p>
-          </div>
+
           <div>
             <p className="para">
               Life brought teachers, mentors and transformative practices.

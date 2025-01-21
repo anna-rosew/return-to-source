@@ -5,7 +5,7 @@ import { Button } from "./button";
 
 const TestimonialSection = () => {
   return (
-    <div className="h-full w-full bg-black px-6 py-12 md:px-16 lg:px-36 md:py-12 overflow-x-hidden">
+    <div className="h-full w-full bg-black px-6 py-12 md:px-16 lg:px-36 md:py-24 overflow-x-hidden">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Text Section */}
         <div className="flex flex-col md:col-span-1 items-center md:items-start text-center md:text-left space-y-12">
