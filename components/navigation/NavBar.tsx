@@ -115,7 +115,7 @@ const Navbar = () => {
               <div
                 className={`${
                   dropdowns.workWithRose ? "block" : "hidden"
-                } absolute z-10 w-auto text-sm bg-black border rounded-lg shadow-md  dark:bg-gray-700`}
+                } absolute z-10 w-auto text-sm bg-black rounded-lg shadow-md  dark:bg-gray-700`}
               >
                 <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
                   <li>
@@ -175,7 +175,7 @@ const Navbar = () => {
               <div
                 className={`${
                   dropdowns.about ? "block" : "hidden"
-                } absolute z-10 w-auto text-sm bg-black border rounded-lg shadow-md  dark:bg-gray-700`}
+                } absolute z-10 w-auto text-sm bg-black rounded-lg shadow-md  dark:bg-gray-700`}
               >
                 <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
                   <li>
@@ -226,7 +226,7 @@ const Navbar = () => {
               <div
                 className={`${
                   dropdowns.resources ? "block" : "hidden"
-                } absolute z-10 w-auto text-sm bg-black border rounded-lg shadow-md dark:bg-gray-700`}
+                } absolute z-10 w-auto text-sm bg-black rounded-lg shadow-md dark:bg-gray-700`}
               >
                 <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
                   <li>

@@ -1,6 +1,4 @@
 "use client";
-
-import UserIcon from "@/public/Assets/Icons/UserIcon";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
@@ -34,13 +32,18 @@ const RightNav = ({ open, closeMenu }: RightNavProps) => {
         </Link>
         <Link href="/dashboard" onClick={closeMenu}>
           <p className="font-jost text-[16px] text-white uppercase relative hover:text-white cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
-            Resources
+            Blog
+          </p>
+        </Link>
+        <Link href="/dashboard" onClick={closeMenu}>
+          <p className="font-jost text-[16px] text-white uppercase relative hover:text-white cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
+            Approach
           </p>
         </Link>
 
-        {/* Buttons Wrapper */}
-        <div className="absolute bottom-6 w-full px-4 space-y-6">
-          <Link href="/login">
+        {/* Login button: 
+        import UserIcon from "@/public/Assets/Icons/UserIcon";
+        <Link href="/login">
             <Button
               variant="outline"
               size="lg"
@@ -49,14 +52,15 @@ const RightNav = ({ open, closeMenu }: RightNavProps) => {
               <UserIcon className="hover:fill-white" />
               <span>Login</span>
             </Button>
-          </Link>
+          </Link> */}
+        <div className="absolute bottom-6 w-full px-4 space-y-6">
           <Link href="/login" className="my-2">
             <Button
               variant="secondary"
               size="lg"
               className="w-full justify-center"
             >
-              Join Community
+              Contact
             </Button>
           </Link>
         </div>
