@@ -39,12 +39,12 @@ const RightNav = ({ open, closeMenu }: RightNavProps) => {
         </Link>
 
         {/* Buttons Wrapper */}
-        <div className="absolute bottom-6 w-full px-4 space-y-4">
-          <Link href="/login" className="my-2">
+        <div className="absolute bottom-6 w-full px-4 space-y-6">
+          <Link href="/login">
             <Button
               variant="outline"
               size="lg"
-              className="w-full justify-center flex items-center space-x-2 group"
+              className="w-full justify-center flex items-center space-x-2 mb-5 group"
             >
               <UserIcon className="hover:fill-white" />
               <span>Login</span>

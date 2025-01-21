@@ -35,7 +35,7 @@ const groups = () => {
   return (
     <div className="container text-center w-full">
       <h1>Groups</h1>
-      <p className="font-bold">
+      <p className="font-bold md:text-center">
         Come and explore how your body, mind and breath work together. Open
         yourself to new dimensions of experience and personal growth.
       </p>
