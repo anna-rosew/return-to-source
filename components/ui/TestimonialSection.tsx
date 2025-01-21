@@ -6,10 +6,10 @@ import { Button } from "./button";
 const TestimonialSection = () => {
   return (
     <div className="h-full w-full bg-black px-6 py-12 md:px-16 lg:px-36 md:py-12 overflow-x-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Text Section */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h2 className="text-white font-semibold mb-4">
+        <div className="flex flex-col md:col-span-1 items-center md:items-start text-center md:text-left space-y-12">
+          <h2 className="text-white font-medium">
             Other Peoples&apos; Stories...
           </h2>
           <p className="text-white">
@@ -22,7 +22,7 @@ const TestimonialSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="my-3 mx-auto border-white text-white hover:bg-customBeige hover:text-black hover:border-customBeige"
+              className="w-full my-3 mx-auto border-white text-white hover:bg-customBeige hover:text-black hover:border-customBeige"
             >
               Start my journey
             </Button>
@@ -30,7 +30,7 @@ const TestimonialSection = () => {
         </div>
 
         {/* Carousel Section */}
-        <div className="w-full">
+        <div className="w-full md:col-span-2">
           <TestimonialCarousel />
         </div>
       </div>
