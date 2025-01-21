@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
-    <div>
+    <div className="container">
       <h1 className="pb-5">Meet Rose</h1>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="relative order-first md:order-last">
@@ -17,7 +17,7 @@ const About = () => {
             src={AboutImage}
             layout="responsive"
           />
-          {/* Small screen image */}
+
           <Image
             className="small-screen-component"
             alt="Rose Long sat leading a retreat class in cross-legged position on the floor, smiling with her eyes closed. She is sat in-front of a large bay window which looks out onto a large sun-filled garden. There is a large, golden gong to her left and a plant with a himilayan salt lamp on her right."
@@ -27,10 +27,11 @@ const About = () => {
         </div>
         <div className="text">
           <p className="para">
-            I used to regularly ask myself, ‘What’s the point?’ Life was a
-            struggle; I didn’t like what was going on in the world, or inside
-            me. I was deeply uncomfortable, wanting to make the world better
-            while unconsciously driven to fix myself and those around me.
+            I used to regularly ask myself, &apos;What&apos;s the point?&apos;
+            Life was a struggle; I didn&apos;t like what was going on in the
+            world, or inside me. I was deeply uncomfortable, wanting to make the
+            world better while unconsciously driven to fix myself and those
+            around me.
           </p>
           <p className="para">
             In my thirties, running a Social Enterprise, I worked hard, played
