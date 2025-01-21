@@ -1,7 +1,5 @@
 import Card from "@/components/common/card";
-import { Button } from "@/components/ui/button";
-import TestimonialCarousel from "@/components/ui/TestimonialCarousel";
-import Link from "next/link";
+import TestimonialSection from "@/components/ui/TestimonialSection";
 
 //Add testimonial component to bottom
 //add margin to cards
@@ -51,34 +49,7 @@ const Work = () => {
           </div>
         </div>
       </div>
-      <div className="h-full w-full bg-black flex flex-col md:flex-row items-center justify-center px-4 py-12 md:px-36 md:py-12">
-        <div className="flex flex-col items-center md:items-start text-center md:text-left mb-6 md:mb-0">
-          <h2 className="text-white font-semibold">
-            Other Peoples&apos; Stories...
-          </h2>
-          <p className="text-white my-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. 
-          </p>
-          <Link href="/work" className="medium-screen-component">
-            <Button
-              variant="outline"
-              size="lg"
-              className="my-3 mx-auto border-white text-white hover:bg-customBeige hover:text-black hover:border-customBeige"
-            >
-              Start my journey
-            </Button>
-          </Link>
-        </div>
-
-        <div className="flex justify-center items-center w-full md:w-1/2">
-          <div className="overflow-hidden w-full">
-            <TestimonialCarousel />
-          </div>
-        </div>
-      </div>
+      <TestimonialSection />
     </div>
   );
 };
