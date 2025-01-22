@@ -2,7 +2,6 @@ import Card from "@/components/common/NavCard";
 import TestimonialSection from "@/components/ui/TestimonialSection";
 
 //Add testimonial component to bottom
-//add margin to cards
 
 const cards = [
   {
@@ -42,7 +41,7 @@ const Work = () => {
         </p>
 
         <div className="lg:my-20 my-7">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
             {cards.map((card, index) => (
               <Card key={index} cardInfo={card} />
             ))}

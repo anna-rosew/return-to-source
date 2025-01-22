@@ -1,4 +1,6 @@
 import Card from "@/components/common/NavCard";
+import SectionHeading from "@/components/common/SectionHeading";
+import OnlineCarousel from "@/components/ui/OnlineCarousel";
 import React from "react";
 
 //make images darker
@@ -47,6 +49,10 @@ const groups = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div className="online-groups">
+        <SectionHeading title="My Section Title" />
+        <OnlineCarousel />
       </div>
     </div>
   );

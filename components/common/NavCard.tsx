@@ -11,6 +11,8 @@ interface CardInfo {
   alt: string;
 }
 
+//plan: make responsive for medium
+
 const NavCard = ({ cardInfo }: { cardInfo: CardInfo }) => {
   return (
     <div
