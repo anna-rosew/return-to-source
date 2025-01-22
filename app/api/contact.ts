@@ -2,12 +2,12 @@
 
 import { EmailTemplate } from "../emails/email-template";
 import { Resend } from "resend";
-import { formSchema } from "@/lib/schemas/emailSchema";
+import { contactSchema } from "@/lib/schemas/contactSchema";
 import { z } from "zod";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const send = async (contactFormData: z.infer<typeof formSchema>) => {
+export const send = async (contactFormData: z.infer<typeof contactSchema>) => {
   try {
     const { error } = await resend.emails.send({
       from: `Acme <${process.env.RESEND_FROM_EMAIL}>`,

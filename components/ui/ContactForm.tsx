@@ -22,13 +22,13 @@ import {
   CardHeader,
   CardTitle,
 } from "./card";
-import { formSchema } from "@/lib/schemas/emailSchema";
-import { send } from "@/app/api/email";
+import { contactSchema } from "@/lib/schemas/contactSchema";
+import { send } from "@/app/api/contact";
 
 const ContactForm = () => {
   // 1. Define your form.
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof contactSchema>>({
+    resolver: zodResolver(contactSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -37,7 +37,7 @@ const ContactForm = () => {
     },
   });
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: z.infer<typeof contactSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     send(values);
@@ -129,7 +129,7 @@ const ContactForm = () => {
                 )}
               />
             </div>
-            <Button type="submit" className="ml-auto">
+            <Button type="submit" variant="primary" className="w-full">
               Submit
             </Button>
           </form>

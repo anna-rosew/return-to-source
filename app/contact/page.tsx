@@ -5,6 +5,7 @@ import ContactImage from "@/public/Assets/Images/contact.webp";
 import ContactSmall from "@/public/Assets/Images/contact-mobile.webp";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ui/ContactForm";
+import NewsletterForm from "@/components/ui/NewsletterForm";
 
 const Contact = () => {
   return (
@@ -38,6 +39,7 @@ const Contact = () => {
         </div>
         <div className="text">
           <ContactForm />
+          <NewsletterForm />
 
           <div>
             <p className="para">
