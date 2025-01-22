@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
+import DetailsCard from "@/components/ui/DetailsCard";
 import VideoPlayer from "@/components/ui/VideoPlayer";
 import Link from "next/link";
 import React from "react";
+import AnahataIcon from "@/public/Assets/Icons/courage-white.svg";
 
 const approach = () => {
   return (
@@ -35,6 +37,11 @@ const approach = () => {
           and mind.
         </p>
       </div>
+      <DetailsCard
+        iconUrl={AnahataIcon}
+        title="Build Courage"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+      />
     </div>
   );
 };

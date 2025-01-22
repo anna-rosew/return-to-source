@@ -1,4 +1,4 @@
-import Card from "@/components/common/card";
+import Card from "@/components/common/NavCard";
 import TestimonialSection from "@/components/ui/TestimonialSection";
 
 //Add testimonial component to bottom

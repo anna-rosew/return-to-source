@@ -11,7 +11,7 @@ interface CardInfo {
   alt: string;
 }
 
-const card = ({ cardInfo }: { cardInfo: CardInfo }) => {
+const NavCard = ({ cardInfo }: { cardInfo: CardInfo }) => {
   return (
     <div
       className="rounded-lg group relative bg-cover bg-center transition-all duration-700 ease-in-out aspect-[1/1] min-h-[300px]"
@@ -42,4 +42,4 @@ const card = ({ cardInfo }: { cardInfo: CardInfo }) => {
   );
 };
 
-export default card;
+export default NavCard;

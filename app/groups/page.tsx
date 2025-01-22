@@ -1,4 +1,4 @@
-import Card from "@/components/common/card";
+import Card from "@/components/common/NavCard";
 import React from "react";
 
 //make images darker

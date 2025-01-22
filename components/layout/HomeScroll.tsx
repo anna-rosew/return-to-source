@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 //images
-//
+
 import Image from "next/image";
 import AnahataChakra from "@/public/Assets/Icons/courage-white.svg";
 import AjnaChakra from "@/public/Assets/Icons/clarity-white.svg";
