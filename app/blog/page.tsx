@@ -1,17 +1,13 @@
-import Link from "next/link";
+import ConstructionLayout from "@/components/layout/ConstructionLayout";
 
 const Blog = () => {
   return (
-    <div className="container text-center w-full">
-      <h1>Meet Rose</h1>
-      <p>
-        This page is currently under construction. Please visit,{" "}
-        <Link href="https://www.roselong-lifechanges.com/">
-          Rose Long: Life Changes
-        </Link>{" "}
-        for more information.
-      </p>
-    </div>
+    <ConstructionLayout>
+      <div className="container text-center w-full">
+        <h1 className="text-center">Meet Rose</h1>
+        <p>This is the real blog page!</p>
+      </div>
+    </ConstructionLayout>
   );
 };
 
