@@ -30,7 +30,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full m-0 bg-customSienna text-white ">
+    <div className="w-full m-0 mt-8 bg-customSienna text-white ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6 lg:container lg:mx-auto lg:px-5">
         <div className="order-last md:order-first items-center">
           <div className="items-center text-center md:text-left">
