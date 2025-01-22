@@ -19,6 +19,7 @@ const DetailsCard = (props: DetailsCardProps) => {
           className={` text-black group-hover:text-white transition-colors duration-700 ${className}`}
           width={width}
           height={height}
+          strokeWidth={1}
         />
 
         <h2 className="text-customSienna group-hover:text-customBeige transition-colors duration-700">

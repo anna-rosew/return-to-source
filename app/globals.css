@@ -134,6 +134,6 @@
   }
 
   .para {
-    @apply mb-2 md:mb-4;
+    @apply mb-2 md:mb-6;
   }
 }
