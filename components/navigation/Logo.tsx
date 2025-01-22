@@ -6,18 +6,6 @@ import LogoImg from "@/public/Assets/Icons/Logo.svg";
 import { Button } from "../ui/button";
 
 const Logo = () => {
-  const [width, setWidth] = useState(0);
-
-  const updateWidth = () => {
-    const newWidth = window.innerWidth;
-    setWidth(newWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateWidth);
-    updateWidth();
-  }, []);
-
   // change between the logo and the button when the user scrolls
   const [showButton, setShowButton] = useState(false);
 

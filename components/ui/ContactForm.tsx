@@ -33,7 +33,6 @@ const ContactForm = () => {
       firstName: "",
       lastName: "",
       email: "",
-      subject: "",
       message: "",
     },
   });
@@ -110,24 +109,7 @@ const ContactForm = () => {
                 )}
               />
             </div>
-            <div className="space-y-1">
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Subject</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="What you're wanting to talk about"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
+
             <div className="space-y-1">
               <FormField
                 control={form.control}
