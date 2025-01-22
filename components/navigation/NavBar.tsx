@@ -145,6 +145,15 @@ const Navbar = () => {
                       Retreats
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href="/one-to-one"
+                      className="hover:text-customGreen"
+                      onClick={closeDropdowns}
+                    >
+                      One-to-Ones
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </li>
