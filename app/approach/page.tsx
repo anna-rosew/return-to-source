@@ -67,7 +67,7 @@ const approach = () => {
           and mind.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8">
         {cardDetails.map((content, index) => (
           <DetailsCard
             key={index}
