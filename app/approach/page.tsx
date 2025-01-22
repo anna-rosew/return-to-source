@@ -4,6 +4,7 @@ import VideoPlayer from "@/components/ui/VideoPlayer";
 import AjnaIcon from "@/public/Assets/Icons/AjnaIcon";
 import AnahataIcon from "@/public/Assets/Icons/AnahataIcon";
 import MuladharaIcon from "@/public/Assets/Icons/MuladharaIcon";
+import StarIcon from "@/public/Assets/Icons/StarIcon";
 import Link from "next/link";
 import React from "react";
 
@@ -46,12 +47,21 @@ const approach = () => {
           Start my journey
         </Button>
       </Link>
-      <div className="text-left">
-        <h3 className="text-customTeal">TECHNIQUES</h3>
-        <h2>
-          You have the capacity to transform yourself from the inside out.
-        </h2>
-        <p className="text-customTeal ml-3">
+      <div className="text-left mt-8 md:grid md:grid-cols-2 md:gap-12">
+        <div className="flex items-center justify-center gap-5">
+          <StarIcon
+            className="hidden md:block text-black  group-hover:text-white transition-colors duration-700"
+            width={100}
+            height={100}
+          />
+          <div>
+            <h3 className="text-customTeal text-base">TECHNIQUES</h3>
+            <h2 className="text-2xl">
+              You have the capacity to transform yourself from the inside out.
+            </h2>
+          </div>
+        </div>
+        <p className="text-customTeal ml-8">
           The ancients knew the power of the mind, body and the breath, and
           modern research is proving what they knew; you can alter your own body
           and mind.
