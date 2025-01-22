@@ -46,7 +46,7 @@ export default function Home() {
           Start my journey
         </Button>
       </Link>
-      <div className="h-full w-full bg-black">
+      <div className="w-full bg-black">
         <HomeScroll />
       </div>
     </div>
