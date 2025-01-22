@@ -23,7 +23,7 @@ import {
   CardTitle,
 } from "./card";
 import { formSchema } from "@/lib/schemas/emailSchema";
-import { send } from "@/lib/api/email";
+import { send } from "@/app/api/email";
 
 const ContactForm = () => {
   // 1. Define your form.
@@ -41,7 +41,6 @@ const ContactForm = () => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     send(values);
-    console.log(values);
   }
 
   return (
