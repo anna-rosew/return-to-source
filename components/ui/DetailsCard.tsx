@@ -12,7 +12,7 @@ type DetailsCardProps = {
 const DetailsCard = (props: DetailsCardProps) => {
   const { Icon, title, text, width = 74, height = 74, className } = props;
   return (
-    <div className="border group border-black rounded-lg hover:bg-black text-black  bg-transparent text-left px-4 py-8 my-8 transition-colors duration-700 ease-in-out ">
+    <div className="border group border-black rounded-lg hover:bg-black text-black  bg-transparent text-left px-4 md:px-4 py-8 md:py-16 my-8 md:my-12 transition-colors duration-700 ease-in-out ">
       <div>
         {/* Dynamically render the passed icon */}
         <Icon

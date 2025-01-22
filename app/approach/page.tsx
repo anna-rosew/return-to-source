@@ -25,7 +25,7 @@ const approach = () => {
       text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.",
     },
   ];
-  
+
   return (
     <div className="container text-center w-full">
       <h1>Approach</h1>
@@ -57,11 +57,11 @@ const approach = () => {
           and mind.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {cardDetails.map((content, index) => (
           <DetailsCard
             key={index}
-            Icon={content.Icon} // Dynamically pass the icon component
+            Icon={content.Icon}
             title={content.title}
             text={content.text}
             width={70}
