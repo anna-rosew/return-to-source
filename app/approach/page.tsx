@@ -11,20 +11,21 @@ const approach = () => {
   const cardDetails = [
     {
       Icon: MuladharaIcon,
-      title: "Sun Chakra",
-      text: "This chakra is associated with the sun.",
+      title: "Build Courage",
+      text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.",
     },
     {
       Icon: AjnaIcon,
-      title: "Moon Chakra",
-      text: "This chakra is associated with the moon.",
+      title: "Find Clarity",
+      text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.",
     },
     {
       Icon: AnahataIcon,
-      title: "Moon Chakra",
-      text: "This chakra is associated with the moon.",
+      title: "Be Present",
+      text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.",
     },
   ];
+  
   return (
     <div className="container text-center w-full">
       <h1>Approach</h1>
