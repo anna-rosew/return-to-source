@@ -1,27 +1,32 @@
 import React from "react";
-import Image from "next/image";
 
 type DetailsCardProps = {
-  iconUrl: string;
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   title: string;
   text: string;
+  width?: number;
+  height?: number;
+  className?: string;
 };
 
 const DetailsCard = (props: DetailsCardProps) => {
+  const { Icon, title, text, width = 74, height = 74, className } = props;
   return (
-    <div className="border border-black rounded-lg hover:bg-black bg-transparent text-left px-4 py-8 my-8 transition-colors duration-700 ease-in-out">
+    <div className="border group border-black rounded-lg hover:bg-black text-black  bg-transparent text-left px-4 py-8 my-8 transition-colors duration-700 ease-in-out ">
       <div>
-        <Image
-          src={props.iconUrl}
-          alt="Anatata Chakra - heart and courage"
-          width={74}
-          height={74}
+        {/* Dynamically render the passed icon */}
+        <Icon
+          className={` text-black group-hover:text-white transition-colors duration-700 ${className}`}
+          width={width}
+          height={height}
         />
 
-        <h2 className="hover:text-customBeige text-customSienna">
-          {props.title}
+        <h2 className="text-customSienna group-hover:text-customBeige transition-colors duration-700">
+          {title}
         </h2>
-        <p className=" text-white ">{props.text}</p>
+        <p className="text-black group-hover:text-white transition-colors duration-700">
+          {text}
+        </p>
       </div>
     </div>
   );

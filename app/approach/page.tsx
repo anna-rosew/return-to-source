@@ -1,11 +1,30 @@
 import { Button } from "@/components/ui/button";
 import DetailsCard from "@/components/ui/DetailsCard";
 import VideoPlayer from "@/components/ui/VideoPlayer";
+import AjnaIcon from "@/public/Assets/Icons/AjnaIcon";
+import AnahataIcon from "@/public/Assets/Icons/AnahataIcon";
+import MuladharaIcon from "@/public/Assets/Icons/MuladharaIcon";
 import Link from "next/link";
 import React from "react";
-import AnahataIcon from "@/public/Assets/Icons/courage-white.svg";
 
 const approach = () => {
+  const cardDetails = [
+    {
+      Icon: MuladharaIcon,
+      title: "Sun Chakra",
+      text: "This chakra is associated with the sun.",
+    },
+    {
+      Icon: AjnaIcon,
+      title: "Moon Chakra",
+      text: "This chakra is associated with the moon.",
+    },
+    {
+      Icon: AnahataIcon,
+      title: "Moon Chakra",
+      text: "This chakra is associated with the moon.",
+    },
+  ];
   return (
     <div className="container text-center w-full">
       <h1>Approach</h1>
@@ -37,11 +56,18 @@ const approach = () => {
           and mind.
         </p>
       </div>
-      <DetailsCard
-        iconUrl={AnahataIcon}
-        title="Build Courage"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-      />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {cardDetails.map((content, index) => (
+          <DetailsCard
+            key={index}
+            Icon={content.Icon} // Dynamically pass the icon component
+            title={content.title}
+            text={content.text}
+            width={70}
+            height={70}
+          />
+        ))}
+      </div>
     </div>
   );
 };
