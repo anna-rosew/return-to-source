@@ -13,21 +13,30 @@ const Contact = () => {
       <div className="grid md:grid-cols-2 gap-8">
         <div className="relative order-first md:order-last">
           <Image
-            className="medium-screen-component w-full max-w-md h-auto object-contain mx-auto"
+            className="medium-screen-component w-full max-w-md h-auto object-contain mx-auto responsive"
             alt="Rose Long sat leading a retreat class in cross-legged position on the floor, smiling with her eyes closed. She is sat in-front of a large bay window which looks out onto a large sun-filled garden. There is a large, golden gong to her left and a plant with a himilayan salt lamp on her right."
             src={ContactImage}
-            layout="responsive"
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+            placeholder="blur"
           />
 
           <Image
-            className="small-screen-component"
+            className="small-screen-component responsive"
             alt="Rose Long sat leading a retreat class in cross-legged position on the floor, smiling with her eyes closed. She is sat in-front of a large bay window which looks out onto a large sun-filled garden. There is a large, golden gong to her left and a plant with a himilayan salt lamp on her right."
             src={ContactSmall}
-            layout="responsive"
+            placeholder="blur"
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
           />
         </div>
         <div className="text">
-          
           <ContactForm />
 
           <div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 import "./globals.css";
 import NavBar from "../components/navigation/NavBar";
@@ -21,6 +22,7 @@ export default function RootLayout({
         <main className="flex flex-col">
           <div className="relative flex flex-col lg:justify-center lg:items-center overflow-hidden  pt-5 md:pt-8 w-full text-center">
             {children}
+            <Analytics />
           </div>
         </main>
         <Footer />

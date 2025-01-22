@@ -103,7 +103,7 @@
   }
 
   .container {
-    @apply mb-10;
+    @apply w-full;
   }
 }
 

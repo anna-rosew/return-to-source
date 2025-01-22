@@ -23,7 +23,7 @@ import {
   CardTitle,
 } from "./card";
 import { formSchema } from "@/lib/schemas/emailSchema";
-import { send } from "@/lib/api/email";s
+import { send } from "@/lib/api/email";
 
 const ContactForm = () => {
   // 1. Define your form.

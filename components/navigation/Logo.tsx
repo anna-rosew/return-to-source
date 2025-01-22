@@ -6,7 +6,6 @@ import LogoImg from "@/public/Assets/Icons/Logo.svg";
 import { Button } from "../ui/button";
 
 const Logo = () => {
-  //update the size of the logo when the size of the screen changes
   const [width, setWidth] = useState(0);
 
   const updateWidth = () => {
@@ -40,9 +39,10 @@ const Logo = () => {
         <Image
           src={LogoImg}
           alt="Logo"
-          width={width < 1024 ? "150" : "250"}
-          height={width < 1024 ? "45" : "74"}
-          className="relative cursor:pointer"
+          width={250}
+          height={74}
+          className="relative cursor-pointer w-[150px] h-[45px] md:w-[250px] md:h-[74px]"
+          priority={true}
         />
       </Link>
       <div
