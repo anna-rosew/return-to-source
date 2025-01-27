@@ -1,8 +1,7 @@
 import ConstructionLayout from "@/components/layout/ConstructionLayout";
-
 import React from "react";
 
-const dashboard = () => {
+const retreats = () => {
   return (
     <ConstructionLayout>
       <div className="container text-center w-full">
@@ -13,4 +12,4 @@ const dashboard = () => {
   );
 };
 
-export default dashboard;
+export default retreats;

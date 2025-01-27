@@ -53,7 +53,7 @@ const groups = () => {
       </div>
       <div className="online-groups">
         <SectionHeading title="Online Groups" />
-        <p className="text">
+        <p className="text mdtext-center md:py-10 py-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
@@ -61,7 +61,7 @@ const groups = () => {
       </div>
       <div className="in-person-groups">
         <SectionHeading title="In-Person Groups" />
-        <p className="text md:text-center">
+        <p className="text md:text-center md:py-10 py-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>

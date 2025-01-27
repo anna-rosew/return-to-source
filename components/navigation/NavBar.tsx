@@ -121,6 +121,15 @@ const Navbar = () => {
                   <li>
                     <Link
                       href="/work"
+                      className="text-customGreen hover:text-white"
+                      onClick={closeDropdowns}
+                    >
+                      <strong>Work with Rose</strong>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/groups"
                       className="hover:text-customGreen"
                       onClick={closeDropdowns}
                     >
@@ -129,7 +138,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      href="/work"
+                      href="/groups"
                       className="hover:text-customGreen"
                       onClick={closeDropdowns}
                     >
@@ -138,7 +147,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      href="/work"
+                      href="/retreats"
                       className="hover:text-customGreen"
                       onClick={closeDropdowns}
                     >
