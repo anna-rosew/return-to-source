@@ -12,6 +12,8 @@ import MorningIcon from "@/public/Assets/Icons/MorningIcon";
 import EveningChillIcon from "@/public/Assets/Icons/EveningChillIcon";
 import KundaliniIcon from "@/public/Assets/Icons/KundaliniIcon";
 import LunarIcon from "@/public/Assets/Icons/LunarIcon";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 
 const classes: ClassInfo[] = [
   {
@@ -43,7 +45,7 @@ const classes: ClassInfo[] = [
     monthlyPrice: "3 class bundle £21",
     width: 100,
     height: 100,
-    backgroundImage: "/Assets/Images/morning-breath.webp",
+    backgroundImage: "/Assets/Images/evening-chill.webp",
     duration: "30 mins",
   },
   {
@@ -59,7 +61,7 @@ const classes: ClassInfo[] = [
     monthlyPrice: "3 class bundle £30",
     width: 100,
     height: 100,
-    backgroundImage: "/Assets/Images/morning-breath.webp",
+    backgroundImage: "/Assets/Images/kundalini-magic.webp",
     duration: "30 mins",
   },
   {
@@ -75,7 +77,7 @@ const classes: ClassInfo[] = [
     monthlyPrice: "2 class bundle £17",
     width: 100,
     height: 100,
-    backgroundImage: "/Assets/Images/morning-breath.webp",
+    backgroundImage: "/Assets/Images/lunar-cycles.webp",
     duration: "30 mins",
   },
 ];

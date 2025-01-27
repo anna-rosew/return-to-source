@@ -1,6 +1,8 @@
 import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
 import OnlineCarousel from "@/components/ui/OnlineCarousel";
+import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 //make images darker
@@ -51,6 +53,10 @@ const groups = () => {
         </div>
       </div>
       <div className="online-groups">
+        <SectionHeading title="Online Groups" />
+        <OnlineCarousel />
+      </div>
+      <div className="in-person-groups">
         <SectionHeading title="Online Groups" />
         <OnlineCarousel />
       </div>

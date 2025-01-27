@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "./button";
 import { ClassSlidesProps } from "@/types/index";
-import { ClockIcon } from "lucide-react";
+import { ChevronRight, ClockIcon } from "lucide-react";
 import DetailsDisplay from "./DetailsDisplay";
 import VideoCallIcon from "@/public/Assets/Icons/VideoCallIcon";
 import StarIcon from "@/public/Assets/Icons/StarIcon";
@@ -27,7 +27,7 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
   };
 
   return (
-    <div className=" relative md:p-5 grid grid-cols-1 md:grid-cols-3 gap-5">
+    <div className=" pt-5 relative md:p-5 grid grid-cols-1 md:grid-cols-3 gap-5">
       <div className="flex flex-col justify-between">
         {/* Header with Icon */}
         <div
@@ -119,6 +119,17 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
                 Book Now
               </Button>
             </Link>
+            <div className="small-screen-component">
+              <span className="text-left mt-4 inline-flex items-center gap-x-4">
+                <Link
+                  href="/dashboard"
+                  className=" underline flex items-center"
+                >
+                  Online class library
+                  <ChevronRight />
+                </Link>
+              </span>
+            </div>
           </div>
         </div>
       </div>
