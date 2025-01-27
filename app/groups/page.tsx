@@ -1,6 +1,7 @@
 import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
 import InPersonCard from "@/components/ui/InPersonCard";
+import InPersonCarousel from "@/components/ui/InPersonCarousel";
 import OnlineCarousel from "@/components/ui/OnlineCarousel";
 import React from "react";
 
@@ -53,19 +54,27 @@ const groups = () => {
       </div>
       <div className="online-groups">
         <SectionHeading title="Online Groups" />
-        <p className="text mdtext-center md:py-10 py-4">
+        <p className="text md:text-center md:py-10 py-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <OnlineCarousel />
       </div>
-      <div className="in-person-groups">
+      <div className="in-person-groups  mb-8">
         <SectionHeading title="In-Person Groups" />
         <p className="text md:text-center md:py-10 py-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <InPersonCard />
+        <InPersonCarousel />
+      </div>
+      <div className="in-person-groups  mb-8">
+        <SectionHeading title="Retreats" />
+        <p className="text md:text-center md:py-10 py-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <InPersonCarousel />
       </div>
     </div>
   );
