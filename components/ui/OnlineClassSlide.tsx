@@ -3,15 +3,18 @@ import React from "react";
 import { Button } from "./button";
 import { ClassSlidesProps } from "@/types/index";
 
-const OnlineClassSlides: React.FC<ClassSlidesProps> = ({ classInfo }) => {
+const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
   const Icon = classInfo.icon;
+  const formatDescription = (description: string) => {
+    return description.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  };
 
   return (
     <div className="p-5 mx-24">
       {/* Header with Icon */}
-      <div className="class-header flex items-center relative group text-black">
+      <div className="class-header flex gap-2 items-center relative group text-black">
         <Icon
-          className={`text-black transition-colors duration-700 z-20 ${classInfo.className}`}
+          className={`text-black transition-colors duration-700 z-20${classInfo.className}`}
           strokeWidth={1}
           stroke="currentColor"
           fill="currentColor"
@@ -23,7 +26,11 @@ const OnlineClassSlides: React.FC<ClassSlidesProps> = ({ classInfo }) => {
 
       {/* Description */}
       <div className="text-left mt-4">
-        <p>{classInfo.description}</p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: formatDescription(classInfo.description),
+          }}
+        />
       </div>
 
       {/* Class Details */}
@@ -32,7 +39,7 @@ const OnlineClassSlides: React.FC<ClassSlidesProps> = ({ classInfo }) => {
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="dates-column mb-4">
             <h3 className="text-lg">Class Dates</h3>
-            <ul className="list-disc pl-5 text-sm">
+            <ul className="list-none pl-5 text-sm">
               {classInfo.dates.length > 0 ? (
                 classInfo.dates.map((date, index) => (
                   <li key={index}>{date}</li>
@@ -44,7 +51,7 @@ const OnlineClassSlides: React.FC<ClassSlidesProps> = ({ classInfo }) => {
           </div>
           <div className="mb-4">
             <h3 className="text-lg">Time</h3>
-            <ul className="list-disc pl-5 text-sm">
+            <ul className="list-none pl-5 text-sm">
               {classInfo.times.length > 0 ? (
                 classInfo.times.map((time, index) => (
                   <li key={index}>{time}</li>
@@ -76,4 +83,4 @@ const OnlineClassSlides: React.FC<ClassSlidesProps> = ({ classInfo }) => {
   );
 };
 
-export default OnlineClassSlides;
+export default OnlineClassSlide;

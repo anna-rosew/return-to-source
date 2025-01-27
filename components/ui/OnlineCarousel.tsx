@@ -4,35 +4,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import OnlineClassSlides from "./OnlineClassSlides";
+import OnlineClassSlides from "./OnlineClassSlide";
 import { ClassInfo } from "@/types/index";
 
 import MorningIcon from "@/public/Assets/Icons/MorningIcon";
 import EveningChillIcon from "@/public/Assets/Icons/EveningChillIcon";
 import KundaliniIcon from "@/public/Assets/Icons/KundaliniIcon";
 import LunarIcon from "@/public/Assets/Icons/LunarIcon";
-import AjnaIcon from "@/public/Assets/Icons/AjnaIcon";
 
 //build basic swiper layout with pagination
 //add my own slider
 
 const classes: ClassInfo[] = [
   {
-    icon: AjnaIcon,
-    classType: "Evening Chill",
-    description: "A deeply restorative class to relax and unwind.",
-    permanentDescription: "Join anywhere via Zoom.",
-    dates: ["Thu, Aug 1", "Thu, Aug 8", "Thu, Aug 27"],
-    times: ["8:00 - 9:00 pm"],
-    dropInPrice: "£10",
-    monthlyPrice: "3-class bundle £21",
-    className: "text-lg",
-  },
-  {
     icon: MorningIcon,
     classType: "Good Morning Breath",
     description:
-      "If you're looking for a fast way to regenerate your body, mind, and spirit, come and experience the magic of the breath. Deeply detoxifying, revitalising, and balancing, the practice of Pranayama has deep and lasting benefits.",
+      "If you're looking for a fast way to <strong>regenerate your body, mind, and spirit,</strong> come and experience the magic of the breath. Deeply detoxifying, revitalising, and balancing, the practice of <strong>Pranayama</strong> has deep and lasting benefits.",
     permanentDescription:
       "You can join this class anywhere in the world on Zoom.",
     dates: ["Tue, Aug 6", "Wed, Aug 21", "Tue, Aug 27"],
