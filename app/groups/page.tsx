@@ -51,7 +51,7 @@ const groups = () => {
         </div>
       </div>
       <div className="online-groups">
-        <SectionHeading title="My Section Title" />
+        <SectionHeading title="Online Groups" />
         <OnlineCarousel />
       </div>
     </div>
