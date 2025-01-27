@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -80,7 +81,7 @@ const classes: ClassInfo[] = [
 ];
 
 const OnlineCarousel: React.FC = () => {
-  const swiperRef = useRef<Swiper | null>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   const pagination = {
     el: ".custom-pagination",
