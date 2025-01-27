@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -11,9 +11,6 @@ import MorningIcon from "@/public/Assets/Icons/MorningIcon";
 import EveningChillIcon from "@/public/Assets/Icons/EveningChillIcon";
 import KundaliniIcon from "@/public/Assets/Icons/KundaliniIcon";
 import LunarIcon from "@/public/Assets/Icons/LunarIcon";
-
-//build basic swiper layout with pagination
-//add my own slider
 
 const classes: ClassInfo[] = [
   {
@@ -48,7 +45,6 @@ const classes: ClassInfo[] = [
     backgroundImage: "/Assets/Images/morning-breath.webp",
     duration: "30 mins",
   },
-
   {
     icon: KundaliniIcon,
     classType: "Kundalini Magic",
@@ -84,27 +80,37 @@ const classes: ClassInfo[] = [
 ];
 
 const OnlineCarousel: React.FC = () => {
+  const swiperRef = useRef<Swiper | null>(null);
+
   const pagination = {
+    el: ".custom-pagination",
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      return (
-        '<span class="' +
-        className +
-        ' swiper-pagination-bullet">' +
-        (index + 1) +
-        "</span>"
-      );
+      return `<h3 class="${className} custom-bullet">${classes[index].classType}</h3>`;
     },
   };
 
   return (
-    <div className="w-full p-4">
+    <div className="w-full">
       <div>
         <div className="mb-6">
+          <div className="custom-pagination flex justify-center items-center py-4 border-t border-b border-gray-800">
+            {classes.map((classItem, index) => (
+              <h3
+                key={index}
+                className="custom-bullet cursor-pointer px-4 py-2 text-center font-medium text-black hover:bg-gray-200 transition-all"
+              >
+                {classItem.classType}
+              </h3>
+            ))}
+          </div>
           <Swiper
             pagination={pagination}
             modules={[Pagination]}
             className="w-full h-full"
+            spaceBetween={50}
+            slidesPerView={1}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {classes.map((classItem, index) => (
               <SwiperSlide

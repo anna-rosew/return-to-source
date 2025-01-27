@@ -120,21 +120,16 @@
     }
   }
 
-  .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    font-size: 12px;
-    color: black;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.2);
-    z-index: 10;
+  .custom-pagination {
+    @apply flex justify-between items-center relative top-2.5 left-0 right-0 lg:mb-5 z-10 lg:py-5 md:py-2 md:mb-0 pointer-events-none border-t border-b border-black py-2 mb-0 !important;
   }
 
-  .swiper-pagination-bullet-active {
-    color: #fff;
-    background: #007aff;
+  .custom-bullet {
+    @apply cursor-pointer flex-1 items-center pb-[24] md:pb-[40px] hover:bg-transparent justify-center lg:px-5 lg:pt-5 lg:pb-10  text-xs py-10 px-2.5 md:py-10 md:px-2.5 text-black md:text-base text-center bg-transparent rounded transition-all duration-300 ease-in-out pointer-events-auto !important;
+  }
+
+  .swiper-pagination-bullet-active.custom-bullet {
+    @apply border-2 border-black !important;
   }
 }
 
