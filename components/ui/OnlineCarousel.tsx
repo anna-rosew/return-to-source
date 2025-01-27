@@ -8,9 +8,9 @@ import OnlineClassSlides from "./OnlineClassSlide";
 import { ClassInfo } from "@/types/index";
 
 import MorningIcon from "@/public/Assets/Icons/MorningIcon";
-import EveningChillIcon from "@/public/Assets/Icons/EveningChillIcon";
+/*import EveningChillIcon from "@/public/Assets/Icons/EveningChillIcon";
 import KundaliniIcon from "@/public/Assets/Icons/KundaliniIcon";
-import LunarIcon from "@/public/Assets/Icons/LunarIcon";
+import LunarIcon from "@/public/Assets/Icons/LunarIcon";*/
 
 //build basic swiper layout with pagination
 //add my own slider
@@ -29,8 +29,10 @@ const classes: ClassInfo[] = [
     monthlyPrice: "3 session bundle £18",
     width: 100,
     height: 100,
+    backgroundImage: "/Assets/Images/morning-breath.webp",
+    duration: "30 mins",
   },
-  {
+  /*{
     icon: EveningChillIcon,
     classType: "Deep Chill",
     description:
@@ -66,7 +68,7 @@ const classes: ClassInfo[] = [
     times: ["8:00 - 10:30 am", "8:00 - 9:00 pm"],
     dropInPrice: "£12 (New Moon), £10 (Full Moon)",
     monthlyPrice: "2 class bundle £17",
-  },
+  },*/
 ];
 
 const OnlineCarousel: React.FC = () => {

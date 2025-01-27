@@ -13,6 +13,8 @@ export interface ClassInfo {
   width?: number;
   height?: number;
   className?: string;
+  duration: string;
+  backgroundImage: string;
 }
 // Props for ClassSlides component
 export interface ClassSlidesProps {
