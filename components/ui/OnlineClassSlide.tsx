@@ -2,8 +2,14 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "./button";
 import { ClassSlidesProps } from "@/types/index";
-import StarIcon from "@/public/Assets/Icons/StarIcon";
 import { ClockIcon } from "lucide-react";
+import DetailsDisplay from "./DetailsDisplay";
+import VideoCallIcon from "@/public/Assets/Icons/VideoCallIcon";
+import StarIcon from "@/public/Assets/Icons/StarIcon";
+
+//center items correctly
+//pagination
+//add array info
 
 const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
   const Icon = classInfo.icon;
@@ -11,119 +17,111 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
     return description.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
   };
 
+  const displayInfo = {
+    icon: VideoCallIcon,
+    heading: "Live Zoom Class",
+    subheading: "Playback anytime.",
+    icon2: StarIcon,
+    heading2: "Membership - £50",
+    subheading2: "Bundle - £24 | Drop-In - £8",
+  };
+
   return (
-    <div className=" relative md:p-5">
-      {/* Header with Icon */}
-      <div
-        className="class-header flex flex-col justify-center items-center relative text-white bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${classInfo.backgroundImage})`,
-          height: "400px",
-        }}
-      >
-        {/* Icon with grey transparent oval background */}
-        <div className="flex items-center justify-center bg-gray-500 bg-opacity-50 rounded-full p-3">
-          <Icon
-            className="w-10 h-10"
-            strokeWidth={1}
-            stroke="currentColor"
-            fill="currentColor"
-          />
-        </div>
-        {/* Header Title */}
-        <h1 className="text-lg uppercase mt-2">{classInfo.classType}</h1>
-
-        {/* Duration with clock icon and semi-transparent background */}
-        <p className="flex items-center mt-4 bg-gray-700 bg-opacity-70 p-2 rounded-lg">
-          <ClockIcon className="w-5 h-5 mr-2 text-white" />
-          {classInfo.duration}{" "}
-          {/* Assuming duration is a string like '10:00 AM' */}
-        </p>
-      </div>
-
-      {/* Description */}
-      <div className="text-left mt-4">
-        <p
-          dangerouslySetInnerHTML={{
-            __html: formatDescription(classInfo.description),
+    <div className=" relative md:p-5 grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="flex flex-col justify-between">
+        {/* Header with Icon */}
+        <div
+          className="class-header p-4 flex flex-col items-start justify-start text-left md:items-center relative text-white bg-cover bg-center h-full rounded-lg sm:h-[300px] md:h-[500px] lg:h-[600px]"
+          style={{
+            backgroundImage: `url(${classInfo.backgroundImage})`,
           }}
-        />
-      </div>
-
-      {/* Class Details */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
-        {/* Dates and Times */}
-        <div className="grid grid-cols-2 gap-3 ">
-          <div className="mb-4">
-            <h3 className="text-md text-center">Class Dates</h3>
-            <ul className="list-none py-2 text-sm">
-              {classInfo.dates.length > 0 ? (
-                classInfo.dates.map((date, index) => (
-                  <li key={index} className="py-2 border-b border-black">
-                    {date}
-                  </li>
-                ))
-              ) : (
-                <li>No dates available</li>
-              )}
-            </ul>
-          </div>
-          <div className="mb-4">
-            <h3 className="text-md">Time</h3>
-            <ul className="list-none py-2 text-sm">
-              {classInfo.times.length > 0 ? (
-                classInfo.times.map((time, index) => (
-                  <li key={index} className="py-2 border-b border-black">
-                    {time}
-                  </li>
-                ))
-              ) : (
-                <li>No times available</li>
-              )}
-            </ul>
-          </div>
-        </div>
-
-        {/* Prices */}
-        <div className="border border-black p-4 text-left mt-7 md:mt-0">
-          <h3 className="text-md mb-2 ">Prices</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md-p-4">
-            <div className="border-r border-black">
-              <ul className="list-none space-y-2">
-                <li className="relative pl-6">
-                  <StarIcon className="absolute left-0 top-0.5 text-black w-4 h-4" />
-                  Drop-In Price: {classInfo.dropInPrice}
-                </li>
-                <li className="relative pl-6">
-                  {" "}
-                  <StarIcon className="absolute left-0 top-0.5 text-black w-4 h-4" />
-                  Monthly Session Bundle: {classInfo.monthlyPrice}
-                </li>
-              </ul>
+        >
+          <div className="flex flex-row items-center justify-start space-x-4">
+            <div
+              className="flex items-center justify-center bg-gray-100 bg-opacity-20 rounded-full p-3 text-white 
+        md:absolute md:top-4 md:left-4 md:flex-row md:items-start md:space-x-4"
+            >
+              <Icon
+                className="class-icon"
+                strokeWidth={1}
+                stroke="currentColor"
+                fill="currentColor"
+              />
             </div>
-            <div>
-              {" "}
-              <h4>MONTHLY MEMBERSHIP</h4>
-              <p>
-                Join all classes and access replays to <strong>save £30</strong>{" "}
-                (from £80 to £50)! Please
-                <Link href="/contact" className="underline">
-                  {" "}
-                  get-in-touch
-                </Link>{" "}
-                for more details.
+            <div className="small-screen-component">
+              <p className="flex items-center bg-gray-100 bg-opacity-20 p-2 rounded-lg text-white">
+                <ClockIcon className="w-5 h-5 mr-2 text-white " />
+                {classInfo.duration}
               </p>
             </div>
           </div>
+          <h2 className="mt-2 md:mt-0 text-white small-screen-component">
+            {classInfo.classType}
+          </h2>
         </div>
       </div>
+      <div className="md:col-span-2 flex flex-col justify-between h-full">
+        {/* Description */}
+        <div className="text-left mt-4">
+          <h2 className="mt-2 text-black medium-screen-component">
+            {classInfo.classType}
+          </h2>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: formatDescription(classInfo.description),
+            }}
+          />
+        </div>
 
-      {/* Book Now Button */}
-      <Link href="/contact">
-        <Button variant="primary" size="lg" className="mt-4 block mx-auto">
-          Book Now
-        </Button>
-      </Link>
+        {/* Class Details */}
+        <div className="mt-5">
+          {/* Dates and Times */}
+          <div>
+            <div className="grid grid-cols-2 ">
+              <div className="mb-4">
+                <h3 className="text-md text-center">Class Dates</h3>
+                <ul className="list-none py-2 text-sm">
+                  {classInfo.dates.length > 0 ? (
+                    classInfo.dates.map((date, index) => (
+                      <li key={index} className="py-2 border-b border-black">
+                        {date}
+                      </li>
+                    ))
+                  ) : (
+                    <li>No dates available</li>
+                  )}
+                </ul>
+              </div>
+              <div className="mb-4">
+                <h3 className="text-md">Time</h3>
+                <ul className="list-none py-2 text-sm">
+                  {classInfo.times.length > 0 ? (
+                    classInfo.times.map((time, index) => (
+                      <li key={index} className="py-2 border-b border-black">
+                        {time}
+                      </li>
+                    ))
+                  ) : (
+                    <li>No times available</li>
+                  )}
+                </ul>
+              </div>
+            </div>{" "}
+            <div className="medium-screen-component">
+              <DetailsDisplay displayInfo={displayInfo} />
+            </div>
+            <Link href="/contact">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="mt-4 block mx-auto w-full"
+              >
+                Book Now
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

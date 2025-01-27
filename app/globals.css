@@ -155,10 +155,14 @@
   }
 
   .section-heading-left {
-    @apply absolute left-0 top-1/2 transform -translate-y-1/2 block w-[30%] h-[0.06em] bg-black sm:w-[30%] md:w-[35%];
+    @apply absolute left-0 top-1/2 transform -translate-y-1/2 block w-[20%] h-[0.06em] bg-black sm:w-[30%] md:w-[35%];
   }
 
   .section-heading-right {
-    @apply absolute right-0 top-1/2 transform -translate-y-1/2 block w-[30%] h-[0.06em] bg-black sm:w-[30%] md:w-[35%];
+    @apply absolute right-0 top-1/2 transform -translate-y-1/2 block w-[20%] h-[0.06em] bg-black sm:w-[30%] md:w-[35%];
+  }
+
+  .class-icon {
+    @apply h-[24px] md:h-[40px] w-auto;
   }
 }

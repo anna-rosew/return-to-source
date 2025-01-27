@@ -2,10 +2,9 @@ const MorningIcon: React.FC<React.SVGProps<SVGSVGElement>> = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="48px"
-      height="48px"
+      className="class-icon"
       viewBox="0 -960 960 960"
-      fill="#000000"
+      fill="white"
       stroke="none"
       strokeWidth="15"
       strokeMiterlimit="10"

@@ -7,7 +7,7 @@ const EveningChillIcon: React.FC<React.SVGProps<SVGSVGElement>> = () => {
       width="48px"
       height="48px"
       viewBox="0 -960 960 960"
-      fill="#000000"
+      fill="white"
       stroke="none"
       strokeWidth="15"
       strokeMiterlimit="10"

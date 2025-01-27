@@ -20,3 +20,25 @@ export interface ClassInfo {
 export interface ClassSlidesProps {
   classInfo: ClassInfo;
 }
+
+//ui
+
+//Props for DetailsDisplay
+
+export interface DisplayInfo {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon2: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  heading: string;
+  subheading: string;
+  heading2: string;
+  subheading2: string;
+}
+
+export interface DetailsDisplayProps {
+  displayInfo: DisplayInfo;
+}
+
+export interface IconProps {
+  width?: string | number; // Allow both string and number for width
+  height?: string | number; // Allow both string and number for height
+}
