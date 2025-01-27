@@ -1,8 +1,7 @@
 import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
+import InPersonCard from "@/components/ui/InPersonCard";
 import OnlineCarousel from "@/components/ui/OnlineCarousel";
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
 import React from "react";
 
 //make images darker
@@ -38,7 +37,7 @@ const cards = [
 const groups = () => {
   return (
     <div className="container text-center w-full">
-      <h1>Groups</h1>
+      <h1 className="pb-5">Groups</h1>
       <p className="font-bold md:text-center">
         Come and explore how your body, mind and breath work together. Open
         yourself to new dimensions of experience and personal growth.
@@ -54,11 +53,19 @@ const groups = () => {
       </div>
       <div className="online-groups">
         <SectionHeading title="Online Groups" />
+        <p className="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
         <OnlineCarousel />
       </div>
       <div className="in-person-groups">
-        <SectionHeading title="Online Groups" />
-        <OnlineCarousel />
+        <SectionHeading title="In-Person Groups" />
+        <p className="text md:text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <InPersonCard />
       </div>
     </div>
   );

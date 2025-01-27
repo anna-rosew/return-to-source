@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
-    <div className="container">
-      <h1 className="pb-5">Meet Rose</h1>
+    <div className="container mb-8">
+      <h1>Meet Rose</h1>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="relative order-first md:order-last">
           <Image
