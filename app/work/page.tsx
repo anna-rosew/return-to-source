@@ -25,7 +25,7 @@ const cards = [
     title: "One-to-Ones",
     subtitle: "Coaching & Yoga",
     description: "Transform from the inside out!",
-    link: "/approach",
+    link: "/onetoone",
     alt: "One-To-Ones - 'The Lotfollah Dome': painting by Lynn Hanford-Day",
   },
 ];

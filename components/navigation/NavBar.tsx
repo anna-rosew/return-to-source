@@ -156,7 +156,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      href="/one-to-one"
+                      href="/onetoone"
                       className="hover:text-customGreen"
                       onClick={closeDropdowns}
                     >
