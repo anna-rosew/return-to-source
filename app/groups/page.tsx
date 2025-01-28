@@ -1,6 +1,5 @@
 import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
-import InPersonCard from "@/components/ui/InPersonCard";
 import InPersonCarousel from "@/components/ui/InPersonCarousel";
 import OnlineCarousel from "@/components/ui/OnlineCarousel";
 import RetreatCarousel from "@/components/ui/RetreatsCarousel";

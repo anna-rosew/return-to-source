@@ -5,9 +5,7 @@ import type { Swiper as SwiperType } from "swiper";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import OnlineClassSlides from "./OnlineClassSlide";
 import { RetreatInfo } from "@/types/index";
-
 import MorningIcon from "@/public/Assets/Icons/MorningIcon";
 import EveningChillIcon from "@/public/Assets/Icons/EveningChillIcon";
 import KundaliniIcon from "@/public/Assets/Icons/KundaliniIcon";
