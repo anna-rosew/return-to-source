@@ -3,6 +3,7 @@ import SectionHeading from "@/components/common/SectionHeading";
 import InPersonCard from "@/components/ui/InPersonCard";
 import InPersonCarousel from "@/components/ui/InPersonCarousel";
 import OnlineCarousel from "@/components/ui/OnlineCarousel";
+import RetreatCarousel from "@/components/ui/RetreatsCarousel";
 import React from "react";
 
 //make images darker
@@ -74,7 +75,7 @@ const groups = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <InPersonCarousel />
+        <RetreatCarousel />
       </div>
     </div>
   );

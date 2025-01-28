@@ -42,3 +42,23 @@ export interface IconProps {
   width?: string | number; // Allow both string and number for width
   height?: string | number; // Allow both string and number for height
 }
+
+export interface RetreatInfo {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  classType: string;
+  description: string;
+  permanentDescription: string;
+  dates: string[];
+  times: string[];
+  dropInPrice: string;
+  monthlyPrice: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  duration: string;
+  backgroundImage: string;
+}
+// Props for ClassSlides component
+export interface RetreatProps {
+  retreatInfo: RetreatInfo;
+}
