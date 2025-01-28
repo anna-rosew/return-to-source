@@ -46,7 +46,7 @@ const InPersonCarousel = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="flex items-center justify-center space-x-6 mt-8 sm:mt-0 sm:w-full sm:absolute sm:top-1/2 sm:-translate-y-1/2 sm:space-x-0">
+        <div className="flex items-center justify-center space-x-6 mt-8 sm:mt-0 sm:w-full sm:absolute sm:top-1/2 sm:-translate-y-1/2 sm:space-x-5">
           <CarouselPrevious className="sm:absolute sm:-left-10 sm:top-1/2 sm:-translate-y-1/2 z-10 text-black border-black" />
           <CarouselNext className="sm:absolute sm:-left-2 sm:top-1/2 sm:-translate-y-1/2 z-10 text-black border-black" />
         </div>
