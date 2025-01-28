@@ -22,6 +22,7 @@ const About = () => {
             className="small-screen-component"
             alt="Rose Long sat leading a retreat class in cross-legged position on the floor, smiling with her eyes closed. She is sat in-front of a large bay window which looks out onto a large sun-filled garden. There is a large, golden gong to her left and a plant with a himilayan salt lamp on her right."
             src={AboutSmall}
+            placeholder="blur"
             layout="responsive"
           />
         </div>
