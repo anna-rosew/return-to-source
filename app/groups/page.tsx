@@ -2,7 +2,7 @@ import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
 import InPersonCarousel from "@/components/ui/InPersonCarousel";
 import OnlineCarousel from "@/components/ui/OnlineCarousel";
-import RetreatCarousel from "@/components/ui/RetreatsCarousel";
+import RetreatCarousel from "@/components/ui/RetreatsCarouselBig";
 import React from "react";
 
 //make images darker
