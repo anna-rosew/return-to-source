@@ -1,9 +1,9 @@
 import React from "react";
-import Link from "next/link";
+
 import Image from "next/image";
 import ContactImage from "@/public/Assets/Images/contact.webp";
 import ContactSmall from "@/public/Assets/Images/contact-mobile.webp";
-import { Button } from "@/components/ui/button";
+
 import ContactForm from "@/components/ui/ContactForm";
 import NewsletterForm from "@/components/ui/NewsletterForm";
 
@@ -40,30 +40,6 @@ const Contact = () => {
         <div className="text">
           <ContactForm />
           <NewsletterForm />
-
-          <div>
-            <p className="para">
-              Life brought teachers, mentors and transformative practices.
-              Challenges became opportunities for growth. I learned to cultivate
-              inner coherence instead of chaos. The mystery of life opened from
-              within. I continue to be amazed by what&apos;s possible when we
-              make a conscious choice to change. Working with people who are up
-              for the challenge keeps me inspired and motivated to keep learning
-              and growing myself.
-            </p>
-            <div className="button-container">
-              <Link href="/blog" className="flex-1">
-                <Button variant="outline" size="lg">
-                  Blog
-                </Button>
-              </Link>
-              <Link href="/" className="flex-1">
-                <Button variant="outline" size="lg">
-                  Qualifications
-                </Button>
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </div>

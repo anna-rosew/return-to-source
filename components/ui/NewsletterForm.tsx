@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 
 import { subscribe } from "@/app/api/newsletter";
 import { Card, CardContent } from "@/components/ui/card";
+import SendIcon from "@/public/Assets/Icons/SendIcon";
 
 type Inputs = z.infer<typeof newsletterSchema>;
 
@@ -44,54 +45,61 @@ export default function NewsletterForm() {
   return (
     <section>
       <Card className="rounded-lg border-0 dark:border">
-        <CardContent className="flex flex-col gap-8 pt-6 md:flex-row md:justify-between md:pt-8">
+        <CardContent className="flex flex-col text-left gap-8 pt-6  md:pt-8">
           <div>
-            <h2 className="text-2xl font-bold">Subscribe to my newsletter</h2>
+            <h2>Subscribe to my newsletter</h2>
             <p className="text-muted-foreground">
-              Get updates on my work and projects.
+              If you’d like to <strong>stay up-to-date</strong> with classes,
+              workshops and retreats, please sign-up to the monthly newsletter.
+            </p>
+            <p className="text-muted-foreground">
+              I like to keep it short but sweet. (You can unsubscribe at
+              anytime.)
             </p>
           </div>
+          <div className="flex flex-row justify-center">
+            <SendIcon />
+            <form
+              onSubmit={handleSubmit(processForm)}
+              className="flex flex-col items-start gap-3"
+            >
+              <div className="w-full">
+                <Input
+                  type="email"
+                  id="email"
+                  autoComplete="email"
+                  placeholder="Email"
+                  className="w-full"
+                  {...register("email")}
+                />
 
-          <form
-            onSubmit={handleSubmit(processForm)}
-            className="flex flex-col items-start gap-3"
-          >
-            <div className="w-full">
-              <Input
-                type="email"
-                id="email"
-                autoComplete="email"
-                placeholder="Email"
-                className="w-full"
-                {...register("email")}
-              />
+                {errors.email?.message && (
+                  <p className="ml-1 mt-2 text-sm text-rose-400">
+                    {errors.email.message}
+                  </p>
+                )}
+              </div>
 
-              {errors.email?.message && (
-                <p className="ml-1 mt-2 text-sm text-rose-400">
-                  {errors.email.message}
+              <div className="w-full">
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full disabled:opacity-50"
+                >
+                  {isSubmitting ? "Submitting..." : "Subscribe"}
+                </Button>
+              </div>
+
+              <div>
+                <p className="text-xs text-muted-foreground">
+                  We care about your data. Read our{" "}
+                  <Link href="/privacy" className="font-bold">
+                    privacy&nbsp;policy.
+                  </Link>
                 </p>
-              )}
-            </div>
-
-            <div className="w-full">
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full disabled:opacity-50"
-              >
-                {isSubmitting ? "Submitting..." : "Subscribe"}
-              </Button>
-            </div>
-
-            <div>
-              <p className="text-xs text-muted-foreground">
-                We care about your data. Read our{" "}
-                <Link href="/privacy" className="font-bold">
-                  privacy&nbsp;policy.
-                </Link>
-              </p>
-            </div>
-          </form>
+              </div>
+            </form>
+          </div>
         </CardContent>
       </Card>
     </section>
