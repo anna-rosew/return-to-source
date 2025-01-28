@@ -73,9 +73,7 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
           />
         </div>
 
-        {/* Class Details */}
         <div className="mt-5">
-          {/* Dates and Times */}
           <div>
             <div className="grid grid-cols-2 ">
               <div className="mb-4">

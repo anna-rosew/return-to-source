@@ -62,3 +62,37 @@ export interface RetreatInfo {
 export interface RetreatProps {
   retreatInfo: RetreatInfo;
 }
+
+export interface RetreatInfo {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  classType: string;
+  description: string;
+  permanentDescription: string;
+  dates: string[];
+  times: string[];
+  dropInPrice: string;
+  monthlyPrice: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  duration: string;
+  backgroundImage: string;
+}
+// Props for ClassSlides component
+export interface RetreatProps {
+  retreatInfo: RetreatInfo;
+}
+
+export interface SessionInfo {
+  backgroundImage: string;
+  title: string;
+  duration: string;
+  type: string;
+  description: string;
+  location: string;
+  date: string;
+}
+
+export interface InPersonProps {
+  sessionInfo: SessionInfo;
+}

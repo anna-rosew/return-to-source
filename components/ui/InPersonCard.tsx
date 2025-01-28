@@ -5,13 +5,18 @@ import Link from "next/link";
 import LocationIcon from "@/public/Assets/Icons/LocationIcon";
 import CalendarIcon from "@/public/Assets/Icons/CalendarIcon";
 
-const InPersonCard = () => {
+import { InPersonProps } from "@/types/index";
+
+const InPersonCard: React.FC<InPersonProps> = ({ sessionInfo }) => {
+  const formatDescription = (description: string) => {
+    return description.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  };
   return (
     <div className="relative p-4 flex flex-col justify-between items-start text-left md:items-start text-white h-full rounded-[20px] sm:h-[300px] md:h-[500px] lg:h-[600px] lg:w-[500px] overflow-hidden">
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center rounded-[20px] filter brightness-50"
         style={{
-          backgroundImage: "url('/Assets/Images/workshop1.webp')",
+          backgroundImage: `url(${sessionInfo.backgroundImage})`,
           backgroundColor: "lightgray",
           backgroundPosition: "50%",
           backgroundSize: "cover",
@@ -20,19 +25,23 @@ const InPersonCard = () => {
       ></div>
 
       <p className="flex items-center bg-gray-100 bg-opacity-30 p-2 rounded-lg text-white">
-        <ClockIcon className="w-5 h-5 mr-2 text-white " />1 hour
+        <ClockIcon className="w-5 h-5 mr-2 text-white " />
+        {sessionInfo.duration}
       </p>
 
       <div className="flex flex-col justify-start space-y-4 flex-grow mt-auto">
         <h3 className="relative z-10 text-white text-left pt-4">
-          Upcoming workshop
+          Upcoming {sessionInfo.type}
         </h3>
         <h2 className="relative z-10 text-white text-left">
-          Breathwork Course
+          {sessionInfo.title}
         </h2>
-        <p className="relative z-10 text-white text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
-        </p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: formatDescription(sessionInfo.description),
+          }}
+          className="relative z-10 text-white text-left"
+        />
       </div>
 
       <div className="p-4 bg-white w-full rounded-lg text-black mt-auto">
@@ -44,7 +53,7 @@ const InPersonCard = () => {
                 className="flex items-center gap-4 text-sm"
               >
                 <LocationIcon />
-                Well Studio, L15
+                {sessionInfo.location}
               </Link>
             </span>
           </div>
@@ -56,14 +65,16 @@ const InPersonCard = () => {
                 className="flex items-center gap-4 text-sm"
               >
                 <CalendarIcon />
-                Wed 16 Oct, 24
+                {sessionInfo.date}
               </Link>
             </span>
           </div>
         </div>
-        <Button variant="secondary" size="lg" className="w-full">
-          BOOK NOW
-        </Button>
+        <Link href="/contact">
+          <Button variant="secondary" size="lg" className="w-full">
+            BOOK NOW
+          </Button>
+        </Link>
       </div>
     </div>
   );

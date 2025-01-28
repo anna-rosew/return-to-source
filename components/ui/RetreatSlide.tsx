@@ -7,10 +7,6 @@ import DetailsDisplay from "./DetailsDisplay";
 import VideoCallIcon from "@/public/Assets/Icons/VideoCallIcon";
 import StarIcon from "@/public/Assets/Icons/StarIcon";
 
-//center items correctly
-//pagination
-//add array info
-
 const RetreatSlide: React.FC<RetreatProps> = ({ retreatInfo }) => {
   const Icon = retreatInfo.icon;
   const formatDescription = (description: string) => {
