@@ -15,8 +15,9 @@ const buttonVariants = cva(
           "bg-black text-customBeige hover:bg-customBeige hover:text-black",
         outline:
           "border border-black text-black hover:bg-black hover:text-customBeige",
-        "white-outline":
+        whiteOutline:
           "border border-white text-white hover:bg-white hover:text-white uppercase",
+
         link: "font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0",
         ghost: "bg-transparent text-black hover:bg-black hover:text-white",
       },

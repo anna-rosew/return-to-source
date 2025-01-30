@@ -3,7 +3,7 @@ import React from "react";
 
 import { RetreatInfo } from "@/types/index";
 import MorningIcon from "@/public/Assets/Icons/MorningIcon";
-import RetreatSlide from "./RetreatSlide";
+import RetreatSlide from "./RetreatOverviewSlide";
 import {
   Carousel,
   CarouselContent,

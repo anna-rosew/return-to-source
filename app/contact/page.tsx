@@ -10,7 +10,7 @@ import NewsletterForm from "@/components/ui/NewsletterForm";
 const Contact = () => {
   return (
     <div className="container text-center w-full">
-      <h1>Contact</h1>
+      <h1 className="mb-8">Contact</h1>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="relative order-first md:order-last">
           <Image
@@ -37,7 +37,7 @@ const Contact = () => {
             }}
           />
         </div>
-        <div className="text">
+        <div className="text ">
           <ContactForm />
           <NewsletterForm />
         </div>

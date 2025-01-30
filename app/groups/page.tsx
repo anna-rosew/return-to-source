@@ -2,38 +2,10 @@ import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
 import InPersonCarousel from "@/components/ui/InPersonCarousel";
 import OnlineCarousel from "@/components/ui/OnlineCarousel";
-import RetreatCarousel from "@/components/ui/RetreatsCarouselBig";
+import { slides } from "@/data/retreats";
+import RetreatsOverview from "@/components/ui/RetreatsOverview";
+import { groupCards } from "@/data/groups";
 import React from "react";
-
-//make images darker
-//Add other components to scroll
-
-const cards = [
-  {
-    imageUrl: "/Assets/Images/online-groups.webp",
-    title: "Online Groups",
-    subtitle: "yoga | community",
-    description: "Transform from the inside out!",
-    link: "/groups",
-    alt: "Online Groups - Photo of a laptop on the beach with a live Zoom class led by Rose Long.",
-  },
-  {
-    imageUrl: "/Assets/Images/in-person-groups.webp",
-    title: "In-Person Sessions",
-    subtitle: "Classes | workshops",
-    description: "Transform from the inside out!",
-    link: "/groups",
-    alt: "In-Person Groups - Photo of a relaxing yoga class being led by Rose Long. All participants lying on matts and Rose sat at the front of the class next to a large gong.",
-  },
-  {
-    imageUrl: "/Assets/Images/retreats.webp",
-    title: "Retreats",
-    subtitle: "Journeys | Growth | Exploration",
-    description: "Transform from the inside out!",
-    link: "/group",
-    alt: "In-Person Groups - Photo of a group on retreat doing a yoga session led by Rose Long on a beach on a sunny day, facing the sea.",
-  },
-];
 
 const groups = () => {
   return (
@@ -44,12 +16,10 @@ const groups = () => {
         yourself to new dimensions of experience and personal growth.
       </p>
       <div className="lg:my-20 my-7">
-        <div className="lg:my-20 my-7">
-          <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
-            {cards.map((card, index) => (
-              <Card key={index} cardInfo={card} />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
+          {groupCards.map((card, index) => (
+            <Card key={index} cardInfo={card} />
+          ))}
         </div>
       </div>
       <div className="online-groups">
@@ -60,7 +30,7 @@ const groups = () => {
         </p>
         <OnlineCarousel />
       </div>
-      <div className="in-person-groups  mb-8">
+      <div className="in-person-groups mb-8">
         <SectionHeading title="In-Person Groups" />
         <p className="text md:text-center md:py-10 py-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -68,13 +38,13 @@ const groups = () => {
         </p>
         <InPersonCarousel />
       </div>
-      <div className="in-person-groups  mb-8">
+      <div className="in-person-groups mb-8">
         <SectionHeading title="Retreats" />
         <p className="text md:text-center md:py-10 py-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <RetreatCarousel />
+        <RetreatsOverview slides={slides} />
       </div>
     </div>
   );

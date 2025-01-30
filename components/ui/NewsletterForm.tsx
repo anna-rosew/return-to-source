@@ -58,7 +58,8 @@ export default function NewsletterForm() {
             </p>
           </div>
           <div className="flex flex-row justify-center">
-            <SendIcon />
+            <SendIcon className="w-20 h-20 md:mx-auto px-2" />
+
             <form
               onSubmit={handleSubmit(processForm)}
               className="flex flex-col items-start gap-3"

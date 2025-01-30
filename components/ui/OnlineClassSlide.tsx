@@ -7,12 +7,9 @@ import DetailsDisplay from "./DetailsDisplay";
 import VideoCallIcon from "@/public/Assets/Icons/VideoCallIcon";
 import StarIcon from "@/public/Assets/Icons/StarIcon";
 
-//center items correctly
-//pagination
-//add array info
-
 const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
   const Icon = classInfo.icon;
+
   const formatDescription = (description: string) => {
     return description.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
   };
@@ -27,7 +24,7 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
   };
 
   return (
-    <div className=" pt-5 relative md:p-5 grid grid-cols-1 md:grid-cols-3 gap-5">
+    <div className="pt-5 relative md:p-5 grid grid-cols-1 md:grid-cols-3 gap-5">
       <div className="flex flex-col justify-between">
         {/* Header with Icon */}
         <div
@@ -37,20 +34,12 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
           }}
         >
           <div className="flex flex-row items-center justify-start space-x-4">
-            <div
-              className="flex items-center justify-center bg-gray-100 bg-opacity-20 rounded-full p-3 text-white 
-        md:absolute md:top-4 md:left-4 md:flex-row md:items-start md:space-x-4"
-            >
-              <Icon
-                className="class-icon"
-                strokeWidth={1}
-                stroke="currentColor"
-                fill="currentColor"
-              />
+            <div className="flex items-center justify-center bg-gray-100 bg-opacity-20 rounded-full p-3 text-white">
+              <Icon className="class-icon" />
             </div>
             <div className="small-screen-component">
               <p className="flex items-center bg-gray-100 bg-opacity-20 p-2 rounded-lg text-white">
-                <ClockIcon className="w-5 h-5 mr-2 text-white " />
+                <ClockIcon className="w-5 h-5 mr-2 text-white" />
                 {classInfo.duration}
               </p>
             </div>
@@ -104,7 +93,7 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
                   )}
                 </ul>
               </div>
-            </div>{" "}
+            </div>
             <div className="medium-screen-component">
               <DetailsDisplay displayInfo={displayInfo} />
             </div>
@@ -119,10 +108,7 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
             </Link>
             <div className="small-screen-component">
               <span className="text-left mt-4 inline-flex items-center gap-x-4">
-                <Link
-                  href="/dashboard"
-                  className=" underline flex items-center"
-                >
+                <Link href="/dashboard" className="underline flex items-center">
                   Online class library
                   <ChevronRight />
                 </Link>
