@@ -12,10 +12,10 @@ const OnlineCarousel: React.FC = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   const pagination = {
-    el: ".custom-pagination",
+    el: ".online-pagination",
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      return `<h3 class="${className} custom-bullet">${classes[index].classType}</h3>`;
+      return `<h3 class="${className} online-bullet">${classes[index].classType}</h3>`;
     },
   };
 
@@ -23,11 +23,11 @@ const OnlineCarousel: React.FC = () => {
     <div className="w-full">
       <div>
         <div className="mb-6">
-          <div className="custom-pagination flex justify-center items-center py-4 border-t border-b border-gray-800">
+          <div className="online-pagination flex justify-center items-center py-4 border-t border-b border-gray-800">
             {classes.map((classItem, index) => (
               <h3
                 key={index}
-                className="custom-bullet cursor-pointer px-4 py-2 text-center font-medium text-black hover:bg-gray-200 transition-all"
+                className="online-bullet cursor-pointer px-4 py-2 text-center font-medium text-black hover:bg-gray-200 transition-all"
               >
                 {classItem.classType}
               </h3>
