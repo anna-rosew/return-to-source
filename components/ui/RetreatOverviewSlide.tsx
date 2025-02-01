@@ -46,6 +46,7 @@ export default function RetreatSlide({ slide }: RetreatSlideProps) {
           </div>
         </div>
       </div>
+      <div className="retreat-pagination absolute bottom-4 left-4 flex space-x-2 z-10"></div>
     </div>
   );
 }

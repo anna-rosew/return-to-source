@@ -131,6 +131,35 @@
   .swiper-pagination-bullet-active.online-bullet {
     @apply border-2 border-black !important;
   }
+
+  /* Global overrides for Swiper navigation arrows */
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply text-black border-2 border-black rounded-full p-2 cursor-pointer; /* Tailwind utilities */
+    background: transparent; /* Remove any background */
+    text-decoration: none; /* Remove any underlines if necessary */
+  }
+
+  .swiper-button-prev {
+    @apply hidden md:flex absolute left-4 top-1/2 transform -translate-y-1/2 z-10;
+  }
+
+  .swiper-button-next {
+    @apply hidden md:flex absolute right-4 top-1/2 transform -translate-y-1/2 z-10;
+  }
+
+  /* Global pagination customization */
+  .swiper-pagination-bullet {
+    @apply w-3 h-3 mx-1 rounded-lg bg-white opacity-50; /* Inactive bullets */
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply bg-white; /* Active bullets */
+  }
+
+  .swiper-pagination {
+    @apply bottom-10; /* Adjust pagination positioning */
+  }
 }
 
 @layer utilities {
