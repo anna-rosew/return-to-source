@@ -69,6 +69,8 @@ export interface RetreatOverviewCardProps {
 
 export interface Slide {
   imageUrl: string;
+  date: string;
+  location: string;
   heading: string;
   description: string;
   buttonText: string;

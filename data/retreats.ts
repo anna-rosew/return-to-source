@@ -3,6 +3,8 @@ import { Slide } from "@/types/index";
 export const slides: Slide[] = [
   {
     imageUrl: "/Assets/Images/retreat-beach.webp",
+    date: "March 2025",
+    location: "Peak District",
     heading:
       "Find Your Balance: A Transformative Yoga Retreat in the Heart of Nature",
     description:
@@ -11,7 +13,9 @@ export const slides: Slide[] = [
     tags: ["Nature", "Transform", "Sound Bath", "Breath"],
   },
   {
-    imageUrl: "/images/yoga2.jpg",
+    imageUrl: "Assets/images/retreat-soundbath.webp",
+    date: "March 2025",
+    location: "Peak District",
     heading: "Connect with Nature",
     description:
       "Surround yourself with pristine wilderness and breathe in tranquility.",
@@ -19,7 +23,9 @@ export const slides: Slide[] = [
     tags: ["Meditation", "Wellness", "Healing", "Community"],
   },
   {
-    imageUrl: "/Assets/Images/retreat-beach.webp",
+    imageUrl: "Assets/images/retreat-field.webp",
+    date: "March 2025",
+    location: "Peak District",
     heading:
       "Find Your Balance: A Transformative Yoga Retreat in the Heart of Nature",
     description:
