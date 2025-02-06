@@ -7,7 +7,7 @@ import LunarIcon from "@/public/Assets/Icons/LunarIcon";
 export const classes: ClassInfo[] = [
   {
     icon: MorningIcon,
-    classType: "Good Morning Breath",
+    classType: "Morning",
     description:
       "If you're looking for a fast way to <strong>regenerate your body, mind, and spirit,</strong> come and experience the magic of the breath. Deeply detoxifying, revitalising, and balancing, the practice of <strong>Pranayama</strong> has deep and lasting benefits.",
     permanentDescription:
@@ -23,7 +23,7 @@ export const classes: ClassInfo[] = [
   },
   {
     icon: EveningChillIcon,
-    classType: "Deep Chill",
+    classType: "Evening",
     description:
       "Thursday nights are about releasing tension and moving into the parasympathetic nervous system, which allows the body to replenish and heal. This hour is a deeply restorative way to look after your health in these stressful times. Come and enjoy an hour to unwind and relax.",
     permanentDescription:
@@ -39,7 +39,7 @@ export const classes: ClassInfo[] = [
   },
   {
     icon: KundaliniIcon,
-    classType: "Kundalini Magic",
+    classType: "Kundalini",
     description:
       "These 90-minute classes combine movement, breath, and sound. If you’re looking for an intense physical workout and a tangible experience of expansive awareness, this is for you. Kundalini Yoga is the fastest way to experience altered states of consciousness without substances.",
     permanentDescription:
@@ -55,7 +55,7 @@ export const classes: ClassInfo[] = [
   },
   {
     icon: LunarIcon,
-    classType: "Lunar Cycles",
+    classType: "Lunar",
     description:
       "Meeting twice each month, this practice helps you drop into the natural rhythms of your body and the world. Women have practiced at the New and Full Moon for centuries to deepen awareness of their bodies and cyclical connection with nature. Set an intention with each New Moon and reflect and release with each Full Moon.",
     permanentDescription:

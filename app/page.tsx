@@ -33,12 +33,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col items-center w-full">
-      <h4 className="uppercase text-[28px] lg:text-[48px] leading-2 text-center font-neato">
-        Breath - Mind - Body
+      <h4 className=" text-[28px] lg:text-[48px] leading-2 text-center font-neato">
+        Findng What Works for You.
       </h4>
       <p className="p-4 text-center text-customTeal lg:mx-64">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        Feeling Overwhelmed? Stuck in a Cycle That’s Hard to Break?
       </p>
       <HeroImage />
       <Link href="/work">
