@@ -27,9 +27,7 @@ const groups = () => {
         <p className="text md:text-center md:py-10 py-4">
           Join us from anywhere in the world for live-streamed and on-demand
           sessions. Practice in the comfort of your own space while staying
-          connected to our supportive community. From guided meditations to
-          dynamic flows, our online offerings bring the studio experience home –
-          perfect for busy schedules or those who prefer practicing remotely.
+          connected to our supportive community.
         </p>
         <OnlineCarousel />
       </div>

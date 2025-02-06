@@ -7,7 +7,7 @@ interface HeadingProps {
 const SectionHeading = ({ title }: HeadingProps) => {
   return (
     <div>
-      <h2 className="relative text-center max-w-[31.25em] mx-auto my-2 sm:my-4">
+      <h2 className="relative text-center max-w-[31.25em] mx-auto my-2">
         <span className="inline-block relative z-10">{title}</span>
         <span className="section-heading-left"></span>
         <span className="section-heading-right"></span>

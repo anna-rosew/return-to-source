@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center w-full">
       <h4 className=" text-[28px] lg:text-[48px] mt-4 leading-2 text-center font-neato">
-        Findng What Works for You.
+        Finding What Works for You.
       </h4>
       <p className="p-4 text-center text-customTeal lg:mx-64">
         Feeling Overwhelmed? Stuck in a Cycle That’s Hard to Break?

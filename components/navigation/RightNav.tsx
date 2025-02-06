@@ -54,7 +54,7 @@ const RightNav = ({ open, closeMenu }: RightNavProps) => {
             </Button>
           </Link> */}
         <div className="absolute bottom-6 w-full px-4 space-y-6">
-          <Link href="/login" className="my-2">
+          <Link href="/contact" className="my-2">
             <Button
               variant="secondary"
               size="lg"
