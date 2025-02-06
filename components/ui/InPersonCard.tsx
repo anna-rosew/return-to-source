@@ -29,7 +29,7 @@ const InPersonCard: React.FC<InPersonProps> = ({ sessionInfo }) => {
         {sessionInfo.duration}
       </p>
 
-      <div className="flex flex-col justify-start space-y-4 flex-grow mt-auto">
+      <div className="flex flex-col justify-start space-y-4 flex-grow mt-auto mb-4">
         <h3 className="relative z-10 text-white text-left pt-4">
           Upcoming {sessionInfo.type}
         </h3>
@@ -40,7 +40,7 @@ const InPersonCard: React.FC<InPersonProps> = ({ sessionInfo }) => {
           dangerouslySetInnerHTML={{
             __html: formatDescription(sessionInfo.description),
           }}
-          className="relative z-10 text-white text-left"
+          className="relative z-10 text-white text-left mb-4"
         />
       </div>
 

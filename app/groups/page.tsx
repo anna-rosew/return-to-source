@@ -25,24 +25,34 @@ const groups = () => {
       <div className="online-groups">
         <SectionHeading title="Online Groups" />
         <p className="text md:text-center md:py-10 py-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Join us from anywhere in the world for live-streamed and on-demand
+          sessions. Practice in the comfort of your own space while staying
+          connected to our supportive community. From guided meditations to
+          dynamic flows, our online offerings bring the studio experience home –
+          perfect for busy schedules or those who prefer practicing remotely.
         </p>
         <OnlineCarousel />
       </div>
       <div className="in-person-groups mb-8">
         <SectionHeading title="In-Person Groups" />
-        <p className="text md:text-center md:py-10 py-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <p className="text md:text-center md:py-4 py-2">
+          Come and join our community for intimate in-person sessions. These
+          classes and workshops offer personal attention and guidance in a
+          supportive space. Whether you&apos;re drawn to gentle Breathing
+          Courses, energising Kundalini flow, or connecting at our post-class
+          gatherings, there&apos;s something for every stage of your journey.
         </p>
         <InPersonCarousel />
       </div>
       <div className="in-person-groups mb-8">
         <SectionHeading title="Retreats" />
         <p className="text md:text-center md:py-10 py-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Step away from the everyday and immerse yourself in transformative
+          experiences. Our retreats blend yoga practice, meditation, and
+          community connection in carefully chosen locations. Whether for a day
+          or a week, these intimate gatherings offer a chance to reset, deepen
+          your practice, and forge lasting connections with fellow
+          practitioners.
         </p>
         <RetreatsOverview slides={slides} />
       </div>
