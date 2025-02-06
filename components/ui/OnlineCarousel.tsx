@@ -36,7 +36,7 @@ const OnlineCarousel: React.FC = () => {
           <Swiper
             pagination={pagination}
             modules={[Pagination]}
-            className="w-full h-full"
+            className="w-full"
             spaceBetween={50}
             slidesPerView={1}
             onSwiper={(swiper) => (swiperRef.current = swiper)}

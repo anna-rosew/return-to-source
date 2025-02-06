@@ -39,9 +39,9 @@ export const classes: ClassInfo[] = [
   },
   {
     icon: KundaliniIcon,
-    classType: "Kundalini",
+    classType: "Chakra",
     description:
-      "These 90-minute classes combine movement, breath, and sound. If you’re looking for an intense physical workout and a tangible experience of expansive awareness, this is for you. Kundalini Yoga is the fastest way to experience altered states of consciousness without substances.",
+      "These 90-minute classes combine movement, breath, and sound. If you’re looking for an intense physical workout and a tangible experience of expansive awareness, this is for you. Chakra Yoga is the fastest way to experience altered states of consciousness without substances.",
     permanentDescription:
       "You can join this class anywhere in the world on Zoom.",
     dates: ["Sat, Aug 3", "Sun, Sep 1", "Sat, Sep 7"],

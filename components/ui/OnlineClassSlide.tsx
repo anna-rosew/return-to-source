@@ -40,18 +40,19 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
               </p>
             </div>
           </div>
-          <h2 className="mt-2 md:mt-0 text-white small-screen-component">
-            {classInfo.classType}
-          </h2>
+          <div className="flex items-center gap-2 small-screen-component">
+            <Icon className="class-icon w-8 h-8 fill-white small-screen-component" />
+            <h2 className="mt-2 md:mt-0 text-white small-screen-component">
+              {classInfo.classType}
+            </h2>
+          </div>
         </div>
       </div>
       <div className="md:col-span-2 flex flex-col justify-between h-full">
-        <div className="text-left mt-4">
-          <div className="flex items-center gap-2">
+        <div className="text-left md:mt-4">
+          <div className="hidden md:flex items-center gap-2 medium-screen-component">
             <Icon className="class-icon w-6 h-6 fill-black" />
-            <h2 className="text-black medium-screen-component">
-              {classInfo.classType}
-            </h2>
+            <h2 className="text-black">{classInfo.classType}</h2>
           </div>
 
           <p
@@ -105,8 +106,8 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
                 Book Now
               </Button>
             </Link>
-            <div className="small-screen-component">
-              <span className="text-left mt-4 inline-flex items-center gap-x-4">
+            <div className="small-screen-component text-left">
+              <span className="mt-4 block">
                 <Link href="/dashboard" className="underline flex items-center">
                   Online class library
                   <ChevronRight />
