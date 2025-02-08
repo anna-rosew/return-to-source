@@ -1,4 +1,4 @@
-const KundaliniIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
+const ChakraIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   fill = "white",
   ...props
 }) => {
@@ -20,4 +20,4 @@ const KundaliniIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   );
 };
 
-export default KundaliniIcon;
+export default ChakraIcon;

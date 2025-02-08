@@ -1,7 +1,7 @@
 import { ClassInfo } from "@/types/index";
 import MorningIcon from "@/public/Assets/Icons/MorningIcon";
 import EveningChillIcon from "@/public/Assets/Icons/EveningChillIcon";
-import KundaliniIcon from "@/public/Assets/Icons/KundaliniIcon";
+import KundaliniIcon from "@/public/Assets/Icons/ChakraIcon";
 import LunarIcon from "@/public/Assets/Icons/LunarIcon";
 
 export const classes: ClassInfo[] = [
