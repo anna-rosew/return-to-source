@@ -97,6 +97,27 @@ export interface RetreatProps {
   retreatInfo: RetreatInfo;
 }
 
+//Blog Posts
+
+export type PostType = "short-article" | "long-article" | "podcast" | "recipe";
+
+export type Tag = "Mind" | "Body" | "Breath" | "Nutrition" | "Mindfulness";
+
+export interface Post {
+  title: string;
+  slug: string;
+  date: string;
+  type: PostType;
+  tags: Tag[];
+  excerpt: string;
+  featured: boolean;
+  coverImage: string;
+  // Additional fields based on type
+  duration?: number; // For podcasts
+  cookingTime?: number; // For recipes
+ 
+}
+
 //UI COMPONENTS
 
 //DetailsDisplay
@@ -117,6 +138,7 @@ export interface DetailsDisplayProps {
 //Icon
 
 export interface IconProps {
-  width?: string | number; // Allow both string and number for width
-  height?: string | number; // Allow both string and number for height
+  width?: string | number; 
+  height?: string | number; 
 }
+
