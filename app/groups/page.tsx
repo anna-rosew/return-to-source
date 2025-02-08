@@ -1,9 +1,9 @@
 import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
-import InPersonCarousel from "@/components/ui/InPersonCarousel";
-import OnlineCarousel from "@/components/ui/OnlineCarousel";
+import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
+import OnlineCarousel from "@/components/ui/online/OnlineCarousel";
 import { slides } from "@/data/retreats";
-import RetreatsOverview from "@/components/ui/RetreatsOverview";
+import RetreatsOverview from "@/components/ui/retreats/RetreatsOverview";
 import { groupCards } from "@/data/groups";
 import React from "react";
 

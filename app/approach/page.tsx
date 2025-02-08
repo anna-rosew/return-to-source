@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import DetailsCard from "@/components/ui/DetailsCard";
-import TestimonialSection from "@/components/ui/TestimonialSection";
+import TestimonialSection from "@/components/ui/testimonials/TestimonialSection";
 import VideoPlayer from "@/components/ui/VideoPlayer";
 import AjnaIcon from "@/public/Assets/Icons/AjnaIcon";
 import AnahataIcon from "@/public/Assets/Icons/AnahataIcon";

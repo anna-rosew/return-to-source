@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import DetailsCard from "@/components/ui/DetailsCard";
-import TestimonialSection from "@/components/ui/TestimonialSection";
+import TestimonialSection from "@/components/ui/testimonials/TestimonialSection";
 import VideoPlayer from "@/components/ui/VideoPlayer";
 import { CalendarDays } from "lucide-react";
 import { SunMoon } from "lucide-react";

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
-import { Button } from "./button";
+import { Button } from "../button";
 import { ClassSlidesProps } from "@/types/index";
 import { ChevronRight, ClockIcon } from "lucide-react";
-import DetailsDisplay from "./DetailsDisplay";
+import DetailsDisplay from "../DetailsDisplay";
 import VideoCallIcon from "@/public/Assets/Icons/VideoCallIcon";
 import StarIcon from "@/public/Assets/Icons/StarIcon";
 

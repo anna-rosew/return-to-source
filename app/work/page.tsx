@@ -1,5 +1,5 @@
 import Card from "@/components/common/NavCard";
-import TestimonialSection from "@/components/ui/TestimonialSection";
+import TestimonialSection from "@/components/ui/testimonials/TestimonialSection";
 import { workCards } from "@/data/work";
 
 const Work = () => {

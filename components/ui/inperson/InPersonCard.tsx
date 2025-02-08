@@ -1,6 +1,6 @@
 import { ClockIcon } from "lucide-react";
 import React from "react";
-import { Button } from "./button";
+import { Button } from "../button";
 import Link from "next/link";
 import LocationIcon from "@/public/Assets/Icons/LocationIcon";
 import CalendarIcon from "@/public/Assets/Icons/CalendarIcon";

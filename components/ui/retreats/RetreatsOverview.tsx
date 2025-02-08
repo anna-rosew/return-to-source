@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import RetreatSlide from "@/components/ui/RetreatOverviewSlide";
+import RetreatSlide from "@/components/ui/retreats/RetreatOverviewSlide";
 import { Slide } from "@/types";
 
 interface RetreatCarouselProps {

@@ -1,7 +1,7 @@
 import React from "react";
-import TestimonialCarousel from "./testimonials/TestimonialCarousel";
+import TestimonialCarousel from "./TestimonialCarousel";
 import Link from "next/link";
-import { Button } from "./button";
+import { Button } from "../button";
 
 const TestimonialSection = () => {
   return (
