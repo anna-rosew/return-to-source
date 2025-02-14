@@ -3,9 +3,9 @@ import Link from "next/link";
 //images
 
 import Image from "next/image";
-import AnahataChakra from "@/public/Assets/Icons/courage-white.svg";
-import AjnaChakra from "@/public/Assets/Icons/clarity-white.svg";
-import MuladharaChakra from "@/public/Assets/Icons/presence-white.svg";
+import AnahataChakra from "@/public/Assets/Images/HomepageBox1.webp";
+import AjnaChakra from "@/public/Assets/Images/HomepageBox3_.webp";
+import MuladharaChakra from "@/public/Assets/Images/HomepageBox3.webp";
 import { ChevronRight } from "lucide-react";
 
 export default function HomeScroll() {
