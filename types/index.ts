@@ -97,6 +97,20 @@ export interface RetreatProps {
   retreatInfo: RetreatInfo;
 }
 
+//About Page - Qualifications
+
+export type Qualification = {
+  year: string;
+  title: string;
+  institution: string;
+};
+
+//(modal)
+
+export type SearchParamProps = {
+  searchParams: Record<string, string> | null | undefined;
+};
+
 //Blog Posts
 
 export type PostType = "short-article" | "long-article" | "podcast" | "recipe";
@@ -115,7 +129,6 @@ export interface Post {
   // Additional fields based on type
   duration?: number; // For podcasts
   cookingTime?: number; // For recipes
- 
 }
 
 //UI COMPONENTS
@@ -138,7 +151,6 @@ export interface DetailsDisplayProps {
 //Icon
 
 export interface IconProps {
-  width?: string | number; 
-  height?: string | number; 
+  width?: string | number;
+  height?: string | number;
 }
-

@@ -4,8 +4,12 @@ import React from "react";
 import AboutImage from "@/public/Assets/Images/about.webp";
 import AboutSmall from "@/public/Assets/Images/about-small.webp";
 import { Button } from "@/components/ui/button";
+import { SearchParamProps } from "@/types";
+import QualificationsModal from "@/components/ui/modals/QualificationsModal";
 
-const About = () => {
+const About = ({ searchParams }: SearchParamProps) => {
+  const show = searchParams?.show;
+
   return (
     <div className="container mb-8">
       <h1>Meet Rose</h1>
@@ -64,7 +68,7 @@ const About = () => {
                   Blog
                 </Button>
               </Link>
-              <Link href="/" className="flex-1">
+              <Link href="?show=true" scroll={false} className="flex-1">
                 <Button variant="outline" size="lg">
                   Qualifications
                 </Button>
@@ -73,6 +77,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      {show && <QualificationsModal />}
     </div>
   );
 };
