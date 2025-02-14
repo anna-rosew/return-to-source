@@ -4,10 +4,10 @@ import React from "react";
 import AboutImage from "@/public/Assets/Images/about.webp";
 import AboutSmall from "@/public/Assets/Images/about-small.webp";
 import { Button } from "@/components/ui/button";
-import { SearchParamProps } from "@/types";
+import { SearchParamProps } from "@/types/index";
 import QualificationsModal from "@/components/ui/modals/QualificationsModal";
 
-const About = ({ searchParams }: Pick<SearchParamProps, "searchParams">) => {
+const About = ({ searchParams }: SearchParamProps) => {
   const show = searchParams?.show;
 
   return (
