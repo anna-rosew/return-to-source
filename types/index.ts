@@ -107,9 +107,10 @@ export type Qualification = {
 
 //(modal)
 
-export type SearchParamProps = {
-  searchParams: Record<string, string> | null | undefined;
-};
+export interface SearchParamProps {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
 
 //Blog Posts
 

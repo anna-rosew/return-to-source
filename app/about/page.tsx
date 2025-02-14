@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { SearchParamProps } from "@/types";
 import QualificationsModal from "@/components/ui/modals/QualificationsModal";
 
-const About = ({ searchParams }: SearchParamProps) => {
+const About = ({ searchParams }: Pick<SearchParamProps, "searchParams">) => {
   const show = searchParams?.show;
 
   return (
