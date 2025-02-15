@@ -6,19 +6,32 @@ import { qualifications } from "@/data/qualifications";
 import { Qualification } from "@/types";
 import { Button } from "../button";
 
-const QualificationsModal = () => {
+interface QualificationsModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const QualificationsModal: React.FC<QualificationsModalProps> = ({
+  isOpen,
+  onClose,
+}) => {
+  if (!isOpen) return null;
   return (
     <div>
       <div className="fixed inset-0 flex items-start justify-start p-0.5 bg-black/80 overflow-y-auto z-50">
         <div className="flex flex-col w-4/5 max-w-[70rem] mx-auto my-4 p-8 bg-customGreen shadow-lg overflow-y-auto max-h-[90vh]">
-          <div className="flex items-center">
-            <Link href="/about">
+          <div className="flex justify-end w-full mb-4">
+            <Button
+              onClick={onClose}
+              variant="outline"
+              className="hover:opacity-75 transition"
+            >
               <X />
-            </Link>
+            </Button>
           </div>
 
           <div className="mb-6">
-            <h2 className="text-2xl font-bold">Full Credentials:</h2>
+            <h2 className="text-left">Full Credentials:</h2>
           </div>
 
           <div className="text-left">

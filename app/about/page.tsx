@@ -1,18 +1,15 @@
-import Link from "next/link";
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import AboutImage from "@/public/Assets/Images/about.webp";
 import AboutSmall from "@/public/Assets/Images/about-small.webp";
 import { Button } from "@/components/ui/button";
-import { SearchParamProps } from "@/types/index";
 import QualificationsModal from "@/components/ui/modals/QualificationsModal";
 import LogoContainer from "@/components/ui/about/LogoContainer";
 import TestimonialSection from "@/components/ui/TestimonialSection";
 
-//fix padding
-
-const About = ({ searchParams }: SearchParamProps) => {
-  const show = searchParams?.show;
+const About = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div>
@@ -70,40 +67,49 @@ const About = ({ searchParams }: SearchParamProps) => {
             </div>
           </div>
         </div>
-        <h2 className="text-left my-5">Qualifications</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <p className="py-2">
-              I’ve been teaching and facilitating groups since my mid-twenties.
-              After training as a secondary school teacher in Religious
-              Education, I quickly realised the school system wasn’t for me.
-              This led me to Human Rights Education, where I set up the
-              Education Department at Anti-Slavery International, working with
-              incredible individuals and communities locally, nationally and
-              internationally.
-            </p>
-            <p className="py-2">
-              In my early thirties, inspired by Paulo Freire’s work, I
-              co-founded Living Lens, an international social enterprise that
-              used video to amplify marginalised voices and spark social change.
-              The work was deeply rewarding and it was during this time that I
-              trained as a Self-Expression & Leadership Coach.{" "}
-            </p>
-            <p className="py-2 mb-3">
-              In my early forties I trained as a Holistic Health Coaching and
-              trained as a Yoga & Meditation Teacher. I am a perpetual student
-              and am grateful to all my teachers and mentors, and the rich
-              traditions that I draw upon in my work.
-            </p>
-            <Link href="?show=true" scroll={false} className="flex-1 ">
-              <Button variant="secondary" size="lg" className="w-full">
+        <div className="page-section">
+          <h2 className="text-left mb-5">Qualifications</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <p className="para">
+                I’ve been teaching and facilitating groups since my
+                mid-twenties. After training as a secondary school teacher in
+                Religious Education, I quickly realised the school system wasn’t
+                for me. This led me to Human Rights Education, where I set up
+                the Education Department at Anti-Slavery International, working
+                with incredible individuals and communities locally, nationally
+                and internationally.
+              </p>
+              <p className="para">
+                In my early thirties, inspired by Paulo Freire’s work, I
+                co-founded Living Lens, an international social enterprise that
+                used video to amplify marginalised voices and spark social
+                change. The work was deeply rewarding and it was during this
+                time that I trained as a Self-Expression & Leadership Coach.{" "}
+              </p>
+              <p className="para">
+                In my early forties I trained as a Holistic Health Coaching and
+                trained as a Yoga & Meditation Teacher. I am a perpetual student
+                and am grateful to all my teachers and mentors, and the rich
+                traditions that I draw upon in my work.
+              </p>
+
+              <Button
+                variant="secondary"
+                size="lg"
+                className="w-full mt-8"
+                onClick={() => setIsModalOpen(true)}
+              >
                 View Full Credentials
               </Button>
-            </Link>
+            </div>
+            <LogoContainer />
           </div>
-          <LogoContainer />
         </div>
-        {show && <QualificationsModal />}
+        <QualificationsModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </div>
       <TestimonialSection />
     </div>
