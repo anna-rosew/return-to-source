@@ -45,13 +45,13 @@ const Footer = () => {
             <div>
               <Link
                 href="https://www.instagram.com/lifechangesrose/?hl=en"
-                className=" inline-block m-3"
+                className="inline-block m-3 transform transition-transform duration-300 hover:scale-110"
               >
                 <Image src={InstaIcon} alt="Instagram" height={48} width={48} />
               </Link>
               <Link
                 href="https://vimeo.com/roselong"
-                className="inline-block m-2.5"
+                className="inline-block m-3 transform transition-transform duration-300 hover:scale-110"
               >
                 <Image src={VimeoIcon} alt="Vimeo" height={48} width={48} />
               </Link>

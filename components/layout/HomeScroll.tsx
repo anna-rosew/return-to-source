@@ -1,7 +1,4 @@
 import Link from "next/link";
-
-//images
-
 import Image from "next/image";
 import AnahataChakra from "@/public/Assets/Images/HomepageBox1.webp";
 import AjnaChakra from "@/public/Assets/Images/HomepageBox3_.webp";
@@ -9,31 +6,6 @@ import MuladharaChakra from "@/public/Assets/Images/HomepageBox3.webp";
 import { ChevronRight } from "lucide-react";
 
 export default function HomeScroll() {
-  {
-    /* 
-            const homeFeatures = [
-    {
-      imageSrc: "",
-      title: "Build Courage",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-      buttonText: "Explore Classes",
-    },
-    {
-      title: "Build Courage",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-      buttonText: "Explore Classes",
-    },
-    {
-      title: "Be Present",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-      buttonText: "Explore Classes",
-    },
-  ];
-            */
-  }
 
   return (
     <div className=" w-full bg-black flex flex-col gap-y-[56px] lg:gap-y-[80px] lg:py-[120px] py-[56px] px-4">
@@ -157,10 +129,4 @@ export default function HomeScroll() {
   );
 }
 
-/* 
-             <div className="text-white flex-col justify-center">
-      {homeFeatures.map((item, index) => (
-        <h1>{item.title}</h1>
-      ))}
-    </div>
-            */
+
