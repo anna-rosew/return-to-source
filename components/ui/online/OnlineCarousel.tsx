@@ -6,7 +6,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import OnlineClassSlides from "./OnlineClassSlide";
-import { classes } from "@/data/online";
+import { classes } from "@/content/online";
 
 const OnlineCarousel: React.FC = () => {
   const swiperRef = useRef<SwiperType | null>(null);

@@ -1,5 +1,5 @@
 import React from "react";
-import { sessionInfo } from "@/data/inperson";
+import { sessionInfo } from "@/content/inperson";
 
 import {
   Carousel,

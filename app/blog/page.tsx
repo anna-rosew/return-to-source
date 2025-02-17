@@ -1,23 +1,24 @@
 import React from "react";
 import ConstructionLayout from "@/components/layout/ConstructionLayout";
-import { Post } from "@/types";
-
+import { getAllPosts } from "@/lib/blog";
 import { FeaturedPosts } from "@/components/ui/blog/FeaturedPosts";
+import { PostGrid } from "@/components/ui/blog/PostGrid";
 
-interface BlogPageProps {
-  posts: Post[];
-}
-
-export default function BlogPage({ posts }: BlogPageProps) {
+export default async function BlogPage() {
+  const posts = await getAllPosts();
   return (
     <ConstructionLayout>
-      <div className="container text-center w-full">
-        <h1 className="pb-5">Blog</h1>
-        <p className="font-bold md:text-center">
-          Come and explore how your body, mind and breath work together. Open
-          yourself to new dimensions of experience and personal growth.
-        </p>
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">Blog</h1>
+          <p className="text-xl text-gray-600">
+            Explore how your body, mind and breath work together.
+          </p>
+        </div>
+
         <FeaturedPosts posts={posts} />
+
+        <PostGrid posts={posts} />
       </div>
     </ConstructionLayout>
   );

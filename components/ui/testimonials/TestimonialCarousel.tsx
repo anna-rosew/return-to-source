@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import TestimonialCard from "./TestimonialCard";
-import { testimonials } from "@/data/testimonials";
+import { testimonials } from "@/content/testimonials";
 
 const TestimonialCarousel = () => {
   return (

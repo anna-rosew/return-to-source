@@ -1,4 +1,4 @@
-import { serviceData } from "@/data/serviceData";
+import { serviceData } from "@/content/serviceData";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 
 export default function HomeScroll() {

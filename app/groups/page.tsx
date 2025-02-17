@@ -2,9 +2,9 @@ import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
 import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
 import OnlineCarousel from "@/components/ui/online/OnlineCarousel";
-import { slides } from "@/data/retreats";
+import { slides } from "@/content/retreats";
 import RetreatsOverview from "@/components/ui/retreats/RetreatsOverview";
-import { groupCards } from "@/data/groups";
+import { groupCards } from "@/content/groups";
 import React from "react";
 
 const groups = () => {

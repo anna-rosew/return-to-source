@@ -144,6 +144,22 @@ export interface Post {
   cookingTime?: number; // For recipes
 }
 
+import { ReactNode } from "react";
+
+export interface MDXContent {
+  title: string;
+  excerpt: string;
+  date: string;
+  tags: Tag[];
+  type: PostType;
+  featured: boolean;
+  author: string;
+  image: string;
+  content?: string;
+  children?: ReactNode;
+  slug: string;
+}
+
 //UI COMPONENTS
 
 //DetailsDisplay

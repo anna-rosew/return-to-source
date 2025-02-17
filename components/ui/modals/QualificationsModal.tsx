@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { X } from "lucide-react";
-import { qualifications } from "@/data/qualifications";
+import { qualifications } from "@/content/qualifications";
 import { Qualification } from "@/types";
 import { Button } from "../button";
 

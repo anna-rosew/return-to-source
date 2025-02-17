@@ -1,6 +1,6 @@
 import Card from "@/components/common/NavCard";
 import TestimonialSection from "@/components/ui/testimonials/TestimonialSection";
-import { workCards } from "@/data/work";
+import { workCards } from "@/content/work";
 
 const Work = () => {
   return (
