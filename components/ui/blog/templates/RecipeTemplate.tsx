@@ -1,5 +1,6 @@
 import { MDXContent } from "@/types";
 import Image from "next/image";
+
 interface RecipeTemplateProps {
   content: MDXContent & {
     cookingTime: number;
@@ -18,7 +19,7 @@ export function RecipeTemplate({ content }: RecipeTemplateProps) {
         </div>
         <div className="relative w-full h-[400px] mb-8">
           <Image
-            src={content.image}
+            src={content.coverImage}
             alt={content.title}
             fill
             className="object-cover rounded-lg"

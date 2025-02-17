@@ -126,11 +126,13 @@ export type SearchParamProps = {
 
 //Blog Posts
 
-export type PostType = "short-article" | "long-article" | "podcast" | "recipe";
+import { ReactNode } from "react";
 
+export type PostType = "short-article" | "long-article" | "podcast" | "recipe";
 export type Tag = "Mind" | "Body" | "Breath" | "Nutrition" | "Mindfulness";
 
-export interface Post {
+// Base interface for common properties
+interface BasePost {
   title: string;
   slug: string;
   date: string;
@@ -139,13 +141,41 @@ export interface Post {
   excerpt: string;
   featured: boolean;
   coverImage: string;
-  // Additional fields based on type
-  duration?: number; // For podcasts
-  cookingTime?: number; // For recipes
+  author: string;
 }
 
-import { ReactNode } from "react";
+// Interface for articles (both short and long)
+export interface ArticlePost extends BasePost {
+  type: "short-article" | "long-article";
+  coverImage: string;
+  contentImage: string;
+  callToAction: string;
+  sections?: {
+    id: string;
+    title: string;
+    content: string;
+  }[];
+}
 
+// Interface for podcasts
+export interface PodcastPost extends BasePost {
+  type: "podcast";
+  duration: number;
+  audioUrl: string;
+}
+
+// Interface for recipes
+export interface RecipePost extends BasePost {
+  type: "recipe";
+  cookingTime: number;
+  ingredients: string[];
+  instructions: string[];
+}
+
+// Union type for all post types
+export type Post = ArticlePost | PodcastPost | RecipePost;
+
+// MDX Content interface
 export interface MDXContent {
   title: string;
   excerpt: string;
@@ -154,7 +184,22 @@ export interface MDXContent {
   type: PostType;
   featured: boolean;
   author: string;
-  image: string;
+  coverImage: string;
+  contentImage?: string;
+  callToAction?: string;
+  sections?: {
+    id: string;
+    title: string;
+    content: string;
+  }[];
+  // Podcast specific
+  duration?: number;
+  audioUrl?: string;
+  // Recipe specific
+  cookingTime?: number;
+  ingredients?: string[];
+  instructions?: string[];
+  // Common
   content?: string;
   children?: ReactNode;
   slug: string;
