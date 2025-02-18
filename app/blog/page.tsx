@@ -9,16 +9,18 @@ export default async function BlogPage() {
   return (
     <ConstructionLayout>
       <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Blog</h1>
-          <p className="text-xl text-gray-600">
-            Explore how your body, mind and breath work together.
-          </p>
-        </div>
+        <h1>Blog</h1>
+        <p className="font-bold md:text-center">
+          Come and explore how your body, mind and breath work together. Open
+          yourself to new dimensions of experience and personal growth
+        </p>
 
-        <FeaturedPosts posts={posts} />
-
-        <PostGrid posts={posts} />
+        <section className="page-section">
+          <FeaturedPosts posts={posts} />
+        </section>
+        <section className="page-section">
+          <PostGrid posts={posts} />
+        </section>
       </div>
     </ConstructionLayout>
   );
