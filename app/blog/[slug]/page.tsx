@@ -1,4 +1,3 @@
-// app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
