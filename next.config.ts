@@ -1,10 +1,9 @@
-// next.config.ts
 import type { NextConfig } from "next";
 import withMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   images: {
-    formats: ["image/avif", "image/webp"] as const, // Using const assertion
+    formats: ["image/avif", "image/webp"] as const,
     remotePatterns: [
       {
         protocol: "https",
@@ -15,15 +14,15 @@ const nextConfig: NextConfig = {
     ],
   },
   reactStrictMode: true,
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
 };
 
-// Create the MDX configuration
 const mdxConfig = withMDX({
   options: {
     remarkPlugins: [],
     rehypePlugins: [],
+    providerImportSource: "@mdx-js/react",
   },
 });
 
-// Apply the MDX configuration to your Next.js config
 export default mdxConfig(nextConfig);

@@ -1,4 +1,6 @@
+// app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { ArticleTemplate } from "@/components/ui/blog/templates/ArticleTemplate";
 import { PodcastTemplate } from "@/components/ui/blog/templates/PodcastTemplate";
@@ -20,16 +22,18 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Post({ params }: Props) {
+export default async function BlogPost({ params }: Props) {
   const post = await getPostBySlug(params.slug);
 
   if (!post) {
     return notFound();
   }
 
-  const postContent = post as MDXContent;
+  const postContent = {
+    ...post,
+    children: post.content ? <MDXRemote source={post.content} /> : null,
+  };
 
-  // Function to render the appropriate template based on post type
   const renderTemplate = () => {
     switch (postContent.type) {
       case "short-article":
