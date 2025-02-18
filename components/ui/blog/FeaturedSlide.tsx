@@ -1,7 +1,7 @@
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
 import Link from "next/link";
 import { Post } from "@/types";
+import { Button } from "../button";
+import { ChevronRight } from "lucide-react";
 
 interface FeaturedSlideProps {
   post: Post;
@@ -10,34 +10,50 @@ interface FeaturedSlideProps {
 export function FeaturedSlide({ post }: FeaturedSlideProps) {
   return (
     <Link href={`/blog/${post.slug}`}>
-      <Card>
-        <CardContent className="p-6">
-          <div className="relative w-full h-48">
-            <Image
-              src={post.coverImage}
-              alt={post.title}
-              fill
-              className="object-cover rounded-lg"
-            />
+      <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] flex rounded-lg overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${post.coverImage})`,
+            borderRadius: "inherit",
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg"></div>{" "}
+        </div>
+
+        <div className="relative z-10 w-full h-full flex flex-col md:flex-row justify-between p-4 text-left rounded-lg overflow-hidden">
+          <div className="w-full lg:w-1/2 md:w-2/3 flex flex-col mt-48 md:my-24 md:mx-10">
+            <h3 className="text-lg text-white opacity-70">
+              <strong>{post.type}</strong>
+            </h3>
+            <h2 className="text-3xl md:text-5xl mb-6 text-white leading-tight">
+              {post.title}
+            </h2>
+
+            <Button variant="primary" size="lg" className="w-auto self-start">
+              Find post
+              <ChevronRight />
+            </Button>
           </div>
-          <h3 className="mt-4 text-xl font-semibold line-clamp-2">
-            {post.title}
-          </h3>
-          <p className="mt-2 text-sm text-gray-600 line-clamp-3">
-            {post.excerpt}
-          </p>
-          <div className="mt-4 flex gap-2">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-600"
-              >
-                {tag}
-              </span>
-            ))}
+
+          <div className="medium-screen-component lg:w-1/2 md:1/3 md:flex md:flex-col md:mt-80 md:mx-10 ">
+            <div className="description max-w-lg">
+              <p className="text-lg mb-6 text-white">{post.excerpt}</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {post.tags.map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm font-medium"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+        <div className="retreat-pagination absolute bottom-4 left-4 flex space-x-2 z-10"></div>
+      </div>
     </Link>
   );
 }
