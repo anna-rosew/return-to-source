@@ -40,7 +40,6 @@ export function PostGrid({ posts }: PostGridProps) {
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Filter posts based on selected type and tags
   const filteredPosts = posts.filter((post) => {
     const typeMatch = selectedType === "all" || post.type === selectedType;
     const tagMatch =
@@ -49,54 +48,63 @@ export function PostGrid({ posts }: PostGridProps) {
     return typeMatch && tagMatch;
   });
 
-  // Calculate pagination
   const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
   const paginatedPosts = filteredPosts.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
     currentPage * POSTS_PER_PAGE
   );
 
-  // Handle tag selection
   const toggleTag = (tag: Tag) => {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
-    setCurrentPage(1); // Reset to first page when filter changes
+    setCurrentPage(1);
   };
 
-  // Handle type selection
   const handleTypeChange = (value: string) => {
     setSelectedType(value as PostType | "all");
-    setCurrentPage(1); // Reset to first page when filter changes
+    setCurrentPage(1);
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto">
+    <div className="w-full max-w-7xl mx-auto ">
       {/* Filters */}
-      <div className="mb-8 space-y-4">
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2">
-          {AVAILABLE_TAGS.map(({ label, value }) => (
-            <Badge
-              key={value}
-              variant={selectedTags.includes(value) ? "default" : "outline"}
-              className="cursor-pointer"
-              onClick={() => toggleTag(value)}
-            >
-              {label}
-            </Badge>
-          ))}
+      <div className="md:flex items-center justify-between w-full px-5 py-2 gap-4 border-b border-black pb-6 mb-4">
+        {/* Left Side: Text & Tags */}
+        <div className="flex items-center gap-4">
+          <p>Explore topics:</p>
+          <div className="flex flex-wrap gap-2">
+            {AVAILABLE_TAGS.map(({ label, value }) => (
+              <Badge
+                key={value}
+                variant={selectedTags.includes(value) ? "selected" : "outline"}
+                className="cursor-pointer p-4 transition-all duration-300"
+                onClick={() => toggleTag(value)}
+              >
+                {label}
+              </Badge>
+            ))}
+          </div>
         </div>
 
-        {/* Post Type Select */}
+        {/* Right Side: Select Menu */}
         <Select value={selectedType} onValueChange={handleTypeChange}>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="w-[180px] border-none">
             <SelectValue placeholder="Select post type" />
           </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Types</SelectItem>
+          <SelectContent className="bg-customBeige border-none">
+            <SelectItem
+              value="all"
+              className="hover:underline hover:bg-transparent focus:bg-transparent"
+            >
+              All Types
+            </SelectItem>
             {POST_TYPES.map(({ label, value }) => (
-              <SelectItem key={value} value={value}>
+              <SelectItem
+                key={value}
+                value={value}
+                className="hover:underline hover:bg-transparent focus:bg-transparent"
+              >
                 {label}
               </SelectItem>
             ))}
