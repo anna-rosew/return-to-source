@@ -116,28 +116,38 @@ export function PostGrid({ posts }: PostGridProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {paginatedPosts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
-            <Card className="h-full hover:shadow-lg transition-shadow">
-              <CardContent className="p-4">
-                <div className="relative w-full h-48 mb-4">
+            <Card className="h-full">
+              <CardContent>
+                <div className="relative w-full h-48 mb-4 text-left">
                   <Image
                     src={post.coverImage}
                     alt={post.title}
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-cover"
                   />
                 </div>
-                <h3 className="font-semibold mb-2 line-clamp-2">
-                  {post.title}
-                </h3>
-                <p className="text-sm text-gray-600 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                <div className="flex flex-wrap gap-1">
-                  {post.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-xs">
-                      {tag}
-                    </Badge>
-                  ))}
+                <div className="px-4">
+                  <div className="flex flex-wrap gap-1">
+                    {post.tags.map((tag) => (
+                      <Badge
+                        key={tag}
+                        variant="selected"
+                        className="text-xs font-normal"
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+
+                  <h2 className="font-normal text-lg leading-8 mb-2 line-clamp-2 text-left text-customSienna my-2">
+                    {post.title}
+                  </h2>
+                  <p className="text-sm text-black mb-4  text-left">
+                    {post.excerpt}
+                  </p>
+                  <p className="text-sm text-black/70 mb-4  text-left">
+                    {post.date}
+                  </p>
                 </div>
               </CardContent>
             </Card>
