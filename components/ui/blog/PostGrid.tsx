@@ -11,6 +11,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Post, PostType, Tag } from "@/types";
+import { PostTypeIcon } from "./PostTypeIcon";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -123,8 +124,19 @@ export function PostGrid({ posts }: PostGridProps) {
                     src={post.coverImage}
                     alt={post.title}
                     fill
-                    className="object-cover"
+                    className="object-cover brightness-75"
                   />
+
+                  <div className="absolute top-4 right-4 flex items-center px-5 py-2 gap-2 bg-white/30  w-fit rounded-full">
+                    <PostTypeIcon
+                      type={post.type}
+                      className="text-white"
+                      size={20}
+                    />
+                    <p className="text-sm font-medium text-white capitalize">
+                      {post.type}
+                    </p>
+                  </div>
                 </div>
                 <div className="px-4">
                   <div className="flex flex-wrap gap-1">
