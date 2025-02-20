@@ -10,7 +10,14 @@ import ConstructionLayout from "@/components/layout/ConstructionLayout";
 
 // Utils & Types
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
-import type { MDXContent, Post } from "@/types";
+import type { MDXContent, Post, PodcastPost, RecipePost } from "@/types/index";
+
+// Types
+interface Props {
+  params: {
+    slug: string;
+  };
+}
 
 // Metadata
 export async function generateMetadata({ params }: Props) {
@@ -19,7 +26,7 @@ export async function generateMetadata({ params }: Props) {
   if (!post) {
     return {
       title: "Not Found",
-      description: "The page youre looking for does not exist.",
+      description: "The page you're looking for does not exist.",
     };
   }
 
@@ -41,13 +48,6 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-// Types
-interface Props {
-  params: {
-    slug: string;
-  };
-}
-
 // Static Params
 export async function generateStaticParams() {
   const posts = await getAllPosts();
@@ -66,10 +66,33 @@ export default async function BlogPost({ params }: Props) {
     return notFound();
   }
 
-  // Process MDX content
-  const postContent = {
+  // Process MDX content and split into intro and main content
+  let introSection;
+  let mainContent = null;
+
+  if (post.content) {
+    // Split content at the first heading (##)
+    const contentParts = post.content.split(/(?=##\s)/);
+
+    if (contentParts.length > 1) {
+      // Store both raw content and processed MDX for intro
+      introSection = {
+        content: contentParts[0].trim(),
+        mdxContent: <MDXRemote source={contentParts[0].trim()} />,
+      };
+      // Rest is main content (including and after first ##)
+      mainContent = <MDXRemote source={contentParts.slice(1).join("")} />;
+    } else {
+      // If no headings found, treat all as main content
+      mainContent = <MDXRemote source={post.content} />;
+    }
+  }
+
+  // Prepare post content with separated intro
+  const postContent: MDXContent = {
     ...post,
-    children: post.content ? <MDXRemote source={post.content} /> : null,
+    intro: introSection,
+    children: mainContent,
   };
 
   // Template renderer
@@ -84,25 +107,23 @@ export default async function BlogPost({ params }: Props) {
       case "podcast":
         return (
           <PodcastTemplate
-            content={
-              postContent as MDXContent & {
-                duration: number;
-                audioUrl: string;
-              }
-            }
+            content={{
+              ...postContent,
+              duration: (post as PodcastPost).duration,
+              audioUrl: (post as PodcastPost).audioUrl,
+            }}
           />
         );
 
       case "recipe":
         return (
           <RecipeTemplate
-            content={
-              postContent as MDXContent & {
-                cookingTime: number;
-                ingredients: string[];
-                instructions: string[];
-              }
-            }
+            content={{
+              ...postContent,
+              cookingTime: (post as RecipePost).cookingTime,
+              ingredients: (post as RecipePost).ingredients,
+              instructions: (post as RecipePost).instructions,
+            }}
           />
         );
 

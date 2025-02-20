@@ -129,7 +129,22 @@ export type SearchParamProps = {
 import { ReactNode } from "react";
 
 export type PostType = "short-article" | "long-article" | "podcast" | "recipe";
-export type Tag = "Mind" | "Body" | "Breath" | "Nutrition" | "Mindfulness";
+
+// Split tags into primary and secondary
+export type PrimaryTag = "Mind" | "Body" | "Breath";
+export type SecondaryTag =
+  | "Nutrition"
+  | "Mindfulness"
+  | "Meditation"
+  | "Yoga"
+  | "Stress Management"
+  | "Sleep"
+  | "Movement"
+  | "Breathing Techniques"
+  | "Mental Health"
+  | "Physical Health"
+  | "Wellness"
+  | "Self Care";
 
 // Base interface for common properties
 interface BasePost {
@@ -137,7 +152,8 @@ interface BasePost {
   slug: string;
   date: string;
   type: PostType;
-  tags: Tag[];
+  primaryTag: PrimaryTag; // Single primary tag
+  secondaryTags: SecondaryTag[]; // Array of secondary tags
   excerpt: string;
   featured: boolean;
   coverImage: string;
@@ -150,6 +166,10 @@ export interface ArticlePost extends BasePost {
   coverImage: string;
   contentImage: string;
   callToAction: string;
+  intro?: {
+    content: string;
+    mdxContent?: ReactNode;
+  };
   sections?: {
     id: string;
     title: string;
@@ -180,13 +200,18 @@ export interface MDXContent {
   title: string;
   excerpt: string;
   date: string;
-  tags: Tag[];
+  primaryTag: PrimaryTag;
+  secondaryTags: SecondaryTag[];
   type: PostType;
   featured: boolean;
   author: string;
   coverImage: string;
   contentImage?: string;
   callToAction?: string;
+  intro?: {
+    content: string;
+    mdxContent?: ReactNode;
+  };
   sections?: {
     id: string;
     title: string;
@@ -204,6 +229,35 @@ export interface MDXContent {
   children?: ReactNode;
   slug: string;
 }
+
+// Helper type for tag counts and filtering
+export interface TagCounts {
+  primary: Record<PrimaryTag, number>;
+  secondary: Record<SecondaryTag, number>;
+}
+
+// Helper functions for tag validation
+export const isPrimaryTag = (tag: string): tag is PrimaryTag => {
+  return ["Mind", "Body", "Breath"].includes(tag);
+};
+
+export const isSecondaryTag = (tag: string): tag is SecondaryTag => {
+  const secondaryTags: SecondaryTag[] = [
+    "Nutrition",
+    "Mindfulness",
+    "Meditation",
+    "Yoga",
+    "Stress Management",
+    "Sleep",
+    "Movement",
+    "Breathing Techniques",
+    "Mental Health",
+    "Physical Health",
+    "Wellness",
+    "Self Care",
+  ];
+  return secondaryTags.includes(tag as SecondaryTag);
+};
 
 //UI COMPONENTS
 

@@ -1,6 +1,6 @@
+// components/ui/blog/templates/LongArticleLayout.tsx
 import { MDXContent } from "@/types";
 import Image from "next/image";
-
 import { ArticleHeader } from "./ArticleHeader";
 import { CallToAction } from "./CallToAction";
 import TableOfContents from "../TableOfContents";
@@ -14,22 +14,23 @@ export const LongArticleLayout = ({
   content,
   type,
 }: LongArticleLayoutProps) => {
-  // Instead of trying to access props directly, we'll work with the content directly
   return (
     <article className="prose prose-xl max-w-4xl mx-auto">
       <ArticleHeader content={content} type={type} />
 
-      {/* Content with ToC */}
-      {content.sections && (
-        <div className="grid grid-cols-12 gap-8 my-8">
-          <div className="col-span-8">{content.children}</div>
+      {/* Intro section with ToC */}
+      <div className="grid grid-cols-12 gap-8 my-8">
+        <div className="col-span-8">{content.intro?.mdxContent}</div>
+        {content.sections && (
           <div className="col-span-4 sticky top-8 h-fit">
             <TableOfContents sections={content.sections} />
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
-      {/* Content Image */}
+      {/* Main content */}
+      <div className="mt-8">{content.children}</div>
+
       {content.contentImage && (
         <div className="relative w-full h-[400px] my-8">
           <Image
