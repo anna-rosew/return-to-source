@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Link } from "lucide-react";
 
 interface Section {
   id: string;
@@ -42,10 +41,9 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
   }, [sections]);
 
   return (
-    <nav className="max-w-4xl mx-auto mb-8 p-4 bg-gray-50 rounded-lg">
+    <nav className="max-w-4xl mx-auto mb-8 p-4 text-left">
       <div className="flex items-center gap-2 mb-2">
-        <Link size={16} />
-        <h2 className="font-semibold">Table of Contents</h2>
+        <h3 className="font-normal">Table of Contents</h3>
       </div>
       <ul className="space-y-2">
         {sections.map((section) => (
