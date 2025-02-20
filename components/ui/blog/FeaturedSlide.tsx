@@ -48,10 +48,16 @@ export function FeaturedSlide({ post }: FeaturedSlideProps) {
             <div className="description max-w-lg">
               <p className="text-lg mb-6 text-white">{post.excerpt}</p>
               <div className="mt-6 flex flex-wrap gap-3">
-                {post.tags.map((tag, idx) => (
+                {/* Primary Tag */}
+                <span className="bg-customSienna text-white px-4 py-2 rounded-full text-sm font-medium">
+                  {post.primaryTag}
+                </span>
+
+                {/* Secondary Tags */}
+                {post.secondaryTags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm font-medium"
+                    className="bg-white/80 text-gray-800 px-4 py-2 rounded-full text-sm font-normal"
                   >
                     {tag}
                   </span>

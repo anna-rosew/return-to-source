@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Post, PostType, Tag } from "@/types";
+import { Post, PostType, PrimaryTag, SecondaryTag } from "@/types";
 import { PostTypeIcon } from "./PostTypeIcon";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,12 +24,19 @@ const POST_TYPES: { label: string; value: PostType }[] = [
   { label: "Recipes", value: "recipe" },
 ];
 
-const AVAILABLE_TAGS: { label: string; value: Tag }[] = [
+// Separate primary and secondary tag options
+const PRIMARY_TAGS: { label: string; value: PrimaryTag }[] = [
   { label: "Mind", value: "Mind" },
   { label: "Body", value: "Body" },
   { label: "Breath", value: "Breath" },
+];
+
+const SECONDARY_TAGS: { label: string; value: SecondaryTag }[] = [
   { label: "Nutrition", value: "Nutrition" },
   { label: "Mindfulness", value: "Mindfulness" },
+  { label: "Meditation", value: "Meditation" },
+  { label: "Stress Management", value: "Stress Management" },
+  // Add all your secondary tags here
 ];
 
 interface PostGridProps {
@@ -38,15 +45,21 @@ interface PostGridProps {
 
 export function PostGrid({ posts }: PostGridProps) {
   const [selectedType, setSelectedType] = useState<PostType | "all">("all");
-  const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
+  const [selectedPrimaryTag, setSelectedPrimaryTag] =
+    useState<PrimaryTag | null>(null);
+  const [selectedSecondaryTags, setSelectedSecondaryTags] = useState<
+    SecondaryTag[]
+  >([]);
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredPosts = posts.filter((post) => {
     const typeMatch = selectedType === "all" || post.type === selectedType;
-    const tagMatch =
-      selectedTags.length === 0 ||
-      selectedTags.some((tag) => post.tags.includes(tag));
-    return typeMatch && tagMatch;
+    const primaryTagMatch =
+      !selectedPrimaryTag || post.primaryTag === selectedPrimaryTag;
+    const secondaryTagMatch =
+      selectedSecondaryTags.length === 0 ||
+      selectedSecondaryTags.some((tag) => post.secondaryTags.includes(tag));
+    return typeMatch && primaryTagMatch && secondaryTagMatch;
   });
 
   const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
@@ -55,8 +68,13 @@ export function PostGrid({ posts }: PostGridProps) {
     currentPage * POSTS_PER_PAGE
   );
 
-  const toggleTag = (tag: Tag) => {
-    setSelectedTags((prev) =>
+  const togglePrimaryTag = (tag: PrimaryTag) => {
+    setSelectedPrimaryTag(selectedPrimaryTag === tag ? null : tag);
+    setCurrentPage(1);
+  };
+
+  const toggleSecondaryTag = (tag: SecondaryTag) => {
+    setSelectedSecondaryTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
     setCurrentPage(1);
@@ -68,49 +86,100 @@ export function PostGrid({ posts }: PostGridProps) {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto ">
+    <div className="w-full max-w-7xl mx-auto">
       {/* Filters */}
-      <div className="md:flex items-center justify-between w-full px-5 py-2 gap-4 border-b border-black pb-6 mb-4">
-        {/* Left Side: Text & Tags */}
-        <div className="flex items-center gap-4">
-          <p>Explore topics:</p>
-          <div className="flex flex-wrap gap-2">
-            {AVAILABLE_TAGS.map(({ label, value }) => (
-              <Badge
-                key={value}
-                variant={selectedTags.includes(value) ? "selected" : "outline"}
-                className="cursor-pointer p-4 transition-all duration-300"
-                onClick={() => toggleTag(value)}
-              >
-                {label}
-              </Badge>
-            ))}
+      <div className="w-full px-5 py-2 border-b border-black pb-6 mb-4">
+        {/* Mobile View: Only Primary Tags */}
+        <div className="md:hidden space-y-4">
+          <div className="flex items-center gap-4">
+            <p>Primary Topics:</p>
+            <div className="flex flex-wrap gap-2">
+              {PRIMARY_TAGS.map(({ label, value }) => (
+                <Badge
+                  key={value}
+                  variant={
+                    selectedPrimaryTag === value ? "selected" : "outline"
+                  }
+                  className="cursor-pointer p-4 transition-all duration-300 bg-white text-customSienna border-customSienna hover:bg-customSienna hover:text-white"
+                  onClick={() => togglePrimaryTag(value)}
+                >
+                  {label}
+                </Badge>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Right Side: Select Menu */}
-        <Select value={selectedType} onValueChange={handleTypeChange}>
-          <SelectTrigger className="w-[180px] border-none">
-            <SelectValue placeholder="Select post type" />
-          </SelectTrigger>
-          <SelectContent className="bg-customBeige border-none">
-            <SelectItem
-              value="all"
-              className="hover:underline hover:bg-transparent focus:bg-transparent"
-            >
-              All Types
-            </SelectItem>
-            {POST_TYPES.map(({ label, value }) => (
+        {/* Medium and Large Screens: All Tags in One Row */}
+        <div className="hidden md:flex items-center justify-between w-full gap-4">
+          <div className="flex items-center gap-6 flex-grow">
+            <p className="whitespace-nowrap">Explore topics:</p>
+
+            {/* Tags Container */}
+            <div className="flex items-center gap-4 flex-grow">
+              {/* Primary Tags */}
+              <div className="flex flex-wrap gap-2">
+                {PRIMARY_TAGS.map(({ label, value }) => (
+                  <Badge
+                    key={value}
+                    variant={
+                      selectedPrimaryTag === value ? "selected" : "outline"
+                    }
+                    className="cursor-pointer p-4 transition-all duration-300 bg-white text-customSienna border-customSienna hover:bg-customSienna hover:text-white"
+                    onClick={() => togglePrimaryTag(value)}
+                  >
+                    {label}
+                  </Badge>
+                ))}
+              </div>
+
+              {/* Divider */}
+              <span className="h-8 w-px bg-gray-300"></span>
+
+              {/* Secondary Tags */}
+              <div className="flex flex-wrap gap-2">
+                {SECONDARY_TAGS.map(({ label, value }) => (
+                  <Badge
+                    key={value}
+                    variant={
+                      selectedSecondaryTags.includes(value)
+                        ? "selected"
+                        : "outline"
+                    }
+                    className="cursor-pointer p-4 transition-all duration-300 bg-white text-gray-600 border-gray-400 hover:bg-gray-100"
+                    onClick={() => toggleSecondaryTag(value)}
+                  >
+                    {label}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Post Type Select */}
+          <Select value={selectedType} onValueChange={handleTypeChange}>
+            <SelectTrigger className="w-[180px] border-none">
+              <SelectValue placeholder="Select post type" />
+            </SelectTrigger>
+            <SelectContent className="bg-customBeige border-none">
               <SelectItem
-                key={value}
-                value={value}
+                value="all"
                 className="hover:underline hover:bg-transparent focus:bg-transparent"
               >
-                {label}
+                All Types
               </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+              {POST_TYPES.map(({ label, value }) => (
+                <SelectItem
+                  key={value}
+                  value={value}
+                  className="hover:underline hover:bg-transparent focus:bg-transparent"
+                >
+                  {label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
       </div>
 
       {/* Grid */}
@@ -127,7 +196,7 @@ export function PostGrid({ posts }: PostGridProps) {
                     className="object-cover brightness-75"
                   />
 
-                  <div className="absolute top-4 right-4 flex items-center px-5 py-2 gap-2 bg-white/30  w-fit rounded-full">
+                  <div className="absolute top-4 right-4 flex items-center px-5 py-2 gap-2 bg-white/30 w-fit rounded-full">
                     <PostTypeIcon
                       type={post.type}
                       className="text-white"
@@ -139,12 +208,22 @@ export function PostGrid({ posts }: PostGridProps) {
                   </div>
                 </div>
                 <div className="px-4">
-                  <div className="flex flex-wrap gap-1">
-                    {post.tags.map((tag) => (
+                  {/* Tags with different styling */}
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {/* Primary Tag */}
+                    <Badge
+                      variant="selected"
+                      className="text-xs font-medium border-none bg-customSienna text-white"
+                    >
+                      {post.primaryTag}
+                    </Badge>
+
+                    {/* Secondary Tags */}
+                    {post.secondaryTags.map((tag) => (
                       <Badge
                         key={tag}
-                        variant="selected"
-                        className="text-xs font-normal"
+                        variant="outline"
+                        className="text-xs font-normal text-gray-600 border-gray-400"
                       >
                         {tag}
                       </Badge>
@@ -154,10 +233,10 @@ export function PostGrid({ posts }: PostGridProps) {
                   <h2 className="font-normal text-lg leading-8 mb-2 line-clamp-2 text-left text-customSienna my-2">
                     {post.title}
                   </h2>
-                  <p className="text-sm text-black mb-4  text-left">
+                  <p className="text-sm text-black mb-4 text-left">
                     {post.excerpt}
                   </p>
-                  <p className="text-sm text-black/70 mb-4  text-left">
+                  <p className="text-sm text-black/70 mb-4 text-left">
                     {post.date}
                   </p>
                 </div>

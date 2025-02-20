@@ -19,7 +19,7 @@ export const LongArticleLayout = ({
       <ArticleHeader content={content} type={type} />
 
       {/* Intro section with ToC */}
-      <div className="grid grid-cols-12 gap-8 my-8">
+      <div className="md:grid md:grid-cols-12 gap-8 my-8">
         <div className="col-span-8">{content.intro?.mdxContent}</div>
         {content.sections && (
           <div className="col-span-4 sticky top-8 h-fit">

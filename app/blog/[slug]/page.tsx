@@ -14,14 +14,13 @@ import type { MDXContent, Post, PodcastPost, RecipePost } from "@/types/index";
 
 // Types
 interface Props {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }> | { slug: string };
 }
 
 // Metadata
 export async function generateMetadata({ params }: Props) {
-  const post = await getPostBySlug(params.slug);
+  const resolvedParams = await params;
+  const post = await getPostBySlug(resolvedParams.slug);
 
   if (!post) {
     return {
@@ -56,10 +55,24 @@ export async function generateStaticParams() {
   }));
 }
 
+// Helper function to clean MDX content
+const cleanMDXContent = (content: string): string => {
+  return content
+    .replace(/\{/g, "&#123;") // Escape curly braces
+    .replace(/\}/g, "&#125;")
+    .replace(/'/g, "'") // Replace smart quotes
+    .replace(/'/g, "'")
+    .replace(/"/g, '"')
+    .replace(/"/g, '"')
+    .trim();
+};
+
 // Main Component
 export default async function BlogPost({ params }: Props) {
+  const resolvedParams = await params;
+
   // Fetch post data
-  const post = await getPostBySlug(params.slug);
+  const post = await getPostBySlug(resolvedParams.slug);
 
   // Handle 404
   if (!post) {
@@ -70,22 +83,60 @@ export default async function BlogPost({ params }: Props) {
   let introSection;
   let mainContent = null;
 
-  if (post.content) {
-    // Split content at the first heading (##)
-    const contentParts = post.content.split(/(?=##\s)/);
+  try {
+    if (post.content) {
+      // Clean the content before processing
+      const cleanContent = cleanMDXContent(post.content);
 
-    if (contentParts.length > 1) {
-      // Store both raw content and processed MDX for intro
-      introSection = {
-        content: contentParts[0].trim(),
-        mdxContent: <MDXRemote source={contentParts[0].trim()} />,
-      };
-      // Rest is main content (including and after first ##)
-      mainContent = <MDXRemote source={contentParts.slice(1).join("")} />;
-    } else {
-      // If no headings found, treat all as main content
-      mainContent = <MDXRemote source={post.content} />;
+      // Split content at the first heading (##)
+      const contentParts = cleanContent.split(/(?=##\s)/);
+
+      if (contentParts.length > 1) {
+        const introContent = cleanMDXContent(contentParts[0]);
+        const mainContentStr = contentParts.slice(1).join("");
+
+        // Process intro content
+        try {
+          introSection = {
+            content: introContent,
+            mdxContent: introContent ? (
+              <MDXRemote source={introContent} />
+            ) : null,
+          };
+        } catch (introError) {
+          console.error("Error processing intro MDX:", introError);
+          introSection = {
+            content: introContent,
+            mdxContent: <p>{introContent}</p>,
+          };
+        }
+
+        // Process main content
+        try {
+          mainContent = mainContentStr ? (
+            <MDXRemote source={cleanMDXContent(mainContentStr)} />
+          ) : null;
+        } catch (mainError) {
+          console.error("Error processing main MDX:", mainError);
+          mainContent = (
+            <div dangerouslySetInnerHTML={{ __html: mainContentStr }} />
+          );
+        }
+      } else {
+        // If no headings found, treat all as main content
+        try {
+          mainContent = <MDXRemote source={cleanContent} />;
+        } catch (error) {
+          console.error("Error processing single content MDX:", error);
+          mainContent = (
+            <div dangerouslySetInnerHTML={{ __html: cleanContent }} />
+          );
+        }
+      }
     }
+  } catch (error) {
+    console.error("Error processing content:", error);
+    mainContent = <div>Error processing content. Please try again.</div>;
   }
 
   // Prepare post content with separated intro
