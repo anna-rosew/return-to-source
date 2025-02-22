@@ -5,6 +5,13 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { CopyButton } from "@/components/ui/CopyButton";
 
+//short article styling
+//podcast styling
+//recipe styling
+//add image caption props
+//upload all blog posts
+//Spacing for PostGrid
+
 interface ArticleHeaderProps {
   content: MDXContent;
   type: "short-article" | "long-article";

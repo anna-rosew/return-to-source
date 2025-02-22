@@ -16,7 +16,7 @@ export const ArticleFooter = ({ content }: ArticleFooterProps) => {
           <Link href="/blog">
             <Button variant="outline">More Blog Content</Button>
           </Link>
-          <Link href="/blog">
+          <Link href="/work">
             <Button variant="secondary">Start Your Journey</Button>
           </Link>
         </div>

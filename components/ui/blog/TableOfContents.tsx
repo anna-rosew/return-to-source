@@ -85,9 +85,9 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
   };
 
   return (
-    <nav className="hidden  md:block max-w-4xl mx-auto p-4 text-left">
+    <nav className="hidden  md:block max-w-4xl mx-auto px-4 text-left">
       <div className="flex items-center gap-2 mb-2">
-        <h3 className="font-normal">Table of Contents</h3>
+        <h3 className="font-normal m-0">Table of Contents</h3>
       </div>
       <ul className="space-y-2">
         {sections.map((section) => (
