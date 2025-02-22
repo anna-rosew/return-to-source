@@ -108,6 +108,10 @@
     @apply mt-12;
   }
 
+  article p {
+    @apply my-8;
+  }
+
   /* Links */
 
   a,

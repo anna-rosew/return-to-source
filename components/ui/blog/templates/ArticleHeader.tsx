@@ -30,9 +30,10 @@ export const ArticleHeader = ({ content }: ArticleHeaderProps) => {
           <Image
             src={content.coverImage}
             alt={content.title}
+            loading="eager"
+            priority={true}
             fill
             className="object-cover rounded-lg"
-            priority
           />
           {/* Overlay container */}
           <div className="absolute bottom-0 left-0 right-0 p-4  text-white rounded-bl-lg rounded-br-lg">
@@ -48,14 +49,14 @@ export const ArticleHeader = ({ content }: ArticleHeaderProps) => {
               <div className="hidden md:block">
                 <CopyButton
                   textToCopy={shareUrl}
-                  className="bg-gray-800 hover:bg-gray-700 text-white"
+                  className="bg-white/30 hover:bg-gray/30 text-white hover:text-black"
                 />
               </div>
             </div>
           </div>
         </div>
       )}
-      <CopyButton textToCopy={shareUrl} className="ml-auto" />
+      <CopyButton textToCopy={shareUrl} className="ml-auto md:hidden" />
     </div>
   );
 };

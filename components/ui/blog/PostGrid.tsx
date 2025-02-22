@@ -196,7 +196,7 @@ export function PostGrid({ posts }: PostGridProps) {
                     className="object-cover brightness-75"
                   />
 
-                  <div className="absolute top-4 right-4 flex items-center px-5 py-2 gap-2 bg-white/30 w-fit rounded-full">
+                  <div className="absolute top-4 right-4 flex items-center px-3 py-1 gap-2 bg-white/30 w-fit rounded-sm">
                     <PostTypeIcon
                       type={post.type}
                       className="text-white"

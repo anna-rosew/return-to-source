@@ -24,7 +24,7 @@ export function FeaturedSlide({ post }: FeaturedSlideProps) {
 
         <div className="relative z-10 w-full h-full flex flex-col md:flex-row justify-between p-4 text-left rounded-lg overflow-hidden">
           <div className="w-full lg:w-1/2 md:w-2/3 flex flex-col mt-32 md:mt-20 md:mx-10">
-            <div className="flex items-center px-5 py-2 gap-2 mb-2 bg-white/30 rounded-full w-fit">
+            <div className="flex items-center px-3 py-1 gap-2 mb-2 bg-white/30 rounded-sm w-fit">
               <PostTypeIcon type={post.type} className="text-white" size={20} />
               <p className="text-base font-medium text-white capitalize">
                 {post.type}
