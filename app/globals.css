@@ -79,7 +79,29 @@
   }
   /* Paragraphs */
   p {
-    @apply font-jost leading-[1.5em] text-[1rem] text-black tracking-wider md:text-[1.1rem] lg:text-[1rem] text-left;
+    @apply font-jost leading-[1.5em] text-[1rem] text-black tracking-wider md:text-[1.1rem] lg:text-[1rem] text-left m-2;
+  }
+
+  article h3 {
+    @apply mt-6;
+  }
+
+  article ul {
+    @apply mb-6 space-y-3 pl-2;
+  }
+
+  article li {
+    @apply relative pl-6 before:absolute before:left-0 before:top-1;
+  }
+
+  article li::before {
+    content: "";
+    background-image: url("/Assets/Icons/star.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
   }
 
   /* Links */

@@ -3,7 +3,7 @@ interface CallToActionProps {
 }
 
 export const CallToAction = ({ text }: CallToActionProps) => (
-  <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-    <p className="font-bold text-lg">{text}</p>
+  <div className="md:mt-8 p-4 md:p-6">
+    <p className="font-normal text-base text-customSienna">{text}</p>
   </div>
 );

@@ -1,6 +1,7 @@
 "use client";
 
-import { ChevronRight } from "lucide-react";
+import { ArrowLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface Section {
@@ -84,7 +85,7 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
   };
 
   return (
-    <nav className="hidden  md:block max-w-4xl mx-auto p-4 text-left bg-gray-50 rounded-lg">
+    <nav className="hidden  md:block max-w-4xl mx-auto p-4 text-left">
       <div className="flex items-center gap-2 mb-2">
         <h3 className="font-normal">Table of Contents</h3>
       </div>
@@ -93,13 +94,13 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
           <li key={section.id}>
             <button
               onClick={() => scrollToSection(section.id)}
-              className={`w-full text-left py-1 px-4 border-b border-black transition-colorsflex items-center justify-center md:justify-start group ${
+              className={`w-full text-left border-b border-black transition-colorsflex my-1 pb-1 items-center justify-center md:justify-start group ${
                 activeSection === section.id
                   ? "bg-gray-200 text-black"
                   : "text-gray-600"
               }`}
             >
-              <p className="flex items-center gap-x-2 pt-1 sm:pt-6 font-medium text-black lg:text-[18px] text-center md:text-left">
+              <p className="flex items-center gap-x-2 font-medium m-0 text-black text-center md:text-left">
                 {section.title}
                 <span className="transform transition-transform duration-300 group-hover:translate-x-2">
                   <ChevronRight />
@@ -109,6 +110,15 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
           </li>
         ))}
       </ul>
+      <Link
+        href="/blog"
+        className="font-bold uppercase list-none flex items-center gap-x-2 text-sm text-black text-left"
+      >
+        <span className="transform transition-transform duration-300 group-hover:translate-x-2">
+          <ArrowLeft />
+        </span>
+        Back to blog
+      </Link>
     </nav>
   );
 }

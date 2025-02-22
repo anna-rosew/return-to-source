@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArticleHeader } from "./ArticleHeader";
 import { CallToAction } from "./CallToAction";
 import TableOfContents from "../TableOfContents";
+import { ArticleFooter } from "./ArticleFooter";
 
 interface LongArticleLayoutProps {
   content: MDXContent;
@@ -15,7 +16,7 @@ export const LongArticleLayout = ({
   type,
 }: LongArticleLayoutProps) => {
   return (
-    <article className="prose prose-xl max-w-4xl mx-auto">
+    <article className="prose prose-xl max-w-4xl mx-auto text-left space-y-12 leading-relaxed">
       <ArticleHeader content={content} type={type} />
 
       {/* Intro section with ToC */}
@@ -32,7 +33,7 @@ export const LongArticleLayout = ({
       <div className="mt-8">{content.children}</div>
 
       {content.contentImage && (
-        <div className="relative w-full h-[400px] my-8">
+        <div className="relative w-full h-[400px] my-8 text-left">
           <Image
             src={content.contentImage}
             alt="Content illustration"
@@ -43,6 +44,7 @@ export const LongArticleLayout = ({
       )}
 
       {content.callToAction && <CallToAction text={content.callToAction} />}
+      <ArticleFooter content={content} />
     </article>
   );
 };

@@ -53,7 +53,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           <h2
             {...props}
             id={id}
-            className="text-2xl font-semibold mb-3 scroll-mt-24"
+            className="text-2xl font-semibold mb-3 scroll-mt-24 text-left"
             data-heading="true"
           >
             {props.children}
@@ -67,7 +67,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           <h3
             {...props}
             id={id}
-            className="text-xl font-semibold mb-2 scroll-mt-24"
+            className="text-xl font-semibold mb-2 scroll-mt-24 text-left"
             data-heading="true"
           >
             {props.children}
@@ -75,7 +75,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         );
       },
       p: ({ children, ...props }) => (
-        <p className="mb-4 leading-relaxed" {...props}>
+        <p className="mb-6 leading-loose text-lg" {...props}>
           {children}
         </p>
       ),

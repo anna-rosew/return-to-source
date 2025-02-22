@@ -7,7 +7,7 @@ interface ArticleHeaderProps {
 }
 
 export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => (
-  <div className="mb-8">
+  <div className="mb-8 text-left">
     <h1>{content.title}</h1>
     <div className="flex items-center gap-4 text-gray-600 mb-4">
       <span>{content.date}</span>
