@@ -162,7 +162,7 @@ interface BasePost {
 
 // Interface for articles (both short and long)
 export interface ArticlePost extends BasePost {
-  type: "short-article" | "long-article";
+  type: "short-article" | "long-article" | "podcast";
   coverImage: string;
   contentImage: string;
   callToAction: string;

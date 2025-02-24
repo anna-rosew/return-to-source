@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 
 interface ArticleHeaderProps {
   content: MDXContent;
-  type: "short-article" | "long-article";
+  type: "short-article" | "long-article" | "podcast" | "recipe";
 }
 
 export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => {
@@ -24,7 +24,7 @@ export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => {
     <div className="md:mb-8 mb-2 text-left">
       <div className="flex items-center px-3 py-1 gap-2 bg-white/30 w-fit rounded-sm">
         <PostTypeIcon type={type} className="text-gray-600" size={20} />
-        <h3 className="text-sm font-medium m-0 text-gray-600 inline-flex items-center">
+        <h3 className="text-sm font-medium text-gray-600 inline-flex m-0 items-center">
           {type}
         </h3>
       </div>
