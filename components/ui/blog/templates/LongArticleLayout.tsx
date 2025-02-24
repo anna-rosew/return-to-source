@@ -1,5 +1,6 @@
 // components/ui/blog/templates/LongArticleLayout.tsx
-import { MDXContent } from "@/types";
+"use client";
+import { MDXContent } from "@/types/index";
 import Image from "next/image";
 import { ArticleHeader } from "./ArticleHeader";
 import { CallToAction } from "./CallToAction";
@@ -48,3 +49,5 @@ export const LongArticleLayout = ({
     </article>
   );
 };
+
+export default LongArticleLayout;

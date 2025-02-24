@@ -182,6 +182,7 @@ export interface PodcastPost extends BasePost {
   type: "podcast";
   duration: number;
   audioUrl: string;
+  podcastUrl: string;
 }
 
 // Interface for recipes
