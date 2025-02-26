@@ -1,4 +1,4 @@
-// app/[slug]/page.tsx
+// app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Metadata } from "next";
@@ -13,14 +13,12 @@ import ConstructionLayout from "@/components/layout/ConstructionLayout";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import type { MDXContent, Post, PodcastPost, RecipePost } from "@/types/index";
 
-// Types
-type Props = {
+// Using the Next.js recommended way for App Router
+export async function generateMetadata({
+  params,
+}: {
   params: { slug: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-};
-
-// Metadata
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+}): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);
 
   if (!post) {
@@ -68,8 +66,12 @@ const cleanMDXContent = (content: string): string => {
     .trim();
 };
 
-// Main Component
-export default async function BlogPost({ params }: Props) {
+// Main Component using inline parameter type
+export default async function BlogPost({
+  params,
+}: {
+  params: { slug: string };
+}) {
   // Fetch post data
   const post = await getPostBySlug(params.slug);
 
