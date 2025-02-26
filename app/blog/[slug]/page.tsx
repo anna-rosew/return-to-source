@@ -14,13 +14,12 @@ import type { MDXContent, Post, PodcastPost, RecipePost } from "@/types/index";
 
 // Types
 interface Props {
-  params: Promise<{ slug: string }> | { slug: string };
+  params: { slug: string };
 }
 
 // Metadata
 export async function generateMetadata({ params }: Props) {
-  const resolvedParams = await params;
-  const post = await getPostBySlug(resolvedParams.slug);
+  const post = await getPostBySlug(params.slug);
 
   if (!post) {
     return {
@@ -69,10 +68,8 @@ const cleanMDXContent = (content: string): string => {
 
 // Main Component
 export default async function BlogPost({ params }: Props) {
-  const resolvedParams = await params;
-
   // Fetch post data
-  const post = await getPostBySlug(resolvedParams.slug);
+  const post = await getPostBySlug(params.slug);
 
   // Handle 404
   if (!post) {
@@ -162,10 +159,12 @@ export default async function BlogPost({ params }: Props) {
               ...postContent,
               duration: (post as PodcastPost).duration,
               audioUrl: (post as PodcastPost).audioUrl,
+              podcastUrl:
+                (post as PodcastPost).podcastUrl ||
+                (post as PodcastPost).audioUrl,
             }}
           />
         );
-
       case "recipe":
         return (
           <RecipeTemplate
