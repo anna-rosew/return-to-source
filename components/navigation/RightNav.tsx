@@ -30,12 +30,12 @@ const RightNav = ({ open, closeMenu }: RightNavProps) => {
             About
           </p>
         </Link>
-        <Link href="/dashboard" onClick={closeMenu}>
+        <Link href="/blog" onClick={closeMenu}>
           <p className="font-jost text-[16px] text-white uppercase relative hover:text-white cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
             Blog
           </p>
         </Link>
-        <Link href="/dashboard" onClick={closeMenu}>
+        <Link href="/approach" onClick={closeMenu}>
           <p className="font-jost text-[16px] text-white uppercase relative hover:text-white cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
             Approach
           </p>

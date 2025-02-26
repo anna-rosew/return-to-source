@@ -1,15 +1,33 @@
-import ConstructionLayout from "@/components/layout/ConstructionLayout";
+import { Button } from "@/components/ui/button";
+import SunIcon from "@/public/Assets/Icons/SunIcon";
+import { Link } from "phosphor-react";
 
 import React from "react";
 
 const dashboard = () => {
   return (
-    <ConstructionLayout>
-      <div className="container text-center w-full">
-        <h1 className="text-center">Meet Rose</h1>
-        <p>This is the real blog page!</p>
+    <div className="flex justify-center items-center h-screen container">
+      <div className="mx-auto">
+        <SunIcon className="mx-auto my-4" />
+        <h1 className="text-center md:text-6xl mb-8 ">Coming Soon!</h1>
+
+        <p className="mt-4 text-lg justify-center text-center">
+          <>
+            <span>Check back soon!</span>
+            <br />
+            <span>
+              In the meantime, you take a look at{" "}
+              <Link href="/blog">classes & retreats.</Link>
+            </span>
+            <Link href="/work">
+              <Button variant="outline" size="lg" className="my-5 mx-auto">
+                Start my journey
+              </Button>
+            </Link>
+          </>
+        </p>
       </div>
-    </ConstructionLayout>
+    </div>
   );
 };
 

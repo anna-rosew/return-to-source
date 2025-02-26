@@ -265,15 +265,6 @@ const Navbar = () => {
                       Blog
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      href="/blog"
-                      className="hover:text-customGreen"
-                      onClick={closeDropdowns}
-                    >
-                      Class
-                    </Link>
-                  </li>
                 </ul>
               </div>
             </li>

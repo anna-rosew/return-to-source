@@ -37,7 +37,7 @@ const Contact = () => {
             }}
           />
         </div>
-        <div className="text ">
+        <div className="text mb-12">
           <ContactForm />
           <NewsletterForm />
         </div>
