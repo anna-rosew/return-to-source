@@ -4,10 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArticleFooter } from "./ArticleFooter";
 import { PodcastHeader } from "./PodcastHeader";
-import { Clock } from "lucide-react";
+import { Clock, Play } from "lucide-react";
 import CopyButton from "../../CopyButton";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { Button } from "../../button";
 
 interface PodcastTemplateProps {
   content: MDXContent & {
@@ -48,7 +49,6 @@ export function PodcastTemplate({ content }: PodcastTemplateProps) {
           )}
         </div>
 
-        {/* Content container - full width on mobile, 2/3 on md+ screens */}
         <div className="w-full md:w-2/3">
           <div className="flex flex-col gap-4">
             {/* Podcast player/embed would go here */}
@@ -59,6 +59,15 @@ export function PodcastTemplate({ content }: PodcastTemplateProps) {
                 <Clock size={16} className="text-gray-600" />
                 <span className="font-medium">{content.duration} minutes</span>
               </div>
+              <div className="flex justify-start">
+                {shareUrl && (
+                  <CopyButton
+                    textToCopy={shareUrl}
+                    className="hidden md:flex bg-white/30 hover:bg-gray-200/30"
+                  />
+                )}
+              </div>
+
               {content.author && (
                 <>
                   <span className="font-medium">•</span>
@@ -66,31 +75,25 @@ export function PodcastTemplate({ content }: PodcastTemplateProps) {
                 </>
               )}
             </div>
-            <Link
-              href={content.audioUrl}
-              className="inline-block text-blue-600 hover:text-blue-800 font-medium"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Listen to Episode
-            </Link>
-            {/* Share Button */}
-            <div className="flex justify-end">
-              {shareUrl && (
-                <CopyButton
-                  textToCopy={shareUrl}
-                  className="hidden md:flex bg-white/30 hover:bg-gray-200/30"
-                />
-              )}
-            </div>
 
             {/* Mobile Share Button */}
             {shareUrl && (
               <CopyButton textToCopy={shareUrl} className="md:hidden mt-4" />
             )}
-
-            {/* Main content */}
             <div>{content.children}</div>
+
+            <Button variant="secondary">
+              <Play size={16} className="text-gray-600" />
+              <span className="font-medium">Listen to Episode</span>
+            </Button>
+
+            <Link
+              href={content.audioUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex items-center gap-1"></div>
+            </Link>
           </div>
         </div>
       </div>

@@ -15,14 +15,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log("Environment:", process.env.NODE_ENV); 
+  console.log("Environment:", process.env.NODE_ENV);
   console.log(
     "Under Construction:",
     process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION
   );
   return (
     <html lang="en">
-      <body className="h-screen">
+      <body className="min-h-screen bg-customLightBeige">
         <NavBar />
         <main className="flex flex-col">
           <div className="relative flex flex-col lg:justify-center lg:items-center overflow-hidden  pt-5 md:pt-8 w-full text-center">

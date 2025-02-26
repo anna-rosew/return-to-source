@@ -18,6 +18,7 @@ const config: Config = {
         customBeige: "#CABB9D",
         customGreen: "#BACA9E",
         customSienna: "#862b0e",
+        customLightBeige: "#F6ECE1",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
