@@ -1,6 +1,7 @@
 // app/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { Metadata } from "next";
 
 // Components
 import { ArticleTemplate } from "@/components/ui/blog/templates/ArticleTemplate";
@@ -13,12 +14,13 @@ import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import type { MDXContent, Post, PodcastPost, RecipePost } from "@/types/index";
 
 // Types
-interface Props {
+type Props = {
   params: { slug: string };
-}
+  searchParams?: { [key: string]: string | string[] | undefined };
+};
 
 // Metadata
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);
 
   if (!post) {
