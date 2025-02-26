@@ -1,7 +1,6 @@
 // app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { Metadata } from "next";
 
 // Components
 import { ArticleTemplate } from "@/components/ui/blog/templates/ArticleTemplate";
@@ -13,12 +12,15 @@ import ConstructionLayout from "@/components/layout/ConstructionLayout";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import type { MDXContent, Post, PodcastPost, RecipePost } from "@/types/index";
 
-// Using the Next.js recommended way for App Router
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
+// Define a custom type to avoid conflicts with Next.js internal types
+type BlogPageParams = {
+  params: {
+    slug: string;
+  };
+};
+
+// Metadata function
+export async function generateMetadata({ params }: BlogPageParams) {
   const post = await getPostBySlug(params.slug);
 
   if (!post) {
@@ -66,12 +68,8 @@ const cleanMDXContent = (content: string): string => {
     .trim();
 };
 
-// Main Component using inline parameter type
-export default async function BlogPost({
-  params,
-}: {
-  params: { slug: string };
-}) {
+// Main Component with the custom param type
+export default async function BlogPost({ params }: BlogPageParams) {
   // Fetch post data
   const post = await getPostBySlug(params.slug);
 
