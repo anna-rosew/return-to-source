@@ -12,7 +12,7 @@ export default async function BlogPage() {
         <h1>Blog</h1>
         <p className="font-bold md:text-center">
           Come and explore how your body, mind and breath work together. Open
-          yourself to new dimensions of experience and personal growth
+          yourself to new dimensions of experience and personal growth.
         </p>
 
         <section className="page-section">
