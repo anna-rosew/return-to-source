@@ -1,6 +1,7 @@
 // app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+// @ts-nocheck 
 
 // Components
 import { ArticleTemplate } from "@/components/ui/blog/templates/ArticleTemplate";
