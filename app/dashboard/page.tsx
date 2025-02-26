@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import SunIcon from "@/public/Assets/Icons/SunIcon";
-import { Link } from "phosphor-react";
+import Link from "next/link";
+
 
 import React from "react";
 
