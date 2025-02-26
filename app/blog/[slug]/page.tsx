@@ -1,26 +1,20 @@
 // app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-// @ts-nocheck 
 
-// Components
 import { ArticleTemplate } from "@/components/ui/blog/templates/ArticleTemplate";
 import { PodcastTemplate } from "@/components/ui/blog/templates/PodcastTemplate";
 import { RecipeTemplate } from "@/components/ui/blog/templates/RecipeTemplate";
 import ConstructionLayout from "@/components/layout/ConstructionLayout";
 
-// Utils & Types
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import type { MDXContent, Post, PodcastPost, RecipePost } from "@/types/index";
 
-// Define a type for our params
 type BlogParams = {
   params: {
     slug: string;
   };
 };
-
-// Metadata function with ts-expect-error directive
 
 export async function generateMetadata({ params }: BlogParams) {
   const post = await getPostBySlug(params.slug);
@@ -61,9 +55,9 @@ export async function generateStaticParams() {
 // Helper function to clean MDX content
 const cleanMDXContent = (content: string): string => {
   return content
-    .replace(/\{/g, "&#123;") // Escape curly braces
+    .replace(/\{/g, "&#123;")
     .replace(/\}/g, "&#125;")
-    .replace(/'/g, "'") // Replace smart quotes
+    .replace(/'/g, "'")
     .replace(/'/g, "'")
     .replace(/"/g, '"')
     .replace(/"/g, '"')
@@ -81,23 +75,19 @@ export default async function BlogPost({ params }: BlogParams) {
     return notFound();
   }
 
-  // Process MDX content and split into intro and main content
   let introSection;
   let mainContent = null;
 
   try {
     if (post.content) {
-      // Clean the content before processing
       const cleanContent = cleanMDXContent(post.content);
 
-      // Split content at the first heading (##)
       const contentParts = cleanContent.split(/(?=##\s)/);
 
       if (contentParts.length > 1) {
         const introContent = cleanMDXContent(contentParts[0]);
         const mainContentStr = contentParts.slice(1).join("");
 
-        // Process intro content
         try {
           introSection = {
             content: introContent,
@@ -113,7 +103,6 @@ export default async function BlogPost({ params }: BlogParams) {
           };
         }
 
-        // Process main content
         try {
           mainContent = mainContentStr ? (
             <MDXRemote source={cleanMDXContent(mainContentStr)} />
@@ -125,7 +114,6 @@ export default async function BlogPost({ params }: BlogParams) {
           );
         }
       } else {
-        // If no headings found, treat all as main content
         try {
           mainContent = <MDXRemote source={cleanContent} />;
         } catch (error) {
@@ -141,14 +129,12 @@ export default async function BlogPost({ params }: BlogParams) {
     mainContent = <div>Error processing content. Please try again.</div>;
   }
 
-  // Prepare post content with separated intro
   const postContent: MDXContent = {
     ...post,
     intro: introSection,
     children: mainContent,
   };
 
-  // Template renderer
   const renderTemplate = () => {
     switch (postContent.type) {
       case "short-article":
@@ -187,7 +173,6 @@ export default async function BlogPost({ params }: BlogParams) {
     }
   };
 
-  // Layout wrapper
   return (
     <ConstructionLayout>
       <main className="container mx-auto px-4 py-8">{renderTemplate()}</main>
