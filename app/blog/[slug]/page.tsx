@@ -12,15 +12,16 @@ import ConstructionLayout from "@/components/layout/ConstructionLayout";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import type { MDXContent, Post, PodcastPost, RecipePost } from "@/types/index";
 
-// Define a custom type to avoid conflicts with Next.js internal types
-type BlogPageParams = {
+// Define a type for our params
+type BlogParams = {
   params: {
     slug: string;
   };
 };
 
-// Metadata function
-export async function generateMetadata({ params }: BlogPageParams) {
+// Metadata function with ts-expect-error directive
+
+export async function generateMetadata({ params }: BlogParams) {
   const post = await getPostBySlug(params.slug);
 
   if (!post) {
@@ -68,8 +69,9 @@ const cleanMDXContent = (content: string): string => {
     .trim();
 };
 
-// Main Component with the custom param type
-export default async function BlogPost({ params }: BlogPageParams) {
+// Main Component with ts-expect-error directive
+
+export default async function BlogPost({ params }: BlogParams) {
   // Fetch post data
   const post = await getPostBySlug(params.slug);
 
