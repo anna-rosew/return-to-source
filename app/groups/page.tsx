@@ -22,7 +22,7 @@ const groups = () => {
           ))}
         </div>
       </div>
-      <div className="online-groups">
+      <div className="online-groups scroll-mt-16" id="online-section">
         <SectionHeading title="Online Groups" />
         <p className="text md:text-center md:py-10 py-4">
           Join us from anywhere in the world for live-streamed and on-demand
@@ -31,7 +31,10 @@ const groups = () => {
         </p>
         <OnlineCarousel />
       </div>
-      <div className="in-person-groups mb-8">
+      <div
+        className="in-person-groups mb-8 scroll-mt-16"
+        id="in-person-section"
+      >
         <SectionHeading title="In-Person Groups" />
         <p className="text md:text-center md:py-4 py-2">
           Come and join our community for intimate in-person sessions. These
@@ -42,7 +45,7 @@ const groups = () => {
         </p>
         <InPersonCarousel />
       </div>
-      <div className="in-person-groups mb-8">
+      <div className="in-person-groups mb-8 scroll-mt-16" id="retreats-section">
         <SectionHeading title="Retreats" />
         <p className="text md:text-center md:py-10 py-4">
           Step away from the everyday and immerse yourself in transformative

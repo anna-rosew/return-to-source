@@ -10,7 +10,8 @@ export const serviceData: IServiceCard[] = [
     description:
       "Learn how to regain clarity, and calm the turmoil within you.",
     image: HomeOne,
-    imageAlt: "Anatata Chakra - heart and courage",
+    imageAlt:
+      "Eye by ManuelTheLensman: Fitness, calm and breathing of black woman outdoor in nature, mountains and blue sky background for yoga wellness, meditation and zen energy. Face of girl breathing for peace, freedom and mindfulness",
     reversed: true,
   },
   {
@@ -22,12 +23,12 @@ export const serviceData: IServiceCard[] = [
     imageAlt: "Ajna Chakra - intuition, imagination, self-realisation",
   },
   {
-    serviceName: "Muladhara",
+    serviceName: "Courage",
     title: "If you’re struggling to make sense of it all...",
     description:
       "Let’s work together so you can find the courage and clarity you need to navigate life, without adding to your stress.",
     image: HomeThree,
-    imageAlt: "Muladhara Chakra - Rooting and Grounding",
+    imageAlt: "Circle of light on water by Rose Long",
     reversed: true,
   },
 ];
