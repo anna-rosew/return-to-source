@@ -14,7 +14,7 @@ import {
 
 const Contact = () => {
   const handleEmailClick = () => {
-    window.location.href = "mailto:info@rose-long.com";
+    window.location.href = "mailto:rose@rose-long.com";
   };
 
   return (
