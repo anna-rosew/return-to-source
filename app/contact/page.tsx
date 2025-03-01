@@ -1,17 +1,26 @@
+"use client";
 import React from "react";
-
 import Image from "next/image";
 import ContactImage from "@/public/Assets/Images/contact.webp";
 import ContactSmall from "@/public/Assets/Images/contact-mobile.webp";
-
-import ContactForm from "@/components/ui/contact/ContactForm";
-import NewsletterForm from "@/components/ui/contact/NewsletterForm";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const Contact = () => {
+  const handleEmailClick = () => {
+    window.location.href = "mailto:info@rose-long.com";
+  };
+
   return (
     <div className="container text-center w-full">
       <h1 className="mb-8">Contact</h1>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div className="relative order-first md:order-last">
           <Image
             className="medium-screen-component w-full max-w-md h-auto object-contain mx-auto responsive"
@@ -38,8 +47,29 @@ const Contact = () => {
           />
         </div>
         <div className="text mb-12">
-          <ContactForm />
-          <NewsletterForm />
+          <Card className="mx-auto max-w-md text-left border-hidden shadow-none">
+            <CardHeader className="px-0">
+              <CardTitle>
+                <h2>Get in Touch</h2>
+              </CardTitle>
+              <CardDescription>
+                <p className="para pt-4">
+                  If you&apos;d like to book a{" "}
+                  <strong>class, workshop, or retreat,</strong> or have any
+                  questions, please don&apos;t hesitate to reach out.
+                </p>
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="p-1">
+              <Button
+                onClick={handleEmailClick}
+                variant="primary"
+                className="w-full"
+              >
+                email me
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
