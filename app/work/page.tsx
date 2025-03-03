@@ -8,8 +8,9 @@ const Work = () => {
       <div className="container">
         <h1>Work with Rose</h1>
         <p className="font-bold">
-          Come and explore how your body, mind and breath work together. Open
-          yourself to new dimensions of experience and personal growth.
+          Learn to Navigate Life with Greater Ease & Flow. Reconnect with your
+          body & breath, and discover new ways to mange your thoughts &
+          emotions.
         </p>
 
         <div className="lg:my-20 my-7">

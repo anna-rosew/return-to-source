@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import HomeScroll from "../components/layout/HomeScroll";
 import { Button } from "../components/ui/button";
 import Link from "next/link";
+import HomeCTA from "@/components/ui/home/HomeCTA";
 
 export const metadata: Metadata = {
   title: "Rose Long | Return to Source",
@@ -33,20 +34,17 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col items-center w-full">
-      <h4 className=" text-[28px] lg:text-[48px] mt-4 leading-2 text-center font-neato">
-        Finding What Works for You.
-      </h4>
-      <p className="p-4 text-center text-customTeal lg:mx-64">
-        Feeling Overwhelmed? Stuck in a Cycle That’s Hard to Break?
-      </p>
       <HeroImage />
       <Link href="/work">
         <Button variant="primary" size="lg" className="my-6 mx-auto">
-          Start my journey
+          Find your way out
         </Button>
       </Link>
       <div className="w-full bg-black">
         <HomeScroll />
+      </div>
+      <div className="w-full bg-customGreen">
+        <HomeCTA />
       </div>
     </div>
   );
