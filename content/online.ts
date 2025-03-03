@@ -18,7 +18,7 @@ export const classes: ClassInfo[] = [
     monthlyPrice: "3 session bundle £18",
     width: 100,
     height: 100,
-    backgroundImage: "/Assets/Images/morning-breath.webp",
+    backgroundImage: "/Assets/Images/evening-chill.webp",
     duration: "30 mins",
   },
   {
@@ -34,7 +34,7 @@ export const classes: ClassInfo[] = [
     monthlyPrice: "3 class bundle £21",
     width: 100,
     height: 100,
-    backgroundImage: "/Assets/Images/evening-chill.webp",
+    backgroundImage: "/Assets/Images/evening-online.webp",
     duration: "30 mins",
   },
   {
