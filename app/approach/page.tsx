@@ -14,18 +14,18 @@ const approach = () => {
   const cardDetails = [
     {
       Icon: MuladharaIcon,
-      title: "Build Courage",
-      text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.",
+      title: "Building Courage",
+      text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown. It takes courage to risk letting go of what no longer works for you.",
     },
     {
       Icon: AjnaIcon,
-      title: "Find Clarity",
-      text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.",
+      title: "Finding Clarity",
+      text: "Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential. Through this work you see where you have agency, and find your way through the blocks.",
     },
     {
       Icon: AnahataIcon,
       title: "Be Present",
-      text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.",
+      text: "With presence comes greater self-awareness deepening your self-knowledge.  This opens you to new choices and gives you freedom from the past.  The more you release the past, the more you can live in the present.",
     },
   ];
 
@@ -34,8 +34,7 @@ const approach = () => {
       <div className="container  w-full">
         <h1>Approach</h1>
         <p className="font-bold md:text-center">
-          Come and explore how your body, mind and breath work together. Open
-          yourself to new dimensions of experience and personal growth
+          Open yourself to new dimensions of experience and personal growth
         </p>
         <VideoPlayer url="https://vimeo.com/981928855" />
 
