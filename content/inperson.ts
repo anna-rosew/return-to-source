@@ -21,4 +21,24 @@ export const sessionInfo: InPersonSession[] = [
     location: "Room 202",
     date: "Wed 16, Feb",
   },
+  {
+    backgroundImage: "/Assets/Images/workshop1.webp",
+    duration: "2h",
+    type: "Course",
+    title: "Core Strength & Digestive Cleansing",
+    description:
+      "This class will guide you through movements and breathing techniques that build physical core strength while simultaneously cleansing and balancing your digestive system.",
+    location: "Room 202",
+    date: "Wed 16, Feb",
+  },
+  {
+    backgroundImage: "/Assets/Images/workshop1.webp",
+    duration: "2h",
+    type: "Course",
+    title: "Core Strength & Digestive Cleansing",
+    description:
+      "This class will guide you through movements and breathing techniques that build physical core strength while simultaneously cleansing and balancing your digestive system.",
+    location: "Room 202",
+    date: "Wed 16, Feb",
+  },
 ];
