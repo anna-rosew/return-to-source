@@ -36,13 +36,7 @@ const groups = () => {
         id="in-person-section"
       >
         <SectionHeading title="In-Person Groups" />
-        <p className="text md:text-center md:py-4 py-2">
-          Come and join our community for intimate in-person sessions. These
-          classes and workshops offer personal attention and guidance in a
-          supportive space. Whether you&apos;re drawn to gentle Breathing
-          Courses, energising Kundalini flow, or connecting at our post-class
-          gatherings, there&apos;s something for every stage of your journey.
-        </p>
+
         <InPersonCarousel />
       </div>
       <div className="in-person-groups mb-8 scroll-mt-16" id="retreats-section">
