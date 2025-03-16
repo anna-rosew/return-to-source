@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { CopyButton } from "@/components/ui/CopyButton";
 import { PostTypeIcon } from "../PostTypeIcon";
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 interface ArticleHeaderProps {
   content: MDXContent;
@@ -28,6 +30,15 @@ export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => {
           {type}
         </h3>
       </div>
+      <Link
+        href="/blog"
+        className="font-bold mt-2 uppercase list-none flex items-center gap-x-2 text-sm text-customTeal/50 text-left"
+      >
+        <span className="transform transition-transform duration-300 group-hover:translate-x-2">
+          <ArrowLeft />
+        </span>
+        Back to blog
+      </Link>
 
       <h1>{content.title}</h1>
       <p className="font-bold text-gray-600 mb-8">{content.excerpt}</p>
@@ -38,6 +49,7 @@ export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => {
             alt={content.title}
             loading="eager"
             priority={true}
+            sizes="(max-width: 768px) 100vw, 1200px"
             fill
             className="object-cover rounded-lg"
           />
