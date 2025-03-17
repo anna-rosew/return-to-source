@@ -13,7 +13,7 @@ export const slides: Slide[] = [
     tags: ["Nature", "Transform", "Sound Bath", "Breath"],
   },
   {
-    imageUrl: "Assets/images/retreat-soundbath.webp",
+    imageUrl: "Assets/Images/retreat-soundbath.webp",
     date: "March 2025",
     location: "Peak District",
     heading: "Connect with Nature",
@@ -23,7 +23,7 @@ export const slides: Slide[] = [
     tags: ["Meditation", "Wellness", "Healing", "Community"],
   },
   {
-    imageUrl: "Assets/images/retreat-field.webp",
+    imageUrl: "Assets/Images/retreat-beach2.webp",
     date: "March 2025",
     location: "Peak District",
     heading:
