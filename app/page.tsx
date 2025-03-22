@@ -34,6 +34,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col items-center w-full">
+      <h1 className="text-[28px] lg:text-[48px] mt-1 leading-2 text-center font-neato mb-0">
+        Finding What Works for You.
+      </h1>
+      <p className="p-4 text-center text-customTeal lg:mx-64">
+        Feeling Overwhelmed? Stuck in a Cycle That’s Hard to Break?
+      </p>
       <HeroImage />
       <Link href="/work">
         <Button variant="primary" size="lg" className="my-6 mx-auto">
