@@ -2,35 +2,14 @@ import { Slide } from "@/types/index";
 
 export const slides: Slide[] = [
   {
-    imageUrl: "/Assets/Images/retreat-beach.webp",
-    date: "March 2025",
-    location: "Peak District",
-    heading:
-      "Find Your Balance: A Transformative Yoga Retreat in the Heart of Nature",
+    imageUrl: "/Assets/Images/snowdonia25-6.webp",
+    date: "April 2025",
+    location: "Snowdonia",
+    heading: "Snowdonia Spring Yoga Retreat",
     description:
-      "Escape the ordinary and rediscover your inner harmony at our immersive yoga retreat. Nestled in pristine wilderness, this thoughtfully crafted experience combines ancient wisdom with modern comfort to help you reset, recharge, and reconnect.",
-    buttonText: "Get in touch",
-    tags: ["Nature", "Transform", "Sound Bath", "Breath"],
-  },
-  {
-    imageUrl: "Assets/Images/retreat-soundbath.webp",
-    date: "March 2025",
-    location: "Peak District",
-    heading: "Connect with Nature",
-    description:
-      "Surround yourself with pristine wilderness and breathe in tranquility.",
-    buttonText: "Learn More",
-    tags: ["Meditation", "Wellness", "Healing", "Community"],
-  },
-  {
-    imageUrl: "Assets/Images/retreat-beach2.webp",
-    date: "March 2025",
-    location: "Peak District",
-    heading:
-      "Find Your Balance: A Transformative Yoga Retreat in the Heart of Nature",
-    description:
-      "Escape the ordinary and rediscover your inner harmony at our immersive yoga retreat. Nestled in pristine wilderness, this thoughtfully crafted experience combines ancient wisdom with modern comfort to help you reset, recharge, and reconnect.",
-    buttonText: "Get in touch",
-    tags: ["Nature", "Transform", "Sound Bath", "Breath"],
+      "Reconnect in Snowdonia this spring as nature awakens. Energising yoga with me, evening Yin with Rob, all near the sacred World Peace Flame. Find solitude, community, and joy as you shed city stress and realign with nature's transformative rhythms.",
+    buttonText: "Get More Details",
+    tags: ["Nature", "Revitalise", "Energising Yoga", "Yin Yoga"],
+    link: "/contact",
   },
 ];

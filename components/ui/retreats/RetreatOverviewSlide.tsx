@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Slide } from "@/types/index";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 interface RetreatSlideProps {
   slide: Slide;
@@ -27,11 +28,12 @@ export default function RetreatSlide({ slide }: RetreatSlideProps) {
           <h2 className="text-3xl md:text-5xl mb-6 text-white leading-tight">
             {slide.heading}
           </h2>
-
-          <Button variant="primary" size="lg" className="w-auto self-start">
-            {slide.buttonText}
-            <ChevronRight />
-          </Button>
+          <Link href={slide.link}>
+            <Button variant="primary" size="lg" className="w-auto self-start">
+              {slide.buttonText}
+              <ChevronRight />
+            </Button>
+          </Link>
         </div>
 
         <div className="medium-screen-component lg:w-1/2 md:1/3 md:flex md:flex-col md:mt-80 md:mx-10 ">

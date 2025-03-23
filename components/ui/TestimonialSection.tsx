@@ -13,10 +13,11 @@ const TestimonialSection = () => {
             Other Peoples&apos; Stories...
           </h2>
           <p className="text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            These stories from clients around the world reflect the diverse
+            paths to wellness, mindfulness, and personal growth that Rose has
+            helped guide. Whether through one-on-one coaching, yoga instruction,
+            or group sessions, each person has discovered their own form of
+            healing and empowerment.
           </p>
           <Link href="/work" className="medium-screen-component">
             <Button

@@ -1,11 +1,12 @@
 import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
-import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
+// import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
 import OnlineCarousel from "@/components/ui/online/OnlineCarousel";
 import { slides } from "@/content/retreats";
 import RetreatsOverview from "@/components/ui/retreats/RetreatsOverview";
 import { groupCards } from "@/content/groups";
 import React from "react";
+import Link from "next/link";
 
 const groups = () => {
   return (
@@ -41,18 +42,28 @@ const groups = () => {
         id="in-person-section"
       >
         <SectionHeading title="In-Person Groups" />
+        <p className="text md:text-center md:py-10 py-4">
+          There are currently no in-person sessions planned but{" "}
+          <Link href="/contact" className="underline">
+            stay-in-touch
+          </Link>{" "}
+          by asking to be signed up to <strong>the newsletter</strong> to be the
+          first to hear!
+        </p>
 
-        <InPersonCarousel />
+        {/* <InPersonCarousel /> */}
       </div>
       <div className="in-person-groups mb-8 scroll-mt-16" id="retreats-section">
         <SectionHeading title="Retreats" />
         <p className="text md:text-center md:py-10 py-4">
-          Step away from the everyday and immerse yourself in transformative
-          experiences. Our retreats blend yoga practice, meditation, and
-          community connection in carefully chosen locations. Whether for a day
-          or a week, these intimate gatherings offer a chance to reset, deepen
-          your practice, and forge lasting connections with fellow
-          practitioners.
+          Step away from the everyday and <strong>immerse</strong> yourself in{" "}
+          <strong>transformative experiences</strong>. Our retreats blend{" "}
+          <strong>yoga practice</strong>, <strong>meditation</strong>, and{" "}
+          <strong>community connection</strong> in carefully chosen locations.
+          Whether for a day or a week, these{" "}
+          <strong>intimate gatherings</strong> offer a chance to{" "}
+          <strong>reset</strong>, <strong>deepen</strong> your practice, and{" "}
+          <strong>forge</strong> lasting connections with fellow practitioners.
         </p>
         <RetreatsOverview slides={slides} />
       </div>

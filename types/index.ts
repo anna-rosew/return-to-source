@@ -92,6 +92,7 @@ export interface Slide {
   description: string;
   buttonText: string;
   tags: string[];
+  link: string;
 }
 
 export interface RetreatInfo {
