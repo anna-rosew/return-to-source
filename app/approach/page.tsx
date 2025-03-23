@@ -36,7 +36,7 @@ const approach = () => {
         <p className="font-bold md:text-center">
           Open yourself to new dimensions of experience and personal growth
         </p>
-        <VideoPlayer url="https://vimeo.com/981928855" />
+        <VideoPlayer url="https://vimeo.com/998276851" />
 
         <div className="text-left mt-8 md:grid md:grid-cols-2 md:gap-12">
           <div className="flex items-center justify-center gap-5">
