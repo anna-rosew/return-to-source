@@ -27,7 +27,12 @@ const groups = () => {
         <p className="text md:text-center md:py-10 py-4">
           Join us from anywhere in the world for live-streamed and on-demand
           sessions. Practice in the comfort of your own space while staying
-          connected to our supportive community.
+          connected to our supportive community. This April there is an
+          exclusive offer for the{" "}
+          <strong className="font-bold">
+            Morning Membership 20% DISCOUNT: Mondays, Wednesdays & Fridays
+            (total 9 classes): £48!
+          </strong>
         </p>
         <OnlineCarousel />
       </div>

@@ -32,10 +32,9 @@ export interface CardInfo {
 }
 
 //OnlineGroupsSlider
-import { FC } from "react";
 
 export interface ClassInfo {
-  icon: FC<{ className?: string }>;
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
   classType: string;
   description: string;
   permanentDescription: string;
@@ -47,6 +46,11 @@ export interface ClassInfo {
   height: number;
   backgroundImage: string;
   duration: string;
+  pricingDetails: {
+    membershipPrice: string;
+    bundlePrice: string;
+    dropInPrice: string;
+  };
 }
 
 export interface ClassSlidesProps {
@@ -260,7 +264,7 @@ export const isSecondaryTag = (tag: string): tag is SecondaryTag => {
   return secondaryTags.includes(tag as SecondaryTag);
 };
 
-//UI COMPONENTS
+//UI COMPONENT
 
 //DetailsDisplay
 

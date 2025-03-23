@@ -14,13 +14,14 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
     return description.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
   };
 
+  // Create dynamic display info based on class pricing
   const displayInfo = {
     icon: VideoCallIcon,
     heading: "Live Zoom Class",
     subheading: "Playback anytime.",
     icon2: StarIcon,
-    heading2: "Membership - £66",
-    subheading2: "Bundle - £24 | Drop-In - £8",
+    heading2: `Membership - ${classInfo.pricingDetails.membershipPrice}`,
+    subheading2: `Bundle - ${classInfo.pricingDetails.bundlePrice} | Drop-In - ${classInfo.pricingDetails.dropInPrice}`,
   };
 
   return (

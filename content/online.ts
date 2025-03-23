@@ -20,6 +20,11 @@ export const classes: ClassInfo[] = [
     height: 100,
     backgroundImage: "/Assets/Images/evening-chill.webp",
     duration: "30 mins",
+    pricingDetails: {
+      membershipPrice: "£66",
+      bundlePrice: "£18",
+      dropInPrice: "£8",
+    },
   },
   {
     icon: MorningIcon,
@@ -41,6 +46,11 @@ export const classes: ClassInfo[] = [
     height: 100,
     backgroundImage: "/Assets/Images/vital-breath.webp",
     duration: "30 mins",
+    pricingDetails: {
+      membershipPrice: "£66",
+      bundlePrice: "£24",
+      dropInPrice: "£8",
+    },
   },
   {
     icon: EveningChillIcon,
@@ -57,6 +67,11 @@ export const classes: ClassInfo[] = [
     height: 100,
     backgroundImage: "/Assets/Images/evening-online.webp",
     duration: "30 mins",
+    pricingDetails: {
+      membershipPrice: "£66",
+      bundlePrice: "£21",
+      dropInPrice: "£10",
+    },
   },
   {
     icon: KundaliniIcon,
@@ -73,6 +88,11 @@ export const classes: ClassInfo[] = [
     height: 100,
     backgroundImage: "/Assets/Images/kundalini-magic.webp",
     duration: "30 mins",
+    pricingDetails: {
+      membershipPrice: "£66",
+      bundlePrice: "£18",
+      dropInPrice: "£8",
+    },
   },
   {
     icon: LunarIcon,
@@ -89,5 +109,10 @@ export const classes: ClassInfo[] = [
     height: 100,
     backgroundImage: "/Assets/Images/lunar-cycles.webp",
     duration: "30 mins",
+    pricingDetails: {
+      membershipPrice: "£66",
+      bundlePrice: "£20",
+      dropInPrice: "£15",
+    },
   },
 ];
