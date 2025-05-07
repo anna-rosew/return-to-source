@@ -4,7 +4,6 @@ import { ChevronRight } from "lucide-react";
 import { IServiceCard } from "@/types";
 
 export const ServiceCard = ({
-  serviceName,
   title,
   description,
   image,
@@ -19,9 +18,6 @@ export const ServiceCard = ({
     >
       <Image src={image} alt={imageAlt} className="hidden w-2/5 sm:block" />
       <div className="sm:w-1/2 lg:py-[56px] sm:px-10">
-        <h3 className="text-[1rem] text-customBeige text-center md:text-left">
-          {serviceName}
-        </h3>
         <h1 className="pt-[12px] text-2xl font-medium text-white lg:text-[42px] lg:leading-[58px] text-center md:text-left">
           {title}
         </h1>

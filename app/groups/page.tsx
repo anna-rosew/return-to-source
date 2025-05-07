@@ -26,13 +26,17 @@ const groups = () => {
       <div className="online-groups scroll-mt-16" id="online-section">
         <SectionHeading title="Online Groups" />
         <p className="text md:text-center md:py-10 py-4">
-          Join us from anywhere in the world for live-streamed and on-demand
-          sessions. Practice in the comfort of your own space while staying
-          connected to our supportive community. This April there is an
-          exclusive offer for the{" "}
+          Join us from <strong>anywhere in the world</strong> for live-streamed
+          and on-demand sessions. Practice in the comfort of your own space
+          while staying connected to our supportive community.{" "}
+        </p>
+        <p className="text md:text-center">
+          This May, allow your Yoga practice to revitalise those run-down, weary
+          parts of you, so you can enjoy life to the full. This month there is
+          an exclusive offer for the{" "}
           <strong className="font-bold">
             Morning Membership 20% DISCOUNT: Mondays, Wednesdays & Fridays
-            (total 9 classes): £48!
+            (total 13 classes): £50 (rather than £78)!
           </strong>
         </p>
         <OnlineCarousel />

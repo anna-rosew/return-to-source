@@ -4,7 +4,6 @@ import { StaticImageData } from "next/image";
 
 export interface IServiceCard {
   title: string;
-  serviceName: string;
   description: string;
   image: StaticImageData;
   imageAlt: string;

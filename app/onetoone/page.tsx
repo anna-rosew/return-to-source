@@ -33,7 +33,7 @@ const onetoone = () => {
       <div className="container  w-full">
         <h1>One-to-Ones</h1>
         <h3>Embracing the Path of Self-Discovery</h3>
-        <VideoPlayer url="https://vimeo.com/981928855" />
+        <VideoPlayer url="https://vimeo.com/998276851/f7735cc4ed" />
 
         <Link href="/contact">
           <Button

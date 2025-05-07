@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://use.typekit.net/kli2wwi.css");
+
 @layer base {
   :root {
     --background: 45, 68%, 94%;
@@ -77,6 +79,13 @@
   }
 
   /* Headings */
+
+  .font-neato {
+    font-family: "neato-serif", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
   h1 {
     @apply font-jomolhari text-[2.2rem] font-normal text-black md:text-[2rem] lg:text-[2.5rem] md:mb-8 mb-5;
   }
@@ -89,6 +98,10 @@
   /* Paragraphs */
   p {
     @apply font-jost leading-[1.5em] text-[1rem] text-black tracking-wider md:text-[1.1rem] lg:text-[1rem] text-left m-2;
+  }
+
+  .neato-heading {
+    @apply font-neato text-[1.6rem] font-normal;
   }
 
   article h3 {

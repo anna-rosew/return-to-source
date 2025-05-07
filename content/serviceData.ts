@@ -5,7 +5,6 @@ import HomeThree from "@/public/Assets/Images/HomepageBox3.webp";
 
 export const serviceData: IServiceCard[] = [
   {
-    serviceName: "Clarity",
     title: "If you're anxious and can’t switch off...",
     description: "Learn to cultivate inner calm.",
     image: HomeOne,
@@ -14,14 +13,12 @@ export const serviceData: IServiceCard[] = [
     reversed: true,
   },
   {
-    serviceName: "Restore",
     title: "If you’re tired and your body’s complaining...",
     description: "Discover the source of your natural vitality",
     image: HomeTwo,
     imageAlt: "Ajna Chakra - intuition, imagination, self-realisation",
   },
   {
-    serviceName: "Courage",
     title: "If you're drowning in confusion and unable to see the light... ",
     description: "It's time to look within and find the clarity you seek.",
     image: HomeThree,
