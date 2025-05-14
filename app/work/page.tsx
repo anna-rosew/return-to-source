@@ -8,7 +8,7 @@ const Work = () => {
       <div className="container">
         <h1>Work with Rose</h1>
         <p className="font-bold">
-          Learn to navigate life with greater ease & flow. Reconnect with your
+          Learn to navigate life with greater ease and flow. Reconnect with your
           body & breath, and discover new ways to mange your thoughts &
           emotions.
         </p>
