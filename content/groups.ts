@@ -2,7 +2,7 @@
 export const groupCards = [
   {
     imageUrl: "/Assets/Images/online-groups.webp",
-    title: "Online Groups",
+    title: "Online Classes",
     subtitle: "yoga | community",
     description: "Transform from the inside out!",
     link: "#online-section",

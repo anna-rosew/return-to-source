@@ -38,7 +38,7 @@ export default function Home() {
         Return to the Body. Return to the Breath.
       </p>
       <h1 className="text-[28px] lg:text-[56px] leading-2 text-center neato-heading mb-2">
-        Return to the Source.
+        Return to Source.
       </h1>
 
       <HeroImage />
@@ -50,7 +50,7 @@ export default function Home() {
       <div className="w-full bg-black">
         <HomeScroll />
       </div>
-      {/* <div className="w-full bg-customGreen">
+      {/* <div className="w-full bg-customTeal">
         <HomeCTA />
       </div> */}
     </div>

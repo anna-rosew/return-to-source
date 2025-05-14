@@ -11,7 +11,7 @@ const Footer = () => {
   const serviceLinks = [
     { name: "Groups Overview", link: "/groups" },
     { name: "One-to-Ones", link: "/onetoone" },
-    { name: "Online Groups", link: "/groups#online-section" },
+    { name: "Online Classes", link: "/groups#online-section" },
     { name: "In-Person Sessions", link: "/groups#in-person-section" },
     { name: "Retreats", link: "/groups#retreats-section" },
   ];

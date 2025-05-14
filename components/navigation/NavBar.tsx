@@ -133,7 +133,7 @@ const Navbar = () => {
                       className="hover:text-customGreen"
                       onClick={closeDropdowns}
                     >
-                      Online Groups
+                      Online Classes
                     </Link>
                   </li>
                   <li>
