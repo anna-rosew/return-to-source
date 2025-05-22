@@ -61,7 +61,7 @@ export const classes: ClassInfo[] = [
     width: 100,
     height: 100,
     backgroundImage: "/Assets/Images/evening-chill.webp",
-    duration: "30 mins",
+    duration: "60 mins",
     pricingDetails: {
       membershipPrice: "£66",
       bundlePrice: "£28",

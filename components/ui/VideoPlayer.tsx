@@ -43,7 +43,7 @@ const VideoPlayer = ({ url, size = "default" }: VideoPlayerProps) => {
         };
       case "large":
         return {
-          container: "pt-[56.25%] max-w-3xl mx-auto",
+          container: "pt-[50.25%] mb-0 max-w-3xl mx-auto",
           playButton: "max-w-[280px] p-5 text-xl",
           playIcon: 80,
         };

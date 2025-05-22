@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import HomeScroll from "../components/layout/HomeScroll";
 import { Button } from "../components/ui/button";
 import Link from "next/link";
-// import HomeCTA from "@/components/ui/home/HomeCTA";
+import HomeCTA from "@/components/ui/home/HomeCTA";
 
 export const metadata: Metadata = {
   title: "Rose Long | Return to Source",
@@ -50,9 +50,9 @@ export default function Home() {
       <div className="w-full bg-black">
         <HomeScroll />
       </div>
-      {/* <div className="w-full bg-customTeal">
+      <div className="w-full bg-customTeal">
         <HomeCTA />
-      </div> */}
+      </div>
     </div>
   );
 }
