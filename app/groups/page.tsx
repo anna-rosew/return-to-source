@@ -2,8 +2,8 @@ import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
 // import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
 import OnlineCarousel from "@/components/ui/online/OnlineCarousel";
-import { slides } from "@/content/retreats";
-import RetreatsOverview from "@/components/ui/retreats/RetreatsOverview";
+// import { slides } from "@/content/retreats";
+// import RetreatsOverview from "@/components/ui/retreats/RetreatsOverview";
 import { groupCards } from "@/content/groups";
 import React from "react";
 import Link from "next/link";
@@ -60,6 +60,14 @@ const groups = () => {
       <div className="in-person-groups mb-8 scroll-mt-16" id="retreats-section">
         <SectionHeading title="Retreats" />
         <p className="text md:text-center md:py-10 py-4">
+          There are currently no retreats planned but{" "}
+          <Link href="/contact" className="underline">
+            stay-in-touch
+          </Link>{" "}
+          by asking to be signed up to <strong>the newsletter</strong> to be the
+          first to hear!
+        </p>
+        {/* <p className="text md:text-center md:py-10 py-4">
           Step away from the everyday and <strong>immerse</strong> yourself in{" "}
           <strong>transformative experiences</strong>. Our retreats blend{" "}
           <strong>yoga practice</strong>, <strong>meditation</strong>, and{" "}
@@ -69,7 +77,7 @@ const groups = () => {
           <strong>reset</strong>, <strong>deepen</strong> your practice, and{" "}
           <strong>forge</strong> lasting connections with fellow practitioners.
         </p>
-        <RetreatsOverview slides={slides} />
+        <RetreatsOverview slides={slides} /> */}
       </div>
     </div>
   );

@@ -14,7 +14,10 @@ const HomeCTA = () => {
           width={25}
           height={25}
         />
-        <h1 className="text-white text-[28px]">Sample Class</h1>
+        <h1 className="text-white text-[28px]">
+          Needing to unwind? <br />
+          Try a sample class video.{" "}
+        </h1>
         <p className="text-white text-center">
           This breathing practice is an enquiry into how the breath moves
           through the left lung and the right lung. With the a-symmetry of the
