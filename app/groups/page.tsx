@@ -13,8 +13,8 @@ const groups = () => {
     <div className="container text-center w-full">
       <h1 className="pb-5">Groups</h1>
       <p className="font-bold md:text-center">
-        Come and explore how your body, mind and breath work together. Open
-        yourself to new dimensions of experience and personal growth.
+        This month I’m offering a scaled down schedule due to family
+        circumstances. Next month I’ll be offering a full programme of classes.
       </p>
       <div className="lg:my-20 my-7">
         <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
@@ -30,7 +30,7 @@ const groups = () => {
           and on-demand sessions. Practice in the comfort of your own space
           while staying connected to our supportive community.{" "}
         </p>
-        <p className="text md:text-center">
+        {/* <p className="text md:text-center">
           This May, allow your Yoga practice to revitalise those run-down, weary
           parts of you, so you can enjoy life to the full. This month there is
           an exclusive offer for the{" "}
@@ -38,7 +38,7 @@ const groups = () => {
             Morning Membership 20% DISCOUNT: Mondays, Wednesdays & Fridays
             (total 13 classes): £50 (rather than £78)!
           </strong>
-        </p>
+        </p> */}
         <OnlineCarousel />
       </div>
       <div
