@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 const Footer = () => {
   const serviceLinks = [
     { name: "Groups Overview", link: "/groups" },
+    // { name: "Monthly Theme", link: "/monthly-theme" },
     { name: "One-to-Ones", link: "/onetoone" },
     { name: "Online Classes", link: "/groups#online-section" },
     { name: "In-Person Sessions", link: "/groups#in-person-section" },

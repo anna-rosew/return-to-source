@@ -2,8 +2,9 @@
 import React from "react";
 import StarIcon from "@/public/Assets/Icons/StarIcon";
 import RootAndReleaseIcon from "@/public/Assets/Icons/RootsIcon";
-import VitalityIcon from "@/public/Assets/Icons/plant";
-import LightIcon from "@/public/Assets/Icons/Sunshine";
+import WaveIcon from "@/public/Assets/Icons/WaveIcon";
+import CompassIcon from "@/public/Assets/Icons/CompassIcon";
+import AnchorIcon from "@/public/Assets/Icons/AnchorIcon";
 import MonthlyCard from "@/components/ui/work/MonthlyCard";
 import { Button } from "../button";
 import Link from "next/link";
@@ -12,18 +13,23 @@ const MonthlyTheme = () => {
   const themeDetails = [
     {
       Icon: RootAndReleaseIcon,
-      title: "Root & Release",
-      text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown. It takes courage to risk letting go of what no longer works for you.",
+      title: "Ground",
+      text: "As Summer's expansive energy settles, find your feet and cultivate a healthy foundation.",
     },
     {
-      Icon: VitalityIcon,
-      title: "Reclaim your Vitality",
-      text: "Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential. Through this work you see where you have agency, and find your way through the blocks.",
+      Icon: WaveIcon,
+      title: "Attune",
+      text: "Listen deeply to your body, and notice where imbalance is calling for your attention.",
     },
     {
-      Icon: LightIcon,
-      title: "Embody the Light",
-      text: "With presence comes greater self-awareness deepening your self-knowledge.  This opens you to new choices and gives you freedom from the past.  The more you release the past, the more you can live in the present.",
+      Icon: CompassIcon,
+      title: "Align",
+      text: "Make conscious adjustments through the day and experience your ability to cultivate balance.",
+    },
+    {
+      Icon: AnchorIcon,
+      title: "Anchor",
+      text: "Integrate what serves you, creating sustainable changes for the months ahead.",
     },
   ];
   return (
@@ -35,22 +41,23 @@ const MonthlyTheme = () => {
           height={25}
         />
         <h1 className="text-white text-[28px]">
-          June 2025: Root & Rise - A Solstice Reclamation
+          September 2025: Equinox Calling
         </h1>
         <p className="text-white text-center">
-          Join Rose for a transformative three-week Summer Solstice journey to
-          reclaim your vitality and natural radiance. This gentle,
-          low-screen-time program invites you to make this solstice a turning
-          point—a joyful &quot;YES!&ldquo; to your vital spirit. Rooted in yogic
-          principles of intention and daily commitment, the journey focuses on
-          self-awareness through simple practices that deepen awareness and
-          celebrate growth. Your part: hold a clear intention and stay curious.
-          Rose&apos;s part: provide the structure and encouragement you need to
-          consistently show up for yourself. Say &#34;YES!&quot; to light, life,
-          and the wonder of being fully alive.
+          Join Rose for a transformative four-week Equinox journey to find
+          balance and stability as the seasons shift. This gentle, grounding
+          program invites you to work with your thoughts and emotions through
+          yogic wisdom and daily practices. As summer&apos;s expansive energy
+          settles into autumn&apos;s reflective rhythm, discover tools to
+          navigate life&apos;s challenges with greater ease and confidence.
+          Rooted in ancient yogic teachings, this journey offers simple yet
+          powerful practices to help you recognize imbalance, return to your
+          center, and create sustainable habits. Your part: show up with
+          curiosity and commitment. Rose&apos;s part: provide the guidance and
+          support you need to cultivate lasting balance and inner stability.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-8">
         {themeDetails.map((content, index) => (
           <MonthlyCard
             key={index}

@@ -54,13 +54,11 @@ const MonthlyTheme = () => {
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="relative z-10 flex items-center justify-center h-full text-center px-4">
             <div>
-              <h3 className="text-white">June 2025</h3>
-              <h1 className="text-white">
-                June: Root & Rise - A Solstice Reclamation
-              </h1>
+              <h3 className="text-white">September 2025</h3>
+              <h1 className="text-white">Equinox Calling</h1>
               <p className="text-lg text-center max-w-2xl mx-auto text-white">
-                Join Rose for a transformative three-week Summer Solstice
-                journey to reclaim your vitality and natural radiance.
+                A four-week Autumn Equinox journey to deepen your self-awareness
+                and reclaim balance, clarity & calm.
               </p>
             </div>
           </div>
