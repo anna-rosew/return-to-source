@@ -60,7 +60,7 @@ export interface ClassSlidesProps {
 
 export interface InPersonSession {
   backgroundImage: string;
-  duration: string;
+  time: string;
   type: string;
   title: string;
   description: string;

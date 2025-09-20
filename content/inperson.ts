@@ -2,43 +2,23 @@ import { InPersonSession } from "@/types";
 
 export const sessionInfo: InPersonSession[] = [
   {
-    backgroundImage: "/Assets/Images/workshop1.webp",
-    duration: "1h 30m",
+    backgroundImage: "/Assets/Images/london_workshop.webp",
+    time: "10:00am-13:00pm",
     type: "Workshop",
-    title: "Breathwork Workshop",
+    title: "Trust your Path, Let Life Unfold",
     description:
-      "Join Rose for an introduction to Breath Work. This five-week course will introduce you to <strong>foundational practices</strong> that allow you to access the <strong>power of your breath</strong>.",
-    location: "Absolute Yoga, Liverpool",
-    date: "Wed 16, Feb",
+      "Join Rose in London to reconnect with your inner wisdom through mindful yoga practice that helps you find clarity and trust in uncertain times.",
+    location: "The West London Buddhist Centre, W2 5DP",
+    date: "Sun 26, Oct",
   },
   {
-    backgroundImage: "/Assets/Images/workshop1.webp",
-    duration: "2h",
-    type: "Course",
-    title: "Core Strength & Digestive Cleansing",
+    backgroundImage: "/Assets/Images/buddhist_center.webp",
+    time: "10:00am-13:00pm",
+    type: "Workshop",
+    title: "Trust your Path, Let Life Unfold",
     description:
-      "This class will guide you through movements and breathing techniques that build physical core strength while simultaneously cleansing and balancing your digestive system.",
-    location: "Room 202",
-    date: "Wed 16, Feb",
-  },
-  {
-    backgroundImage: "/Assets/Images/workshop1.webp",
-    duration: "2h",
-    type: "Course",
-    title: "Core Strength & Digestive Cleansing",
-    description:
-      "This class will guide you through movements and breathing techniques that build physical core strength while simultaneously cleansing and balancing your digestive system.",
-    location: "Room 202",
-    date: "Wed 16, Feb",
-  },
-  {
-    backgroundImage: "/Assets/Images/workshop1.webp",
-    duration: "2h",
-    type: "Course",
-    title: "Core Strength & Digestive Cleansing",
-    description:
-      "This class will guide you through movements and breathing techniques that build physical core strength while simultaneously cleansing and balancing your digestive system.",
-    location: "Room 202",
-    date: "Wed 16, Feb",
+      "Join Rose in London to reconnect with your inner wisdom through mindful yoga practice that helps you find clarity and trust in uncertain times.",
+    location: "The West London Buddhist Centre, W2 5DP",
+    date: "Sun 23, Nov",
   },
 ];

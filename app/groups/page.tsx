@@ -1,12 +1,12 @@
 import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
-// import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
 import OnlineCarousel from "@/components/ui/online/OnlineCarousel";
 // import { slides } from "@/content/retreats";
 // import RetreatsOverview from "@/components/ui/retreats/RetreatsOverview";
 import { groupCards } from "@/content/groups";
 import React from "react";
 import Link from "next/link";
+import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
 
 const groups = () => {
   return (
@@ -60,7 +60,7 @@ const groups = () => {
           first to hear!
         </p>
 
-        {/* <InPersonCarousel /> */}
+        <InPersonCarousel />
       </div>
       <div className="in-person-groups mb-8 scroll-mt-16" id="retreats-section">
         <SectionHeading title="Retreats" />

@@ -26,7 +26,7 @@ const InPersonCard: React.FC<InPersonProps> = ({ sessionInfo }) => {
 
       <p className="flex items-center bg-gray-100 bg-opacity-30 p-2 rounded-lg text-white">
         <ClockIcon className="w-5 h-5 mr-2 text-white " />
-        {sessionInfo.duration}
+        {sessionInfo.time}
       </p>
 
       <div className="flex flex-col justify-start space-y-4 flex-grow mt-auto mb-4">
