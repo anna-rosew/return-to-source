@@ -27,21 +27,21 @@ const groups = () => {
           while staying connected to our supportive community.{" "}
         </p>
         <p className="text md:text-center">
-          This September, let your Yoga practice help you find balance and
-          stability as the seasons shift. Ground yourself through powerful
-          practices that teach you to work skillfully with thoughts and
-          emotions.
+          In <strong>October</strong>, let your Yoga practice serve as your
+          guidebook to the <strong>inner world</strong>. Learn to step off the
+          frenetic treadmill of distraction and busyness to cultivate a steady
+          foundation within, empowering you to live from the inside out.
+        </p>
+        <p className="text md:text-center">
+          Through conscious movement and breath, we will work to strengthen your
+          foundation, cultivate embodied awareness, and increase your
+          resilience, allowing you to master being a true{" "}
+          <strong>Citizen of Two Worlds</strong>.
         </p>
         <h3>Investment Options:</h3>
         <p className="text md:text-center">
-          <strong> Equinox Calling Programme:</strong> £120 (includes 18 yoga
-          classes + daily practices)!
-          <br />
-          <strong>Add 1-to-1 Coaching:</strong> Special 10% discount available
-          for September sessions (limited spaces - email to book)
-          <br />
-          <strong>Returning Members:</strong> Participated in Summer&apos;s Root
-          & Rise Programme? Pay just £70 instead of £120.
+          <strong> October Programme: £120</strong> (includes 18 yoga classes +
+          daily practices)! Pay less and save £32.
         </p>
 
         <OnlineCarousel />
