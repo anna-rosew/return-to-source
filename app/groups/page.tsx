@@ -27,21 +27,22 @@ const groups = () => {
           while staying connected to our supportive community.{" "}
         </p>
         <p className="text md:text-center">
-          In <strong>October</strong>, let your Yoga practice serve as your
-          guidebook to the <strong>inner world</strong>. Learn to step off the
-          frenetic treadmill of distraction and busyness to cultivate a steady
-          foundation within, empowering you to live from the inside out.
+          In <strong>November</strong>, as the earth draws her energy inward, we
+          invite you to do the same. This is <strong>Vata season</strong> – a
+          time to come back to your body and cultivate inner nourishment and
+          vitality as nature retreats into restful preparation.
         </p>
         <p className="text md:text-center">
-          Through conscious movement and breath, we will work to strengthen your
-          foundation, cultivate embodied awareness, and increase your
-          resilience, allowing you to master being a true{" "}
-          <strong>Citizen of Two Worlds</strong>.
+          Through warming breath practices, grounding movement, and deep
+          relaxation, we will work to strengthen your physical stability,
+          generate inner warmth, and regulate your nervous system, helping you
+          navigate this <strong>season of Drawing In</strong> with steadiness
+          and ease.
         </p>
         <h3>Investment Options:</h3>
         <p className="text md:text-center">
-          <strong> October Programme: £120</strong> (includes 18 yoga classes +
-          daily practices)! Pay less and save £32.
+          <strong>November Programme: £50</strong> (includes 18 yoga classes +
+          lunar cycles + free mantra session)! Pay less and save £42.
         </p>
 
         <OnlineCarousel />

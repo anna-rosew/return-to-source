@@ -12,8 +12,8 @@ export const classes: ClassInfo[] = [
       "A morning class focused on <strong>core</strong> <strong>strength</strong> and <strong>balance</strong>. In <strong>Yogic anatomy</strong>, <strong>strong roots</strong> allow you to feel fear and remain <strong>grounded and steady</strong>, keeping your <strong>body and mind stable</strong>. A <strong>strong core</strong> allows you to stay <strong>aligned</strong>, so you notice when you're off center, and can find your way back. These classes offer you a <strong>foundational practice</strong> that supports your <strong>exercise and activity</strong> through the rest of the week.",
     permanentDescription:
       "You can join this class anywhere in the world on Zoom.",
-    dates: ["Mon, Oct 6", "Mon, Oct 20", "Mon, Oct 27"],
-    times: ["7:00 - 7:30", "7:00 - 7:30", "7:00 - 7:30"],
+    dates: ["Mon, Nov 3", "Mon, Nov 10", "Mon, Nov 17", "Mon , Nov 27"],
+    times: ["7:00 - 7:30", "7:00 - 7:30", "7:00 - 7:30", "7:00 - 7:30"],
     dropInPrice: "£8",
     monthlyPrice: "3 session bundle £18",
     width: 100,
@@ -22,7 +22,7 @@ export const classes: ClassInfo[] = [
     duration: "30 mins",
     pricingDetails: {
       membershipPrice: "£50",
-      bundlePrice: "£18",
+      bundlePrice: "£24",
       dropInPrice: "£8",
     },
   },
@@ -33,20 +33,8 @@ export const classes: ClassInfo[] = [
       "This month we're exploring the <strong>yin and yang</strong> of breathing. Learn how to <strong>energize yourself without caffeine</strong> and <strong>relax without wine</strong>! As the <strong>only mammals</strong> who can <strong>alter breathing rhythm</strong>, we utilize this <strong>power</strong> to <strong>transform thinking and feeling</strong> by <strong>resetting our nervous system</strong> and influencing <strong>hormone release</strong>.",
     permanentDescription:
       "You can join this class anywhere in the world on Zoom.",
-    dates: [
-      "Wed, Oct 1",
-      "Wed, Oct 8",
-      "Wed, Sep 15",
-      "Wed, Sep 20",
-      "Wed, Sep 29",
-    ],
-    times: [
-      "7:00 - 7:30",
-      "7:00 - 7:30",
-      "7:00 - 7:30",
-      "7:00 - 7:30",
-      "7:00 - 7:30",
-    ],
+    dates: ["Wed, Nov 5", "Wed, Nov 12", "Wed, Nov 19", "Wed, Nov 26"],
+    times: ["7:00 - 7:30", "7:00 - 7:30", "7:00 - 7:30", "7:00 - 7:30"],
     dropInPrice: "£8",
     monthlyPrice: "5 session bundle £30",
     width: 100,
@@ -55,7 +43,7 @@ export const classes: ClassInfo[] = [
     duration: "30 mins",
     pricingDetails: {
       membershipPrice: "£50",
-      bundlePrice: "£30",
+      bundlePrice: "£24",
       dropInPrice: "£8",
     },
   },
@@ -66,7 +54,7 @@ export const classes: ClassInfo[] = [
       "In today's <strong>fast-paced world</strong>, overwhelming stress triggers our nervous system without allowing reset time. Over the weeks, experience <strong>gentle floor-based movements led by <strong>Rose</strong> and supported <strong>Yin</strong> practices guided by <strong>Rob</strong>. Engage in <strong>deep, restorative relaxation</strong> that releases tension, calms the mind, and <strong>restores equilibrium</strong>. Regular practice cultivates <strong>inner balance</strong>, <strong>manages stress</strong>, <strong>improves sleep</strong>, and brings spaciousness and ease to daily life challenges.",
     permanentDescription:
       "You can join this class anywhere in the world on Zoom.",
-    dates: ["Thu, Oct 16", "Thu, Oct 23", "Thu, Oct 30"],
+    dates: ["Thu, Nov 6", "Thu, Nov 13", "Thu, Nov 20", "Thu, Nov 27"],
     times: ["20:00 - 21:00", "20:00 - 21:00", "20:00 - 21:00"],
     dropInPrice: "£10",
     monthlyPrice: "3 class bundle £16",
@@ -76,7 +64,7 @@ export const classes: ClassInfo[] = [
     duration: "60 mins",
     pricingDetails: {
       membershipPrice: "£50",
-      bundlePrice: "£16",
+      bundlePrice: "£24",
       dropInPrice: "£10",
     },
   },
@@ -87,14 +75,8 @@ export const classes: ClassInfo[] = [
       "Come and <strong>release</strong> <strong>physical and emotional stagnation</strong> accumulated over Winter. Align with <strong>Spring's regenerative energy</strong>, <strong>clearing space for the new</strong> in your life.",
     permanentDescription:
       "You can join this class anywhere in the world on Zoom.",
-    dates: ["Fri, Sep 5", "Fri, Sep 12", "Fri, Sep 19", "Fri, Sep 26"],
-    times: [
-      "7:00 - 7:30",
-      "7:00 - 7:30",
-      "7:00 - 7:30",
-      "7:00 - 7:30",
-      "7:00 - 7:30",
-    ],
+    dates: ["Fri, Nov 7", "Fri, Nov 14", "Fri, Nov 21", "Fri, Nov 28"],
+    times: ["7:00 - 7:30", "7:00 - 7:30", "7:00 - 7:30", "7:00 - 7:30"],
     dropInPrice: "£8",
     monthlyPrice: "3 class bundle £18",
     width: 100,
@@ -104,7 +86,7 @@ export const classes: ClassInfo[] = [
     pricingDetails: {
       membershipPrice: "£50",
       bundlePrice: "£18",
-      dropInPrice: "£8",
+      dropInPrice: "£12",
     },
   },
   {
@@ -114,7 +96,7 @@ export const classes: ClassInfo[] = [
       "Marking the cycles of the Moon helps us connect to our <strong>own natural rhythm</strong>. In this class, we align with the Moon phases and the body’s <strong>energy centres</strong>, deepening intuitive listening. At the <strong>new Moon</strong>, we set intentions; at the <strong>full Moon</strong>, we reflect; and as the Moon <strong>wanes</strong>, we <strong>integrate and release</strong>.",
     permanentDescription:
       "You can join this class anywhere in the world on Zoom.",
-    dates: ["Full Moon: Tues, Oct 7", "Equinox New Moon: Tues, Oct 21"],
+    dates: ["Full Moon: Tues, Nov 5", "Equinox New Moon: Tues, Nov 20"],
     times: ["20:00 - 21:00", "20:00 - 21:00"],
     dropInPrice: "£12",
     monthlyPrice: "2 class bundle £18",
@@ -124,8 +106,8 @@ export const classes: ClassInfo[] = [
     duration: "30 mins",
     pricingDetails: {
       membershipPrice: "£50",
-      bundlePrice: "£18",
-      dropInPrice: "£12",
+      bundlePrice: "£16",
+      dropInPrice: "£10",
     },
   },
 ];
