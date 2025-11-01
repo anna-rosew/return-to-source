@@ -1,6 +1,6 @@
 import Card from "@/components/common/NavCard";
 import TestimonialSection from "@/components/ui/testimonials/TestimonialSection";
-import MonthlyTheme from "@/components/ui/work/MonthlyTheme";
+// import MonthlyTheme from "@/components/ui/work/MonthlyTheme";
 import { workCards } from "@/content/work";
 
 const Work = () => {
@@ -22,9 +22,9 @@ const Work = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-customTeal">
+      {/* <div className="w-full bg-customTeal">
         <MonthlyTheme />
-      </div>
+      </div> */}
       <TestimonialSection />
     </div>
   );

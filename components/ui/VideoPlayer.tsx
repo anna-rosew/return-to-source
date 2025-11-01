@@ -70,7 +70,6 @@ const VideoPlayer = ({ url, size = "default" }: VideoPlayerProps) => {
             width="100%"
             height="100%"
             controls
-            playing
             playIcon={
               <button
                 className={`w-full flex justify-center items-center gap-2 bg-ifm-btn-primary text-ifm-text-black rounded-[40px] ${sizeStyles.playButton}`}

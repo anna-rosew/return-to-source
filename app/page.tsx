@@ -4,6 +4,7 @@ import HomeScroll from "../components/layout/HomeScroll";
 import { Button } from "../components/ui/button";
 import Link from "next/link";
 import HomeCTA from "@/components/ui/home/HomeCTA";
+import ApproachHomeSection from "@/components/ui/about/ApproachHomeSection";
 
 export const metadata: Metadata = {
   title: "Rose Long | Return to Source",
@@ -47,6 +48,9 @@ export default function Home() {
           Return to Source
         </Button>
       </Link>
+      <div className="w-full bg-customTeal">
+        <ApproachHomeSection />
+      </div>
       <div className="w-full bg-black">
         <HomeScroll />
       </div>
