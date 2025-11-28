@@ -9,7 +9,7 @@ export const classes: ClassInfo[] = [
     icon: MorningIcon,
     classType: "Morning Strength",
     description:
-      "A morning class focused on <strong>core</strong> <strong>strength</strong> and <strong>balance</strong>. In <strong>Yogic anatomy</strong>, <strong>strong roots</strong> allow you to feel fear and remain <strong>grounded and steady</strong>, keeping your <strong>body and mind stable</strong>. A <strong>strong core</strong> allows you to stay <strong>aligned</strong>, so you notice when you're off center, and can find your way back. These classes offer you a <strong>foundational practice</strong> that supports your <strong>exercise and activity</strong> through the rest of the week.",
+      "In these classes we build <strong>strength from the inside out</strong>. Cultivating physical stability supports <strong>mental clarity and focus</strong>, while reducing anxiety. Join us to feel <strong>grounded, centred, and steady</strong> in your body and your mind.",
     permanentDescription:
       "You can join this class anywhere in the world on Zoom.",
     dates: ["Mon, Dec 1", "Mon, Dec 8", "Mon, Dec 15"],
@@ -30,7 +30,7 @@ export const classes: ClassInfo[] = [
     icon: MorningIcon,
     classType: "Vital Breath",
     description:
-      "This month we're exploring the <strong>yin and yang</strong> of breathing. Learn how to <strong>energize yourself without caffeine</strong> and <strong>relax without wine</strong>! As the <strong>only mammals</strong> who can <strong>alter breathing rhythm</strong>, we utilize this <strong>power</strong> to <strong>transform thinking and feeling</strong> by <strong>resetting our nervous system</strong> and influencing <strong>hormone release</strong>.",
+      "This month in our weekly Pranayama class, we're exploring how to generate <strong>inner warmth and vitality</strong> through the breath. These practices <strong>support your immune system</strong> in the colder months of the year.",
     permanentDescription:
       "You can join this class anywhere in the world on Zoom.",
     dates: ["Wed, Dec 3", "Wed, Dec 10", "Wed, Dec 17"],

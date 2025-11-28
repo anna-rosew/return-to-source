@@ -6,7 +6,7 @@ import OnlineCarousel from "@/components/ui/online/OnlineCarousel";
 import { groupCards } from "@/content/groups";
 import React from "react";
 import Link from "next/link";
-import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
+// import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
 
 const groups = () => {
   return (
@@ -21,30 +21,27 @@ const groups = () => {
       </div>
       <div className="online-groups scroll-mt-16" id="online-section">
         <SectionHeading title="Online Groups" />
-        <p className="text md:text-center md:py-10 py-4">
+        <p className="text md:text-center py-4">
           Join us from <strong>anywhere in the world</strong> for live-streamed
           and on-demand sessions. Practice in the comfort of your own space
           while staying connected to our supportive community.{" "}
         </p>
-        <p className="text md:text-center">
+        <p className="text md:text-center py-4">
           In <strong>December</strong>, as we approach the Winter Solstice, the
           natural world draws inward to her vital core while our human world
           accelerates into excess. This month offers an invitation to{" "}
           <strong>notice this contrast</strong> and find your way back to the
-          natural rhythm of the season.
+          natural rhythm of the season. Through practices of stillness and
+          silence, grounding movement, and deep relaxation, we will work to
+          regulate your nervous system, support your immune system, and provide
+          a steady counterbalance to the growing momentum around you, helping
+          you navigate this <strong>season of Finding Stillness</strong> with
+          clarity and ease.
         </p>
-        <p className="text md:text-center">
-          Through practices of stillness and silence, grounding movement, and
-          deep relaxation, we will work to regulate your nervous system, support
-          your immune system, and provide a steady counterbalance to the growing
-          momentum around you, helping you navigate this{" "}
-          <strong>season of Finding Stillness</strong> with clarity and ease.
-        </p>
-        <h3>Investment Options:</h3>
-        <p className="text md:text-center">
-          <strong>December Programme: £50</strong> (includes all classes: Core
-          Strength & Balance, Vital Breath, Stillness & Silence, and Evening
-          Chill)! Pay less and save £37.
+        <p className="text md:text-center py-4">
+          INVESTMENT OPTIONS: <strong>December Programme: £50</strong> (includes
+          all classes: Core Strength & Balance, Vital Breath, Stillness &
+          Silence, and Evening Chill)! Pay less and <strong>save £37</strong>.
         </p>
         <OnlineCarousel />
       </div>
@@ -62,7 +59,7 @@ const groups = () => {
           first to hear!
         </p>
 
-        <InPersonCarousel />
+        {/* <InPersonCarousel /> */}
       </div>
       <div className="in-person-groups mb-8 scroll-mt-16" id="retreats-section">
         <SectionHeading title="Retreats" />

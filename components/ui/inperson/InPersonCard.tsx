@@ -12,7 +12,7 @@ const InPersonCard: React.FC<InPersonProps> = ({ sessionInfo }) => {
     return description.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
   };
   return (
-    <div className="relative p-4 flex flex-col justify-between items-start text-left md:items-start text-white h-full rounded-[20px] sm:h-[300px] md:h-[500px] lg:h-[600px] lg:w-[500px] overflow-hidden">
+    <div className="relative p-4 flex flex-col justify-between items-start text-left md:items-start text-white h-full rounded-[20px] sm:h-[300px] md:h-[400px] lg:h-[600px] lg:w-[450px] overflow-hidden">
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center rounded-[20px] filter brightness-50"
         style={{
