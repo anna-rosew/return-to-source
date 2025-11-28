@@ -26,7 +26,7 @@ const DetailsDisplay: React.FC<DetailsDisplayProps> = ({ displayInfo }) => {
             fill="currentColor"
           />
           <h2 className="text-[18px]">{displayInfo.heading2}</h2>
-          <p>{displayInfo.subheading2}</p>
+          <p className="max-w-[400px]">{displayInfo.subheading2}</p>
         </div>
       </div>
     </div>

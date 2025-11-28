@@ -27,24 +27,25 @@ const groups = () => {
           while staying connected to our supportive community.{" "}
         </p>
         <p className="text md:text-center">
-          In <strong>November</strong>, as the earth draws her energy inward, we
-          invite you to do the same. This is <strong>Vata season</strong> – a
-          time to come back to your body and cultivate inner nourishment and
-          vitality as nature retreats into restful preparation.
+          In <strong>December</strong>, as we approach the Winter Solstice, the
+          natural world draws inward to her vital core while our human world
+          accelerates into excess. This month offers an invitation to{" "}
+          <strong>notice this contrast</strong> and find your way back to the
+          natural rhythm of the season.
         </p>
         <p className="text md:text-center">
-          Through warming breath practices, grounding movement, and deep
-          relaxation, we will work to strengthen your physical stability,
-          generate inner warmth, and regulate your nervous system, helping you
-          navigate this <strong>season of Drawing In</strong> with steadiness
-          and ease.
+          Through practices of stillness and silence, grounding movement, and
+          deep relaxation, we will work to regulate your nervous system, support
+          your immune system, and provide a steady counterbalance to the growing
+          momentum around you, helping you navigate this{" "}
+          <strong>season of Finding Stillness</strong> with clarity and ease.
         </p>
         <h3>Investment Options:</h3>
         <p className="text md:text-center">
-          <strong>November Programme: £50</strong> (includes 18 yoga classes +
-          lunar cycles + free mantra session)! Pay less and save £42.
+          <strong>December Programme: £50</strong> (includes all classes: Core
+          Strength & Balance, Vital Breath, Stillness & Silence, and Evening
+          Chill)! Pay less and save £37.
         </p>
-
         <OnlineCarousel />
       </div>
       <div
