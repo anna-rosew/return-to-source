@@ -6,7 +6,7 @@ import OnlineCarousel from "@/components/ui/online/OnlineCarousel";
 import { groupCards } from "@/content/groups";
 import React from "react";
 import Link from "next/link";
-// import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
+import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
 
 const groups = () => {
   return (
@@ -51,15 +51,11 @@ const groups = () => {
       >
         <SectionHeading title="In-Person Groups" />
         <p className="text md:text-center md:py-10 py-4">
-          There are currently no in-person sessions planned but{" "}
-          <Link href="/contact" className="underline">
-            stay-in-touch
-          </Link>{" "}
-          by asking to be signed up to <strong>the newsletter</strong> to be the
-          first to hear!
+          Enjoy the benefits of movement face-to-face at in-person sessions,
+          joining in community and finding your flow.
         </p>
 
-        {/* <InPersonCarousel /> */}
+        <InPersonCarousel />
       </div>
       <div className="in-person-groups mb-8 scroll-mt-16" id="retreats-section">
         <SectionHeading title="Retreats" />
