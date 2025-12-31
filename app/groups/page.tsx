@@ -27,21 +27,22 @@ const groups = () => {
           while staying connected to our supportive community.{" "}
         </p>
         <p className="text md:text-center py-4">
-          In <strong>December</strong>, as we approach the Winter Solstice, the
-          natural world draws inward to her vital core while our human world
-          accelerates into excess. This month offers an invitation to{" "}
-          <strong>notice this contrast</strong> and find your way back to the
-          natural rhythm of the season. Through practices of stillness and
-          silence, grounding movement, and deep relaxation, we will work to
-          regulate your nervous system, support your immune system, and provide
-          a steady counterbalance to the growing momentum around you, helping
-          you navigate this <strong>season of Finding Stillness</strong> with
-          clarity and ease.
+          In <strong>January</strong>, as we cross the threshold into a new year, 
+          nature rests in her deepest slumber while the human world rushes forward 
+          with resolutions and fresh starts. This month invites us to 
+          <strong>honour both energies</strong> - the quiet wisdom of winter&apos;s pause 
+          and the gentle stirring of new beginnings. Through practices of grounding 
+          movement, breathwork, and mindful reflection, we will work to strengthen 
+          your foundation, cultivate sustainable intentions, and create space for 
+          authentic renewal, helping you navigate this <strong>season of Deep Roots 
+          & New Growth</strong> with steadiness and grace.
         </p>
         <p className="text md:text-center py-4">
-          INVESTMENT OPTIONS: <strong>December Programme: £50</strong> (includes
-          all classes: Core Strength & Balance, Vital Breath, Stillness &
-          Silence, and Evening Chill)! Pay less and <strong>save £37</strong>.
+          NEW YEAR SPECIAL OFFERS: <strong>All Morning Classes: £50</strong> 
+          (includes Core Strength & Balance, Vital Breath, and Stillness & 
+          Silence) - <strong>save £22!</strong> Or bring a friend and 
+          <strong>both pay half price: £52</strong> for all classes including 
+          Evening Chill.
         </p>
         <OnlineCarousel />
       </div>
