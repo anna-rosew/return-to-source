@@ -38,7 +38,7 @@ export default function Home() {
       <p className="p-1 text-center uppercase text-[18px]">
         Return to the Body. Return to the Breath.
       </p>
-      <h1 className="text-[28px] lg:text-[56px] leading-2 text-center neato-heading mb-2">
+      <h1 className="text-[28px] lg:text-[56px] leading-2 text-center font-jomolhari mb-2">
         Return to Source.
       </h1>
 
