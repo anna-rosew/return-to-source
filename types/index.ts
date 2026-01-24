@@ -66,6 +66,7 @@ export interface InPersonSession {
   description: string;
   location: string;
   date: string;
+  price: string;
 }
 
 export interface InPersonProps {
