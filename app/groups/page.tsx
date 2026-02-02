@@ -27,23 +27,27 @@ const groups = () => {
           while staying connected to our supportive community.{" "}
         </p>
         <p className="text md:text-center py-4">
-          In <strong>January</strong>, as we cross the threshold into a new
-          year, nature rests in her deepest slumber while the human world rushes
-          forward with resolutions and fresh starts. This month invites us to
-          <strong>honour both energies</strong> - the quiet wisdom of
-          winter&apos;s pause and the gentle stirring of new beginnings. Through
-          practices of grounding movement, breathwork, and mindful reflection,
-          we will work to strengthen your foundation, cultivate sustainable
-          intentions, and create space for authentic renewal, helping you
-          navigate this <strong>season of Deep Roots & New Growth</strong> with
-          steadiness and grace.
+          <strong>February</strong> can be a challenging month. When we look
+          outward for signs of change we may feel weary and disheartened. This
+          is a time to
+          <strong> turn inward</strong>, to tend gently to what is growing
+          beneath the surface. This month <strong>Imbolc</strong> reminds us to
+          nourish the seeds that matter most. What seeds are you tending to at
+          this point in your year? Over the years I&apos;ve found a regular yoga
+          practice offers a space to
+          <strong> listen inwardly</strong>, nourish what is quietly growing,
+          and find pleasure in the slow turning of the seasons. That&apos;s why
+          I&apos;m offering a rich range of classes and workshops this month, to
+          support us in finding the
+          <strong> emerging gifts of the season</strong>.
         </p>
         <p className="text md:text-center py-4">
-          NEW YEAR SPECIAL OFFERS: <strong>All Morning Classes: £50</strong>
-          (includes Core Strength & Balance, Vital Breath, and Stillness &
-          Silence) - <strong>save £22!</strong> Or bring a friend and
-          <strong>both pay half price: £52</strong> for all classes including
-          Evening Chill.
+          MEMBERSHIP DEALS: <strong>All Morning Classes: £50</strong>
+          (includes Core Strength & Balance, Vital Breath, and Heart & Roots) -
+          <strong> save £22!</strong>{" "}
+          <strong>One Morning Class & Evening Chill: £40</strong> - save £16! Or
+          bring a friend and <strong>both pay half price: £52</strong> for all
+          classes including Evening Chill.
         </p>
         <OnlineCarousel />
       </div>
