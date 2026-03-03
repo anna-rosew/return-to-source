@@ -2,35 +2,14 @@ import { Slide } from "@/types/index";
 
 export const slides: Slide[] = [
   {
-    imageUrl: "/Assets/Images/retreat-beach.webp",
-    date: "March 2025",
-    location: "Peak District",
-    heading:
-      "Find Your Balance: A Transformative Yoga Retreat in the Heart of Nature",
+    imageUrl: "/Assets/Images/snowdonia26.webp",
+    date: "April 23-26, 2026",
+    location: "Snowdonia Mountain Lodge",
+    heading: "Heart & Roots Snowdonia Retreat",
     description:
-      "Escape the ordinary and rediscover your inner harmony at our immersive yoga retreat. Nestled in pristine wilderness, this thoughtfully crafted experience combines ancient wisdom with modern comfort to help you reset, recharge, and reconnect.",
-    buttonText: "Get in touch",
-    tags: ["Nature", "Transform", "Sound Bath", "Breath"],
-  },
-  {
-    imageUrl: "Assets/images/retreat-soundbath.webp",
-    date: "March 2025",
-    location: "Peak District",
-    heading: "Connect with Nature",
-    description:
-      "Surround yourself with pristine wilderness and breathe in tranquility.",
-    buttonText: "Learn More",
-    tags: ["Meditation", "Wellness", "Healing", "Community"],
-  },
-  {
-    imageUrl: "Assets/images/retreat-field.webp",
-    date: "March 2025",
-    location: "Peak District",
-    heading:
-      "Find Your Balance: A Transformative Yoga Retreat in the Heart of Nature",
-    description:
-      "Escape the ordinary and rediscover your inner harmony at our immersive yoga retreat. Nestled in pristine wilderness, this thoughtfully crafted experience combines ancient wisdom with modern comfort to help you reset, recharge, and reconnect.",
-    buttonText: "Get in touch",
-    tags: ["Nature", "Transform", "Sound Bath", "Breath"],
+      "Join me for a transformative retreat in Snowdonia this Spring. Held by the valley and mountains, supported by community, we'll cultivate deeper connection through mindful movement, breathwork, and ceremony. If you're longing to reconnect with yourself, others, and the natural world, join me. 3 spaces available.",
+    buttonText: "Get More Details",
+    tags: ["Nature", "Community", "Mindful Movement", "Breathwork", "Healing"],
+    link: "/contact",
   },
 ];
