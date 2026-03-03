@@ -27,7 +27,7 @@ const HomeCTA = () => {
         </p>
       </div>
       <div>
-        <VideoPlayer url="https://vimeo.com/1073862777" size="large" />
+        <VideoPlayer url="https://vimeo.com/1073862777" />
         <Link href="/work">
           <Button variant="secondary" size="lg" className="mb-12 mx-auto">
             More Classes
