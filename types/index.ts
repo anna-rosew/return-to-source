@@ -4,6 +4,7 @@ import { StaticImageData } from "next/image";
 
 export interface IServiceCard {
   title: string;
+  serviceName: string;
   description: string;
   image: StaticImageData;
   imageAlt: string;
@@ -31,9 +32,10 @@ export interface CardInfo {
 }
 
 //OnlineGroupsSlider
+import { FC } from "react";
 
 export interface ClassInfo {
-  icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  icon: FC<{ className?: string }>;
   classType: string;
   description: string;
   permanentDescription: string;
@@ -45,11 +47,6 @@ export interface ClassInfo {
   height: number;
   backgroundImage: string;
   duration: string;
-  pricingDetails: {
-    membershipPrice: string;
-    bundlePrice: string;
-    dropInPrice: string;
-  };
 }
 
 export interface ClassSlidesProps {
@@ -60,13 +57,12 @@ export interface ClassSlidesProps {
 
 export interface InPersonSession {
   backgroundImage: string;
-  time: string;
+  duration: string;
   type: string;
   title: string;
   description: string;
   location: string;
   date: string;
-  price: string;
 }
 
 export interface InPersonProps {
@@ -92,7 +88,6 @@ export interface Slide {
   description: string;
   buttonText: string;
   tags: string[];
-  link: string;
 }
 
 export interface RetreatInfo {
@@ -265,7 +260,7 @@ export const isSecondaryTag = (tag: string): tag is SecondaryTag => {
   return secondaryTags.includes(tag as SecondaryTag);
 };
 
-//UI COMPONENT
+//UI COMPONENTS
 
 //DetailsDisplay
 

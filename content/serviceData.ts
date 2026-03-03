@@ -5,24 +5,29 @@ import HomeThree from "@/public/Assets/Images/HomepageBox3.webp";
 
 export const serviceData: IServiceCard[] = [
   {
-    title: "If you're anxious and can’t switch off...",
-    description: "Learn to cultivate inner calm.",
+    serviceName: "Clarity",
+    title: "If your mind’s racing and you can’t switch off…",
+    description:
+      "Learn how to regain clarity, and calm the turmoil within you.",
     image: HomeOne,
-    imageAlt:
-      "Eye by ManuelTheLensman: Fitness, calm and breathing of black woman outdoor in nature, mountains and blue sky background for yoga wellness, meditation and zen energy. Face of girl breathing for peace, freedom and mindfulness",
+    imageAlt: "Anatata Chakra - heart and courage",
     reversed: true,
   },
   {
-    title: "If you’re tired and your body’s complaining...",
-    description: "Discover the source of your natural vitality",
+    serviceName: "Restore",
+    title: "If your energy is drained and your body feels out of sync...",
+    description:
+      "Discover how to reconnect with your body and the healing power within you.",
     image: HomeTwo,
     imageAlt: "Ajna Chakra - intuition, imagination, self-realisation",
   },
   {
-    title: "If you're drowning in confusion and unable to see the light... ",
-    description: "It's time to look within and find the clarity you seek.",
+    serviceName: "Muladhara",
+    title: "If you’re struggling to make sense of it all...",
+    description:
+      "Let’s work together so you can find the courage and clarity you need to navigate life, without adding to your stress.",
     image: HomeThree,
-    imageAlt: "Circle of light on water by Rose Long",
+    imageAlt: "Muladhara Chakra - Rooting and Grounding",
     reversed: true,
   },
 ];

@@ -10,11 +10,10 @@ import { Button } from "../ui/button";
 const Footer = () => {
   const serviceLinks = [
     { name: "Groups Overview", link: "/groups" },
-    // { name: "Monthly Theme", link: "/monthly-theme" },
     { name: "One-to-Ones", link: "/onetoone" },
-    { name: "Online Classes", link: "/groups#online-section" },
-    { name: "In-Person Sessions", link: "/groups#in-person-section" },
-    { name: "Retreats", link: "/groups#retreats-section" },
+    { name: "Online Groups", link: "/groups" },
+    { name: "In-Person Sessions", link: "/groups" },
+    { name: "Retreats", link: "/groups" },
   ];
 
   const aboutLinks = [
@@ -27,7 +26,7 @@ const Footer = () => {
     { name: "Blog", link: "/blog" },
     { name: "Contact", link: "/contact" },
     { name: "Members Portal", link: "/dashboard" },
-    { name: "Newsletter", link: "/contact" },
+    { name: "Newsletter", link: "/" },
   ];
 
   return (
@@ -40,6 +39,7 @@ const Footer = () => {
                 src={LogoWhite}
                 alt="Rose Long Logo"
                 height={64}
+                width={0}
                 className="mx-auto md:mx-1"
               />
             </Link>

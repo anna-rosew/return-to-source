@@ -31,9 +31,9 @@ const onetoone = () => {
   return (
     <div>
       <div className="container  w-full">
-        <h1>One-to-Ones</h1>
-        <h3>Embracing the Path of Self-Discovery</h3>
-        <VideoPlayer url="https://vimeo.com/998276851/f7735cc4ed" />
+        <h1>Approach</h1>
+        <h3>Unlock the Answers from Within.</h3>
+        <VideoPlayer url="https://vimeo.com/981928855" />
 
         <Link href="/contact">
           <Button
