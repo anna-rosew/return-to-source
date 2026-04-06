@@ -6,7 +6,7 @@ import OnlineCarousel from "@/components/ui/online/OnlineCarousel";
 // import RetreatsOverview from "@/components/ui/retreats/RetreatsOverview";
 import { groupCards } from "@/content/groups";
 // import SpringCleanseSection from "@/components/ui/springcleanse/SpringCleanseSection";
-// import EasterSeriesSection from "@/components/ui/online/EasterSeriesSection"; // uncomment when Rose approves
+import EasterSeriesSection from "@/components/ui/online/EasterSeriesSection";
 import React from "react";
 
 const groups = () => {
@@ -26,9 +26,7 @@ const groups = () => {
       </div>
       {/* Spring Cleanse 2026 — replaces Online and In-Person sections for this season
       <SpringCleanseSection /> */}
-      {/* EASTER SERIES — uncomment when Rose approves
       <EasterSeriesSection />
-      */}
       <div className="online-groups">
         <SectionHeading title="Online Groups" />
         <p className="text md:text-center md:py-10 py-4">

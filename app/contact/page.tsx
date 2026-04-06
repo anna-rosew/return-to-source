@@ -34,7 +34,6 @@ const Contact = () => {
         <div className="text text-left space-y-8 pb-4">
           <ContactForm />
           <NewsletterForm />
-          {/* PAYMENT SECTION — uncomment when Rose approves
           <div className="text-left border border-customBeige/60 rounded-xl p-6 bg-customLightBeige/40">
             <h3 className="mb-3">Payment</h3>
             <p className="text-sm text-black/70 mb-4">
@@ -68,7 +67,6 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          */}
         </div>
       </div>
     </div>
