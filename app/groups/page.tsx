@@ -2,8 +2,8 @@ import Card from "@/components/common/NavCard";
 import SectionHeading from "@/components/common/SectionHeading";
 import OnlineCarousel from "@/components/ui/online/OnlineCarousel";
 // import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
-// import { slides } from "@/content/retreats";
-// import RetreatsOverview from "@/components/ui/retreats/RetreatsOverview";
+import { slides } from "@/content/retreats";
+import RetreatsOverview from "@/components/ui/retreats/RetreatsOverview";
 import { groupCards } from "@/content/groups";
 // import SpringCleanseSection from "@/components/ui/springcleanse/SpringCleanseSection";
 import EasterSeriesSection from "@/components/ui/online/EasterSeriesSection";
@@ -61,11 +61,7 @@ const groups = () => {
           your practice, and forge lasting connections with fellow
           practitioners.
         </p>
-        {/* <RetreatsOverview slides={slides} /> */}
-        <p className="italic text-black/50 text-sm md:text-center py-6">
-          Upcoming retreats will be announced here — stay tuned, or{" "}
-          <a href="/contact" className="underline">drop Rose a message</a> if you&apos;d like to be first to hear.
-        </p>
+        <RetreatsOverview slides={slides} />
       </div>
     </div>
   );
