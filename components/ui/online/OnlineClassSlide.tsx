@@ -1,26 +1,26 @@
-import Link from "next/link";
-import React from "react";
-import { Button } from "../button";
-import { ClassSlidesProps } from "@/types/index";
-import { ChevronRight, ClockIcon } from "lucide-react";
-import DetailsDisplay from "../DetailsDisplay";
-import VideoCallIcon from "@/public/Assets/Icons/VideoCallIcon";
-import StarIcon from "@/public/Assets/Icons/StarIcon";
+import Link from 'next/link';
+import React from 'react';
+import { Button } from '../button';
+import { ClassSlidesProps } from '@/types/index';
+import { ChevronRight, ClockIcon } from 'lucide-react';
+import DetailsDisplay from '../DetailsDisplay';
+import VideoCallIcon from '@/public/Assets/Icons/VideoCallIcon';
+import StarIcon from '@/public/Assets/Icons/StarIcon';
 
 const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
   const Icon = classInfo.icon;
 
   const formatDescription = (description: string) => {
-    return description.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+    return description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
   };
 
   const displayInfo = {
     icon: VideoCallIcon,
-    heading: "Live Zoom Class",
-    subheading: "Playback anytime.",
+    heading: 'Live Zoom Class',
+    subheading: 'Playback anytime.',
     icon2: StarIcon,
-    heading2: "Sign up for all Classes",
-    subheading2: "Half price — £48",
+    heading2: 'Sign up for all Classes',
+    subheading2: 'Half price — £48',
   };
 
   return (
@@ -98,11 +98,7 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
               <DetailsDisplay displayInfo={displayInfo} />
             </div>
             <Link href="/contact">
-              <Button
-                variant="secondary"
-                size="lg"
-                className="mt-4 block mx-auto w-full"
-              >
+              <Button variant="secondary" size="lg" className="mt-4 block mx-auto w-full">
                 Book Now
               </Button>
             </Link>

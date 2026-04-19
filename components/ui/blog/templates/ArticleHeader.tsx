@@ -1,22 +1,22 @@
-"use client";
+'use client';
 
-import { MDXContent } from "@/types/index";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { CopyButton } from "@/components/ui/CopyButton";
-import { PostTypeIcon } from "../PostTypeIcon";
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { MDXContent } from '@/types/index';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { CopyButton } from '@/components/ui/CopyButton';
+import { PostTypeIcon } from '../PostTypeIcon';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 
 interface ArticleHeaderProps {
   content: MDXContent;
-  type: "short-article" | "long-article" | "podcast" | "recipe";
+  type: 'short-article' | 'long-article' | 'podcast' | 'recipe';
 }
 
 export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => {
   const pathname = usePathname();
-  const [shareUrl, setShareUrl] = useState<string>("");
+  const [shareUrl, setShareUrl] = useState<string>('');
 
   useEffect(() => {
     setShareUrl(`${window.location.origin}${pathname}`);
@@ -26,9 +26,7 @@ export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => {
     <div className="md:mb-8 mb-2 text-left">
       <div className="flex items-center px-3 py-1 gap-2 bg-white/30 w-fit rounded-sm">
         <PostTypeIcon type={type} className="text-gray-600" size={20} />
-        <h3 className="text-sm font-medium text-gray-600 inline-flex m-0 items-center">
-          {type}
-        </h3>
+        <h3 className="text-sm font-medium text-gray-600 inline-flex m-0 items-center">{type}</h3>
       </div>
       <Link
         href="/blog"
@@ -75,9 +73,7 @@ export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => {
           </div>
         </div>
       )}
-      {shareUrl && (
-        <CopyButton textToCopy={shareUrl} className="ml-auto md:hidden" />
-      )}
+      {shareUrl && <CopyButton textToCopy={shareUrl} className="ml-auto md:hidden" />}
     </div>
   );
 };

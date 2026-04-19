@@ -1,7 +1,7 @@
-import React from "react";
-import TestimonialCarousel from "./testimonials/TestimonialCarousel";
-import Link from "next/link";
-import { Button } from "./button";
+import React from 'react';
+import TestimonialCarousel from './testimonials/TestimonialCarousel';
+import Link from 'next/link';
+import { Button } from './button';
 
 const TestimonialSection = () => {
   return (
@@ -9,14 +9,11 @@ const TestimonialSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Text Section */}
         <div className="flex flex-col md:col-span-1 items-center md:items-start text-center md:text-left space-y-12">
-          <h2 className="text-white font-medium">
-            Other Peoples&apos; Stories...
-          </h2>
+          <h2 className="text-white font-medium">Other Peoples&apos; Stories...</h2>
           <p className="text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <Link href="/work" className="medium-screen-component">
             <Button

@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Slide } from "@/types/index";
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
+import { Button } from '@/components/ui/button';
+import { Slide } from '@/types/index';
+import { ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 interface RetreatSlideProps {
   slide: Slide;
@@ -14,10 +14,10 @@ export default function RetreatSlide({ slide }: RetreatSlideProps) {
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${slide.imageUrl})`,
-          borderRadius: "inherit",
+          borderRadius: 'inherit',
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg"></div>{" "}
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg"></div>{' '}
       </div>
 
       <div className="relative z-10 w-full h-full flex flex-col md:flex-row justify-between p-4 text-left rounded-lg overflow-hidden">
@@ -25,11 +25,9 @@ export default function RetreatSlide({ slide }: RetreatSlideProps) {
           <h3 className="text-lg text-white opacity-70">
             <strong>{slide.location}</strong> | {slide.date}
           </h3>
-          <h2 className="text-3xl md:text-5xl mb-6 text-white leading-tight">
-            {slide.heading}
-          </h2>
+          <h2 className="text-3xl md:text-5xl mb-6 text-white leading-tight">{slide.heading}</h2>
 
-          <Link href={slide.link || "/retreats"}>
+          <Link href={slide.link || '/retreats'}>
             <Button variant="primary" size="lg" className="w-auto self-start">
               {slide.buttonText}
               <ChevronRight />

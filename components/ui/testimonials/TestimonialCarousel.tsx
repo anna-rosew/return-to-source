@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import TestimonialCard from "./TestimonialCard";
-import { testimonials } from "@/content/testimonials";
+} from '@/components/ui/carousel';
+import TestimonialCard from './TestimonialCard';
+import { testimonials } from '@/content/testimonials';
 
 const TestimonialCarousel = () => {
   return (
@@ -15,10 +15,7 @@ const TestimonialCarousel = () => {
       <Carousel className="relative overflow-visible">
         <CarouselContent className="flex items-center space-x-4">
           {testimonials.map((testimonial, index) => (
-            <CarouselItem
-              key={index}
-              className="flex-shrink-0 w-full md:w-3/4 lg:w-1/2 md:px-4"
-            >
+            <CarouselItem key={index} className="flex-shrink-0 w-full md:w-3/4 lg:w-1/2 md:px-4">
               <TestimonialCard
                 pic={testimonial.pic}
                 heading={testimonial.heading}

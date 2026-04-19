@@ -1,6 +1,6 @@
 //HomeScroll
 
-import { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image';
 
 export interface IServiceCard {
   title: string;
@@ -32,7 +32,7 @@ export interface CardInfo {
 }
 
 //OnlineGroupsSlider
-import { FC } from "react";
+import { FC } from 'react';
 
 export interface ClassInfo {
   icon: FC<{ className?: string }>;
@@ -127,25 +127,25 @@ export type SearchParamProps = {
 
 //Blog Posts
 
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-export type PostType = "short-article" | "long-article" | "podcast" | "recipe";
+export type PostType = 'short-article' | 'long-article' | 'podcast' | 'recipe';
 
 // Split tags into primary and secondary
-export type PrimaryTag = "Mind" | "Body" | "Breath";
+export type PrimaryTag = 'Mind' | 'Body' | 'Breath';
 export type SecondaryTag =
-  | "Nutrition"
-  | "Mindfulness"
-  | "Meditation"
-  | "Yoga"
-  | "Stress Management"
-  | "Sleep"
-  | "Movement"
-  | "Breathing Techniques"
-  | "Mental Health"
-  | "Physical Health"
-  | "Wellness"
-  | "Self Care";
+  | 'Nutrition'
+  | 'Mindfulness'
+  | 'Meditation'
+  | 'Yoga'
+  | 'Stress Management'
+  | 'Sleep'
+  | 'Movement'
+  | 'Breathing Techniques'
+  | 'Mental Health'
+  | 'Physical Health'
+  | 'Wellness'
+  | 'Self Care';
 
 // Base interface for common properties
 interface BasePost {
@@ -163,7 +163,7 @@ interface BasePost {
 
 // Interface for articles (both short and long)
 export interface ArticlePost extends BasePost {
-  type: "short-article" | "long-article" | "podcast";
+  type: 'short-article' | 'long-article' | 'podcast';
   coverImage: string;
   contentImage: string;
   callToAction: string;
@@ -180,7 +180,7 @@ export interface ArticlePost extends BasePost {
 
 // Interface for podcasts
 export interface PodcastPost extends BasePost {
-  type: "podcast";
+  type: 'podcast';
   duration: number;
   audioUrl: string;
   podcastUrl: string;
@@ -188,7 +188,7 @@ export interface PodcastPost extends BasePost {
 
 // Interface for recipes
 export interface RecipePost extends BasePost {
-  type: "recipe";
+  type: 'recipe';
   cookingTime: number;
   ingredients: string[];
   instructions: string[];
@@ -240,23 +240,23 @@ export interface TagCounts {
 
 // Helper functions for tag validation
 export const isPrimaryTag = (tag: string): tag is PrimaryTag => {
-  return ["Mind", "Body", "Breath"].includes(tag);
+  return ['Mind', 'Body', 'Breath'].includes(tag);
 };
 
 export const isSecondaryTag = (tag: string): tag is SecondaryTag => {
   const secondaryTags: SecondaryTag[] = [
-    "Nutrition",
-    "Mindfulness",
-    "Meditation",
-    "Yoga",
-    "Stress Management",
-    "Sleep",
-    "Movement",
-    "Breathing Techniques",
-    "Mental Health",
-    "Physical Health",
-    "Wellness",
-    "Self Care",
+    'Nutrition',
+    'Mindfulness',
+    'Meditation',
+    'Yoga',
+    'Stress Management',
+    'Sleep',
+    'Movement',
+    'Breathing Techniques',
+    'Mental Health',
+    'Physical Health',
+    'Wellness',
+    'Self Care',
   ];
   return secondaryTags.includes(tag as SecondaryTag);
 };

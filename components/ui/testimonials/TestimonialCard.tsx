@@ -1,5 +1,5 @@
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image';
+import React from 'react';
 
 interface TestimonialCardProps {
   pic: string;
@@ -18,16 +18,13 @@ const TestimonialCard = (props: TestimonialCardProps) => {
           alt={props.heading}
           width={100}
           height={100}
-          style={{ borderRadius: "50%", objectFit: "cover" }}
+          style={{ borderRadius: '50%', objectFit: 'cover' }}
         />
       </div>
-      <h2 className="font-bold text-lg mb-2 text-customSienna">
-        {props.heading}
-      </h2>
+      <h2 className="font-bold text-lg mb-2 text-customSienna">{props.heading}</h2>
       <p className="italic mb-4">{props.testimonial}</p>
       <p className="text-sm  text-customSienna">
-        <span className="font-semibold ">{props.name}</span> |{" "}
-        <span>{props.location}</span>
+        <span className="font-semibold ">{props.name}</span> | <span>{props.location}</span>
       </p>
     </div>
   );

@@ -1,5 +1,5 @@
 // app/loading.tsx
-import { Skeleton } from "@/components/layout/Skeleton";
+import { Skeleton } from '@/components/layout/Skeleton';
 
 export default function RootLoading() {
   return (

@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 // Define the type of the props, including backgroundColor and children
 interface SectionObserverProps {
@@ -11,7 +11,7 @@ interface SectionObserverProps {
 
 export default function SectionObserver({
   backgroundColor,
-  height = "500px",
+  height = '500px',
   children,
 }: SectionObserverProps) {
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function SectionObserver({
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           document.body.style.backgroundColor = entry.target.getAttribute(
-            "data-backgroundcolor"
+            'data-backgroundcolor'
           ) as string;
         }
       });
@@ -30,7 +30,7 @@ export default function SectionObserver({
     });
 
     // Select all sections and observe them
-    const sections = document.querySelectorAll(".section");
+    const sections = document.querySelectorAll('.section');
     sections.forEach((section) => observer.observe(section));
 
     // Cleanup observer on component unmount

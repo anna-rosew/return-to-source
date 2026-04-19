@@ -1,5 +1,5 @@
-import SnowdoniaRetreat from "@/components/ui/retreats/SnowdoniaRetreat";
-import React from "react";
+import SnowdoniaRetreat from '@/components/ui/retreats/SnowdoniaRetreat';
+import React from 'react';
 
 const retreats = () => {
   return (

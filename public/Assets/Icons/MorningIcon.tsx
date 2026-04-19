@@ -1,7 +1,4 @@
-const MorningIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
-  fill = "white",
-  ...props
-}) => {
+const MorningIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({ fill = 'white', ...props }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

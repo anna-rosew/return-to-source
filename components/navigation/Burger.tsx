@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import RightNav from "./RightNav";
+import React, { useState, useEffect } from 'react';
+import RightNav from './RightNav';
 
 interface BurgerProps {
   menuOpen: boolean;
@@ -29,19 +29,19 @@ const Burger = ({ menuOpen, toggleMenu }: BurgerProps) => {
         {/* Line 1 */}
         <div
           className={`w-full h-[3px] bg-black rounded-sm transform transition duration-300 ease-in-out ${
-            open ? "rotate-45 translate-y-[14px]" : "" // Adjust translate-y for perfect cross positioning
+            open ? 'rotate-45 translate-y-[14px]' : '' // Adjust translate-y for perfect cross positioning
           }`}
         />
         {/* Line 2 */}
         <div
           className={`w-full h-[3px] bg-black rounded-sm transition duration-300 ease-in-out ${
-            open ? "opacity-0" : "" // Line 2 disappears on open
+            open ? 'opacity-0' : '' // Line 2 disappears on open
           }`}
         />
         {/* Line 3 */}
         <div
           className={`w-full h-[3px] bg-black rounded-sm transform transition duration-300 ease-in-out ${
-            open ? "-rotate-45 -translate-y-[14px]" : "" // Adjust translate-y for perfect cross positioning
+            open ? '-rotate-45 -translate-y-[14px]' : '' // Adjust translate-y for perfect cross positioning
           }`}
         />
       </div>

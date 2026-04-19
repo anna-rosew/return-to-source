@@ -1,6 +1,6 @@
-import { MDXContent, PrimaryTag, SecondaryTag } from "@/types/index";
+import { MDXContent, PrimaryTag, SecondaryTag } from '@/types/index';
 
-import { PostTypeIcon } from "../PostTypeIcon";
+import { PostTypeIcon } from '../PostTypeIcon';
 
 interface PodcastHeaderProps {
   content: MDXContent & {
@@ -9,7 +9,7 @@ interface PodcastHeaderProps {
     primaryTag: PrimaryTag;
     secondaryTags: SecondaryTag[];
   };
-  type: "podcast";
+  type: 'podcast';
 }
 
 export const PodcastHeader = ({ content, type }: PodcastHeaderProps) => {
@@ -18,9 +18,7 @@ export const PodcastHeader = ({ content, type }: PodcastHeaderProps) => {
       {/* Post Type Badge */}
       <div className="flex items-center px-3 py-1 gap-2 bg-white/30 w-fit rounded-sm">
         <PostTypeIcon type={type} className="text-gray-600" size={20} />
-        <h3 className="text-sm font-medium text-gray-600 inline-flex m-0 items-center">
-          {type}
-        </h3>
+        <h3 className="text-sm font-medium text-gray-600 inline-flex m-0 items-center">{type}</h3>
       </div>
 
       {/* Title */}

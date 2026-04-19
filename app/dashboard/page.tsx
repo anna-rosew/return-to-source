@@ -1,9 +1,8 @@
-import { Button } from "@/components/ui/button";
-import SunIcon from "@/public/Assets/Icons/SunIcon";
-import Link from "next/link";
+import { Button } from '@/components/ui/button';
+import SunIcon from '@/public/Assets/Icons/SunIcon';
+import Link from 'next/link';
 
-
-import React from "react";
+import React from 'react';
 
 const dashboard = () => {
   return (
@@ -17,8 +16,7 @@ const dashboard = () => {
             <span>Check back soon!</span>
             <br />
             <span>
-              In the meantime, you take a look at{" "}
-              <Link href="/blog">classes & retreats.</Link>
+              In the meantime, you take a look at <Link href="/blog">classes & retreats.</Link>
             </span>
             <Link href="/work">
               <Button variant="outline" size="lg" className="my-5 mx-auto">

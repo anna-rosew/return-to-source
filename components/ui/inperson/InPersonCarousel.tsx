@@ -1,5 +1,5 @@
-import React from "react";
-import { sessionInfo } from "@/content/inperson";
+import React from 'react';
+import { sessionInfo } from '@/content/inperson';
 
 import {
   Carousel,
@@ -7,8 +7,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import InPersonCard from "./InPersonCard";
+} from '@/components/ui/carousel';
+import InPersonCard from './InPersonCard';
 
 const InPersonCarousel = () => {
   return (
@@ -16,10 +16,7 @@ const InPersonCarousel = () => {
       <Carousel className="relative overflow-visible">
         <CarouselContent className="flex items-center space-x-4">
           {sessionInfo.map((session, index) => (
-            <CarouselItem
-              key={index}
-              className="md:pl-40 md:basis-1/2 lg:basis-1/2"
-            >
+            <CarouselItem key={index} className="md:pl-40 md:basis-1/2 lg:basis-1/2">
               <InPersonCard sessionInfo={session} />
             </CarouselItem>
           ))}

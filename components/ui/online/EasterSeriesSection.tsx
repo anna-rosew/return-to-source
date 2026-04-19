@@ -1,97 +1,96 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import AjnaIcon from "@/public/Assets/Icons/AjnaIcon";
-import AnahataIcon from "@/public/Assets/Icons/AnahataIcon";
-import { Wind, Waves, Mountain, Flame } from "lucide-react";
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import AjnaIcon from '@/public/Assets/Icons/AjnaIcon';
+import AnahataIcon from '@/public/Assets/Icons/AnahataIcon';
+import { Wind, Waves, Mountain, Flame } from 'lucide-react';
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const easterClasses = [
   {
-    name: "Illuminate",
-    chakra: "Crown & 3rd Eye",
-    description:
-      "Open to guidance and inner clarity, letting inspiration shine through.",
-    date: "Good Friday, 3rd April",
-    time: "08.00–08.30",
-    color: "#7C6B9E",
+    name: 'Illuminate',
+    chakra: 'Crown & 3rd Eye',
+    description: 'Open to guidance and inner clarity, letting inspiration shine through.',
+    date: 'Good Friday, 3rd April',
+    time: '08.00–08.30',
+    color: '#7C6B9E',
     Icon: AjnaIcon,
-    iconType: "stroke" as const,
+    iconType: 'stroke' as const,
   },
   {
-    name: "Vibrate",
-    chakra: "Throat",
+    name: 'Vibrate',
+    chakra: 'Throat',
     description:
-      "Awaken your voice & allow your vision of renewal to resonate through the power of mantra.",
-    date: "Saturday, 4th April",
-    time: "08.00–08.30",
-    color: "#5B9BB5",
+      'Awaken your voice & allow your vision of renewal to resonate through the power of mantra.',
+    date: 'Saturday, 4th April',
+    time: '08.00–08.30',
+    color: '#5B9BB5',
     Icon: Wind,
-    iconType: "lucide" as const,
+    iconType: 'lucide' as const,
   },
   {
-    name: "Connect",
-    chakra: "Heart",
-    description: "Open your heart & connect to the Love that connects us all.",
-    date: "Easter Sunday, 5th April",
-    time: "08.00–08.30",
-    color: "#356D65",
+    name: 'Connect',
+    chakra: 'Heart',
+    description: 'Open your heart & connect to the Love that connects us all.',
+    date: 'Easter Sunday, 5th April',
+    time: '08.00–08.30',
+    color: '#356D65',
     Icon: AnahataIcon,
-    iconType: "stroke" as const,
+    iconType: 'stroke' as const,
   },
   {
-    name: "Transform",
-    chakra: "Solar Plexus",
-    description: "Ignite your motivation & radiant inner strength.",
-    date: "Easter Monday, 6th April",
-    time: "08.00–08.30",
-    color: "#C9921A",
+    name: 'Transform',
+    chakra: 'Solar Plexus',
+    description: 'Ignite your motivation & radiant inner strength.',
+    date: 'Easter Monday, 6th April',
+    time: '08.00–08.30',
+    color: '#C9921A',
     Icon: Flame,
-    iconType: "lucide" as const,
+    iconType: 'lucide' as const,
   },
   {
-    name: "Flow",
-    chakra: "Sacral",
-    description: "Flow with the natural rhythms of Spring.",
-    date: "Friday, 10th April",
-    time: "07.00–07.30",
-    color: "#D4742A",
+    name: 'Flow',
+    chakra: 'Sacral',
+    description: 'Flow with the natural rhythms of Spring.',
+    date: 'Friday, 10th April',
+    time: '07.00–07.30',
+    color: '#D4742A',
     Icon: Waves,
-    iconType: "lucide" as const,
+    iconType: 'lucide' as const,
   },
   {
-    name: "Ground",
-    chakra: "Root",
-    description: "Embody your intentions in the light of the New Moon.",
-    date: "Friday, 17th April",
-    time: "07.00–07.30",
-    color: "#862b0e",
+    name: 'Ground',
+    chakra: 'Root',
+    description: 'Embody your intentions in the light of the New Moon.',
+    date: 'Friday, 17th April',
+    time: '07.00–07.30',
+    color: '#862b0e',
     Icon: Mountain,
-    iconType: "lucide" as const,
+    iconType: 'lucide' as const,
   },
 ];
 
 const membershipDeals = [
   {
-    title: "Easter Series + Evening Chill",
-    price: "£45",
-    saving: "save £15",
-    normal: "normally £60",
+    title: 'Easter Series + Evening Chill',
+    price: '£45',
+    saving: 'save £15',
+    normal: 'normally £60',
   },
   {
-    title: "Easter Series + Morning Class",
-    subtitle: "Core & Balance or Vital Breath",
-    price: "£40",
-    saving: "save £14",
-    normal: "normally £54",
+    title: 'Easter Series + Morning Class',
+    subtitle: 'Core & Balance or Vital Breath',
+    price: '£40',
+    saving: 'save £14',
+    normal: 'normally £54',
   },
   {
-    title: "All Classes",
-    price: "£48",
-    saving: "half price",
-    normal: "normally £96",
+    title: 'All Classes',
+    price: '£48',
+    saving: 'half price',
+    normal: 'normally £96',
     highlight: true,
   },
 ];
@@ -109,11 +108,9 @@ const EasterSeriesSection = () => {
           Six classes. Six chakras. One awakening.
         </p>
         <p className="mt-2 md:text-center">
-          This six-class series invites you to move through the chakras,
-          awakening the vitality of Spring within you. Through movement,
-          breathwork, mantra, and meditation, you&apos;ll attune to the
-          season&apos;s natural rhythms and feed the seeds of fresh new
-          beginnings.
+          This six-class series invites you to move through the chakras, awakening the vitality of
+          Spring within you. Through movement, breathwork, mantra, and meditation, you&apos;ll
+          attune to the season&apos;s natural rhythms and feed the seeds of fresh new beginnings.
         </p>
       </div>
 
@@ -139,7 +136,7 @@ const EasterSeriesSection = () => {
                     {cls.chakra}
                   </p>
                   <div style={{ color: cls.color }}>
-                    {cls.iconType === "lucide" ? (
+                    {cls.iconType === 'lucide' ? (
                       <Icon className="w-5 h-5" strokeWidth={1.5} stroke={cls.color} fill="none" />
                     ) : (
                       <Icon className="w-6 h-6" width={24} height={24} />
@@ -148,9 +145,7 @@ const EasterSeriesSection = () => {
                 </div>
 
                 {/* name */}
-                <h3 className="font-jomolhari text-2xl m-0 mb-2 leading-tight">
-                  {cls.name}
-                </h3>
+                <h3 className="font-jomolhari text-2xl m-0 mb-2 leading-tight">{cls.name}</h3>
 
                 {/* description */}
                 <p className="text-sm text-black/65 m-0 leading-relaxed flex-1">
@@ -159,13 +154,8 @@ const EasterSeriesSection = () => {
 
                 {/* divider + date/time */}
                 <div className="border-t border-black/8 mt-4 pt-3 flex items-center justify-between">
-                  <p className="text-xs font-semibold m-0 text-black/75">
-                    {cls.date}
-                  </p>
-                  <p
-                    className="text-xs m-0 font-medium"
-                    style={{ color: cls.color }}
-                  >
+                  <p className="text-xs font-semibold m-0 text-black/75">{cls.date}</p>
+                  <p className="text-xs m-0 font-medium" style={{ color: cls.color }}>
                     {cls.time}
                   </p>
                 </div>
@@ -200,14 +190,14 @@ const EasterSeriesSection = () => {
               key={i}
               className={`text-center border ${
                 deal.highlight
-                  ? "border-customTeal bg-customTeal text-white"
-                  : "border-customBeige/60 bg-white"
+                  ? 'border-customTeal bg-customTeal text-white'
+                  : 'border-customBeige/60 bg-white'
               }`}
             >
               <CardContent className="p-5">
                 <p
                   className={`text-sm font-semibold m-0 leading-snug ${
-                    deal.highlight ? "text-white" : "text-black"
+                    deal.highlight ? 'text-white' : 'text-black'
                   }`}
                 >
                   {deal.title}
@@ -215,7 +205,7 @@ const EasterSeriesSection = () => {
                 {deal.subtitle && (
                   <p
                     className={`text-xs m-0 mt-0.5 ${
-                      deal.highlight ? "text-white/75" : "text-black/50"
+                      deal.highlight ? 'text-white/75' : 'text-black/50'
                     }`}
                   >
                     {deal.subtitle}
@@ -223,21 +213,21 @@ const EasterSeriesSection = () => {
                 )}
                 <p
                   className={`text-3xl font-jomolhari m-0 mt-3 ${
-                    deal.highlight ? "text-white" : "text-customTeal"
+                    deal.highlight ? 'text-white' : 'text-customTeal'
                   }`}
                 >
                   {deal.price}
                 </p>
                 <p
                   className={`text-xs mt-1 m-0 font-medium ${
-                    deal.highlight ? "text-white/80" : "text-customSienna"
+                    deal.highlight ? 'text-white/80' : 'text-customSienna'
                   }`}
                 >
                   {deal.saving}
                 </p>
                 <p
                   className={`text-xs m-0 mt-0.5 line-through ${
-                    deal.highlight ? "text-white/50" : "text-black/35"
+                    deal.highlight ? 'text-white/50' : 'text-black/35'
                   }`}
                 >
                   {deal.normal}

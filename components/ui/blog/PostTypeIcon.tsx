@@ -1,10 +1,10 @@
-import { PenTool, Mic, UtensilsCrossed, FileText } from "lucide-react";
-import { PostType } from "@/types";
+import { PenTool, Mic, UtensilsCrossed, FileText } from 'lucide-react';
+import { PostType } from '@/types';
 
 // Modified to include a default fallback icon
 const postTypeIcons = {
-  "short-article": PenTool,
-  "long-article": PenTool,
+  'short-article': PenTool,
+  'long-article': PenTool,
   podcast: Mic,
   recipe: UtensilsCrossed,
   // Add a default icon for fallback
@@ -17,14 +17,9 @@ interface PostTypeIconProps {
   className?: string;
 }
 
-export function PostTypeIcon({
-  type,
-  size = 24,
-  className = "",
-}: PostTypeIconProps) {
+export function PostTypeIcon({ type, size = 24, className = '' }: PostTypeIconProps) {
   // Handle cases where type might be undefined or not in our mapping
-  const Icon =
-    type && postTypeIcons[type] ? postTypeIcons[type] : postTypeIcons.default;
+  const Icon = type && postTypeIcons[type] ? postTypeIcons[type] : postTypeIcons.default;
 
   // Safe check to ensure we always have a valid component
   if (!Icon) {

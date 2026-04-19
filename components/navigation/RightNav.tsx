@@ -1,6 +1,6 @@
-"use client";
-import Link from "next/link";
-import { Button } from "../ui/button";
+'use client';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 interface RightNavProps {
   open: boolean;
@@ -11,7 +11,7 @@ const RightNav = ({ open, closeMenu }: RightNavProps) => {
   return (
     <div
       className={`${
-        open ? "translate-x-0" : "translate-x-full"
+        open ? 'translate-x-0' : 'translate-x-full'
       } fixed top-0 right-0 w-full h-full bg-customTeal z-40 transition-all duration-500 ease-in-out`}
     >
       <div className="flex flex-col justify-center items-center h-full text-white text-lg space-y-6">
@@ -55,11 +55,7 @@ const RightNav = ({ open, closeMenu }: RightNavProps) => {
           </Link> */}
         <div className="absolute bottom-6 w-full px-4 space-y-6">
           <Link href="/contact" className="my-2">
-            <Button
-              variant="secondary"
-              size="lg"
-              className="w-full justify-center"
-            >
+            <Button variant="secondary" size="lg" className="w-full justify-center">
               Contact
             </Button>
           </Link>

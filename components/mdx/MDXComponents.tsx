@@ -1,34 +1,31 @@
 // mdx/MDXComponents.tsx
-import React, { DetailedHTMLProps, HTMLAttributes, useMemo } from "react";
-import Image from "next/image";
-import { MDXComponents } from "mdx/types";
+import React, { DetailedHTMLProps, HTMLAttributes, useMemo } from 'react';
+import Image from 'next/image';
+import { MDXComponents } from 'mdx/types';
 
-type HeadingProps = DetailedHTMLProps<
-  HTMLAttributes<HTMLHeadingElement>,
-  HTMLHeadingElement
->;
+type HeadingProps = DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
 
 const generateId = (text: React.ReactNode): string => {
   const stringText = React.Children.toArray(text)
     .map((child) => {
-      if (typeof child === "string") return child;
-      if (typeof child === "number") return String(child);
-      if (child && typeof child === "object" && "props" in child) {
+      if (typeof child === 'string') return child;
+      if (typeof child === 'number') return String(child);
+      if (child && typeof child === 'object' && 'props' in child) {
         const props = (child as { props: { children?: unknown } }).props;
-        return String(props.children || "");
+        return String(props.children || '');
       }
-      return "";
+      return '';
     })
-    .join("")
+    .join('')
     .trim();
 
   return stringText
     .toLowerCase()
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(/[^\w-]+/g, "") // Remove all non-word chars
-    .replace(/--+/g, "-") // Replace multiple - with single -
-    .replace(/^-+/, "") // Trim - from start
-    .replace(/-+$/, ""); // Trim - from end
+    .replace(/\s+/g, '-') // Replace spaces with -
+    .replace(/[^\w-]+/g, '') // Remove all non-word chars
+    .replace(/--+/g, '-') // Replace multiple - with single -
+    .replace(/^-+/, '') // Trim - from start
+    .replace(/-+$/, ''); // Trim - from end
 };
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -49,7 +46,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       },
       h2: (props: HeadingProps) => {
         const id = generateId(props.children);
-        console.log("Generated h2 id:", id, "for:", props.children);
+        console.log('Generated h2 id:', id, 'for:', props.children);
         return (
           <h2
             {...props}
@@ -63,7 +60,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       },
       h3: (props: HeadingProps) => {
         const id = generateId(props.children);
-        console.log("Generated h3 id:", id, "for:", props.children);
+        console.log('Generated h3 id:', id, 'for:', props.children);
         return (
           <h3
             {...props}
@@ -102,7 +99,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           <div className="relative w-full h-64 my-4">
             <Image
               src={src}
-              alt={alt || ""}
+              alt={alt || ''}
               fill
               className="object-cover rounded-lg"
               sizes="(max-width: 768px) 100vw, 768px"

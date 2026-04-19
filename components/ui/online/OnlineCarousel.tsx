@@ -1,18 +1,18 @@
-"use client";
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import type { Swiper as SwiperType } from "swiper";
-import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import OnlineClassSlides from "./OnlineClassSlide";
-import { classes } from "@/content/online";
+'use client';
+import React, { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperType } from 'swiper';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import OnlineClassSlides from './OnlineClassSlide';
+import { classes } from '@/content/online';
 
 const OnlineCarousel: React.FC = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   const pagination = {
-    el: ".online-pagination",
+    el: '.online-pagination',
     clickable: true,
     renderBullet: function (index: number, className: string) {
       return `<h3 class="${className} online-bullet">${classes[index].classType}</h3>`;

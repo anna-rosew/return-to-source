@@ -1,16 +1,16 @@
 // app/blog/[slug]/page.tsx
-import { notFound } from "next/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { notFound } from 'next/navigation';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 
-import { ArticleTemplate } from "@/components/ui/blog/templates/ArticleTemplate";
-import { PodcastTemplate } from "@/components/ui/blog/templates/PodcastTemplate";
-import { RecipeTemplate } from "@/components/ui/blog/templates/RecipeTemplate";
+import { ArticleTemplate } from '@/components/ui/blog/templates/ArticleTemplate';
+import { PodcastTemplate } from '@/components/ui/blog/templates/PodcastTemplate';
+import { RecipeTemplate } from '@/components/ui/blog/templates/RecipeTemplate';
 
-import { getAllPosts, getPostBySlug } from "@/lib/blog";
-import type { MDXContent, Post, PodcastPost, RecipePost } from "@/types/index";
+import { getAllPosts, getPostBySlug } from '@/lib/blog';
+import type { MDXContent, Post, PodcastPost, RecipePost } from '@/types/index';
 
 // Next.js specific type imports
-import { Metadata } from "next";
+import { Metadata } from 'next';
 
 // Simplified params type
 type Params = {
@@ -18,11 +18,7 @@ type Params = {
 };
 
 // Metadata generation
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<Params>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
 
@@ -30,7 +26,7 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Not Found",
+      title: 'Not Found',
       description: "The page you're looking for does not exist.",
     };
   }
@@ -64,8 +60,8 @@ export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
 // Helper function to clean MDX content
 const cleanMDXContent = (content: string): string => {
   return content
-    .replace(/\{/g, "&#123;")
-    .replace(/\}/g, "&#125;")
+    .replace(/\{/g, '&#123;')
+    .replace(/\}/g, '&#125;')
     .replace(/'/g, "'")
     .replace(/'/g, "'")
     .replace(/"/g, '"')
@@ -74,11 +70,7 @@ const cleanMDXContent = (content: string): string => {
 };
 
 // Main Component
-export default async function BlogPost({
-  params,
-}: {
-  params: Promise<Params>;
-}) {
+export default async function BlogPost({ params }: { params: Promise<Params> }) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
 
@@ -101,17 +93,15 @@ export default async function BlogPost({
 
       if (contentParts.length > 1) {
         const introContent = cleanMDXContent(contentParts[0]);
-        const mainContentStr = contentParts.slice(1).join("");
+        const mainContentStr = contentParts.slice(1).join('');
 
         try {
           introSection = {
             content: introContent,
-            mdxContent: introContent ? (
-              <MDXRemote source={introContent} />
-            ) : null,
+            mdxContent: introContent ? <MDXRemote source={introContent} /> : null,
           };
         } catch (introError) {
-          console.error("Error processing intro MDX:", introError);
+          console.error('Error processing intro MDX:', introError);
           introSection = {
             content: introContent,
             mdxContent: <p>{introContent}</p>,
@@ -123,24 +113,20 @@ export default async function BlogPost({
             <MDXRemote source={cleanMDXContent(mainContentStr)} />
           ) : null;
         } catch (mainError) {
-          console.error("Error processing main MDX:", mainError);
-          mainContent = (
-            <div dangerouslySetInnerHTML={{ __html: mainContentStr }} />
-          );
+          console.error('Error processing main MDX:', mainError);
+          mainContent = <div dangerouslySetInnerHTML={{ __html: mainContentStr }} />;
         }
       } else {
         try {
           mainContent = <MDXRemote source={cleanContent} />;
         } catch (error) {
-          console.error("Error processing single content MDX:", error);
-          mainContent = (
-            <div dangerouslySetInnerHTML={{ __html: cleanContent }} />
-          );
+          console.error('Error processing single content MDX:', error);
+          mainContent = <div dangerouslySetInnerHTML={{ __html: cleanContent }} />;
         }
       }
     }
   } catch (error) {
-    console.error("Error processing content:", error);
+    console.error('Error processing content:', error);
     mainContent = <div>Error processing content. Please try again.</div>;
   }
 
@@ -152,26 +138,22 @@ export default async function BlogPost({
 
   const renderTemplate = () => {
     switch (postContent.type) {
-      case "short-article":
-      case "long-article":
-        return (
-          <ArticleTemplate content={postContent} type={postContent.type} />
-        );
+      case 'short-article':
+      case 'long-article':
+        return <ArticleTemplate content={postContent} type={postContent.type} />;
 
-      case "podcast":
+      case 'podcast':
         return (
           <PodcastTemplate
             content={{
               ...postContent,
               duration: (post as PodcastPost).duration,
               audioUrl: (post as PodcastPost).audioUrl,
-              podcastUrl:
-                (post as PodcastPost).podcastUrl ||
-                (post as PodcastPost).audioUrl,
+              podcastUrl: (post as PodcastPost).podcastUrl || (post as PodcastPost).audioUrl,
             }}
           />
         );
-      case "recipe":
+      case 'recipe':
         return (
           <RecipeTemplate
             content={{
@@ -188,7 +170,5 @@ export default async function BlogPost({
     }
   };
 
-  return (
-    <main className="container mx-auto px-4 py-8">{renderTemplate()}</main>
-  );
+  return <main className="container mx-auto px-4 py-8">{renderTemplate()}</main>;
 }

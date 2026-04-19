@@ -1,7 +1,7 @@
-import Card from "@/components/common/NavCard";
-import TestimonialSection from "@/components/ui/testimonials/TestimonialSection";
-import EasterSeriesSection from "@/components/ui/online/EasterSeriesSection";
-import { workCards } from "@/content/work";
+import Card from '@/components/common/NavCard';
+import TestimonialSection from '@/components/ui/testimonials/TestimonialSection';
+import EasterSeriesSection from '@/components/ui/online/EasterSeriesSection';
+import { workCards } from '@/content/work';
 
 const Work = () => {
   return (
@@ -9,8 +9,8 @@ const Work = () => {
       <div className="container">
         <h1>Work with Rose</h1>
         <p className="font-bold">
-          Come and explore how your body, mind and breath work together. Open
-          yourself to new dimensions of experience and personal growth.
+          Come and explore how your body, mind and breath work together. Open yourself to new
+          dimensions of experience and personal growth.
         </p>
 
         <div className="lg:my-20 my-7">

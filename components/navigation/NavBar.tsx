@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useState, useEffect, useRef } from "react";
-import Logo from "./Logo";
-import Burger from "./Burger";
-import Link from "next/link";
-import { Button } from "../ui/button";
+import { useState, useEffect, useRef } from 'react';
+import Logo from './Logo';
+import Burger from './Burger';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,24 +50,18 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        navbarRef.current &&
-        !navbarRef.current.contains(event.target as Node)
-      ) {
+      if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
         closeDropdowns();
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
   return (
-    <nav
-      ref={navbarRef}
-      className="relative lg:mt-3 lg:mx-[76px] border-b-2 border-black"
-    >
+    <nav ref={navbarRef} className="relative lg:mt-3 lg:mx-[76px] border-b-2 border-black">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
         <div className="flex items-center justify-between w-full md:w-auto">
           <Logo />
@@ -91,7 +85,7 @@ const Navbar = () => {
 
             <li>
               <button
-                onClick={() => toggleDropdown("workWithRose")}
+                onClick={() => toggleDropdown('workWithRose')}
                 className="flex items-center justify-between w-full py-2 px-3 cursor-pointer"
               >
                 <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
@@ -114,7 +108,7 @@ const Navbar = () => {
               </button>
               <div
                 className={`${
-                  dropdowns.workWithRose ? "block" : "hidden"
+                  dropdowns.workWithRose ? 'block' : 'hidden'
                 } absolute z-10 w-auto text-sm bg-black rounded-lg shadow-md  dark:bg-gray-700`}
               >
                 <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
@@ -169,7 +163,7 @@ const Navbar = () => {
 
             <li>
               <button
-                onClick={() => toggleDropdown("about")}
+                onClick={() => toggleDropdown('about')}
                 className="flex items-center justify-between w-full py-2 px-3"
               >
                 <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
@@ -192,16 +186,12 @@ const Navbar = () => {
               </button>
               <div
                 className={`${
-                  dropdowns.about ? "block" : "hidden"
+                  dropdowns.about ? 'block' : 'hidden'
                 } absolute z-10 w-auto text-sm bg-black rounded-lg shadow-md  dark:bg-gray-700`}
               >
                 <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
                   <li>
-                    <Link
-                      href="/about"
-                      className="hover:text-customGreen"
-                      onClick={closeDropdowns}
-                    >
+                    <Link href="/about" className="hover:text-customGreen" onClick={closeDropdowns}>
                       Meet Rose
                     </Link>
                   </li>
@@ -220,7 +210,7 @@ const Navbar = () => {
 
             <li>
               <button
-                onClick={() => toggleDropdown("resources")}
+                onClick={() => toggleDropdown('resources')}
                 className="flex items-center justify-between w-full py-2 px-3"
               >
                 <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
@@ -243,7 +233,7 @@ const Navbar = () => {
               </button>
               <div
                 className={`${
-                  dropdowns.resources ? "block" : "hidden"
+                  dropdowns.resources ? 'block' : 'hidden'
                 } absolute z-10 w-auto text-sm bg-black rounded-lg shadow-md dark:bg-gray-700`}
               >
                 <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
@@ -257,11 +247,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href="/blog"
-                      className="hover:text-customGreen"
-                      onClick={closeDropdowns}
-                    >
+                    <Link href="/blog" className="hover:text-customGreen" onClick={closeDropdowns}>
                       Blog
                     </Link>
                   </li>

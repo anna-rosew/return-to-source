@@ -95,8 +95,8 @@
   }
 
   article li::before {
-    content: "";
-    background-image: url("/Assets/Icons/star.svg");
+    content: '';
+    background-image: url('/Assets/Icons/star.svg');
     background-size: contain;
     background-repeat: no-repeat;
     width: 16px;

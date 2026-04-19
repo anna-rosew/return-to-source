@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const SunIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
-  fill = "#fff",
-  stroke = "#fff",
-  strokeWidth = "10",
-  strokeMiterlimit = "10",
+  fill = '#fff',
+  stroke = '#fff',
+  strokeWidth = '10',
+  strokeMiterlimit = '10',
   ...props
 }) => {
   return (

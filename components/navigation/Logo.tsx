@@ -1,9 +1,9 @@
-"use client";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import LogoImg from "@/public/Assets/Icons/Logo.svg";
-import { Button } from "../ui/button";
+'use client';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import LogoImg from '@/public/Assets/Icons/Logo.svg';
+import { Button } from '../ui/button';
 
 const Logo = () => {
   // change between the logo and the button when the user scrolls
@@ -18,12 +18,12 @@ const Logo = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", changeNavButton);
+    window.addEventListener('scroll', changeNavButton);
   }, []);
 
   return (
     <>
-      <Link href="/" style={{ display: showButton ? "none" : "block" }}>
+      <Link href="/" style={{ display: showButton ? 'none' : 'block' }}>
         <Image
           src={LogoImg}
           alt="Logo"
@@ -35,7 +35,7 @@ const Logo = () => {
       </Link>
       <div
         style={{
-          display: showButton ? "block" : "none",
+          display: showButton ? 'block' : 'none',
         }}
       >
         <Button />

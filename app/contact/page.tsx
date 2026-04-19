@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import Image from "next/image";
-import ContactImage from "@/public/Assets/Images/contact.webp";
-import ContactSmall from "@/public/Assets/Images/contact-mobile.webp";
+import Image from 'next/image';
+import ContactImage from '@/public/Assets/Images/contact.webp';
+import ContactSmall from '@/public/Assets/Images/contact-mobile.webp';
 
-import ContactForm from "@/components/ui/contact/ContactForm";
-import NewsletterForm from "@/components/ui/contact/NewsletterForm";
+import ContactForm from '@/components/ui/contact/ContactForm';
+import NewsletterForm from '@/components/ui/contact/NewsletterForm';
 
 const Contact = () => {
   return (
@@ -20,7 +20,7 @@ const Contact = () => {
             fill
             sizes="50vw"
             placeholder="blur"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: 'cover' }}
           />
           <Image
             className="small-screen-component responsive"
@@ -28,13 +28,13 @@ const Contact = () => {
             src={ContactSmall}
             placeholder="blur"
             sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: '100%', height: 'auto' }}
           />
         </div>
         <div className="text text-left space-y-8 pb-4">
           <ContactForm />
           <NewsletterForm />
-          <div className="text-left border border-customBeige/60 rounded-xl p-6 bg-customLightBeige/40">
+          {/* <div className="text-left border border-customBeige/60 rounded-xl p-6 bg-customLightBeige/40">
             <h3 className="mb-3">Payment</h3>
             <p className="text-sm text-black/70 mb-4">
               If you already know what you&apos;d like to book, please make a
@@ -66,11 +66,10 @@ const Contact = () => {
                 will be in touch to welcome you.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
-
   );
 };
 

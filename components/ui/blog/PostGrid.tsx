@@ -1,42 +1,42 @@
-"use client";
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+'use client';
+import { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Post, PostType, PrimaryTag, SecondaryTag } from "@/types";
-import { PostTypeIcon } from "./PostTypeIcon";
-import Image from "next/image";
-import Link from "next/link";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+} from '@/components/ui/select';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Post, PostType, PrimaryTag, SecondaryTag } from '@/types';
+import { PostTypeIcon } from './PostTypeIcon';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const POSTS_PER_PAGE = 8;
 
 const POST_TYPES: { label: string; value: PostType }[] = [
-  { label: "Short Articles", value: "short-article" },
-  { label: "Long Articles", value: "long-article" },
-  { label: "Podcasts", value: "podcast" },
-  { label: "Recipes", value: "recipe" },
+  { label: 'Short Articles', value: 'short-article' },
+  { label: 'Long Articles', value: 'long-article' },
+  { label: 'Podcasts', value: 'podcast' },
+  { label: 'Recipes', value: 'recipe' },
 ];
 
 // Separate primary and secondary tag options
 const PRIMARY_TAGS: { label: string; value: PrimaryTag }[] = [
-  { label: "Mind", value: "Mind" },
-  { label: "Body", value: "Body" },
-  { label: "Breath", value: "Breath" },
+  { label: 'Mind', value: 'Mind' },
+  { label: 'Body', value: 'Body' },
+  { label: 'Breath', value: 'Breath' },
 ];
 
 const SECONDARY_TAGS: { label: string; value: SecondaryTag }[] = [
-  { label: "Nutrition", value: "Nutrition" },
-  { label: "Mindfulness", value: "Mindfulness" },
-  { label: "Meditation", value: "Meditation" },
-  { label: "Stress Management", value: "Stress Management" },
+  { label: 'Nutrition', value: 'Nutrition' },
+  { label: 'Mindfulness', value: 'Mindfulness' },
+  { label: 'Meditation', value: 'Meditation' },
+  { label: 'Stress Management', value: 'Stress Management' },
   // Add all your secondary tags here
 ];
 
@@ -45,22 +45,17 @@ interface PostGridProps {
 }
 
 export function PostGrid({ posts }: PostGridProps) {
-  const [selectedType, setSelectedType] = useState<PostType | "all">("all");
-  const [selectedPrimaryTag, setSelectedPrimaryTag] =
-    useState<PrimaryTag | null>(null);
-  const [selectedSecondaryTags, setSelectedSecondaryTags] = useState<
-    SecondaryTag[]
-  >([]);
+  const [selectedType, setSelectedType] = useState<PostType | 'all'>('all');
+  const [selectedPrimaryTag, setSelectedPrimaryTag] = useState<PrimaryTag | null>(null);
+  const [selectedSecondaryTags, setSelectedSecondaryTags] = useState<SecondaryTag[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredPosts = posts.filter((post) => {
-    const typeMatch = selectedType === "all" || post.type === selectedType;
-    const primaryTagMatch =
-      !selectedPrimaryTag || post.primaryTag === selectedPrimaryTag;
+    const typeMatch = selectedType === 'all' || post.type === selectedType;
+    const primaryTagMatch = !selectedPrimaryTag || post.primaryTag === selectedPrimaryTag;
     const secondaryTagMatch =
       selectedSecondaryTags.length === 0 ||
-      (post.secondaryTags &&
-        selectedSecondaryTags.some((tag) => post.secondaryTags.includes(tag)));
+      (post.secondaryTags && selectedSecondaryTags.some((tag) => post.secondaryTags.includes(tag)));
     return typeMatch && primaryTagMatch && secondaryTagMatch;
   });
 
@@ -83,7 +78,7 @@ export function PostGrid({ posts }: PostGridProps) {
   };
 
   const handleTypeChange = (value: string) => {
-    setSelectedType(value as PostType | "all");
+    setSelectedType(value as PostType | 'all');
     setCurrentPage(1);
   };
 
@@ -99,9 +94,7 @@ export function PostGrid({ posts }: PostGridProps) {
               {PRIMARY_TAGS.map(({ label, value }) => (
                 <Badge
                   key={value}
-                  variant={
-                    selectedPrimaryTag === value ? "selected" : "outline"
-                  }
+                  variant={selectedPrimaryTag === value ? 'selected' : 'outline'}
                   className="cursor-pointer p-4 transition-all duration-300 bg-white text-customSienna border-customSienna hover:bg-customSienna hover:text-white"
                   onClick={() => togglePrimaryTag(value)}
                 >
@@ -124,9 +117,7 @@ export function PostGrid({ posts }: PostGridProps) {
                 {PRIMARY_TAGS.map(({ label, value }) => (
                   <Badge
                     key={value}
-                    variant={
-                      selectedPrimaryTag === value ? "selected" : "outline"
-                    }
+                    variant={selectedPrimaryTag === value ? 'selected' : 'outline'}
                     className="cursor-pointer p-4 transition-all duration-300 bg-white text-customSienna border-customSienna hover:bg-customSienna hover:text-white"
                     onClick={() => togglePrimaryTag(value)}
                   >
@@ -143,11 +134,7 @@ export function PostGrid({ posts }: PostGridProps) {
                 {SECONDARY_TAGS.map(({ label, value }) => (
                   <Badge
                     key={value}
-                    variant={
-                      selectedSecondaryTags.includes(value)
-                        ? "selected"
-                        : "outline"
-                    }
+                    variant={selectedSecondaryTags.includes(value) ? 'selected' : 'outline'}
                     className="cursor-pointer p-4 transition-all duration-300 bg-white text-gray-600 border-gray-400 hover:bg-gray-100"
                     onClick={() => toggleSecondaryTag(value)}
                   >
@@ -194,7 +181,7 @@ export function PostGrid({ posts }: PostGridProps) {
                   {post.coverImage ? (
                     <Image
                       src={post.coverImage}
-                      alt={post.title || "Post image"}
+                      alt={post.title || 'Post image'}
                       fill
                       className="object-cover brightness-75"
                     />
@@ -206,14 +193,8 @@ export function PostGrid({ posts }: PostGridProps) {
 
                   {post.type && (
                     <div className="absolute top-4 right-4 flex items-center px-3 py-1 gap-2 bg-white/30 w-fit rounded-sm">
-                      <PostTypeIcon
-                        type={post.type}
-                        className="text-white"
-                        size={20}
-                      />
-                      <p className="text-sm font-medium text-white capitalize">
-                        {post.type}
-                      </p>
+                      <PostTypeIcon type={post.type} className="text-white" size={20} />
+                      <p className="text-sm font-medium text-white capitalize">{post.type}</p>
                     </div>
                   )}
                 </div>
@@ -244,12 +225,8 @@ export function PostGrid({ posts }: PostGridProps) {
                   <h2 className="font-normal text-lg leading-8 mb-2 line-clamp-2 text-left text-customSienna my-2">
                     {post.title}
                   </h2>
-                  <p className="text-sm text-black mb-4 text-left">
-                    {post.excerpt}
-                  </p>
-                  <p className="text-sm text-black/70 mb-4 text-left">
-                    {post.date}
-                  </p>
+                  <p className="text-sm text-black mb-4 text-left">{post.excerpt}</p>
+                  <p className="text-sm text-black/70 mb-4 text-left">{post.date}</p>
                 </div>
               </CardContent>
             </Card>
@@ -272,7 +249,7 @@ export function PostGrid({ posts }: PostGridProps) {
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
               <Button
                 key={page}
-                variant={currentPage === page ? "primary" : "outline"}
+                variant={currentPage === page ? 'primary' : 'outline'}
                 onClick={() => setCurrentPage(page)}
               >
                 {page}
@@ -282,9 +259,7 @@ export function PostGrid({ posts }: PostGridProps) {
 
           <Button
             variant="outline"
-            onClick={() =>
-              setCurrentPage((prev) => Math.min(totalPages, prev + 1))
-            }
+            onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
             disabled={currentPage === totalPages}
           >
             <ChevronRight />

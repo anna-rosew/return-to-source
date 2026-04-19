@@ -1,5 +1,5 @@
-import { MDXContent } from "@/types/index";
-import Image from "next/image";
+import { MDXContent } from '@/types/index';
+import Image from 'next/image';
 
 interface ArticleContentProps {
   content: MDXContent;

@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-import { Post } from "@/types";
-import { FeaturedSlide } from "./FeaturedSlide";
+import { Post } from '@/types';
+import { FeaturedSlide } from './FeaturedSlide';
 
 interface FeaturedPostsProps {
   posts: Post[];
@@ -22,8 +22,8 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
         modules={[Navigation, Pagination]}
         slidesPerView={1}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         }}
         className="relative w-full"
       >

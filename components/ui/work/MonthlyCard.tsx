@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 type MonthlyCardProps = {
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -24,12 +24,8 @@ const MonthlyCard = (props: MonthlyCardProps) => {
 
       <div className="group rounded-lg flex min-h-[300px] flex-col items-center justify-start text-black bg-customBeige text-center px-4 md:px-4 py-4 transition-colors duration-700 ease-in-out">
         <div>
-          <h2 className="text-customSienna transition-colors duration-700 text-[1.5em]">
-            {title}
-          </h2>
-          <p className="text-black transition-colors duration-700 text-[1rem]">
-            {text}
-          </p>
+          <h2 className="text-customSienna transition-colors duration-700 text-[1.5em]">{title}</h2>
+          <p className="text-black transition-colors duration-700 text-[1rem]">{text}</p>
         </div>
       </div>
     </div>

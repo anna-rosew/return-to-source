@@ -1,59 +1,51 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Flower2,
-  Home,
-  Salad,
-  Trees,
-  Flame,
-  CalendarDays,
-  MapPin,
-} from "lucide-react";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Flower2, Home, Salad, Trees, Flame, CalendarDays, MapPin } from 'lucide-react';
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const included = [
   {
     icon: Flower2,
-    title: "Daily Yoga & Practices",
+    title: 'Daily Yoga & Practices',
     items: [
-      "A seasonal blend of movement, meditation, mantra, and deep relaxation — suitable for all levels.",
-      "Rejuvenating and restorative sessions to shake off winter heaviness.",
-      "Small group sessions to gently support and deepen your practice.",
+      'A seasonal blend of movement, meditation, mantra, and deep relaxation — suitable for all levels.',
+      'Rejuvenating and restorative sessions to shake off winter heaviness.',
+      'Small group sessions to gently support and deepen your practice.',
     ],
   },
   {
     icon: Home,
-    title: "Peaceful Accommodation",
+    title: 'Peaceful Accommodation',
     items: [
-      "3 nights in a comfortable single en-suite room.",
-      "4 days nestled in a stunning valley, surrounded by the beauty of Snowdonia in Spring.",
+      '3 nights in a comfortable single en-suite room.',
+      '4 days nestled in a stunning valley, surrounded by the beauty of Snowdonia in Spring.',
     ],
   },
   {
     icon: Salad,
-    title: "Nourishing Plant-Based Meals",
+    title: 'Nourishing Plant-Based Meals',
     items: [
-      "All meals prepared for you — delicious daily breakfast, lunch, and dinner.",
-      "Fresh, locally sourced, seasonal ingredients to support lightness and vitality.",
-      "Herbal teas and refreshments available throughout the day.",
+      'All meals prepared for you — delicious daily breakfast, lunch, and dinner.',
+      'Fresh, locally sourced, seasonal ingredients to support lightness and vitality.',
+      'Herbal teas and refreshments available throughout the day.',
     ],
   },
   {
     icon: Trees,
-    title: "Time to Rest, Reset & Reconnect",
+    title: 'Time to Rest, Reset & Reconnect',
     items: [
-      "Space to slow down, reflect, and realign with the season of renewal.",
-      "Pristine fresh air, stunning walks in the valley, and quiet moments in nature.",
-      "Evenings gathered around the fire pit under dark, starry skies.",
+      'Space to slow down, reflect, and realign with the season of renewal.',
+      'Pristine fresh air, stunning walks in the valley, and quiet moments in nature.',
+      'Evenings gathered around the fire pit under dark, starry skies.',
     ],
   },
   {
     icon: Flame,
-    title: "The World Peace Flame",
+    title: 'The World Peace Flame',
     items: [
       "We're staying at Snowdonia Mountain Lodge, home to the World Peace Flame — burning continuously since 1999.",
       "A quiet, powerful symbol of unity and peace that we'll honour during our time together.",
@@ -66,7 +58,6 @@ const included = [
 const SnowdoniaRetreat = () => {
   return (
     <div className="w-full">
-
       {/* Hero image */}
       <div className="relative w-full h-[50vh] min-h-[320px] rounded-xl overflow-hidden mb-10">
         <Image
@@ -93,25 +84,24 @@ const SnowdoniaRetreat = () => {
       {/* Intro prose */}
       <div className="w-full text-center mb-12 space-y-4">
         <p className="italic text-customSienna font-semibold">
-          As the snow melts from the mountain tops and the streams come alive
-          with rushing water, the sleeping land awakens.
+          As the snow melts from the mountain tops and the streams come alive with rushing water,
+          the sleeping land awakens.
         </p>
         <p>
-          Join me for a Spring Yoga Retreat in the heart of Snowdonia, where
-          you can feel the pulse of the Earth, steady and ancient. This is an
-          invitation to step away from the noise and chaos of the world and shed
-          the skins of yesterday. Come and settle into the rhythms of nature.
+          Join me for a Spring Yoga Retreat in the heart of Snowdonia, where you can feel the pulse
+          of the Earth, steady and ancient. This is an invitation to step away from the noise and
+          chaos of the world and shed the skins of yesterday. Come and settle into the rhythms of
+          nature.
         </p>
         <p>
-          Remember the cyclical and transformative power of the seasons.
-          Reconnect with the life within you, mirrored in the beauty of nature.
+          Remember the cyclical and transformative power of the seasons. Reconnect with the life
+          within you, mirrored in the beauty of nature.
         </p>
         <p className="text-black/65">
-          Time changes on retreat — life changing insights and transformation
-          happen in an instant. The magic of the place, and the shared focus of
-          the group makes things possible that cannot be planned or known in
-          advance. This is the reason I love teaching retreats. If you feel an
-          inner &lsquo;yes&rsquo; — I&apos;d love you to come.
+          Time changes on retreat — life changing insights and transformation happen in an instant.
+          The magic of the place, and the shared focus of the group makes things possible that
+          cannot be planned or known in advance. This is the reason I love teaching retreats. If you
+          feel an inner &lsquo;yes&rsquo; — I&apos;d love you to come.
         </p>
       </div>
 
@@ -130,14 +120,16 @@ const SnowdoniaRetreat = () => {
           <div>
             <p className="text-xs uppercase tracking-widest text-black/50 mb-1">Venue</p>
             <p className="font-semibold text-sm">Snowdonia Mountain Lodge</p>
-            <p className="text-xs text-black/55 mt-0.5">A stunning valley in the heart of Snowdonia</p>
+            <p className="text-xs text-black/55 mt-0.5">
+              A stunning valley in the heart of Snowdonia
+            </p>
           </div>
         </div>
       </div>
 
       {/* Photo strip */}
       <div className="grid grid-cols-3 gap-2 mb-12 rounded-xl overflow-hidden">
-        {["snowdonia25-1.webp", "snowdonia25-3.webp", "snowdonia25-5.webp"].map((img, i) => (
+        {['snowdonia25-1.webp', 'snowdonia25-3.webp', 'snowdonia25-5.webp'].map((img, i) => (
           <div key={i} className="relative h-40 md:h-56">
             <Image
               src={`/Assets/Images/${img}`}
@@ -152,18 +144,16 @@ const SnowdoniaRetreat = () => {
       {/* Rose's personal note */}
       <div className="w-full mb-12 text-center space-y-4">
         <p>
-          Come and spend deep, reconnecting time on the mat, and deep,
-          reconnecting time in nature. There&apos;ll be moments for reflection,
-          solitude and connection. And yes — there will be plenty of time to
-          laugh, chat, and enjoy the simple pleasure of good food and good
+          Come and spend deep, reconnecting time on the mat, and deep, reconnecting time in nature.
+          There&apos;ll be moments for reflection, solitude and connection. And yes — there will be
+          plenty of time to laugh, chat, and enjoy the simple pleasure of good food and good
           company.
         </p>
         <p className="text-black/65">
-          The Retreat is four days, and yet on retreat those days can be life
-          changing. I&apos;ve had many such experiences — leaving home not
-          knowing what to expect, tired and not altogether convinced it will be
-          worth the journey. Only to return home on Sunday feeling a kind of
-          soul revival — a renewed sense of purpose and enthusiasm for life.
+          The Retreat is four days, and yet on retreat those days can be life changing. I&apos;ve
+          had many such experiences — leaving home not knowing what to expect, tired and not
+          altogether convinced it will be worth the journey. Only to return home on Sunday feeling a
+          kind of soul revival — a renewed sense of purpose and enthusiasm for life.
         </p>
       </div>
 
@@ -171,18 +161,14 @@ const SnowdoniaRetreat = () => {
       <div className="mb-12">
         <h2 className="text-center mb-8">What&apos;s Included</h2>
         <p className="text-center text-black/60 text-sm w-full mb-8">
-          Everything is taken care of, so you can simply arrive, breathe in the
-          beauty of the valley, and allow yourself to be restored and
-          revitalised.
+          Everything is taken care of, so you can simply arrive, breathe in the beauty of the
+          valley, and allow yourself to be restored and revitalised.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {included.map((item, i) => {
             const Icon = item.icon;
             return (
-              <Card
-                key={i}
-                className="border border-customBeige/60 bg-white text-left"
-              >
+              <Card key={i} className="border border-customBeige/60 bg-white text-left">
                 <CardContent className="p-5">
                   <div className="flex items-center gap-3 mb-3">
                     <Icon className="w-5 h-5 text-customTeal shrink-0" strokeWidth={1.5} />
@@ -211,9 +197,7 @@ const SnowdoniaRetreat = () => {
           <p className="text-white/75 text-sm mt-1">Payment plans available</p>
         </div>
         <div className="p-6 bg-white space-y-3">
-          <p className="text-sm text-customSienna font-semibold">
-            Only 2 spaces remaining
-          </p>
+          <p className="text-sm text-customSienna font-semibold">Only 2 spaces remaining</p>
           <p className="text-sm text-black/60">
             If you&apos;d like one of the remaining places, email Rose to register.
           </p>
@@ -227,12 +211,9 @@ const SnowdoniaRetreat = () => {
 
       {/* Closing */}
       <div className="max-w-md mx-auto text-center mb-8">
-        <p className="italic text-black/50 text-sm">
-          &ldquo;I&apos;d love you to come.&rdquo;
-        </p>
+        <p className="italic text-black/50 text-sm">&ldquo;I&apos;d love you to come.&rdquo;</p>
         <p className="text-sm mt-2">Love, Rose</p>
       </div>
-
     </div>
   );
 };

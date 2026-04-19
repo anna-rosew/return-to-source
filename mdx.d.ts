@@ -1,11 +1,11 @@
-declare module "*.mdx" {
-  import type { ReactNode } from "react";
+declare module '*.mdx' {
+  import type { ReactNode } from 'react';
 
   export const frontMatter: {
     title: string;
     excerpt: string;
     date: string;
-    type: "short-article" | "long-article" | "podcast" | "recipe";
+    type: 'short-article' | 'long-article' | 'podcast' | 'recipe';
     tags: string[];
     featured: boolean;
     coverImage: string;

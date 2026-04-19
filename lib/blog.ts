@@ -1,21 +1,21 @@
-import fs from "fs/promises"; 
-import path from "path";
-import matter from "gray-matter";
-import { Post, MDXContent } from "@/types/index";
+import fs from 'fs/promises';
+import path from 'path';
+import matter from 'gray-matter';
+import { Post, MDXContent } from '@/types/index';
 
-const postsDirectory = path.join(process.cwd(), "content/blog");
+const postsDirectory = path.join(process.cwd(), 'content/blog');
 
 export async function getAllPosts(): Promise<Post[]> {
   // Use async version
   const fileNames = await fs.readdir(postsDirectory);
 
   const postsPromises = fileNames
-    .filter((fileName) => fileName.endsWith(".mdx"))
+    .filter((fileName) => fileName.endsWith('.mdx'))
     .map(async (fileName) => {
-      const slug = fileName.replace(/\.mdx$/, "");
+      const slug = fileName.replace(/\.mdx$/, '');
       const fullPath = path.join(postsDirectory, fileName);
       // Use async version
-      const fileContents = await fs.readFile(fullPath, "utf8");
+      const fileContents = await fs.readFile(fullPath, 'utf8');
       const { data } = matter(fileContents);
 
       return {
@@ -27,9 +27,7 @@ export async function getAllPosts(): Promise<Post[]> {
   // Wait for all promises to resolve
   const posts = await Promise.all(postsPromises);
 
-  return posts.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export async function getPostBySlug(slug: string): Promise<MDXContent | null> {
@@ -38,7 +36,7 @@ export async function getPostBySlug(slug: string): Promise<MDXContent | null> {
     const fullPath = path.join(postsDirectory, `${slug}.mdx`);
 
     // Use async version
-    const fileContents = await fs.readFile(fullPath, "utf8");
+    const fileContents = await fs.readFile(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
     console.log(`Successfully read post with slug: ${slug}`);

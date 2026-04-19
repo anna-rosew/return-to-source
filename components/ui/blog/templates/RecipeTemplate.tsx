@@ -1,5 +1,5 @@
-import { MDXContent } from "@/types";
-import Image from "next/image";
+import { MDXContent } from '@/types';
+import Image from 'next/image';
 
 interface RecipeTemplateProps {
   content: MDXContent & {

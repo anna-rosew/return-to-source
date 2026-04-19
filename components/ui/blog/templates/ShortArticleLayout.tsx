@@ -1,18 +1,15 @@
-import { MDXContent } from "@/types";
-import { ArticleHeader } from "./ArticleHeader";
-import { ArticleContent } from "./ArticleContent";
-import { CallToAction } from "./CallToAction";
-import { ArticleFooter } from "./ArticleFooter";
+import { MDXContent } from '@/types';
+import { ArticleHeader } from './ArticleHeader';
+import { ArticleContent } from './ArticleContent';
+import { CallToAction } from './CallToAction';
+import { ArticleFooter } from './ArticleFooter';
 
 interface ShortArticleLayoutProps {
   content: MDXContent;
-  type: "short-article";
+  type: 'short-article';
 }
 
-export const ShortArticleLayout = ({
-  content,
-  type,
-}: ShortArticleLayoutProps) => (
+export const ShortArticleLayout = ({ content, type }: ShortArticleLayoutProps) => (
   <article className="prose prose-base max-w-4xl mx-auto">
     <ArticleHeader content={content} type={type} />
     <ArticleContent content={content} />

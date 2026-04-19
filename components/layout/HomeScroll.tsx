@@ -1,5 +1,5 @@
-import { serviceData } from "@/content/serviceData";
-import { ServiceCard } from "@/components/ui/ServiceCard";
+import { serviceData } from '@/content/serviceData';
+import { ServiceCard } from '@/components/ui/ServiceCard';
 
 export default function HomeScroll() {
   return (

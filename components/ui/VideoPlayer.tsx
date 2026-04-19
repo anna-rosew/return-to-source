@@ -1,7 +1,7 @@
-"use client";
-import { useRef } from "react";
-import ReactPlayer from "react-player/lazy";
-import { Play } from "phosphor-react";
+'use client';
+import { useRef } from 'react';
+import ReactPlayer from 'react-player/lazy';
+import { Play } from 'phosphor-react';
 
 type VideoPlayerProps = {
   url: string;

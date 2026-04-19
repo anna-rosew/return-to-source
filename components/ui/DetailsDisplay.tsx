@@ -1,5 +1,5 @@
-import React from "react";
-import { DetailsDisplayProps } from "@/types/index";
+import React from 'react';
+import { DetailsDisplayProps } from '@/types/index';
 
 const DetailsDisplay: React.FC<DetailsDisplayProps> = ({ displayInfo }) => {
   const Icon = displayInfo.icon;

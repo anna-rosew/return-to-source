@@ -1,31 +1,31 @@
-import { Button } from "@/components/ui/button";
-import DetailsCard from "@/components/ui/DetailsCard";
-import TestimonialSection from "@/components/ui/testimonials/TestimonialSection";
-import VideoPlayer from "@/components/ui/VideoPlayer";
-import AjnaIcon from "@/public/Assets/Icons/AjnaIcon";
-import AnahataIcon from "@/public/Assets/Icons/AnahataIcon";
-import MuladharaIcon from "@/public/Assets/Icons/MuladharaIcon";
-import StarIcon from "@/public/Assets/Icons/StarIcon";
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
-import React from "react";
+import { Button } from '@/components/ui/button';
+import DetailsCard from '@/components/ui/DetailsCard';
+import TestimonialSection from '@/components/ui/testimonials/TestimonialSection';
+import VideoPlayer from '@/components/ui/VideoPlayer';
+import AjnaIcon from '@/public/Assets/Icons/AjnaIcon';
+import AnahataIcon from '@/public/Assets/Icons/AnahataIcon';
+import MuladharaIcon from '@/public/Assets/Icons/MuladharaIcon';
+import StarIcon from '@/public/Assets/Icons/StarIcon';
+import { ChevronRight } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
 
 const approach = () => {
   const cardDetails = [
     {
       Icon: MuladharaIcon,
-      title: "Build Courage",
-      text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.",
+      title: 'Build Courage',
+      text: 'This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.',
     },
     {
       Icon: AjnaIcon,
-      title: "Find Clarity",
-      text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.",
+      title: 'Find Clarity',
+      text: 'This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.',
     },
     {
       Icon: AnahataIcon,
-      title: "Be Present",
-      text: "This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.",
+      title: 'Be Present',
+      text: 'This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.',
     },
   ];
 
@@ -34,8 +34,8 @@ const approach = () => {
       <div className="container  w-full">
         <h1>Approach</h1>
         <p className="font-bold md:text-center">
-          Come and explore how your body, mind and breath work together. Open
-          yourself to new dimensions of experience and personal growth
+          Come and explore how your body, mind and breath work together. Open yourself to new
+          dimensions of experience and personal growth
         </p>
         <VideoPlayer url="https://vimeo.com/981928855" />
 
@@ -55,16 +55,11 @@ const approach = () => {
           </div>
           <div className="pl-8">
             <p className="text-customTeal">
-              The ancients knew the power of the mind, body and the breath, and
-              modern research is proving what they knew; you can alter your own
-              body and mind.
+              The ancients knew the power of the mind, body and the breath, and modern research is
+              proving what they knew; you can alter your own body and mind.
             </p>
             <Link href="/work">
-              <Button
-                variant="secondary"
-                size="lg"
-                className="my-3 md:mr-auto w-full md:w-auto "
-              >
+              <Button variant="secondary" size="lg" className="my-3 md:mr-auto w-full md:w-auto ">
                 Start my journey
               </Button>
             </Link>
@@ -84,9 +79,8 @@ const approach = () => {
         </div>
         <div className="m-8">
           <p className="text-center">
-            If you feel ready to embark on your journey of discovery or are
-            simply interested, we are always here to{" "}
-            <strong>have a chat.</strong> So, why not{"  "}
+            If you feel ready to embark on your journey of discovery or are simply interested, we
+            are always here to <strong>have a chat.</strong> So, why not{'  '}
             <span className="inline-flex items-center gap-x-4">
               <Link href="/work" className="flex items-center font-medium">
                 <strong>get in touch</strong>

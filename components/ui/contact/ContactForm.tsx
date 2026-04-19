@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Button } from "../button";
+import { useState } from 'react';
+import { Button } from '../button';
 
 const ContactForm = () => {
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
   });
 
   const handleChange = (
@@ -20,7 +20,9 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const body = `Hi Rose,\n\n${form.message}\n\nBest,\n${form.name}\n${form.email}`;
-    const mailto = `mailto:rose_long@icloud.com?subject=${encodeURIComponent(form.subject || "Enquiry from website")}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:rose_long@icloud.com?subject=${encodeURIComponent(
+      form.subject || 'Enquiry from website'
+    )}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
   };
 
@@ -28,8 +30,8 @@ const ContactForm = () => {
     <div className="w-full text-left">
       <h2 className="mb-2">Get in Touch</h2>
       <p className="text-black/65 text-sm mb-6">
-        If you&apos;d like to book a <strong>class, workshop, or retreat,</strong> or
-        have any questions, please don&apos;t hesitate to reach out.
+        If you&apos;d like to book a <strong>class, workshop, or retreat,</strong> or have any
+        questions, please don&apos;t hesitate to reach out.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">

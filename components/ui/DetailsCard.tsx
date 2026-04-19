@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 type DetailsCardProps = {
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -24,9 +24,7 @@ const DetailsCard = (props: DetailsCardProps) => {
         <h2 className="text-customSienna group-hover:text-customBeige transition-colors duration-700">
           {title}
         </h2>
-        <p className="text-black group-hover:text-white transition-colors duration-700">
-          {text}
-        </p>
+        <p className="text-black group-hover:text-white transition-colors duration-700">{text}</p>
       </div>
     </div>
   );

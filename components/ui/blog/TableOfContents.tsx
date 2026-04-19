@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { ArrowLeft, ChevronRight } from "lucide-react";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { ArrowLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 interface Section {
   id: string;
@@ -15,7 +15,7 @@ interface TableOfContentsProps {
 }
 
 export default function TableOfContents({ sections }: TableOfContentsProps) {
-  const [activeSection, setActiveSection] = useState<string>("");
+  const [activeSection, setActiveSection] = useState<string>('');
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,7 +30,7 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
     );
 
     // Log initial sections
-    console.log("Sections to observe:", sections);
+    console.log('Sections to observe:', sections);
 
     // Observer setup
     sections.forEach((section) => {
@@ -57,24 +57,24 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
 
       // Log position calculations
       const elementPosition = element.getBoundingClientRect().top;
-      console.log("Element position:", elementPosition);
+      console.log('Element position:', elementPosition);
 
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
-      console.log("Target scroll position:", offsetPosition);
+      console.log('Target scroll position:', offsetPosition);
 
       // Attempt scroll
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
-      console.log("Scroll initiated");
+      console.log('Scroll initiated');
     } else {
       console.warn(`No element found with id: ${sectionId}`);
 
       // Log all available heading elements
-      const allHeadings = document.querySelectorAll("h1, h2, h3");
+      const allHeadings = document.querySelectorAll('h1, h2, h3');
       console.log(
-        "Available headings:",
+        'Available headings:',
         Array.from(allHeadings).map((h) => ({
           id: h.id,
           text: h.textContent,
@@ -95,9 +95,7 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
             <button
               onClick={() => scrollToSection(section.id)}
               className={`w-full text-left border-b border-black transition-colorsflex my-1 pb-1 items-center justify-center md:justify-start group ${
-                activeSection === section.id
-                  ? "bg-gray-200 text-black"
-                  : "text-gray-600"
+                activeSection === section.id ? 'bg-gray-200 text-black' : 'text-gray-600'
               }`}
             >
               <p className="flex items-center gap-x-2 font-medium m-0 text-black text-center md:text-left">

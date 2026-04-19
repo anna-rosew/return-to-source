@@ -1,27 +1,27 @@
-import type { NextConfig } from "next";
-import withMDX from "@next/mdx";
+import type { NextConfig } from 'next';
+import withMDX from '@next/mdx';
 
 const nextConfig: NextConfig = {
   images: {
-    formats: ["image/avif", "image/webp"] as const,
+    formats: ['image/avif', 'image/webp'] as const,
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "assets.vercel.com",
-        port: "",
-        pathname: "/image/upload/**",
+        protocol: 'https',
+        hostname: 'assets.vercel.com',
+        port: '',
+        pathname: '/image/upload/**',
       },
     ],
   },
   reactStrictMode: true,
-  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
 };
 
 const mdxConfig = withMDX({
   options: {
     remarkPlugins: [],
     rehypePlugins: [],
-    providerImportSource: "@mdx-js/react",
+    providerImportSource: '@mdx-js/react',
   },
 });
 

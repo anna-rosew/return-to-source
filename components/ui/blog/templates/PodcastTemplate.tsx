@@ -1,14 +1,14 @@
-"use client";
-import { MDXContent } from "@/types";
-import Link from "next/link";
-import Image from "next/image";
-import { ArticleFooter } from "./ArticleFooter";
-import { PodcastHeader } from "./PodcastHeader";
-import { Clock, Play } from "lucide-react";
-import CopyButton from "../../CopyButton";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import { Button } from "../../button";
+'use client';
+import { MDXContent } from '@/types';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArticleFooter } from './ArticleFooter';
+import { PodcastHeader } from './PodcastHeader';
+import { Clock, Play } from 'lucide-react';
+import CopyButton from '../../CopyButton';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { Button } from '../../button';
 
 interface PodcastTemplateProps {
   content: MDXContent & {
@@ -26,7 +26,7 @@ export function PodcastTemplate({ content }: PodcastTemplateProps) {
   useEffect(() => {
     setShareUrl(`${window.location.origin}${pathname}`);
   }, [pathname]);
-  const [shareUrl, setShareUrl] = useState<string>("");
+  const [shareUrl, setShareUrl] = useState<string>('');
 
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
@@ -77,9 +77,7 @@ export function PodcastTemplate({ content }: PodcastTemplateProps) {
             </div>
 
             {/* Mobile Share Button */}
-            {shareUrl && (
-              <CopyButton textToCopy={shareUrl} className="md:hidden mt-4" />
-            )}
+            {shareUrl && <CopyButton textToCopy={shareUrl} className="md:hidden mt-4" />}
             <div>{content.children}</div>
 
             <Button variant="secondary">
@@ -87,11 +85,7 @@ export function PodcastTemplate({ content }: PodcastTemplateProps) {
               <span className="font-medium">Listen to Episode</span>
             </Button>
 
-            <Link
-              href={content.audioUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href={content.audioUrl} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center gap-1"></div>
             </Link>
           </div>

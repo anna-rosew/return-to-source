@@ -1,23 +1,20 @@
 // components/ui/blog/templates/LongArticleLayout.tsx
-"use client";
-import { MDXContent } from "@/types/index";
-import Image from "next/image";
-import { ArticleHeader } from "./ArticleHeader";
-import { CallToAction } from "./CallToAction";
+'use client';
+import { MDXContent } from '@/types/index';
+import Image from 'next/image';
+import { ArticleHeader } from './ArticleHeader';
+import { CallToAction } from './CallToAction';
 // import TableOfContents from "../TableOfContents";
-import { ArticleFooter } from "./ArticleFooter";
+import { ArticleFooter } from './ArticleFooter';
 // import { ArrowLeft } from "lucide-react";
 // import Link from "next/link";
 
 interface LongArticleLayoutProps {
   content: MDXContent;
-  type: "long-article";
+  type: 'long-article';
 }
 
-export const LongArticleLayout = ({
-  content,
-  type,
-}: LongArticleLayoutProps) => {
+export const LongArticleLayout = ({ content, type }: LongArticleLayoutProps) => {
   return (
     <article className="prose prose-xl max-w-4xl mx-auto text-left space-y-12 leading-relaxed">
       <ArticleHeader content={content} type={type} />

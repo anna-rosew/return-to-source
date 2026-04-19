@@ -1,8 +1,8 @@
-import { MDXContent } from "@/types/index";
-import { Button } from "../../button";
-import Link from "next/link";
-import { Badge } from "../../badge";
-import { ArrowLeft } from "lucide-react";
+import { MDXContent } from '@/types/index';
+import { Button } from '../../button';
+import Link from 'next/link';
+import { Badge } from '../../badge';
+import { ArrowLeft } from 'lucide-react';
 
 interface ArticleFooterProps {
   content: MDXContent;

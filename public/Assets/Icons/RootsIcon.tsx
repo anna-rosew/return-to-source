@@ -1,9 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const HumanIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
-  fill = "white",
-  ...props
-}) => {
+const HumanIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({ fill = 'white', ...props }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

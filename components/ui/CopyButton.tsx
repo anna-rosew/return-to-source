@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Copy, Check } from "lucide-react";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import { useState } from 'react';
+import { Copy, Check } from 'lucide-react';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 
 interface CopyButtonProps {
   textToCopy: string;
@@ -10,11 +10,7 @@ interface CopyButtonProps {
   showAlert?: boolean;
 }
 
-export const CopyButton = ({
-  textToCopy,
-  className = "",
-  showAlert = true,
-}: CopyButtonProps) => {
+export const CopyButton = ({ textToCopy, className = '', showAlert = true }: CopyButtonProps) => {
   const [copied, setCopied] = useState(false);
   const [showCopyAlert, setShowCopyAlert] = useState(false);
 
@@ -32,7 +28,7 @@ export const CopyButton = ({
         setShowCopyAlert(false);
       }, 2000);
     } catch (err) {
-      console.error("Failed to copy text:", err);
+      console.error('Failed to copy text:', err);
     }
   };
 
@@ -49,9 +45,7 @@ export const CopyButton = ({
 
       {showCopyAlert && showAlert && (
         <Alert className="fixed bottom-4 right-4 w-auto bg-green-50 border-green-200 z-50">
-          <AlertDescription className="text-green-800">
-            Link copied to clipboard!
-          </AlertDescription>
+          <AlertDescription className="text-green-800">Link copied to clipboard!</AlertDescription>
         </Alert>
       )}
     </>

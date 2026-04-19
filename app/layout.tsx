@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 
-import "./globals.css";
-import NavBar from "../components/navigation/NavBar";
-import Footer from "../components/layout/Footer";
+import './globals.css';
+import NavBar from '../components/navigation/NavBar';
+import Footer from '../components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: "...",
-  description: "...",
+  title: '...',
+  description: '...',
 };
 
 export default function RootLayout({
@@ -15,11 +15,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log("Environment:", process.env.NODE_ENV);
-  console.log(
-    "Under Construction:",
-    process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION
-  );
+  console.log('Environment:', process.env.NODE_ENV);
+  console.log('Under Construction:', process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION);
   return (
     <html lang="en">
       <body className="min-h-screen bg-customLightBeige">

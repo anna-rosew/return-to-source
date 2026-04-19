@@ -35,16 +35,23 @@ bashCopygit clone https://github.com/anna-rosew/blog-site.git
 cd blog-site
 
 ### Install dependencies:
+
 bashCopynpm install
+
 # or
+
 yarn install
 
 ### Create a .env.local file with the following variables:
+
 Copy# Add any environment variables needed, like API keys, database connections, etc.
 
 ### Run the development server:
+
 bashCopynpm run dev
+
 # or
+
 yarn dev
 
 Navigate to http://localhost:3000/blog to see the issue in action
@@ -64,7 +71,6 @@ Next.js 14
 TypeScript
 Tailwind CSS
 
-
 ## How to Submit Fixes
 
 Create a new branch:
@@ -79,5 +85,6 @@ git push origin fix-blog-issue
 Create a pull request against the main branch
 
 ## Contact
+
 If you have any questions or need additional information, please contact me at annarosewain9@gmail.com.
 Thank you for your help with debugging this issue!

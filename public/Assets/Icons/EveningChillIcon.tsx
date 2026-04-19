@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const EveningChillIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
-  fill = "white",
+  fill = 'white',
   ...props
 }) => {
   return (

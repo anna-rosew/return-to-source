@@ -1,8 +1,8 @@
-import SunIcon from "@/public/Assets/Icons/SunIcon";
+import SunIcon from '@/public/Assets/Icons/SunIcon';
 
-import Link from "next/link";
-import React from "react";
-import { Button } from "../ui/button";
+import Link from 'next/link';
+import React from 'react';
+import { Button } from '../ui/button';
 
 interface ConstructionLayoutProps {
   children: React.ReactNode;
@@ -10,8 +10,7 @@ interface ConstructionLayoutProps {
 }
 
 const ConstructionLayout = ({ children, message }: ConstructionLayoutProps) => {
-  const isUnderConstruction =
-    process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION === "true";
+  const isUnderConstruction = process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION === 'true';
 
   if (isUnderConstruction) {
     return (
@@ -26,8 +25,7 @@ const ConstructionLayout = ({ children, message }: ConstructionLayoutProps) => {
                 <span>{message}</span>
                 <br />
                 <span>
-                  For more information, visit the{" "}
-                  <Link href="/contact">Contact page</Link>.
+                  For more information, visit the <Link href="/contact">Contact page</Link>.
                 </span>
                 <Link href="/work">
                   <Button variant="outline" size="lg" className="my-5 mx-auto">
@@ -40,8 +38,7 @@ const ConstructionLayout = ({ children, message }: ConstructionLayoutProps) => {
                 <span>Check back soon!</span>
                 <br />
                 <span>
-                  In the meantime, you take a look at{" "}
-                  <Link href="/blog">classes & retreats.</Link>
+                  In the meantime, you take a look at <Link href="/blog">classes & retreats.</Link>
                 </span>
                 <Link href="/work">
                   <Button variant="outline" size="lg" className="my-5 mx-auto">

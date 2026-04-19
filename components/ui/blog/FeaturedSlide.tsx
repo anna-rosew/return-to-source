@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { Post } from "@/types";
-import { Button } from "../button";
-import { ChevronRight } from "lucide-react";
-import { PostTypeIcon } from "./PostTypeIcon";
+import Link from 'next/link';
+import { Post } from '@/types';
+import { Button } from '../button';
+import { ChevronRight } from 'lucide-react';
+import { PostTypeIcon } from './PostTypeIcon';
 
 interface FeaturedSlideProps {
   post: Post;
@@ -16,7 +16,7 @@ export function FeaturedSlide({ post }: FeaturedSlideProps) {
           className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{
             backgroundImage: `url(${post.coverImage})`,
-            borderRadius: "inherit",
+            borderRadius: 'inherit',
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg" />
@@ -26,17 +26,11 @@ export function FeaturedSlide({ post }: FeaturedSlideProps) {
           <div className="w-full lg:w-1/2 md:w-2/3 flex flex-col mt-32 md:mt-20 md:mx-10">
             <div className="flex items-center px-3 py-1 gap-2 mb-2 bg-white/30 rounded-sm w-fit">
               <PostTypeIcon type={post.type} className="text-white" size={20} />
-              <p className="text-base font-medium text-white capitalize">
-                {post.type}
-              </p>
+              <p className="text-base font-medium text-white capitalize">{post.type}</p>
             </div>
 
-            <h2 className="text-3xl md:text-5xl mb-6 text-white leading-tight">
-              {post.title}
-            </h2>
-            <h3 className="mb-6 text-lg text-white/70 tracking-widest ">
-              {post.date}
-            </h3>
+            <h2 className="text-3xl md:text-5xl mb-6 text-white leading-tight">{post.title}</h2>
+            <h3 className="mb-6 text-lg text-white/70 tracking-widest ">{post.date}</h3>
 
             <Button variant="primary" size="lg" className="w-auto self-start">
               Find post

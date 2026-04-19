@@ -1,9 +1,9 @@
-"use client";
-import React from "react";
-import VideoPlayer from "../VideoPlayer";
-import StarIcon from "@/public/Assets/Icons/StarIcon";
-import Link from "next/link";
-import { Button } from "../button";
+'use client';
+import React from 'react';
+import VideoPlayer from '../VideoPlayer';
+import StarIcon from '@/public/Assets/Icons/StarIcon';
+import Link from 'next/link';
+import { Button } from '../button';
 
 const HomeCTA = () => {
   return (
@@ -24,9 +24,7 @@ const HomeCTA = () => {
         </p> */}
       </div>
       <div>
-        <VideoPlayer
-          url="https://vimeo.com/1128592039?fl=tl&fe=ec"
-        />
+        <VideoPlayer url="https://vimeo.com/1128592039?fl=tl&fe=ec" />
         <Link href="/work">
           <Button variant="secondary" size="lg" className="mb-12 mx-auto">
             More Classes
