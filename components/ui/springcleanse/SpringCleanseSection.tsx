@@ -160,26 +160,26 @@ function WeekCard({
 }) {
   return (
     <Card className="overflow-hidden border-customBeige/60">
-      <CardHeader className="bg-customTeal py-3 px-4 space-y-0">
-        <CardTitle className="text-white font-jost font-semibold text-sm tracking-wide">
+      <CardHeader className="space-y-0 bg-customTeal px-4 py-3">
+        <CardTitle className="font-jost text-sm font-semibold tracking-wide text-white">
           {title}
         </CardTitle>
-        {subtitle && <p className="text-white/75 text-xs m-0 mt-0.5 leading-tight">{subtitle}</p>}
+        {subtitle && <p className="m-0 mt-0.5 text-xs leading-tight text-white/75">{subtitle}</p>}
       </CardHeader>
       <CardContent className="p-0">
         {entries.map((entry, i) => (
           <div
             key={i}
-            className={`flex items-start gap-3 px-4 py-2.5 border-b border-black/5 last:border-0 ${
+            className={`flex items-start gap-3 border-b border-black/5 px-4 py-2.5 last:border-0 ${
               activityStyle[entry.type]
             }`}
           >
-            <span className="min-w-[62px] font-jost text-xs font-semibold shrink-0 pt-0.5">
+            <span className="min-w-[62px] shrink-0 pt-0.5 font-jost text-xs font-semibold">
               {entry.day}
             </span>
-            <div className="flex-1 min-w-0">
-              <p className="text-xs font-semibold m-0 leading-tight">{entry.activity}</p>
-              {entry.time && <p className="text-xs opacity-60 m-0 mt-0.5">{entry.time}</p>}
+            <div className="min-w-0 flex-1">
+              <p className="m-0 text-xs font-semibold leading-tight">{entry.activity}</p>
+              {entry.time && <p className="m-0 mt-0.5 text-xs opacity-60">{entry.time}</p>}
             </div>
           </div>
         ))}
@@ -196,8 +196,8 @@ const SpringCleanseSection = () => {
       <SectionHeading title="Spring Cleanse 2026" />
 
       {/* ── Intro ── */}
-      <div className="max-w-2xl mx-auto md:py-8 py-4 text-center">
-        <p className="italic text-customSienna font-semibold md:text-center">
+      <div className="mx-auto max-w-2xl py-4 text-center md:py-8">
+        <p className="font-semibold italic text-customSienna md:text-center">
           Feeling heavy, foggy, or just a little &ldquo;off&rdquo; after winter? This is your
           invitation to reset.
         </p>
@@ -207,7 +207,7 @@ const SpringCleanseSection = () => {
         </p>
       </div>
 
-      <div className="relative w-full h-56 md:h-72 rounded-lg overflow-hidden mb-10">
+      <div className="relative mb-10 h-56 w-full overflow-hidden rounded-lg md:h-72">
         <Image
           src="/Assets/Images/spring_cleanse.jpg"
           alt="Spring Cleanse 2026"
@@ -218,13 +218,13 @@ const SpringCleanseSection = () => {
 
       {/* ── Benefits ── */}
       <div className="mb-10">
-        <h3 className="text-center mb-5">What to expect</h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <h3 className="mb-5 text-center">What to expect</h3>
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
           {benefits.map((b, i) => (
             <Card key={i} className="border-customBeige/50 bg-customLightBeige/50 text-left">
               <CardContent className="p-4">
-                <p className="font-semibold text-customTeal m-0 text-sm leading-snug">{b.label}</p>
-                <p className="text-xs text-black/65 m-0 mt-1 leading-snug">{b.detail}</p>
+                <p className="m-0 text-sm font-semibold leading-snug text-customTeal">{b.label}</p>
+                <p className="m-0 mt-1 text-xs leading-snug text-black/65">{b.detail}</p>
               </CardContent>
             </Card>
           ))}
@@ -244,12 +244,12 @@ const SpringCleanseSection = () => {
 
       {/* ── Schedule ── */}
       <div className="mb-10">
-        <h3 className="text-center mb-1">Your Schedule</h3>
-        <p className="text-center text-sm text-black/60 mb-6 md:text-center">
+        <h3 className="mb-1 text-center">Your Schedule</h3>
+        <p className="mb-6 text-center text-sm text-black/60 md:text-center">
           All sessions are live and recorded — catch up any time.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <WeekCard title="Week 1 · 1–8 March" entries={week1} />
           <WeekCard title="Week 2 · 9–15 March" entries={week2} />
           <WeekCard
@@ -260,11 +260,11 @@ const SpringCleanseSection = () => {
         </div>
 
         {/* Legend */}
-        <div className="flex flex-wrap gap-2 justify-center mt-4">
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
           {legend.map(({ type, label }) => (
             <span
               key={type}
-              className={`text-xs px-3 py-1 rounded-full border font-jost ${activityStyle[type]}`}
+              className={`rounded-full border px-3 py-1 font-jost text-xs ${activityStyle[type]}`}
             >
               {label}
             </span>
@@ -274,45 +274,45 @@ const SpringCleanseSection = () => {
 
       {/* ── What's included ── */}
       <div className="mb-10">
-        <h3 className="text-center mb-6">What&apos;s included</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 max-w-2xl mx-auto">
+        <h3 className="mb-6 text-center">What&apos;s included</h3>
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-10 gap-y-3 md:grid-cols-2">
           {included.map((item, i) => (
             <div key={i} className="flex items-start gap-2 text-left">
-              <span className="text-customTeal shrink-0 mt-0.5 text-xs">✦</span>
-              <p className="text-sm m-0 leading-snug">{item}</p>
+              <span className="mt-0.5 shrink-0 text-xs text-customTeal">✦</span>
+              <p className="m-0 text-sm leading-snug">{item}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* ── Testimonial ── */}
-      <div className="max-w-xl mx-auto mb-8">
+      <div className="mx-auto mb-8 max-w-xl">
         <div className="quote">
-          <p className="italic text-sm m-0">
+          <p className="m-0 text-sm italic">
             &ldquo;Feeling lighter, clearer, energised — arthritis hugely improved, more focused. Am
             going to continue. THANK YOU!&rdquo;
           </p>
         </div>
-        <p className="text-xs text-right text-black/50 mt-1 m-0 pr-3">— E.H.</p>
+        <p className="m-0 mt-1 pr-3 text-right text-xs text-black/50">— E.H.</p>
       </div>
 
       {/* ── Pricing ── */}
-      <Card className="max-w-sm mx-auto border-customTeal overflow-hidden text-center">
+      <Card className="mx-auto max-w-sm overflow-hidden border-customTeal text-center">
         <CardHeader className="bg-customTeal py-4">
-          <CardTitle className="text-white font-jost font-semibold">Your Investment</CardTitle>
+          <CardTitle className="font-jost font-semibold text-white">Your Investment</CardTitle>
         </CardHeader>
         <CardContent className="p-6">
-          <p className="text-4xl font-jomolhari text-customTeal m-0">£135</p>
-          <p className="text-sm text-black/55 mt-1 m-0">Members: £65</p>
+          <p className="m-0 font-jomolhari text-4xl text-customTeal">£135</p>
+          <p className="m-0 mt-1 text-sm text-black/55">Members: £65</p>
 
-          <div className="border border-customBeige rounded-lg p-4 my-4 bg-customLightBeige text-left">
-            <p className="text-sm font-semibold text-customSienna m-0">Special offer</p>
-            <p className="text-sm m-0 mt-1 leading-snug">
+          <div className="my-4 rounded-lg border border-customBeige bg-customLightBeige p-4 text-left">
+            <p className="m-0 text-sm font-semibold text-customSienna">Special offer</p>
+            <p className="m-0 mt-1 text-sm leading-snug">
               Sign up with a friend — you both receive 50% off. Just £65 each.
             </p>
           </div>
 
-          <p className="text-sm font-semibold text-customTeal m-0">Ready? Email me to register.</p>
+          <p className="m-0 text-sm font-semibold text-customTeal">Ready? Email me to register.</p>
         </CardContent>
       </Card>
     </section>

@@ -9,7 +9,6 @@ import { Trees } from 'lucide-react';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
-
 export const metadata: Metadata = {
   title: 'One-to-One Sessions | Rose Long',
   description:
@@ -36,13 +35,13 @@ const Onetoone = () => {
   ];
   return (
     <div>
-      <div className="container  w-full">
+      <div className="container w-full">
         <h1>One-to-One</h1>
         <h3>Unlock the Answers from Within.</h3>
         <VideoPlayer url="https://vimeo.com/981928855" />
 
         <Link href="/contact">
-          <Button variant="primary" size="lg" className="my-3 w-full md:w-auto mx-auto">
+          <Button variant="primary" size="lg" className="mx-auto my-3 w-full md:w-auto">
             Book a free 30 minute session
           </Button>
         </Link>
@@ -55,7 +54,7 @@ const Onetoone = () => {
             insights arise, answers are revealed, and <strong>potential is unlocked.</strong>
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-8">
           {cardDetails.map((content, index) => (
             <DetailsCard
               key={index}

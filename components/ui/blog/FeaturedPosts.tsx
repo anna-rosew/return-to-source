@@ -17,7 +17,7 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
   const featuredPosts = posts.filter((post) => post.featured).slice(0, 3);
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
+    <div className="relative mx-auto w-full max-w-6xl">
       <Swiper
         modules={[Navigation, Pagination]}
         slidesPerView={1}
@@ -34,8 +34,8 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
         ))}
 
         <div className="medium-screen-component">
-          <div className="swiper-button-prev absolute left-4 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"></div>
-          <div className="medium-screen-component swiper-button-next absolute right-4 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"></div>
+          <div className="swiper-button-prev absolute left-4 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer"></div>
+          <div className="medium-screen-component swiper-button-next absolute right-4 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer"></div>
         </div>
       </Swiper>
     </div>

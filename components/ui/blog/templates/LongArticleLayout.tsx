@@ -16,7 +16,7 @@ interface LongArticleLayoutProps {
 
 export const LongArticleLayout = ({ content, type }: LongArticleLayoutProps) => {
   return (
-    <article className="prose prose-xl max-w-4xl mx-auto text-left space-y-12 leading-relaxed">
+    <article className="prose prose-xl mx-auto max-w-4xl space-y-12 text-left leading-relaxed">
       <ArticleHeader content={content} type={type} />
 
       {/* Intro section with ToC */}
@@ -34,12 +34,12 @@ export const LongArticleLayout = ({ content, type }: LongArticleLayoutProps) => 
       <div className="mt-8">{content.children}</div>
 
       {content.contentImage && (
-        <div className="relative w-full h-[400px] my-8 text-left">
+        <div className="relative my-8 h-[400px] w-full text-left">
           <Image
             src={content.contentImage}
             alt="Content illustration"
             fill
-            className="object-cover rounded-lg"
+            className="rounded-lg object-cover"
           />
         </div>
       )}

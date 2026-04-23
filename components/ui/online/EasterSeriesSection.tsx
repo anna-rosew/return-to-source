@@ -99,11 +99,11 @@ const membershipDeals = [
 const EasterSeriesSection = () => {
   return (
     <section className="easter-series mb-12 mt-4">
-      <h2 className="text-center my-6">Spring Awakening: The Easter Series</h2>
+      <h2 className="my-6 text-center">Spring Awakening: The Easter Series</h2>
 
       {/* Intro */}
-      <div className="max-w-2xl mx-auto md:py-8 py-4 text-center">
-        <p className="italic text-customSienna font-semibold md:text-center">
+      <div className="mx-auto max-w-2xl py-4 text-center md:py-8">
+        <p className="font-semibold italic text-customSienna md:text-center">
           Six classes. Six chakras. One awakening.
         </p>
         <p className="mt-2 md:text-center">
@@ -114,47 +114,47 @@ const EasterSeriesSection = () => {
       </div>
 
       {/* Class cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+      <div className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {easterClasses.map((cls, i) => {
           const Icon = cls.Icon;
           return (
             <div
               key={i}
-              className="flex flex-col text-left bg-white border border-customBeige/70 rounded-xl overflow-hidden"
+              className="flex flex-col overflow-hidden rounded-xl border border-customBeige/70 bg-white text-left"
             >
               {/* coloured top bar */}
               <div className="h-1 w-full" style={{ backgroundColor: cls.color }} />
 
-              <div className="p-5 flex flex-col flex-1">
+              <div className="flex flex-1 flex-col p-5">
                 {/* icon + chakra label row */}
-                <div className="flex items-center justify-between mb-3">
+                <div className="mb-3 flex items-center justify-between">
                   <p
-                    className="text-xs tracking-widest uppercase m-0 font-medium"
+                    className="m-0 text-xs font-medium uppercase tracking-widest"
                     style={{ color: cls.color }}
                   >
                     {cls.chakra}
                   </p>
                   <div style={{ color: cls.color }}>
                     {cls.iconType === 'lucide' ? (
-                      <Icon className="w-5 h-5" strokeWidth={1.5} stroke={cls.color} fill="none" />
+                      <Icon className="h-5 w-5" strokeWidth={1.5} stroke={cls.color} fill="none" />
                     ) : (
-                      <Icon className="w-6 h-6" width={24} height={24} />
+                      <Icon className="h-6 w-6" width={24} height={24} />
                     )}
                   </div>
                 </div>
 
                 {/* name */}
-                <h3 className="font-jomolhari text-2xl m-0 mb-2 leading-tight">{cls.name}</h3>
+                <h3 className="m-0 mb-2 font-jomolhari text-2xl leading-tight">{cls.name}</h3>
 
                 {/* description */}
-                <p className="text-sm text-black/65 m-0 leading-relaxed flex-1">
+                <p className="m-0 flex-1 text-sm leading-relaxed text-black/65">
                   {cls.description}
                 </p>
 
                 {/* divider + date/time */}
-                <div className="border-t border-black/8 mt-4 pt-3 flex items-center justify-between">
-                  <p className="text-xs font-semibold m-0 text-black/75">{cls.date}</p>
-                  <p className="text-xs m-0 font-medium" style={{ color: cls.color }}>
+                <div className="border-black/8 mt-4 flex items-center justify-between border-t pt-3">
+                  <p className="m-0 text-xs font-semibold text-black/75">{cls.date}</p>
+                  <p className="m-0 text-xs font-medium" style={{ color: cls.color }}>
                     {cls.time}
                   </p>
                 </div>
@@ -165,29 +165,29 @@ const EasterSeriesSection = () => {
       </div>
 
       {/* Pricing */}
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-10">
+      <div className="mb-10 flex flex-col items-center justify-center gap-6 sm:flex-row">
         <div className="text-center">
-          <p className="text-4xl font-jomolhari text-customTeal m-0">£36</p>
-          <p className="text-sm text-black/55 m-0 mt-1">Full Series</p>
+          <p className="m-0 font-jomolhari text-4xl text-customTeal">£36</p>
+          <p className="m-0 mt-1 text-sm text-black/55">Full Series</p>
         </div>
-        <div className="hidden sm:block h-12 w-px bg-black/15" />
+        <div className="hidden h-12 w-px bg-black/15 sm:block" />
         <div className="text-center">
-          <p className="text-2xl font-jomolhari text-black/60 m-0">£8</p>
-          <p className="text-sm text-black/55 m-0 mt-1">Drop-in per class</p>
+          <p className="m-0 font-jomolhari text-2xl text-black/60">£8</p>
+          <p className="m-0 mt-1 text-sm text-black/55">Drop-in per class</p>
         </div>
       </div>
 
       {/* Membership deals */}
-      <div className="max-w-2xl mx-auto mb-10">
-        <h3 className="text-center mb-2">Easter Bundle Deals</h3>
-        <p className="text-center text-sm text-black/55 mb-6 md:text-center">
+      <div className="mx-auto mb-10 max-w-2xl">
+        <h3 className="mb-2 text-center">Easter Bundle Deals</h3>
+        <p className="mb-6 text-center text-sm text-black/55 md:text-center">
           How to enjoy more classes and pay less.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {membershipDeals.map((deal, i) => (
             <Card
               key={i}
-              className={`text-center border ${
+              className={`border text-center ${
                 deal.highlight
                   ? 'border-customTeal bg-customTeal text-white'
                   : 'border-customBeige/60 bg-white'
@@ -195,7 +195,7 @@ const EasterSeriesSection = () => {
             >
               <CardContent className="p-5">
                 <p
-                  className={`text-sm font-semibold m-0 leading-snug ${
+                  className={`m-0 text-sm font-semibold leading-snug ${
                     deal.highlight ? 'text-white' : 'text-black'
                   }`}
                 >
@@ -203,7 +203,7 @@ const EasterSeriesSection = () => {
                 </p>
                 {deal.subtitle && (
                   <p
-                    className={`text-xs m-0 mt-0.5 ${
+                    className={`m-0 mt-0.5 text-xs ${
                       deal.highlight ? 'text-white/75' : 'text-black/50'
                     }`}
                   >
@@ -211,21 +211,21 @@ const EasterSeriesSection = () => {
                   </p>
                 )}
                 <p
-                  className={`text-3xl font-jomolhari m-0 mt-3 ${
+                  className={`m-0 mt-3 font-jomolhari text-3xl ${
                     deal.highlight ? 'text-white' : 'text-customTeal'
                   }`}
                 >
                   {deal.price}
                 </p>
                 <p
-                  className={`text-xs mt-1 m-0 font-medium ${
+                  className={`m-0 mt-1 text-xs font-medium ${
                     deal.highlight ? 'text-white/80' : 'text-customSienna'
                   }`}
                 >
                   {deal.saving}
                 </p>
                 <p
-                  className={`text-xs m-0 mt-0.5 line-through ${
+                  className={`m-0 mt-0.5 text-xs line-through ${
                     deal.highlight ? 'text-white/50' : 'text-black/35'
                   }`}
                 >

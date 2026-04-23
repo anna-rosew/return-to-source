@@ -7,10 +7,10 @@ const DetailsDisplay: React.FC<DetailsDisplayProps> = ({ displayInfo }) => {
 
   return (
     <div className="flex justify-center">
-      <div className="flex gap-8 bg-customGreen rounded-3xl p-6 w-fit">
+      <div className="flex w-fit gap-8 rounded-3xl bg-customGreen p-6">
         <div className="flex-col items-center text-center">
           <Icon
-            className="w-10 h-10 mx-auto"
+            className="mx-auto h-10 w-10"
             strokeWidth={1}
             stroke="currentColor"
             fill="currentColor"
@@ -18,9 +18,9 @@ const DetailsDisplay: React.FC<DetailsDisplayProps> = ({ displayInfo }) => {
           <h2 className="text-[18px]">{displayInfo.heading}</h2>
           <p>{displayInfo.subheading}</p>
         </div>
-        <div className="flex-col items-center text-center border-l border-black pl-8">
+        <div className="flex-col items-center border-l border-black pl-8 text-center">
           <Icon2
-            className="w-10 h-10 mx-auto"
+            className="mx-auto h-10 w-10"
             strokeWidth={1}
             stroke="currentColor"
             fill="currentColor"

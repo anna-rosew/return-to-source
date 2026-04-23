@@ -11,26 +11,26 @@ interface FeaturedSlideProps {
 export function FeaturedSlide({ post }: FeaturedSlideProps) {
   return (
     <Link href={`/blog/${post.slug}`}>
-      <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] flex rounded-lg overflow-hidden">
+      <div className="relative flex h-[400px] w-full overflow-hidden rounded-lg md:h-[450px] lg:h-[500px]">
         <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          className="absolute inset-0 h-full w-full bg-cover bg-center"
           style={{
             backgroundImage: `url(${post.coverImage})`,
             borderRadius: 'inherit',
           }}
         >
-          <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg" />
+          <div className="absolute inset-0 rounded-lg bg-black bg-opacity-40" />
         </div>
 
-        <div className="relative z-10 w-full h-full flex flex-col md:flex-row justify-between p-4 text-left rounded-lg overflow-hidden">
-          <div className="w-full lg:w-1/2 md:w-2/3 flex flex-col mt-32 md:mt-20 md:mx-10">
-            <div className="flex items-center px-3 py-1 gap-2 mb-2 bg-white/30 rounded-sm w-fit">
+        <div className="relative z-10 flex h-full w-full flex-col justify-between overflow-hidden rounded-lg p-4 text-left md:flex-row">
+          <div className="mt-32 flex w-full flex-col md:mx-10 md:mt-20 md:w-2/3 lg:w-1/2">
+            <div className="mb-2 flex w-fit items-center gap-2 rounded-sm bg-white/30 px-3 py-1">
               <PostTypeIcon type={post.type} className="text-white" size={20} />
-              <p className="text-base font-medium text-white capitalize">{post.type}</p>
+              <p className="text-base font-medium capitalize text-white">{post.type}</p>
             </div>
 
-            <h2 className="text-3xl md:text-5xl mb-6 text-white leading-tight">{post.title}</h2>
-            <h3 className="mb-6 text-lg text-white/70 tracking-widest ">{post.date}</h3>
+            <h2 className="mb-6 text-3xl leading-tight text-white md:text-5xl">{post.title}</h2>
+            <h3 className="mb-6 text-lg tracking-widest text-white/70">{post.date}</h3>
 
             <Button variant="primary" size="lg" className="w-auto self-start">
               Find post
@@ -38,12 +38,12 @@ export function FeaturedSlide({ post }: FeaturedSlideProps) {
             </Button>
           </div>
 
-          <div className="medium-screen-component lg:w-1/2 md:1/3 md:flex md:flex-col md:mt-60 md:mx-10">
+          <div className="medium-screen-component md:1/3 md:mx-10 md:mt-60 md:flex md:flex-col lg:w-1/2">
             <div className="description max-w-lg">
-              <p className="text-lg mb-6 text-white">{post.excerpt}</p>
+              <p className="mb-6 text-lg text-white">{post.excerpt}</p>
               <div className="mt-6 flex flex-wrap gap-3">
                 {/* Primary Tag */}
-                <span className="bg-customSienna text-white px-4 py-2 rounded-full text-sm font-medium">
+                <span className="rounded-full bg-customSienna px-4 py-2 text-sm font-medium text-white">
                   {post.primaryTag}
                 </span>
 
@@ -51,7 +51,7 @@ export function FeaturedSlide({ post }: FeaturedSlideProps) {
                 {post.secondaryTags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="bg-white/80 text-gray-800 px-4 py-2 rounded-full text-sm font-normal"
+                    className="rounded-full bg-white/80 px-4 py-2 text-sm font-normal text-gray-800"
                   >
                     {tag}
                   </span>

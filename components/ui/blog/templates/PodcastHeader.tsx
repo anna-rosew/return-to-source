@@ -14,17 +14,17 @@ interface PodcastHeaderProps {
 
 export const PodcastHeader = ({ content, type }: PodcastHeaderProps) => {
   return (
-    <div className="md:mb-8 mb-2 text-left relative">
+    <div className="relative mb-2 text-left md:mb-8">
       {/* Post Type Badge */}
-      <div className="flex items-center px-3 py-1 gap-2 bg-white/30 w-fit rounded-sm">
+      <div className="flex w-fit items-center gap-2 rounded-sm bg-white/30 px-3 py-1">
         <PostTypeIcon type={type} className="text-gray-600" size={20} />
-        <h3 className="text-sm font-medium text-gray-600 inline-flex m-0 items-center">{type}</h3>
+        <h3 className="m-0 inline-flex items-center text-sm font-medium text-gray-600">{type}</h3>
       </div>
 
       {/* Title */}
       <h1>{content.title}</h1>
 
-      <p className="font-bold text-gray-600 mb-8">{content.excerpt}</p>
+      <p className="mb-8 font-bold text-gray-600">{content.excerpt}</p>
 
       {/* Audio Link */}
     </div>

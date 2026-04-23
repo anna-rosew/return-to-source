@@ -18,7 +18,7 @@ const Work = () => {
         <h1>Work with Rose</h1>
         <p className="font-bold md:text-center">{INTRO_PARAGRAPH}</p>
 
-        <div className="lg:my-20 my-7">
+        <div className="my-7 lg:my-20">
           <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
             {workCards.map((card, index) => (
               <Card key={index} cardInfo={card} />

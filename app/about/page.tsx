@@ -14,10 +14,10 @@ const About = () => {
     <div>
       <div className="container mb-8">
         <h1 className="text-left">Meet Rose</h1>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid gap-8 md:grid-cols-2">
           <div className="relative order-first md:order-last">
             <Image
-              className="w-full h-auto object-contain mx-auto"
+              className="mx-auto h-auto w-full object-contain"
               alt="Rose Long sat leading a retreat class in cross-legged position on the floor, smiling with her eyes closed. She is sat in-front of a large bay window which looks out onto a large sun-filled garden. There is a large, golden gong to her left and a plant with a himilayan salt lamp on her right."
               src={AboutImage}
               placeholder="blur"
@@ -54,8 +54,8 @@ const About = () => {
           </div>
         </div>
         <div className="page-section">
-          <h2 className="text-left mb-5">Qualifications</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <h2 className="mb-5 text-left">Qualifications</h2>
+          <div className="grid gap-8 md:grid-cols-2">
             <div>
               <p className="para">
                 I’ve been teaching and facilitating groups since my mid-twenties. After training as
@@ -79,7 +79,7 @@ const About = () => {
               <Button
                 variant="secondary"
                 size="lg"
-                className="w-full mt-8"
+                className="mt-8 w-full"
                 onClick={() => setIsModalOpen(true)}
               >
                 View Full Credentials

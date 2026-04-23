@@ -7,7 +7,7 @@ import IIN from '@/public/Assets/Icons/IIN.svg';
 
 const LogoContainer = () => {
   return (
-    <div className="grid grid-cols-4 md:grid-cols-2 md:px-4 gap-4">
+    <div className="grid grid-cols-4 gap-4 md:grid-cols-2 md:px-4">
       <Link href="https://kundaliniresearchinstitute.org/en/">
         <Image src={KRI} alt="Kundalini Researh Institute" className="md:h-[200px]" />
       </Link>

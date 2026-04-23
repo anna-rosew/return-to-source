@@ -90,11 +90,11 @@ export function PostGrid({ posts }: PostGridProps) {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto">
+    <div className="mx-auto w-full max-w-7xl">
       {/* Filters */}
-      <div className="w-full px-5 py-2 border-b border-black pb-6 mb-4">
+      <div className="mb-4 w-full border-b border-black px-5 py-2 pb-6">
         {/* Mobile View: Only Primary Tags */}
-        <div className="md:hidden space-y-4">
+        <div className="space-y-4 md:hidden">
           <div className="flex items-center gap-4">
             <p>Primary Topics:</p>
             <div className="flex flex-wrap gap-2">
@@ -102,7 +102,7 @@ export function PostGrid({ posts }: PostGridProps) {
                 <Badge
                   key={value}
                   variant={selectedPrimaryTag === value ? 'selected' : 'outline'}
-                  className="cursor-pointer p-4 transition-all duration-300 bg-white text-customSienna border-customSienna hover:bg-customSienna hover:text-white"
+                  className="cursor-pointer border-customSienna bg-white p-4 text-customSienna transition-all duration-300 hover:bg-customSienna hover:text-white"
                   onClick={() => togglePrimaryTag(value)}
                 >
                   {label}
@@ -113,19 +113,19 @@ export function PostGrid({ posts }: PostGridProps) {
         </div>
 
         {/* Medium and Large Screens: All Tags in One Row */}
-        <div className="hidden md:flex items-center justify-between w-full gap-4">
-          <div className="flex items-center gap-6 flex-grow">
+        <div className="hidden w-full items-center justify-between gap-4 md:flex">
+          <div className="flex flex-grow items-center gap-6">
             <p className="whitespace-nowrap">Explore topics:</p>
 
             {/* Tags Container */}
-            <div className="flex items-center gap-4 flex-grow">
+            <div className="flex flex-grow items-center gap-4">
               {/* Primary Tags */}
               <div className="flex flex-wrap gap-2">
                 {PRIMARY_TAGS.map(({ label, value }) => (
                   <Badge
                     key={value}
                     variant={selectedPrimaryTag === value ? 'selected' : 'outline'}
-                    className="cursor-pointer p-4 transition-all duration-300 bg-white text-customSienna border-customSienna hover:bg-customSienna hover:text-white"
+                    className="cursor-pointer border-customSienna bg-white p-4 text-customSienna transition-all duration-300 hover:bg-customSienna hover:text-white"
                     onClick={() => togglePrimaryTag(value)}
                   >
                     {label}
@@ -142,7 +142,7 @@ export function PostGrid({ posts }: PostGridProps) {
                   <Badge
                     key={value}
                     variant={selectedSecondaryTags.includes(value) ? 'selected' : 'outline'}
-                    className="cursor-pointer p-4 transition-all duration-300 bg-white text-gray-600 border-gray-400 hover:bg-gray-100"
+                    className="cursor-pointer border-gray-400 bg-white p-4 text-gray-600 transition-all duration-300 hover:bg-gray-100"
                     onClick={() => toggleSecondaryTag(value)}
                   >
                     {label}
@@ -157,10 +157,10 @@ export function PostGrid({ posts }: PostGridProps) {
             <SelectTrigger className="w-[180px] border-none">
               <SelectValue placeholder="Select post type" />
             </SelectTrigger>
-            <SelectContent className="bg-customBeige border-none">
+            <SelectContent className="border-none bg-customBeige">
               <SelectItem
                 value="all"
-                className="hover:underline hover:bg-transparent focus:bg-transparent"
+                className="hover:bg-transparent hover:underline focus:bg-transparent"
               >
                 All Types
               </SelectItem>
@@ -168,7 +168,7 @@ export function PostGrid({ posts }: PostGridProps) {
                 <SelectItem
                   key={value}
                   value={value}
-                  className="hover:underline hover:bg-transparent focus:bg-transparent"
+                  className="hover:bg-transparent hover:underline focus:bg-transparent"
                 >
                   {label}
                 </SelectItem>
@@ -179,12 +179,12 @@ export function PostGrid({ posts }: PostGridProps) {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {paginatedPosts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <Card className="h-full">
               <CardContent>
-                <div className="relative w-full h-48 mb-4 text-left">
+                <div className="relative mb-4 h-48 w-full text-left">
                   {post.coverImage ? (
                     <Image
                       src={post.coverImage}
@@ -193,25 +193,25 @@ export function PostGrid({ posts }: PostGridProps) {
                       className="object-cover brightness-75"
                     />
                   ) : (
-                    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                    <div className="flex h-full w-full items-center justify-center bg-gray-200">
                       <span className="text-gray-400">No image</span>
                     </div>
                   )}
 
                   {post.type && (
-                    <div className="absolute top-4 right-4 flex items-center px-3 py-1 gap-2 bg-white/30 w-fit rounded-sm">
+                    <div className="absolute right-4 top-4 flex w-fit items-center gap-2 rounded-sm bg-white/30 px-3 py-1">
                       <PostTypeIcon type={post.type} className="text-white" size={20} />
-                      <p className="text-sm font-medium text-white capitalize">{post.type}</p>
+                      <p className="text-sm font-medium capitalize text-white">{post.type}</p>
                     </div>
                   )}
                 </div>
                 <div className="px-4">
                   {/* Tags with different styling */}
-                  <div className="flex flex-wrap gap-2 mb-3">
+                  <div className="mb-3 flex flex-wrap gap-2">
                     {/* Primary Tag */}
                     <Badge
                       variant="selected"
-                      className="text-xs font-medium border-none bg-customSienna text-white"
+                      className="border-none bg-customSienna text-xs font-medium text-white"
                     >
                       {post.primaryTag}
                     </Badge>
@@ -222,18 +222,18 @@ export function PostGrid({ posts }: PostGridProps) {
                         <Badge
                           key={tag}
                           variant="outline"
-                          className="text-xs font-normal text-gray-600 border-gray-400"
+                          className="border-gray-400 text-xs font-normal text-gray-600"
                         >
                           {tag}
                         </Badge>
                       ))}
                   </div>
 
-                  <h2 className="font-normal text-lg leading-8 mb-2 line-clamp-2 text-left text-customSienna my-2">
+                  <h2 className="my-2 mb-2 line-clamp-2 text-left text-lg font-normal leading-8 text-customSienna">
                     {post.title}
                   </h2>
-                  <p className="text-sm text-black mb-4 text-left">{post.excerpt}</p>
-                  <p className="text-sm text-black/70 mb-4 text-left">{post.date}</p>
+                  <p className="mb-4 text-left text-sm text-black">{post.excerpt}</p>
+                  <p className="mb-4 text-left text-sm text-black/70">{post.date}</p>
                 </div>
               </CardContent>
             </Card>
@@ -243,7 +243,7 @@ export function PostGrid({ posts }: PostGridProps) {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex justify-center items-center gap-2 mt-8">
+        <div className="mt-8 flex items-center justify-center gap-2">
           <Button
             variant="outline"
             onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}

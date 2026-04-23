@@ -29,9 +29,9 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full m-0 bg-customSienna text-white ">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6 lg:container lg:mx-auto lg:px-5">
-        <div className="order-last md:order-first items-center">
+    <div className="m-0 w-full bg-customSienna text-white">
+      <div className="grid grid-cols-1 gap-4 p-6 lg:container md:grid-cols-2 lg:mx-auto lg:px-5">
+        <div className="order-last items-center md:order-first">
           <div className="items-center text-center md:text-left">
             <Link href="/">
               <Image
@@ -45,24 +45,24 @@ const Footer = () => {
             <div>
               <Link
                 href="https://www.instagram.com/lifechangesrose/?hl=en"
-                className="inline-block m-3 transform transition-transform duration-300 hover:scale-110"
+                className="m-3 inline-block transform transition-transform duration-300 hover:scale-110"
               >
                 <Image src={InstaIcon} alt="Instagram" height={48} width={48} />
               </Link>
               <Link
                 href="https://vimeo.com/roselong"
-                className="inline-block m-3 transform transition-transform duration-300 hover:scale-110"
+                className="m-3 inline-block transform transition-transform duration-300 hover:scale-110"
               >
                 <Image src={VimeoIcon} alt="Vimeo" height={48} width={48} />
               </Link>
             </div>
             <Link href="/contact">
-              <Button variant="secondary" className="my-2 mx-auto lg:mx-3">
+              <Button variant="secondary" className="mx-auto my-2 lg:mx-3">
                 Get in Touch
               </Button>
             </Link>
             <div className="my-6">
-              <p className="text-xs text-white leading-6">
+              <p className="text-xs leading-6 text-white">
                 Website built by{' '}
                 <Link href="https://annarosewain.com/" className="font-bold">
                   {' '}
@@ -80,10 +80,10 @@ const Footer = () => {
         <div className="grid grid-cols-3 items-start justify-between text-center md:text-left">
           {/* Services Section */}
           <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-white text-base my-4 text-center md:text-left">services</h3>
+            <h3 className="my-4 text-center text-base text-white md:text-left">services</h3>
             <ul className="list-none p-0">
               {serviceLinks.map((item, index) => (
-                <li key={index} className="block mb-3">
+                <li key={index} className="mb-3 block">
                   <Link className="white-links text-xs leading-6 md:text-base" href={item.link}>
                     {item.name}
                   </Link>
@@ -94,10 +94,10 @@ const Footer = () => {
 
           {/* About Section */}
           <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-white text-base my-4 text-center md:text-left">about</h3>
+            <h3 className="my-4 text-center text-base text-white md:text-left">about</h3>
             <ul className="list-none p-0">
               {aboutLinks.map((item, index) => (
-                <li key={index} className="block mb-3">
+                <li key={index} className="mb-3 block">
                   <Link className="white-links text-xs leading-6 md:text-base" href={item.link}>
                     {item.name}
                   </Link>
@@ -108,10 +108,10 @@ const Footer = () => {
 
           {/* Resources Section */}
           <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-white text-base my-4 text-center md:text-left">resources</h3>
+            <h3 className="my-4 text-center text-base text-white md:text-left">resources</h3>
             <ul className="list-none p-0">
               {resourceLinks.map((item, index) => (
-                <li key={index} className="block mb-3">
+                <li key={index} className="mb-3 block">
                   <Link className="white-links text-xs leading-6 md:text-base" href={item.link}>
                     {item.name}
                   </Link>

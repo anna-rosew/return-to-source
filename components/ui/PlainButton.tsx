@@ -30,8 +30,7 @@ const PlainButton: React.FC<ButtonProps> = ({
       onClick={onClick}
       disabled={disabled || loading}
       type={type}
-      className={`px-10 py-3 uppercase text-[15px] tracking-wide rounded-lg transition-colors duration-700 ease-in-out 
-        ${colorClasses[color]} ${disabled ? 'cursor-not-allowed' : ''} ${className}`}
+      className={`rounded-lg px-10 py-3 text-[15px] uppercase tracking-wide transition-colors duration-700 ease-in-out ${colorClasses[color]} ${disabled ? 'cursor-not-allowed' : ''} ${className}`}
     >
       {loading ? 'Loading...' : text}
     </button>

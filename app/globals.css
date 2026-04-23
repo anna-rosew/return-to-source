@@ -72,17 +72,17 @@
 
   /* Headings */
   h1 {
-    @apply font-jomolhari text-[2.2rem] font-normal text-black md:text-[2rem] lg:text-[2.5rem] md:mb-8 mb-5;
+    @apply mb-5 font-jomolhari text-[2.2rem] font-normal text-black md:mb-8 md:text-[2rem] lg:text-[2.5rem];
   }
   h2 {
-    @apply font-jost text-[1.8rem] font-normal text-black md:text-[1.6rem] lg:text-[2rem] py-1;
+    @apply py-1 font-jost text-[1.8rem] font-normal text-black md:text-[1.6rem] lg:text-[2rem];
   }
   h3 {
-    @apply font-jost uppercase text-[1rem] font-normal text-black md:text-[1rem] lg:text-[1rem] md:py-2;
+    @apply font-jost text-[1rem] font-normal uppercase text-black md:py-2 md:text-[1rem] lg:text-[1rem];
   }
   /* Paragraphs */
   p {
-    @apply font-jost leading-[1.5em] text-[1rem] text-black tracking-wider md:text-[1.1rem] lg:text-[1rem] text-left m-2;
+    @apply m-2 text-left font-jost text-[1rem] leading-[1.5em] tracking-wider text-black md:text-[1.1rem] lg:text-[1rem];
   }
 
   article h3 {
@@ -150,7 +150,7 @@
   }
 
   .button-container {
-    @apply flex flex-col md:flex-row gap-4 w-full mt-10;
+    @apply mt-10 flex w-full flex-col gap-4 md:flex-row;
 
     Button {
       @apply w-full;
@@ -158,11 +158,11 @@
   }
 
   .online-pagination {
-    @apply flex justify-between items-center relative top-2.5 left-0 right-0 lg:mb-5 z-10 lg:py-5 md:py-2 md:mb-0 pointer-events-none border-t border-b border-black py-2 mb-0 !important;
+    @apply pointer-events-none relative left-0 right-0 top-2.5 z-10 mb-0 flex items-center justify-between border-b border-t border-black py-2 md:mb-0 md:py-2 lg:mb-5 lg:py-5 !important;
   }
 
   .online-bullet {
-    @apply cursor-pointer flex-1 items-center pb-8 md:pb-[40px] hover:bg-transparent justify-center lg:px-5 lg:pt-5 lg:pb-10  text-xs pt-5 px-2.5 md:py-10 md:px-2.5 text-black md:text-base text-center bg-transparent rounded transition-all duration-300 ease-in-out pointer-events-auto !important;
+    @apply pointer-events-auto flex-1 cursor-pointer items-center justify-center rounded bg-transparent px-2.5 pb-8 pt-5 text-center text-xs text-black transition-all duration-300 ease-in-out hover:bg-transparent md:px-2.5 md:py-10 md:pb-[40px] md:text-base lg:px-5 lg:pb-10 lg:pt-5 !important;
   }
 
   .swiper-pagination-bullet-active.online-bullet {
@@ -182,11 +182,11 @@
 
 @layer utilities {
   .white-links {
-    @apply font-jost text-[16px] text-white relative hover:text-white cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0;
+    @apply relative inline-block cursor-pointer font-jost text-[16px] text-white transition-all ease-in-out before:absolute before:bottom-0 before:h-[1px] before:w-0 before:origin-center before:bg-white before:transition-all before:duration-700 before:ease-in-out hover:text-white hover:before:left-0 hover:before:w-full;
   }
 
   .quote {
-    @apply italic border-l border-black p-3 m-2;
+    @apply m-2 border-l border-black p-3 italic;
     p {
       @apply text-customSienna;
     }
@@ -197,15 +197,15 @@
   }
 
   .section-heading-left {
-    @apply absolute left-0 top-1/2 transform -translate-y-1/2 block w-[15%] h-[0.06em] bg-black sm:w-[30%] md:w-[35%];
+    @apply absolute left-0 top-1/2 block h-[0.06em] w-[15%] -translate-y-1/2 transform bg-black sm:w-[30%] md:w-[35%];
   }
 
   .section-heading-right {
-    @apply absolute right-0 top-1/2 transform -translate-y-1/2 block w-[15%] h-[0.06em] bg-black sm:w-[30%] md:w-[35%];
+    @apply absolute right-0 top-1/2 block h-[0.06em] w-[15%] -translate-y-1/2 transform bg-black sm:w-[30%] md:w-[35%];
   }
 
   .class-icon {
-    @apply h-[24px] md:h-[40px] w-auto;
+    @apply h-[24px] w-auto md:h-[40px];
   }
 }
 

@@ -37,7 +37,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           <h1
             {...props}
             id={id}
-            className="text-3xl font-bold mb-4 scroll-mt-24"
+            className="mb-4 scroll-mt-24 text-3xl font-bold"
             data-heading="true"
           >
             {props.children}
@@ -51,7 +51,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           <h2
             {...props}
             id={id}
-            className="text-2xl font-semibold mb-3 scroll-mt-24 text-left"
+            className="mb-3 scroll-mt-24 text-left text-2xl font-semibold"
             data-heading="true"
           >
             {props.children}
@@ -65,7 +65,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           <h3
             {...props}
             id={id}
-            className="text-xl font-semibold mb-2 scroll-mt-24 text-left"
+            className="mb-2 scroll-mt-24 text-left text-xl font-semibold"
             data-heading="true"
           >
             {props.children}
@@ -73,17 +73,17 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         );
       },
       p: ({ children, ...props }) => (
-        <p className="mb-6 leading-loose text-lg" {...props}>
+        <p className="mb-6 text-lg leading-loose" {...props}>
           {children}
         </p>
       ),
       ul: ({ children, ...props }) => (
-        <ul className="list-disc list-inside mb-4 space-y-2" {...props}>
+        <ul className="mb-4 list-inside list-disc space-y-2" {...props}>
           {children}
         </ul>
       ),
       ol: ({ children, ...props }) => (
-        <ol className="list-decimal list-inside mb-4 space-y-2" {...props}>
+        <ol className="mb-4 list-inside list-decimal space-y-2" {...props}>
           {children}
         </ol>
       ),
@@ -96,12 +96,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         if (!src) return null;
 
         return (
-          <div className="relative w-full h-64 my-4">
+          <div className="relative my-4 h-64 w-full">
             <Image
               src={src}
               alt={alt || ''}
               fill
-              className="object-cover rounded-lg"
+              className="rounded-lg object-cover"
               sizes="(max-width: 768px) 100vw, 768px"
               {...props}
             />

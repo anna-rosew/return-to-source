@@ -13,25 +13,25 @@ export const ServiceCard = ({
 }: IServiceCard) => {
   return (
     <div
-      className={`flex flex-col gap-x-12 items-center ${
+      className={`flex flex-col items-center gap-x-12 ${
         reversed ? 'sm:flex-row-reverse' : 'sm:flex-row'
-      } w-full max-w-screen-lg mx-auto justify-center`}
+      } mx-auto w-full max-w-screen-lg justify-center`}
     >
       <Image src={image} alt={imageAlt} className="hidden w-2/5 sm:block" />
-      <div className="sm:w-1/2 lg:py-[56px] sm:px-10">
-        <h3 className="text-[1rem] text-customBeige text-center md:text-left">{serviceName}</h3>
-        <h1 className="pt-[12px] text-2xl font-medium text-white lg:text-[42px] lg:leading-[58px] text-center md:text-left">
+      <div className="sm:w-1/2 sm:px-10 lg:py-[56px]">
+        <h3 className="text-center text-[1rem] text-customBeige md:text-left">{serviceName}</h3>
+        <h1 className="pt-[12px] text-center text-2xl font-medium text-white md:text-left lg:text-[42px] lg:leading-[58px]">
           {title}
         </h1>
-        <div className="block sm:hidden lg:w-[600px] lg:h-[600px] mx-auto">
+        <div className="mx-auto block sm:hidden lg:h-[600px] lg:w-[600px]">
           <Image src={image} alt={imageAlt} className="pt-7" />
         </div>
-        <p className="py-[24px] text-white lg:text-[18px] text-center md:text-left">
+        <p className="py-[24px] text-center text-white md:text-left lg:text-[18px]">
           {description}
         </p>
         <Link href="/work">
-          <div className="flex items-center justify-center md:justify-start group">
-            <p className="flex items-center gap-x-2 pt-1 sm:pt-6 font-medium text-customGreen lg:text-[18px] text-center md:text-left">
+          <div className="group flex items-center justify-center md:justify-start">
+            <p className="flex items-center gap-x-2 pt-1 text-center font-medium text-customGreen sm:pt-6 md:text-left lg:text-[18px]">
               Learn More{' '}
               <span className="transform transition-transform duration-300 group-hover:translate-x-2">
                 <ChevronRight />

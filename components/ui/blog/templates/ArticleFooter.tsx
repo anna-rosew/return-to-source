@@ -13,17 +13,17 @@ export const ArticleFooter = ({ content }: ArticleFooterProps) => {
     <footer className="pb-2">
       <Link
         href="/blog"
-        className="font-bold uppercase list-none flex items-center gap-x-2 text-sm text-black text-left"
+        className="flex list-none items-center gap-x-2 text-left text-sm font-bold uppercase text-black"
       >
         <span className="transform transition-transform duration-300 group-hover:translate-x-2">
           <ArrowLeft />
         </span>
         Back to blog
       </Link>
-      <div className="mt-4 pt-6 border-t border-black text-gray-600 text-sm">
-        <div className="flex justify-between flex-wrap gap-4">
+      <div className="mt-4 border-t border-black pt-6 text-sm text-gray-600">
+        <div className="flex flex-wrap justify-between gap-4">
           {/* Author and Date */}
-          <div className="flex justify-between flex-wrap gap-4">
+          <div className="flex flex-wrap justify-between gap-4">
             <Link href="/work">
               <Button variant="secondary">Start Your Journey</Button>
             </Link>
@@ -36,7 +36,7 @@ export const ArticleFooter = ({ content }: ArticleFooterProps) => {
                 <Badge
                   key={tag}
                   variant="outline"
-                  className="text-xs font-normal text-gray-600 border-gray-400 hover:bg-transparent hover:text-gray-600"
+                  className="border-gray-400 text-xs font-normal text-gray-600 hover:bg-transparent hover:text-gray-600"
                 >
                   #{tag}
                 </Badge>

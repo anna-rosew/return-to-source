@@ -29,20 +29,20 @@ export function PodcastTemplate({ content }: PodcastTemplateProps) {
   const [shareUrl, setShareUrl] = useState<string>('');
 
   return (
-    <article className="prose prose-lg max-w-4xl mx-auto">
+    <article className="prose prose-lg mx-auto max-w-4xl">
       {/* Podcast Header */}
       <PodcastHeader content={content} type="podcast" />
 
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col gap-4 md:flex-row">
         {/* Image container - full width on mobile, 1/3 on md+ screens */}
         <div className="w-full md:w-1/3">
           {content.contentImage && (
-            <div className="relative w-full aspect-square">
+            <div className="relative aspect-square w-full">
               <Image
                 src={content.contentImage}
                 alt={`Content image for ${content.title}`}
                 fill
-                className="object-cover rounded-lg"
+                className="rounded-lg object-cover"
                 priority={false}
               />
             </div>
@@ -52,7 +52,7 @@ export function PodcastTemplate({ content }: PodcastTemplateProps) {
         <div className="w-full md:w-2/3">
           <div className="flex flex-col gap-4">
             {/* Podcast player/embed would go here */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-4">
+            <div className="mb-4 flex flex-wrap items-center gap-4 text-sm text-gray-600">
               <span className="font-medium">{content.date}</span>
               <span className="font-medium">•</span>
               <div className="flex items-center gap-1">
@@ -63,7 +63,7 @@ export function PodcastTemplate({ content }: PodcastTemplateProps) {
                 {shareUrl && (
                   <CopyButton
                     textToCopy={shareUrl}
-                    className="hidden md:flex bg-white/30 hover:bg-gray-200/30"
+                    className="hidden bg-white/30 hover:bg-gray-200/30 md:flex"
                   />
                 )}
               </div>
@@ -77,7 +77,7 @@ export function PodcastTemplate({ content }: PodcastTemplateProps) {
             </div>
 
             {/* Mobile Share Button */}
-            {shareUrl && <CopyButton textToCopy={shareUrl} className="md:hidden mt-4" />}
+            {shareUrl && <CopyButton textToCopy={shareUrl} className="mt-4 md:hidden" />}
             <div>{content.children}</div>
 
             <Button variant="secondary">

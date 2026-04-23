@@ -39,7 +39,7 @@ export default function SectionObserver({
 
   return (
     <div
-      className="flex flex-col items-center w-full"
+      className="flex w-full flex-col items-center"
       data-backgroundcolor={backgroundColor}
       style={{ backgroundColor, height }}
     >

@@ -3,7 +3,7 @@ import { ServiceCard } from '@/components/ui/ServiceCard';
 
 export default function HomeScroll() {
   return (
-    <div className="w-full bg-black flex flex-col gap-y-[56px] lg:gap-y-[80px] lg:py-[120px] py-[56px] px-4">
+    <div className="flex w-full flex-col gap-y-[56px] bg-black px-4 py-[56px] lg:gap-y-[80px] lg:py-[120px]">
       {serviceData.map((service) => (
         <ServiceCard key={service.serviceName} {...service} />
       ))}

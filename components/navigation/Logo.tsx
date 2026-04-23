@@ -30,7 +30,7 @@ const Logo = () => {
           alt="Logo"
           width={250}
           height={74}
-          className="relative cursor-pointer w-[150px] h-[45px] md:w-[250px] md:h-[74px]"
+          className="relative h-[45px] w-[150px] cursor-pointer md:h-[74px] md:w-[250px]"
           priority={true}
         />
       </Link>
@@ -40,7 +40,9 @@ const Logo = () => {
         }}
       >
         <Link href="/contact">
-          <Button variant="primary" size="sm">Book a session</Button>
+          <Button variant="primary" size="sm">
+            Book a session
+          </Button>
         </Link>
       </div>
     </>

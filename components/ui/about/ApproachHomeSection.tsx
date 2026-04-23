@@ -6,14 +6,14 @@ import { Button } from '../button';
 
 const HomeCTA = () => {
   return (
-    <div className="w-full container">
+    <div className="container w-full">
       <div>
         <StarIcon
-          className="fill-white text-white mx-auto mt-7  group-hover:text-white transition-colors duration-700"
+          className="mx-auto mt-7 fill-white text-white transition-colors duration-700 group-hover:text-white"
           width={25}
           height={25}
         />
-        <h1 className="text-white text-[28px]">Deepen your Connection</h1>
+        <h1 className="text-[28px] text-white">Deepen your Connection</h1>
         {/* <p className="text-white text-center">
           This breathing practice is an enquiry into how the breath moves
           through the left lung and the right lung. With the a-symmetry of the
@@ -25,7 +25,7 @@ const HomeCTA = () => {
       <div>
         <VideoPlayer url="https://vimeo.com/1128592039?fl=tl&fe=ec" />
         <Link href="/work">
-          <Button variant="secondary" size="lg" className="mb-12 mx-auto">
+          <Button variant="secondary" size="lg" className="mx-auto mb-12">
             More Classes
           </Button>
         </Link>

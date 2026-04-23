@@ -36,15 +36,15 @@ export const CopyButton = ({ textToCopy, className = '', showAlert = true }: Cop
     <>
       <button
         onClick={handleCopy}
-        className={`flex items-center gap-2 px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors ${className}`}
+        className={`flex items-center gap-2 rounded-md bg-gray-100 px-3 py-1 transition-colors hover:bg-gray-200 ${className}`}
         aria-label="Copy to clipboard"
       >
-        {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+        {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
         <span>Share</span>
       </button>
 
       {showCopyAlert && showAlert && (
-        <Alert className="fixed bottom-4 right-4 w-auto bg-green-50 border-green-200 z-50">
+        <Alert className="fixed bottom-4 right-4 z-50 w-auto border-green-200 bg-green-50">
           <AlertDescription className="text-green-800">Link copied to clipboard!</AlertDescription>
         </Alert>
       )}

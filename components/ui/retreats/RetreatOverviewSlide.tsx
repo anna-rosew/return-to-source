@@ -9,23 +9,23 @@ interface RetreatSlideProps {
 
 export default function RetreatSlide({ slide }: RetreatSlideProps) {
   return (
-    <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] flex rounded-lg overflow-hidden">
+    <div className="relative flex h-[500px] w-full overflow-hidden rounded-lg md:h-[600px] lg:h-[700px]">
       <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        className="absolute inset-0 h-full w-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${slide.imageUrl})`,
           borderRadius: 'inherit',
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg"></div>{' '}
+        <div className="absolute inset-0 rounded-lg bg-black bg-opacity-40"></div>{' '}
       </div>
 
-      <div className="relative z-10 w-full h-full flex flex-col md:flex-row justify-between p-4 text-left rounded-lg overflow-hidden">
-        <div className="w-full lg:w-1/2 md:w-2/3 flex flex-col mt-48 md:my-24 md:mx-10">
+      <div className="relative z-10 flex h-full w-full flex-col justify-between overflow-hidden rounded-lg p-4 text-left md:flex-row">
+        <div className="mt-48 flex w-full flex-col md:mx-10 md:my-24 md:w-2/3 lg:w-1/2">
           <h3 className="text-lg text-white opacity-70">
             <strong>{slide.location}</strong> | {slide.date}
           </h3>
-          <h2 className="text-3xl md:text-5xl mb-6 text-white leading-tight">{slide.heading}</h2>
+          <h2 className="mb-6 text-3xl leading-tight text-white md:text-5xl">{slide.heading}</h2>
 
           <Link href={slide.link || '/retreats'}>
             <Button variant="primary" size="lg" className="w-auto self-start">
@@ -35,14 +35,14 @@ export default function RetreatSlide({ slide }: RetreatSlideProps) {
           </Link>
         </div>
 
-        <div className="medium-screen-component lg:w-1/2 md:1/3 md:flex md:flex-col md:mt-80 md:mx-10 ">
+        <div className="medium-screen-component md:1/3 md:mx-10 md:mt-80 md:flex md:flex-col lg:w-1/2">
           <div className="description max-w-lg">
-            <p className="text-lg mb-6 text-white">{slide.description}</p>
+            <p className="mb-6 text-lg text-white">{slide.description}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               {slide.tags.map((tag, idx) => (
                 <span
                   key={idx}
-                  className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm font-medium"
+                  className="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium text-gray-800"
                 >
                   {tag}
                 </span>
@@ -51,7 +51,7 @@ export default function RetreatSlide({ slide }: RetreatSlideProps) {
           </div>
         </div>
       </div>
-      <div className="retreat-pagination absolute bottom-4 left-4 flex space-x-2 z-10"></div>
+      <div className="retreat-pagination absolute bottom-4 left-4 z-10 flex space-x-2"></div>
     </div>
   );
 }

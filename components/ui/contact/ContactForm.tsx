@@ -29,15 +29,15 @@ const ContactForm = () => {
   return (
     <div className="w-full text-left">
       <h2 className="mb-2">Get in Touch</h2>
-      <p className="text-black/65 text-sm mb-6">
+      <p className="mb-6 text-sm text-black/65">
         If you&apos;d like to book a <strong>class, workshop, or retreat,</strong> or have any
         questions, please don&apos;t hesitate to reach out.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-medium text-black/60 uppercase tracking-wide">
+            <label className="text-xs font-medium uppercase tracking-wide text-black/60">
               Name
             </label>
             <input
@@ -47,11 +47,11 @@ const ContactForm = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="Your name"
-              className="border border-customBeige/80 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-customTeal"
+              className="rounded-lg border border-customBeige/80 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-customTeal"
             />
           </div>
           <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-medium text-black/60 uppercase tracking-wide">
+            <label className="text-xs font-medium uppercase tracking-wide text-black/60">
               Email
             </label>
             <input
@@ -61,20 +61,20 @@ const ContactForm = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="your@email.com"
-              className="border border-customBeige/80 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-customTeal"
+              className="rounded-lg border border-customBeige/80 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-customTeal"
             />
           </div>
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-medium text-black/60 uppercase tracking-wide">
+          <label className="text-xs font-medium uppercase tracking-wide text-black/60">
             I&apos;m interested in
           </label>
           <select
             name="subject"
             value={form.subject}
             onChange={handleChange}
-            className="border border-customBeige/80 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-customTeal text-black/70"
+            className="rounded-lg border border-customBeige/80 bg-white px-4 py-2.5 text-sm text-black/70 focus:outline-none focus:ring-1 focus:ring-customTeal"
           >
             <option value="">Select an option…</option>
             <option value="Spring Awakening: Easter Series">Spring Awakening: Easter Series</option>
@@ -87,7 +87,7 @@ const ContactForm = () => {
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-medium text-black/60 uppercase tracking-wide">
+          <label className="text-xs font-medium uppercase tracking-wide text-black/60">
             Message
           </label>
           <textarea
@@ -97,7 +97,7 @@ const ContactForm = () => {
             onChange={handleChange}
             rows={5}
             placeholder="Write your message here…"
-            className="border border-customBeige/80 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-customTeal resize-none"
+            className="resize-none rounded-lg border border-customBeige/80 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-customTeal"
           />
         </div>
 
@@ -105,7 +105,7 @@ const ContactForm = () => {
           Send Message
         </Button>
 
-        <p className="text-xs text-black/40 text-center">
+        <p className="text-center text-xs text-black/40">
           This will open your email client to send the message.
         </p>
       </form>

@@ -23,14 +23,14 @@ export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => {
   }, [pathname]);
 
   return (
-    <div className="md:mb-8 mb-2 text-left">
-      <div className="flex items-center px-3 py-1 gap-2 bg-white/30 w-fit rounded-sm">
+    <div className="mb-2 text-left md:mb-8">
+      <div className="flex w-fit items-center gap-2 rounded-sm bg-white/30 px-3 py-1">
         <PostTypeIcon type={type} className="text-gray-600" size={20} />
-        <h3 className="text-sm font-medium text-gray-600 inline-flex m-0 items-center">{type}</h3>
+        <h3 className="m-0 inline-flex items-center text-sm font-medium text-gray-600">{type}</h3>
       </div>
       <Link
         href="/blog"
-        className="font-bold mt-2 uppercase list-none flex items-center gap-x-2 text-sm text-customTeal/50 text-left"
+        className="mt-2 flex list-none items-center gap-x-2 text-left text-sm font-bold uppercase text-customTeal/50"
       >
         <span className="transform transition-transform duration-300 group-hover:translate-x-2">
           <ArrowLeft />
@@ -39,9 +39,9 @@ export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => {
       </Link>
 
       <h1>{content.title}</h1>
-      <p className="font-bold text-gray-600 mb-8">{content.excerpt}</p>
+      <p className="mb-8 font-bold text-gray-600">{content.excerpt}</p>
       {content.coverImage && (
-        <div className="relative w-full h-[400px] md:mb-8 mb-2">
+        <div className="relative mb-2 h-[400px] w-full md:mb-8">
           <Image
             src={content.coverImage}
             alt={content.title}
@@ -49,11 +49,11 @@ export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => {
             priority={true}
             sizes="(max-width: 768px) 100vw, 1200px"
             fill
-            className="object-cover rounded-lg"
+            className="rounded-lg object-cover"
           />
           {/* Overlay container */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 text-white rounded-bl-lg rounded-br-lg">
-            <div className="flex justify-between items-center">
+          <div className="absolute bottom-0 left-0 right-0 rounded-bl-lg rounded-br-lg p-4 text-white">
+            <div className="flex items-center justify-between">
               {/* Date and Author */}
               <div className="text-sm">
                 <span className="font-medium">{content.date}</span>
@@ -65,7 +65,7 @@ export const ArticleHeader = ({ content, type }: ArticleHeaderProps) => {
                 {shareUrl && (
                   <CopyButton
                     textToCopy={shareUrl}
-                    className="bg-white/30 hover:bg-gray/30 text-white hover:text-black"
+                    className="hover:bg-gray/30 bg-white/30 text-white hover:text-black"
                   />
                 )}
               </div>

@@ -15,10 +15,10 @@ const QualificationsModal: React.FC<QualificationsModalProps> = ({ isOpen, onClo
   if (!isOpen) return null;
   return (
     <div>
-      <div className="fixed inset-0 flex items-start justify-start p-0.5 bg-black/80 overflow-y-auto z-50">
-        <div className="flex flex-col w-4/5 max-w-[70rem] mx-auto my-4 p-8 bg-customGreen shadow-lg overflow-y-auto max-h-[90vh]">
-          <div className="flex justify-end w-full mb-4">
-            <Button onClick={onClose} variant="outline" className="hover:opacity-75 transition">
+      <div className="fixed inset-0 z-50 flex items-start justify-start overflow-y-auto bg-black/80 p-0.5">
+        <div className="mx-auto my-4 flex max-h-[90vh] w-4/5 max-w-[70rem] flex-col overflow-y-auto bg-customGreen p-8 shadow-lg">
+          <div className="mb-4 flex w-full justify-end">
+            <Button onClick={onClose} variant="outline" className="transition hover:opacity-75">
               <X />
             </Button>
           </div>

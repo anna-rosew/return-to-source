@@ -10,7 +10,7 @@ interface ShortArticleLayoutProps {
 }
 
 export const ShortArticleLayout = ({ content, type }: ShortArticleLayoutProps) => (
-  <article className="prose prose-base max-w-4xl mx-auto">
+  <article className="prose prose-base mx-auto max-w-4xl">
     <ArticleHeader content={content} type={type} />
     <ArticleContent content={content} />
     {content.callToAction && <CallToAction text={content.callToAction} />}

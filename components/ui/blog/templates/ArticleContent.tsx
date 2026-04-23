@@ -10,12 +10,12 @@ export const ArticleContent = ({ content }: ArticleContentProps) => {
     <div>
       {content.children}
       {content.contentImage && (
-        <div className="relative w-full h-[400px] my-8 text-left">
+        <div className="relative my-8 h-[400px] w-full text-left">
           <Image
             src={content.contentImage}
             alt="Content illustration"
             fill
-            className="object-cover rounded-lg"
+            className="rounded-lg object-cover"
           />
         </div>
       )}

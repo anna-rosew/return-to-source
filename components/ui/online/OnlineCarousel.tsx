@@ -23,7 +23,7 @@ const OnlineCarousel: React.FC = () => {
     <div className="w-full">
       <div>
         <div className="mb-6">
-          <div className="online-pagination flex justify-center items-center py-4 border-t border-b border-gray-800" />
+          <div className="online-pagination flex items-center justify-center border-b border-t border-gray-800 py-4" />
           <Swiper
             pagination={pagination}
             modules={[Pagination]}
@@ -35,7 +35,7 @@ const OnlineCarousel: React.FC = () => {
             {classes.map((classItem, index) => (
               <SwiperSlide
                 key={index}
-                className="text-center bg-transparent flex items-center justify-center"
+                className="flex items-center justify-center bg-transparent text-center"
               >
                 <OnlineClassSlides classInfo={classItem} />
               </SwiperSlide>

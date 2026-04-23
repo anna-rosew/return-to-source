@@ -5,7 +5,7 @@ export const testimonials: Testimonial[] = [
     pic: '/Assets/Images/Suri.webp',
     heading: 'A sense of calm restored.',
     testimonial:
-      "\u201c Rose came into my life at a traumatic and distressing time. I\u2019ve unearthed insights when I didn\u2019t think my mind would let me and overcome challenges that I could not see beyond. Through movement, breath and her excellent coaching skills, a sense of calm and peace is restored. I don\u2019t know how Rose does it, but she just knows.\u201d",
+      '\u201c Rose came into my life at a traumatic and distressing time. I\u2019ve unearthed insights when I didn\u2019t think my mind would let me and overcome challenges that I could not see beyond. Through movement, breath and her excellent coaching skills, a sense of calm and peace is restored. I don\u2019t know how Rose does it, but she just knows.\u201d',
     name: 'Suri',
     location: 'Switzerland',
   },
@@ -37,7 +37,7 @@ export const testimonials: Testimonial[] = [
     pic: '/Assets/Images/Janine.webp',
     heading: 'Healing through breath and movement.',
     testimonial:
-      "\u201cI first practised yoga with Rose on a retreat in Portugal in 2018. It was the first time I had tried kundalini yoga and I found it released emotions and I felt that it was very healing. I find Rose\u2019s online yoga leaves me feeling relaxed, much more aware of the power of my breath and with a heightened awareness.\u201d",
+      '\u201cI first practised yoga with Rose on a retreat in Portugal in 2018. It was the first time I had tried kundalini yoga and I found it released emotions and I felt that it was very healing. I find Rose\u2019s online yoga leaves me feeling relaxed, much more aware of the power of my breath and with a heightened awareness.\u201d',
     name: 'Janine',
     location: 'UK',
   },
@@ -45,7 +45,7 @@ export const testimonials: Testimonial[] = [
     pic: '/Assets/Images/Ruth.webp',
     heading: 'A sense of family in spirit.',
     testimonial:
-      "\u201cI really enjoyed being part of the group and I found your Zoom \u2018technique\u2019 worked really well. I just had you on the screen while doing the practice, so it felt like a one to one, whilst being aware of the others in the group, all with a common purpose. Emotionally, it felt so lovely to be part of a \u2018family\u2019 in spirit.\u201d",
+      '\u201cI really enjoyed being part of the group and I found your Zoom \u2018technique\u2019 worked really well. I just had you on the screen while doing the practice, so it felt like a one to one, whilst being aware of the others in the group, all with a common purpose. Emotionally, it felt so lovely to be part of a \u2018family\u2019 in spirit.\u201d',
     name: 'Ruth',
     location: 'UK',
   },

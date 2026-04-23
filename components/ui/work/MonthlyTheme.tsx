@@ -33,15 +33,15 @@ const MonthlyTheme = () => {
     },
   ];
   return (
-    <div className="w-full container py-10">
+    <div className="container w-full py-10">
       <div>
         <StarIcon
-          className="fill-white text-white mx-auto mt-7  group-hover:text-white transition-colors duration-700"
+          className="mx-auto mt-7 fill-white text-white transition-colors duration-700 group-hover:text-white"
           width={25}
           height={25}
         />
-        <h1 className="text-white text-[28px]">September 2025: Equinox Calling</h1>
-        <p className="text-white text-center">
+        <h1 className="text-[28px] text-white">September 2025: Equinox Calling</h1>
+        <p className="text-center text-white">
           Join Rose for a transformative four-week Equinox journey to find balance and stability as
           the seasons shift. This gentle, grounding program invites you to work with your thoughts
           and emotions through yogic wisdom and daily practices. As summer&apos;s expansive energy
@@ -53,7 +53,7 @@ const MonthlyTheme = () => {
           lasting balance and inner stability.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-8">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-4 md:gap-8">
         {themeDetails.map((content, index) => (
           <MonthlyCard
             key={index}
@@ -67,7 +67,7 @@ const MonthlyTheme = () => {
         ))}
       </div>
       <Link href="/contact">
-        <Button variant="secondary" size="lg" className="my-10 mx-auto">
+        <Button variant="secondary" size="lg" className="mx-auto my-10">
           Email me more info!
         </Button>
       </Link>

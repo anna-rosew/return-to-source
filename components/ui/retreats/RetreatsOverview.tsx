@@ -32,8 +32,8 @@ export default function RetreatsOverview({ slides }: RetreatCarouselProps) {
         ))}
 
         <div className="medium-screen-component">
-          <div className="swiper-button-prev absolute left-4 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"></div>
-          <div className="medium-screen-component swiper-button-next absolute right-4 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"></div>
+          <div className="swiper-button-prev absolute left-4 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer"></div>
+          <div className="medium-screen-component swiper-button-next absolute right-4 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer"></div>
         </div>
       </Swiper>
     </div>

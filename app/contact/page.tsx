@@ -15,12 +15,12 @@ import NewsletterForm from '@/components/ui/contact/NewsletterForm';
 
 const Contact = () => {
   return (
-    <div className="container text-center w-full pb-20">
+    <div className="container w-full pb-20 text-center">
       <h1 className="mb-10">Contact</h1>
-      <div className="grid md:grid-cols-2 gap-12 md:items-stretch">
-        <div className="relative order-first md:order-last rounded-xl overflow-hidden min-h-[400px]">
+      <div className="grid gap-12 md:grid-cols-2 md:items-stretch">
+        <div className="relative order-first min-h-[400px] overflow-hidden rounded-xl md:order-last">
           <Image
-            className="medium-screen-component absolute inset-0 w-full h-full object-cover rounded-xl"
+            className="medium-screen-component absolute inset-0 h-full w-full rounded-xl object-cover"
             alt="Rose Long sat leading a retreat class in cross-legged position on the floor, smiling with her eyes closed. She is sat in-front of a large bay window which looks out onto a large sun-filled garden. There is a large, golden gong to her left and a plant with a himilayan salt lamp on her right."
             src={ContactImage}
             fill
@@ -37,7 +37,7 @@ const Contact = () => {
             style={{ width: '100%', height: 'auto' }}
           />
         </div>
-        <div className="text text-left space-y-8 pb-4">
+        <div className="text space-y-8 pb-4 text-left">
           <ContactForm />
           <NewsletterForm />
           {/* <div className="text-left border border-customBeige/60 rounded-xl p-6 bg-customLightBeige/40">

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const Retreats = () => {
   return (
-    <div className="w-full px-4 md:px-8 pb-20 max-w-5xl mx-auto">
+    <div className="mx-auto w-full max-w-5xl px-4 pb-20 md:px-8">
       <SnowdoniaRetreat />
     </div>
   );

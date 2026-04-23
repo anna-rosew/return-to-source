@@ -58,7 +58,7 @@ const SnowdoniaRetreat = () => {
   return (
     <div className="w-full">
       {/* Hero image */}
-      <div className="relative w-full h-[50vh] min-h-[320px] rounded-xl overflow-hidden mb-10">
+      <div className="relative mb-10 h-[50vh] min-h-[320px] w-full overflow-hidden rounded-xl">
         <Image
           src="/Assets/Images/snowdonia26.webp"
           alt="Snowdonia Spring Retreat"
@@ -66,23 +66,23 @@ const SnowdoniaRetreat = () => {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/30 rounded-xl" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-2">
-          <p className="text-xs uppercase tracking-widest mb-3 text-white/80">
+        <div className="absolute inset-0 rounded-xl bg-black/30" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-2 text-center text-white">
+          <p className="mb-3 text-xs uppercase tracking-widest text-white/80">
             April 2026 · Snowdonia
           </p>
-          <h1 className="font-jomolhari text-4xl md:text-5xl mb-4 text-white">
+          <h1 className="mb-4 font-jomolhari text-4xl text-white md:text-5xl">
             Spring Yoga Retreat
           </h1>
-          <span className="bg-customSienna text-white text-xs font-semibold px-4 py-1.5 rounded-full">
+          <span className="rounded-full bg-customSienna px-4 py-1.5 text-xs font-semibold text-white">
             Only 2 spaces remaining
           </span>
         </div>
       </div>
 
       {/* Intro prose */}
-      <div className="w-full text-center mb-12 space-y-4">
-        <p className="italic text-customSienna font-semibold">
+      <div className="mb-12 w-full space-y-4 text-center">
+        <p className="font-semibold italic text-customSienna">
           As the snow melts from the mountain tops and the streams come alive with rushing water,
           the sleeping land awakens.
         </p>
@@ -105,21 +105,21 @@ const SnowdoniaRetreat = () => {
       </div>
 
       {/* Dates & venue */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 w-full">
-        <div className="flex items-start gap-4 border border-customBeige/70 rounded-xl p-5 bg-white">
-          <CalendarDays className="w-5 h-5 mt-0.5 shrink-0 text-customTeal" strokeWidth={1.5} />
+      <div className="mb-12 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="flex items-start gap-4 rounded-xl border border-customBeige/70 bg-white p-5">
+          <CalendarDays className="mt-0.5 h-5 w-5 shrink-0 text-customTeal" strokeWidth={1.5} />
           <div>
-            <p className="text-xs uppercase tracking-widest text-black/50 mb-1">Dates</p>
-            <p className="font-semibold text-sm">Thu 23rd – Sun 26th April 2026</p>
-            <p className="text-xs text-black/55 mt-0.5">Arrival from 3.00pm · Departure 11.00am</p>
+            <p className="mb-1 text-xs uppercase tracking-widest text-black/50">Dates</p>
+            <p className="text-sm font-semibold">Thu 23rd – Sun 26th April 2026</p>
+            <p className="mt-0.5 text-xs text-black/55">Arrival from 3.00pm · Departure 11.00am</p>
           </div>
         </div>
-        <div className="flex items-start gap-4 border border-customBeige/70 rounded-xl p-5 bg-white">
-          <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-customTeal" strokeWidth={1.5} />
+        <div className="flex items-start gap-4 rounded-xl border border-customBeige/70 bg-white p-5">
+          <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-customTeal" strokeWidth={1.5} />
           <div>
-            <p className="text-xs uppercase tracking-widest text-black/50 mb-1">Venue</p>
-            <p className="font-semibold text-sm">Snowdonia Mountain Lodge</p>
-            <p className="text-xs text-black/55 mt-0.5">
+            <p className="mb-1 text-xs uppercase tracking-widest text-black/50">Venue</p>
+            <p className="text-sm font-semibold">Snowdonia Mountain Lodge</p>
+            <p className="mt-0.5 text-xs text-black/55">
               A stunning valley in the heart of Snowdonia
             </p>
           </div>
@@ -127,7 +127,7 @@ const SnowdoniaRetreat = () => {
       </div>
 
       {/* Photo strip */}
-      <div className="grid grid-cols-3 gap-2 mb-12 rounded-xl overflow-hidden">
+      <div className="mb-12 grid grid-cols-3 gap-2 overflow-hidden rounded-xl">
         {['snowdonia25-1.webp', 'snowdonia25-3.webp', 'snowdonia25-5.webp'].map((img, i) => (
           <div key={i} className="relative h-40 md:h-56">
             <Image
@@ -141,7 +141,7 @@ const SnowdoniaRetreat = () => {
       </div>
 
       {/* Rose's personal note */}
-      <div className="w-full mb-12 text-center space-y-4">
+      <div className="mb-12 w-full space-y-4 text-center">
         <p>
           Come and spend deep, reconnecting time on the mat, and deep, reconnecting time in nature.
           There&apos;ll be moments for reflection, solitude and connection. And yes — there will be
@@ -158,25 +158,25 @@ const SnowdoniaRetreat = () => {
 
       {/* What's included */}
       <div className="mb-12">
-        <h2 className="text-center mb-8">What&apos;s Included</h2>
-        <p className="text-center text-black/60 text-sm w-full mb-8">
+        <h2 className="mb-8 text-center">What&apos;s Included</h2>
+        <p className="mb-8 w-full text-center text-sm text-black/60">
           Everything is taken care of, so you can simply arrive, breathe in the beauty of the
           valley, and allow yourself to be restored and revitalised.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {included.map((item, i) => {
             const Icon = item.icon;
             return (
               <Card key={i} className="border border-customBeige/60 bg-white text-left">
                 <CardContent className="p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Icon className="w-5 h-5 text-customTeal shrink-0" strokeWidth={1.5} />
-                    <h3 className="text-base font-semibold m-0">{item.title}</h3>
+                  <div className="mb-3 flex items-center gap-3">
+                    <Icon className="h-5 w-5 shrink-0 text-customTeal" strokeWidth={1.5} />
+                    <h3 className="m-0 text-base font-semibold">{item.title}</h3>
                   </div>
                   <ul className="space-y-1.5">
                     {item.items.map((point, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm text-black/65">
-                        <span className="text-customTeal mt-0.5 shrink-0 text-xs">✦</span>
+                        <span className="mt-0.5 shrink-0 text-xs text-customTeal">✦</span>
                         {point}
                       </li>
                     ))}
@@ -189,19 +189,19 @@ const SnowdoniaRetreat = () => {
       </div>
 
       {/* Pricing & CTA */}
-      <div className="max-w-sm mx-auto text-center border border-customTeal rounded-2xl overflow-hidden mb-12">
-        <div className="bg-customTeal py-5 px-6">
-          <p className="text-white text-xs uppercase tracking-widest mb-1">Your Investment</p>
+      <div className="mx-auto mb-12 max-w-sm overflow-hidden rounded-2xl border border-customTeal text-center">
+        <div className="bg-customTeal px-6 py-5">
+          <p className="mb-1 text-xs uppercase tracking-widest text-white">Your Investment</p>
           <p className="font-jomolhari text-5xl text-white">£645</p>
-          <p className="text-white/75 text-sm mt-1">Payment plans available</p>
+          <p className="mt-1 text-sm text-white/75">Payment plans available</p>
         </div>
-        <div className="p-6 bg-white space-y-3">
-          <p className="text-sm text-customSienna font-semibold">Only 2 spaces remaining</p>
+        <div className="space-y-3 bg-white p-6">
+          <p className="text-sm font-semibold text-customSienna">Only 2 spaces remaining</p>
           <p className="text-sm text-black/60">
             If you&apos;d like one of the remaining places, email Rose to register.
           </p>
           <Link href="/contact">
-            <Button variant="secondary" size="lg" className="w-full mt-2">
+            <Button variant="secondary" size="lg" className="mt-2 w-full">
               Reserve Your Place
             </Button>
           </Link>
@@ -209,9 +209,9 @@ const SnowdoniaRetreat = () => {
       </div>
 
       {/* Closing */}
-      <div className="max-w-md mx-auto text-center mb-8">
-        <p className="italic text-black/50 text-sm">&ldquo;I&apos;d love you to come.&rdquo;</p>
-        <p className="text-sm mt-2">Love, Rose</p>
+      <div className="mx-auto mb-8 max-w-md text-center">
+        <p className="text-sm italic text-black/50">&ldquo;I&apos;d love you to come.&rdquo;</p>
+        <p className="mt-2 text-sm">Love, Rose</p>
       </div>
     </div>
   );

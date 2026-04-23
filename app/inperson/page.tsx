@@ -1,4 +1,3 @@
-
 const Inperson = () => {
   return (
     <div className="container mb-8">

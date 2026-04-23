@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-customLightBeige">
         <NavBar />
         <main className="flex flex-col">
-          <div className="relative flex flex-col lg:justify-center lg:items-center overflow-hidden  pt-5 md:pt-8 w-full text-center">
+          <div className="relative flex w-full flex-col overflow-hidden pt-5 text-center md:pt-8 lg:items-center lg:justify-center">
             {children}
             <Analytics />
           </div>

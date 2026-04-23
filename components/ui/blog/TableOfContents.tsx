@@ -43,7 +43,6 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
   }, [sections]);
 
   const scrollToSection = (sectionId: string) => {
-
     const element = document.getElementById(sectionId);
 
     if (element) {
@@ -61,7 +60,6 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
         behavior: 'smooth',
       });
     } else {
-
       // Log all available heading elements
       const allHeadings = document.querySelectorAll('h1, h2, h3');
       console.log(
@@ -76,20 +74,20 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
   };
 
   return (
-    <nav className="hidden  md:block max-w-4xl mx-auto px-4 text-left">
-      <div className="flex items-center gap-2 mb-2">
-        <h3 className="font-normal m-0">Table of Contents</h3>
+    <nav className="mx-auto hidden max-w-4xl px-4 text-left md:block">
+      <div className="mb-2 flex items-center gap-2">
+        <h3 className="m-0 font-normal">Table of Contents</h3>
       </div>
       <ul className="space-y-2">
         {sections.map((section) => (
           <li key={section.id}>
             <button
               onClick={() => scrollToSection(section.id)}
-              className={`w-full text-left border-b border-black transition-colorsflex my-1 pb-1 items-center justify-center md:justify-start group ${
+              className={`transition-colorsflex group my-1 w-full items-center justify-center border-b border-black pb-1 text-left md:justify-start ${
                 activeSection === section.id ? 'bg-gray-200 text-black' : 'text-gray-600'
               }`}
             >
-              <p className="flex items-center gap-x-2 font-medium m-0 text-black text-center md:text-left">
+              <p className="m-0 flex items-center gap-x-2 text-center font-medium text-black md:text-left">
                 {section.title}
                 <span className="transform transition-transform duration-300 group-hover:translate-x-2">
                   <ChevronRight />
@@ -101,7 +99,7 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
       </ul>
       <Link
         href="/blog"
-        className="font-bold uppercase list-none flex items-center gap-x-2 text-sm text-black text-left"
+        className="flex list-none items-center gap-x-2 text-left text-sm font-bold uppercase text-black"
       >
         <span className="transform transition-transform duration-300 group-hover:translate-x-2">
           <ArrowLeft />

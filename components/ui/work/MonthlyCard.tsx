@@ -15,17 +15,17 @@ const MonthlyCard = (props: MonthlyCardProps) => {
   return (
     <div>
       <Icon
-        className={`text-black mx-auto mt-10  ${className}`}
+        className={`mx-auto mt-10 text-black ${className}`}
         width={width}
         height={height}
         strokeWidth={1}
       />
-      <h3 className="text-white pt-4">{week}</h3>
+      <h3 className="pt-4 text-white">{week}</h3>
 
-      <div className="group rounded-lg flex min-h-[300px] flex-col items-center justify-start text-black bg-customBeige text-center px-4 md:px-4 py-4 transition-colors duration-700 ease-in-out">
+      <div className="group flex min-h-[300px] flex-col items-center justify-start rounded-lg bg-customBeige px-4 py-4 text-center text-black transition-colors duration-700 ease-in-out md:px-4">
         <div>
-          <h2 className="text-customSienna transition-colors duration-700 text-[1.5em]">{title}</h2>
-          <p className="text-black transition-colors duration-700 text-[1rem]">{text}</p>
+          <h2 className="text-[1.5em] text-customSienna transition-colors duration-700">{title}</h2>
+          <p className="text-[1rem] text-black transition-colors duration-700">{text}</p>
         </div>
       </div>
     </div>

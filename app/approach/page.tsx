@@ -38,20 +38,20 @@ const Approach = () => {
 
   return (
     <div>
-      <div className="container  w-full">
+      <div className="container w-full">
         <h1>Approach</h1>
         <p className="font-bold md:text-center">{INTRO_PARAGRAPH}</p>
         <VideoPlayer url="https://vimeo.com/981928855" />
 
-        <div className="text-left mt-8 md:grid md:grid-cols-2 md:gap-12">
+        <div className="mt-8 text-left md:grid md:grid-cols-2 md:gap-12">
           <div className="flex items-center justify-center gap-5">
             <StarIcon
-              className="hidden md:block text-black  group-hover:text-white transition-colors duration-700"
+              className="hidden text-black transition-colors duration-700 group-hover:text-white md:block"
               width={100}
               height={100}
             />
             <div>
-              <h3 className="text-customTeal text-base">TECHNIQUES</h3>
+              <h3 className="text-base text-customTeal">TECHNIQUES</h3>
               <h2 className="text-2xl">
                 You have the capacity to transform yourself from the inside out.
               </h2>
@@ -63,13 +63,13 @@ const Approach = () => {
               proving what they knew; you can alter your own body and mind.
             </p>
             <Link href="/work">
-              <Button variant="secondary" size="lg" className="my-3 md:mr-auto w-full md:w-auto ">
+              <Button variant="secondary" size="lg" className="my-3 w-full md:mr-auto md:w-auto">
                 Start my journey
               </Button>
             </Link>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-8">
           {cardDetails.map((content, index) => (
             <DetailsCard
               key={index}

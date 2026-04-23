@@ -10,7 +10,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard = (props: TestimonialCardProps) => {
   return (
-    <div className="testimonial-card p-7 rounded shadow-md bg-customBeige text-left">
+    <div className="testimonial-card rounded bg-customBeige p-7 text-left shadow-md">
       <div className="mb-4">
         <Image
           src={props.pic}
@@ -20,10 +20,10 @@ const TestimonialCard = (props: TestimonialCardProps) => {
           style={{ borderRadius: '50%', objectFit: 'cover' }}
         />
       </div>
-      <h2 className="font-bold text-lg mb-2 text-customSienna">{props.heading}</h2>
-      <p className="italic mb-4">{props.testimonial}</p>
-      <p className="text-sm  text-customSienna">
-        <span className="font-semibold ">{props.name}</span> | <span>{props.location}</span>
+      <h2 className="mb-2 text-lg font-bold text-customSienna">{props.heading}</h2>
+      <p className="mb-4 italic">{props.testimonial}</p>
+      <p className="text-sm text-customSienna">
+        <span className="font-semibold">{props.name}</span> | <span>{props.location}</span>
       </p>
     </div>
   );

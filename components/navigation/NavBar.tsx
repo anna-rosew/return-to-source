@@ -61,12 +61,12 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <nav ref={navbarRef} className="relative lg:mt-3 lg:mx-[76px] border-b-2 border-black">
-      <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
-        <div className="flex items-center justify-between w-full md:w-auto">
+    <nav ref={navbarRef} className="relative border-b-2 border-black lg:mx-[76px] lg:mt-3">
+      <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
+        <div className="flex w-full items-center justify-between md:w-auto">
           <Logo />
         </div>
-        <div className="lg:flex hidden items-center justify-center space-x-2 md:order-2">
+        <div className="hidden items-center justify-center space-x-2 md:order-2 lg:flex">
           <Link href="/contact">
             <Button variant="secondary" size="lg">
               Contact Rose
@@ -74,10 +74,10 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="hidden lg:block">
-          <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-4 rtl:space-x-reverse">
-            <li className="py-2 px-3">
+          <ul className="mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-4 rtl:space-x-reverse">
+            <li className="px-3 py-2">
               <Link href="/" aria-current="page">
-                <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
+                <p className="relative inline-block cursor-pointer font-jost text-[16px] uppercase text-black transition-all ease-in-out before:absolute before:bottom-0 before:h-[1px] before:w-0 before:origin-center before:bg-black before:transition-all before:duration-700 before:ease-in-out hover:text-black hover:before:left-0 hover:before:w-full">
                   Home
                 </p>
               </Link>
@@ -86,13 +86,13 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => toggleDropdown('workWithRose')}
-                className="flex items-center justify-between w-full py-2 px-3 cursor-pointer"
+                className="flex w-full cursor-pointer items-center justify-between px-3 py-2"
               >
-                <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
+                <p className="relative inline-block cursor-pointer font-jost text-[16px] uppercase text-black transition-all ease-in-out before:absolute before:bottom-0 before:h-[1px] before:w-0 before:origin-center before:bg-black before:transition-all before:duration-700 before:ease-in-out hover:text-black hover:before:left-0 hover:before:w-full">
                   Work with Rose
                 </p>
                 <svg
-                  className="w-2.5 h-2.5 ms-3 cursor-pointer"
+                  className="ms-3 h-2.5 w-2.5 cursor-pointer"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 10 6"
@@ -109,9 +109,9 @@ const Navbar = () => {
               <div
                 className={`${
                   dropdowns.workWithRose ? 'block' : 'hidden'
-                } absolute z-10 w-auto text-sm bg-black rounded-lg shadow-md  dark:bg-gray-700`}
+                } absolute z-10 w-auto rounded-lg bg-black text-sm shadow-md dark:bg-gray-700`}
               >
-                <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
+                <ul className="space-y-4 p-6 pb-0 text-white dark:text-white md:pb-4">
                   <li>
                     <Link
                       href="/work"
@@ -164,13 +164,13 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => toggleDropdown('about')}
-                className="flex items-center justify-between w-full py-2 px-3"
+                className="flex w-full items-center justify-between px-3 py-2"
               >
-                <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
+                <p className="relative inline-block cursor-pointer font-jost text-[16px] uppercase text-black transition-all ease-in-out before:absolute before:bottom-0 before:h-[1px] before:w-0 before:origin-center before:bg-black before:transition-all before:duration-700 before:ease-in-out hover:text-black hover:before:left-0 hover:before:w-full">
                   About
                 </p>
                 <svg
-                  className="w-2.5 h-2.5 ms-3"
+                  className="ms-3 h-2.5 w-2.5"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 10 6"
@@ -187,9 +187,9 @@ const Navbar = () => {
               <div
                 className={`${
                   dropdowns.about ? 'block' : 'hidden'
-                } absolute z-10 w-auto text-sm bg-black rounded-lg shadow-md  dark:bg-gray-700`}
+                } absolute z-10 w-auto rounded-lg bg-black text-sm shadow-md dark:bg-gray-700`}
               >
-                <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
+                <ul className="space-y-4 p-6 pb-0 text-white dark:text-white md:pb-4">
                   <li>
                     <Link href="/about" className="hover:text-customGreen" onClick={closeDropdowns}>
                       Meet Rose
@@ -211,13 +211,13 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => toggleDropdown('resources')}
-                className="flex items-center justify-between w-full py-2 px-3"
+                className="flex w-full items-center justify-between px-3 py-2"
               >
-                <p className="font-jost text-[16px] text-black uppercase relative hover:text-black cursor-pointer transition-all ease-in-out inline-block before:transition-all before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-full hover:before:left-0 before:bottom-0">
+                <p className="relative inline-block cursor-pointer font-jost text-[16px] uppercase text-black transition-all ease-in-out before:absolute before:bottom-0 before:h-[1px] before:w-0 before:origin-center before:bg-black before:transition-all before:duration-700 before:ease-in-out hover:text-black hover:before:left-0 hover:before:w-full">
                   Resources
                 </p>
                 <svg
-                  className="w-2.5 h-2.5 ms-3"
+                  className="ms-3 h-2.5 w-2.5"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 10 6"
@@ -234,9 +234,9 @@ const Navbar = () => {
               <div
                 className={`${
                   dropdowns.resources ? 'block' : 'hidden'
-                } absolute z-10 w-auto text-sm bg-black rounded-lg shadow-md dark:bg-gray-700`}
+                } absolute z-10 w-auto rounded-lg bg-black text-sm shadow-md dark:bg-gray-700`}
               >
-                <ul className="space-y-4 p-6 pb-0 text-white md:pb-4 dark:text-white">
+                <ul className="space-y-4 p-6 pb-0 text-white dark:text-white md:pb-4">
                   <li>
                     <Link
                       href="/dashboard"
