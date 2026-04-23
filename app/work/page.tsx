@@ -1,7 +1,14 @@
+import { Metadata } from 'next';
 import Card from '@/components/common/NavCard';
 import TestimonialSection from '@/components/ui/testimonials/TestimonialSection';
 import EasterSeriesSection from '@/components/ui/online/EasterSeriesSection';
 import { workCards } from '@/content/work';
+
+export const metadata: Metadata = {
+  title: 'Work with Rose | Rose Long',
+  description:
+    'Explore all the ways to work with Rose Long — one-to-one coaching, group classes, online sessions, retreats, and seasonal programmes.',
+};
 
 const Work = () => {
   return (

@@ -1,6 +1,13 @@
+import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import MonthlyCard from '@/components/ui/work/MonthlyCard';
 import TestimonialSection from '@/components/ui/testimonials/TestimonialSection';
+
+export const metadata: Metadata = {
+  title: 'Monthly Theme | Rose Long',
+  description:
+    'A focused monthly programme with Rose Long — live yoga classes, daily practices, journal prompts and community support to help you show up for yourself.',
+};
 import RootAndReleaseIcon from '@/public/Assets/Icons/RootsIcon';
 import VitalityIcon from '@/public/Assets/Icons/plant';
 import LightIcon from '@/public/Assets/Icons/Sunshine';

@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import DetailsCard from '@/components/ui/DetailsCard';
 import TestimonialSection from '@/components/ui/testimonials/TestimonialSection';
@@ -9,6 +10,12 @@ import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'One-to-One Sessions | Rose Long',
+  description:
+    'Private coaching sessions with Rose Long — tailored to your rhythm, delivered by phone, video or in person. Develop your inner guidance system.',
+};
 
 const onetoone = () => {
   const cardDetails = [

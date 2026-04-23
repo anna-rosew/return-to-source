@@ -4,13 +4,11 @@ import { Button } from '../button';
 import Link from 'next/link';
 import LocationIcon from '@/public/Assets/Icons/LocationIcon';
 import CalendarIcon from '@/public/Assets/Icons/CalendarIcon';
+import { formatDescription } from '@/lib/utils';
 
 import { InPersonProps } from '@/types/index';
 
 const InPersonCard: React.FC<InPersonProps> = ({ sessionInfo }) => {
-  const formatDescription = (description: string) => {
-    return description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-  };
   return (
     <div className="relative p-4 flex flex-col justify-between items-start text-left md:items-start text-white h-full rounded-[20px] sm:h-[300px] md:h-[500px] lg:h-[600px] lg:w-[500px] overflow-hidden">
       <div

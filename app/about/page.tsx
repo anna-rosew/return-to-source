@@ -2,11 +2,10 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import AboutImage from '@/public/Assets/Images/about.webp';
-import AboutSmall from '@/public/Assets/Images/about-small.webp';
 import { Button } from '@/components/ui/button';
 import QualificationsModal from '@/components/ui/modals/QualificationsModal';
 import LogoContainer from '@/components/ui/about/LogoContainer';
-import TestimonialSection from '@/components/ui/TestimonialSection';
+import TestimonialSection from '@/components/ui/testimonials/TestimonialSection';
 
 const About = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,18 +17,11 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="relative order-first md:order-last">
             <Image
-              className="medium-screen-component w-full max-w-md h-auto object-contain mx-auto"
+              className="w-full h-auto object-contain mx-auto"
               alt="Rose Long sat leading a retreat class in cross-legged position on the floor, smiling with her eyes closed. She is sat in-front of a large bay window which looks out onto a large sun-filled garden. There is a large, golden gong to her left and a plant with a himilayan salt lamp on her right."
               src={AboutImage}
-              layout="responsive"
-            />
-
-            <Image
-              className="small-screen-component"
-              alt="Rose Long sat leading a retreat class in cross-legged position on the floor, smiling with her eyes closed. She is sat in-front of a large bay window which looks out onto a large sun-filled garden. There is a large, golden gong to her left and a plant with a himilayan salt lamp on her right."
-              src={AboutSmall}
               placeholder="blur"
-              layout="responsive"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
           <div className="text">

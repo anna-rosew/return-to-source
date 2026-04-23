@@ -1,6 +1,13 @@
+import { Metadata } from 'next';
 import React from 'react';
 
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Contact | Rose Long',
+  description:
+    'Get in touch with Rose Long to ask a question, book a session, or find out more about her yoga and coaching work.',
+};
 import ContactImage from '@/public/Assets/Images/contact.webp';
 import ContactSmall from '@/public/Assets/Images/contact-mobile.webp';
 

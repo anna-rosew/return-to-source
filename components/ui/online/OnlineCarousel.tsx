@@ -23,16 +23,7 @@ const OnlineCarousel: React.FC = () => {
     <div className="w-full">
       <div>
         <div className="mb-6">
-          <div className="online-pagination flex justify-center items-center py-4 border-t border-b border-gray-800">
-            {classes.map((classItem, index) => (
-              <h3
-                key={index}
-                className="online-bullet cursor-pointer px-4 py-2 text-center font-medium text-black hover:bg-gray-200 transition-all"
-              >
-                {classItem.classType}
-              </h3>
-            ))}
-          </div>
+          <div className="online-pagination flex justify-center items-center py-4 border-t border-b border-gray-800" />
           <Swiper
             pagination={pagination}
             modules={[Pagination]}

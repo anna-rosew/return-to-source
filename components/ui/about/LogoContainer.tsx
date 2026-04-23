@@ -4,7 +4,7 @@ import Image from 'next/image';
 import KRI from '@/public/Assets/Icons/kundali-institute.svg';
 import IAHC from '@/public/Assets/Icons/IAHC.svg';
 import YogaAlliance from '@/public/Assets/Icons/yoga-alliance.svg';
-import IIN from '@/public/Assets/Icons/kundali-institute.svg';
+import IIN from '@/public/Assets/Icons/IIN.svg';
 
 const LogoContainer = () => {
   return (

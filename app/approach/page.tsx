@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import DetailsCard from '@/components/ui/DetailsCard';
 import TestimonialSection from '@/components/ui/testimonials/TestimonialSection';
@@ -9,6 +10,12 @@ import StarIcon from '@/public/Assets/Icons/StarIcon';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'Approach | Rose Long',
+  description:
+    'Discover the mind-body-breath approach Rose uses in her coaching and yoga sessions — grounded in ancient wisdom and modern research.',
+};
 
 const approach = () => {
   const cardDetails = [

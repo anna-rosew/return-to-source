@@ -1,6 +1,13 @@
+import { Metadata } from 'next';
 import Card from '@/components/common/NavCard';
 import SectionHeading from '@/components/common/SectionHeading';
 import OnlineCarousel from '@/components/ui/online/OnlineCarousel';
+
+export const metadata: Metadata = {
+  title: 'Groups | Rose Long',
+  description:
+    'Join Rose Long for online and in-person yoga and coaching groups, seasonal programmes, and retreats. Something for every stage of your journey.',
+};
 // import InPersonCarousel from "@/components/ui/inperson/InPersonCarousel";
 import { slides } from '@/content/retreats';
 import RetreatsOverview from '@/components/ui/retreats/RetreatsOverview';

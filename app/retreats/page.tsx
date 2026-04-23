@@ -1,5 +1,12 @@
+import { Metadata } from 'next';
 import SnowdoniaRetreat from '@/components/ui/retreats/SnowdoniaRetreat';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'Retreats | Rose Long',
+  description:
+    'Step away from the everyday and immerse yourself in a transformative retreat with Rose Long. Yoga, meditation, and community in carefully chosen locations.',
+};
 
 const retreats = () => {
   return (

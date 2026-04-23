@@ -1,7 +1,7 @@
 'use client';
 import { useRef } from 'react';
 import ReactPlayer from 'react-player/lazy';
-import { Play } from 'phosphor-react';
+import { Play } from 'lucide-react';
 
 type VideoPlayerProps = {
   url: string;
@@ -21,7 +21,7 @@ const VideoPlayer = (props: VideoPlayerProps) => {
           playing
           playIcon={
             <button className="max-w-[361px] w-full flex justify-center items-center gap-2 bg-ifm-btn-primary text-ifm-text-black rounded-[40px] p-6 text-2xl">
-              <Play weight="fill" color="white" size={100} />
+              <Play fill="white" color="white" size={100} />
             </button>
           }
           url={props.url}

@@ -6,13 +6,10 @@ import { ChevronRight, ClockIcon } from 'lucide-react';
 import DetailsDisplay from '../DetailsDisplay';
 import VideoCallIcon from '@/public/Assets/Icons/VideoCallIcon';
 import StarIcon from '@/public/Assets/Icons/StarIcon';
+import { formatDescription } from '@/lib/utils';
 
 const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
   const Icon = classInfo.icon;
-
-  const formatDescription = (description: string) => {
-    return description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-  };
 
   const displayInfo = {
     icon: VideoCallIcon,

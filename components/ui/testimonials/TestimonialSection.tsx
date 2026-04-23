@@ -11,9 +11,8 @@ const TestimonialSection = () => {
         <div className="flex flex-col md:col-span-1 items-center md:items-start text-center md:text-left space-y-12">
           <h2 className="text-white font-medium">Other Peoples&apos; Stories...</h2>
           <p className="text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            From reclaiming calm to finding the courage to make real change — these are the
+            experiences of people who&apos;ve worked with Rose.
           </p>
           <Link href="/work" className="medium-screen-component">
             <Button
