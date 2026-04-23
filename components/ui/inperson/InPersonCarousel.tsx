@@ -1,4 +1,3 @@
-import React from 'react';
 import { sessionInfo } from '@/content/inperson';
 
 import {

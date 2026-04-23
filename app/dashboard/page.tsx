@@ -2,9 +2,8 @@ import { Button } from '@/components/ui/button';
 import SunIcon from '@/public/Assets/Icons/SunIcon';
 import Link from 'next/link';
 
-import React from 'react';
 
-const dashboard = () => {
+const Dashboard = () => {
   return (
     <div className="flex justify-center items-center h-screen container">
       <div className="mx-auto">
@@ -30,4 +29,4 @@ const dashboard = () => {
   );
 };
 
-export default dashboard;
+export default Dashboard;

@@ -30,15 +30,12 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
     );
 
     // Log initial sections
-    console.log('Sections to observe:', sections);
 
     // Observer setup
     sections.forEach((section) => {
       const element = document.getElementById(section.id);
-      console.log(`Looking for element with id '${section.id}':`, element);
       if (element) {
         observer.observe(element);
-        console.log(`Observing element with id '${section.id}'`);
       }
     });
 
@@ -46,10 +43,8 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
   }, [sections]);
 
   const scrollToSection = (sectionId: string) => {
-    console.log(`Attempting to scroll to section: ${sectionId}`);
 
     const element = document.getElementById(sectionId);
-    console.log(`Found element:`, element);
 
     if (element) {
       // Get the header height (adjust this value based on your layout)
@@ -57,19 +52,15 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
 
       // Log position calculations
       const elementPosition = element.getBoundingClientRect().top;
-      console.log('Element position:', elementPosition);
 
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
-      console.log('Target scroll position:', offsetPosition);
 
       // Attempt scroll
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth',
       });
-      console.log('Scroll initiated');
     } else {
-      console.warn(`No element found with id: ${sectionId}`);
 
       // Log all available heading elements
       const allHeadings = document.querySelectorAll('h1, h2, h3');

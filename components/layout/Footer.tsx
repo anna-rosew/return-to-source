@@ -1,4 +1,3 @@
-import React from 'react';
 import LogoWhite from '@/public/Assets/Icons/logo_white.svg';
 import InstaIcon from '@/public/Assets/Icons/insta-footer.svg';
 import VimeoIcon from '@/public/Assets/Icons/footer-vimeo.svg';

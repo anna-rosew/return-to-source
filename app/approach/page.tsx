@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { INTRO_PARAGRAPH } from '@/content/copy';
 import { Button } from '@/components/ui/button';
 import DetailsCard from '@/components/ui/DetailsCard';
 import TestimonialSection from '@/components/ui/testimonials/TestimonialSection';
@@ -9,7 +10,6 @@ import MuladharaIcon from '@/public/Assets/Icons/MuladharaIcon';
 import StarIcon from '@/public/Assets/Icons/StarIcon';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import React from 'react';
 
 export const metadata: Metadata = {
   title: 'Approach | Rose Long',
@@ -17,22 +17,22 @@ export const metadata: Metadata = {
     'Discover the mind-body-breath approach Rose uses in her coaching and yoga sessions — grounded in ancient wisdom and modern research.',
 };
 
-const approach = () => {
+const Approach = () => {
   const cardDetails = [
     {
       Icon: MuladharaIcon,
       title: 'Build Courage',
-      text: 'This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.',
+      text: 'Change asks you to release what is familiar and step into the unknown. This takes real courage. In a clear space of enquiry you can see your patterns, name what no longer serves you, and choose differently.',
     },
     {
       Icon: AjnaIcon,
       title: 'Find Clarity',
-      text: 'This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.',
+      text: 'Through guided reflection and honest self-inquiry, blind spots become visible. Greater self-awareness gives you the clarity to see where you have agency — and the freedom to act from that place.',
     },
     {
       Icon: AnahataIcon,
       title: 'Be Present',
-      text: 'This is not a quick fix. The process asks you to release the familiar and step into the unknown.  It takes courage to risk letting go of what no longer works for you.  Holding a clear space of enquiry allows you to see your patterns, identify blind spots and unlock your potential.  Greater self-awareness equates with greater freedom.  Through this work you learn where you have agency and find your way through the blocks.',
+      text: 'The body and breath are your greatest allies. Learning to slow down, listen and inhabit the present moment is where insight and transformation begin. Each session is designed to help you come back to yourself.',
     },
   ];
 
@@ -40,10 +40,7 @@ const approach = () => {
     <div>
       <div className="container  w-full">
         <h1>Approach</h1>
-        <p className="font-bold md:text-center">
-          Come and explore how your body, mind and breath work together. Open yourself to new
-          dimensions of experience and personal growth
-        </p>
+        <p className="font-bold md:text-center">{INTRO_PARAGRAPH}</p>
         <VideoPlayer url="https://vimeo.com/981928855" />
 
         <div className="text-left mt-8 md:grid md:grid-cols-2 md:gap-12">
@@ -102,4 +99,4 @@ const approach = () => {
   );
 };
 
-export default approach;
+export default Approach;

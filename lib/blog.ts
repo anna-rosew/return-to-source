@@ -32,14 +32,10 @@ export async function getAllPosts(): Promise<Post[]> {
 
 export async function getPostBySlug(slug: string): Promise<MDXContent | null> {
   try {
-    console.log(`Fetching post with slug: ${slug}`);
     const fullPath = path.join(postsDirectory, `${slug}.mdx`);
 
-    // Use async version
     const fileContents = await fs.readFile(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
-
-    console.log(`Successfully read post with slug: ${slug}`);
 
     return {
       slug,

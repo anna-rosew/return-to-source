@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import SnowdoniaRetreat from '@/components/ui/retreats/SnowdoniaRetreat';
-import React from 'react';
 
 export const metadata: Metadata = {
   title: 'Retreats | Rose Long',
@@ -8,7 +7,7 @@ export const metadata: Metadata = {
     'Step away from the everyday and immerse yourself in a transformative retreat with Rose Long. Yoga, meditation, and community in carefully chosen locations.',
 };
 
-const retreats = () => {
+const Retreats = () => {
   return (
     <div className="w-full px-4 md:px-8 pb-20 max-w-5xl mx-auto">
       <SnowdoniaRetreat />
@@ -16,4 +15,4 @@ const retreats = () => {
   );
 };
 
-export default retreats;
+export default Retreats;

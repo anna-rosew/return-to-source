@@ -36,8 +36,15 @@ const SECONDARY_TAGS: { label: string; value: SecondaryTag }[] = [
   { label: 'Nutrition', value: 'Nutrition' },
   { label: 'Mindfulness', value: 'Mindfulness' },
   { label: 'Meditation', value: 'Meditation' },
+  { label: 'Yoga', value: 'Yoga' },
   { label: 'Stress Management', value: 'Stress Management' },
-  // Add all your secondary tags here
+  { label: 'Sleep', value: 'Sleep' },
+  { label: 'Movement', value: 'Movement' },
+  { label: 'Breathing Techniques', value: 'Breathing Techniques' },
+  { label: 'Mental Health', value: 'Mental Health' },
+  { label: 'Physical Health', value: 'Physical Health' },
+  { label: 'Wellness', value: 'Wellness' },
+  { label: 'Self Care', value: 'Self Care' },
 ];
 
 interface PostGridProps {

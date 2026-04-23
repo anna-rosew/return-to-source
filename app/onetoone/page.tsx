@@ -9,7 +9,6 @@ import { Trees } from 'lucide-react';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
-import React from 'react';
 
 export const metadata: Metadata = {
   title: 'One-to-One Sessions | Rose Long',
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
     'Private coaching sessions with Rose Long — tailored to your rhythm, delivered by phone, video or in person. Develop your inner guidance system.',
 };
 
-const onetoone = () => {
+const Onetoone = () => {
   const cardDetails = [
     {
       Icon: CalendarDays,
@@ -95,4 +94,4 @@ const onetoone = () => {
   );
 };
 
-export default onetoone;
+export default Onetoone;

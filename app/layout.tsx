@@ -15,8 +15,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log('Environment:', process.env.NODE_ENV);
-  console.log('Under Construction:', process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION);
   return (
     <html lang="en">
       <body className="min-h-screen bg-customLightBeige">

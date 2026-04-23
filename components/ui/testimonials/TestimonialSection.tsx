@@ -1,4 +1,3 @@
-import React from 'react';
 import TestimonialCarousel from './TestimonialCarousel';
 import Link from 'next/link';
 import { Button } from '../button';

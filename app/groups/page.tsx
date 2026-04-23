@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { INTRO_PARAGRAPH } from '@/content/copy';
 import Card from '@/components/common/NavCard';
 import SectionHeading from '@/components/common/SectionHeading';
 import OnlineCarousel from '@/components/ui/online/OnlineCarousel';
@@ -14,16 +15,12 @@ import RetreatsOverview from '@/components/ui/retreats/RetreatsOverview';
 import { groupCards } from '@/content/groups';
 // import SpringCleanseSection from "@/components/ui/springcleanse/SpringCleanseSection";
 import EasterSeriesSection from '@/components/ui/online/EasterSeriesSection';
-import React from 'react';
 
-const groups = () => {
+const Groups = () => {
   return (
     <div className="container text-center w-full">
       <h1 className="pb-5">Groups</h1>
-      <p className="font-bold md:text-center">
-        Come and explore how your body, mind and breath work together. Open yourself to new
-        dimensions of experience and personal growth.
-      </p>
+      <p className="font-bold md:text-center">{INTRO_PARAGRAPH}</p>
       <div className="lg:my-20 my-7">
         <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
           {groupCards.map((card, index) => (
@@ -73,4 +70,4 @@ const groups = () => {
   );
 };
 
-export default groups;
+export default Groups;
