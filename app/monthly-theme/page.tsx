@@ -171,19 +171,23 @@ const MonthlyTheme = () => {
             &#39;YES!&apos; and respond.
           </p>
           <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-            <Button
-              size="lg"
-              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 text-lg"
-            >
-              I&lsquo;m a Yes! - Sign Up for £120
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-amber-600 text-amber-600 hover:bg-amber-50 px-8 py-3 text-lg"
-            >
-              Email me for details
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 text-lg"
+              >
+                I&lsquo;m a Yes! - Sign Up for £120
+              </Button>
+            </Link>
+            <a href="mailto:rose_long@icloud.com?subject=Monthly%20Theme%20-%20Details">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-amber-600 text-amber-600 hover:bg-amber-50 px-8 py-3 text-lg"
+              >
+                Email me for details
+              </Button>
+            </a>
           </div>
           <p className="text-sm text-gray-600 mt-6">
             Spaces limited. Email Rose to secure your place.

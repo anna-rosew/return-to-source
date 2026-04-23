@@ -60,12 +60,8 @@ export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
 // Helper function to clean MDX content
 const cleanMDXContent = (content: string): string => {
   return content
-    .replace(/\{/g, '&#123;')
-    .replace(/\}/g, '&#125;')
-    .replace(/'/g, "'")
-    .replace(/'/g, "'")
-    .replace(/"/g, '"')
-    .replace(/"/g, '"')
+    .replace(/\u2018|\u2019/g, "'")
+    .replace(/\u201C|\u201D/g, '"')
     .trim();
 };
 

@@ -31,7 +31,7 @@ const onetoone = () => {
   return (
     <div>
       <div className="container  w-full">
-        <h1>Approach</h1>
+        <h1>One-to-One</h1>
         <h3>Unlock the Answers from Within.</h3>
         <VideoPlayer url="https://vimeo.com/981928855" />
 

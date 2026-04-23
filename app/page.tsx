@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://www.rose-long.com',
-    images: 'http://localhost:3000/public/Assets/logo2',
+    images: 'https://www.rose-long.com/Assets/Icons/logo2.svg',
   },
   keywords: [
     'yoga',

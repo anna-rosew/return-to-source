@@ -19,6 +19,7 @@ const Logo = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', changeNavButton);
+    return () => window.removeEventListener('scroll', changeNavButton);
   }, []);
 
   return (
@@ -38,7 +39,9 @@ const Logo = () => {
           display: showButton ? 'block' : 'none',
         }}
       >
-        <Button />
+        <Link href="/contact">
+          <Button variant="primary" size="sm">Book a session</Button>
+        </Link>
       </div>
     </>
   );
