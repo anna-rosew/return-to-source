@@ -17,7 +17,7 @@ const OnlineClassSlide: React.FC<ClassSlidesProps> = ({ classInfo }) => {
     subheading: 'Playback anytime.',
     icon2: StarIcon,
     heading2: 'Sign up for all Classes',
-    subheading2: 'Half price — £48',
+    subheading2: '20% off — £40',
   };
 
   return (
