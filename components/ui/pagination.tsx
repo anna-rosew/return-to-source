@@ -46,10 +46,7 @@ const PaginationLink = ({ className, isActive, size = 'icon', ...props }: Pagina
 );
 PaginationLink.displayName = 'PaginationLink';
 
-const PaginationPrevious = ({
-  className,
-  ...props
-}: ComponentProps<typeof PaginationLink>) => (
+const PaginationPrevious = ({ className, ...props }: ComponentProps<typeof PaginationLink>) => (
   <PaginationLink
     aria-label="Go to previous page"
     size="default"
