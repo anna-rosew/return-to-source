@@ -1,5 +1,3 @@
-import React from 'react';
-
 const SunIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   fill = '#fff',
   stroke = '#fff',

@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface SendIconProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
 }

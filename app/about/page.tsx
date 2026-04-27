@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import AboutImage from '@/public/Assets/Images/about.webp';
 import { Button } from '@/components/ui/button';
 import QualificationsModal from '@/components/ui/modals/QualificationsModal';

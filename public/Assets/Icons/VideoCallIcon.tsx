@@ -1,5 +1,3 @@
-import React from 'react';
-
 const VideoCallIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

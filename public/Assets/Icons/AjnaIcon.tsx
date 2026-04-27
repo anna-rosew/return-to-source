@@ -1,5 +1,3 @@
-import React from 'react';
-
 const AjnaIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg

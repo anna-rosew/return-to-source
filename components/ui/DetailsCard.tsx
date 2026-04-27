@@ -1,5 +1,3 @@
-import React from 'react';
-
 type DetailsCardProps = {
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   title: string;

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const HumanIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({ fill = 'white', ...props }) => {
   return (
     <svg

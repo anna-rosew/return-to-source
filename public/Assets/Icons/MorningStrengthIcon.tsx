@@ -1,5 +1,3 @@
-import React from 'react';
-
 const MorningStrengthIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   fill = 'white',
   stroke = 'currentColor',

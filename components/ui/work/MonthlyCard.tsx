@@ -1,5 +1,3 @@
-import React from 'react';
-
 type MonthlyCardProps = {
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   week: string;

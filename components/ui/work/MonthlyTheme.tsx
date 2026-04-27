@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import StarIcon from '@/public/Assets/Icons/StarIcon';
 import RootAndReleaseIcon from '@/public/Assets/Icons/RootsIcon';
 import WaveIcon from '@/public/Assets/Icons/WaveIcon';

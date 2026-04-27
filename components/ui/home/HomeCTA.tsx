@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import VideoPlayer from '../VideoPlayer';
 import StarIcon from '@/public/Assets/Icons/StarIcon';
 import Link from 'next/link';
