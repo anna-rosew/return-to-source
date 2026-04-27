@@ -10,9 +10,9 @@ const Footer = () => {
   const serviceLinks = [
     { name: 'Groups Overview', link: '/groups' },
     { name: 'One-to-Ones', link: '/onetoone' },
-    { name: 'Online Groups', link: '/groups' },
-    { name: 'In-Person Sessions', link: '/groups' },
-    { name: 'Retreats', link: '/groups' },
+    { name: 'Online Groups', link: '/groups#online-groups' },
+    { name: 'In-Person Sessions', link: '/groups#in-person-groups' },
+    { name: 'Retreats', link: '/groups#retreats' },
   ];
 
   const aboutLinks = [
@@ -25,7 +25,6 @@ const Footer = () => {
     { name: 'Blog', link: '/blog' },
     { name: 'Contact', link: '/contact' },
     { name: 'Members Portal', link: '/dashboard' },
-    { name: 'Newsletter', link: '/' },
   ];
 
   return (
